@@ -12,7 +12,7 @@ SWEP.SubCatType = "7Sniper Rifle"
 
 SWEP.Description = "A simple, rugged hunting rifle with no room for tactical nonsense. Equipped with an adjustable 6x scope."
 
-SWEP.Trivia_Caliber = ".243 Winchester"
+SWEP.Trivia_Caliber = ".270 Winchester"
 SWEP.Trivia_Manufacturer = "SAKO"
 SWEP.Trivia_Year = "2006"
 
@@ -27,11 +27,11 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 60,
-        Damage_Min = 70,
+        Damage_Max = 66,
+        Damage_Min = 50,
 
-        Range_Min = 750,
-        Range_Max = 2000,
+        Range_Min = 1500,
+        Range_Max = 4000,
 
         MoveSpeedMult = 0.8,
         ShootingSpeedMult = 0.65,
@@ -40,13 +40,13 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 1,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 30,
-        Damage_Min = 50,
+        Damage_Max = 35,
+        Damage_Min = 60,
         Range_Min = 1000,
-        Range_Max = 2500,
+        Range_Max = 3000,
 
-        RPM = 45,
-        ShootTimeMult = 0.9,
+        RPM = 40,
+        ShootTimeMult = 0.82,
         HipFireSpreadPenalty = 0.025,
 
         BodyDamageMultipliers = {
@@ -60,7 +60,7 @@ SWEP.BalanceStats = {
             [HITGROUP_GEAR] = 0.5
         },
 
-        ReloadTimeMult = 1.25,
+        ReloadTimeMult = 1.15,
 
         MoveSpeedMult = 0.85,
         ShootingSpeedMult = 0.5,
@@ -102,7 +102,7 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 85
+SWEP.Damage_Max = 65
 SWEP.Damage_Min = 52
 SWEP.Range_Min = 1000
 SWEP.Range_Max = 6000
@@ -113,7 +113,7 @@ SWEP.ArmorBonus = 3
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.2,
+    [HITGROUP_STOMACH] = 1.25,
     [HITGROUP_LEFTARM] = 0.75,
     [HITGROUP_RIGHTARM] = 0.75,
     [HITGROUP_LEFTLEG] = 0.5,
@@ -302,24 +302,30 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
     [4] = {
+        PrintName = "Caliber",
+        Category = {"ammo_sako85"},
+        AttachSound = "TacRP/weapons/flashlight_on.wav",
+        DetachSound = "TacRP/weapons/flashlight_off.wav",
+    },
+    [5] = {
         PrintName = "Bolt",
         Category = {"bolt_manual"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [5] = {
+    [6] = {
         PrintName = "Trigger",
         Category = {"trigger_manual"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [6] = {
+    [7] = {
         PrintName = "Ammo",
         Category = {"ammo_sniper"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [7] = {
+    [8] = {
         PrintName = "Perk",
         Category = {"perk", "perk_melee", "perk_shooting", "perk_reload"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
