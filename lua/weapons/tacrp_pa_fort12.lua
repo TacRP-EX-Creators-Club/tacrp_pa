@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "1Sidearm"
 
-SWEP.Description = "Cost effective Ukrainian pistol rarely seen outside Eastern Europe. Low power, but handy and can probably survive any amount of supernatural disasters."
+SWEP.Description = "Cost effective Ukrainian pistol rarely seen outside Eastern Europe. Low stopping power, but handy and can probably survive quite a few supernatural disasters."
 SWEP.Description_Quote = "Find Strelok. Kill Strelok?"
 
 SWEP.Trivia_Caliber = "9x18mm"
@@ -125,8 +125,8 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 1
-SWEP.ShootingSpeedMult = 0.5
-SWEP.SightedSpeedMult = 0.5
+SWEP.ShootingSpeedMult = 0.75
+SWEP.SightedSpeedMult = 0.6
 
 SWEP.ReloadSpeedMult = 0.75
 
@@ -270,13 +270,13 @@ SWEP.Attachments = {
     [2] = {
         PrintName = "Muzzle",
         Category = "silencer",
-        Bone = "ValveBiped.barrel_assembly",
+        Bone = "ValveBiped.P2000_rootbone",
         WMBone = "Box01",
         AttachSound = "tacrp/weapons/silencer_on.wav",
         DetachSound = "tacrp/weapons/silencer_off.wav",
         VMScale = 0.5,
         WMScale = 0.5,
-        Pos_VM = Vector(-0.5, 0.39, 6),
+        Pos_VM = Vector(-3.1, -0.06, 8.55),
         Ang_VM = Angle(90, 0, 0),
         Pos_WM = Vector(0, 8, -1.5),
         Ang_WM = Angle(0, -90, 0),
@@ -288,9 +288,9 @@ SWEP.Attachments = {
         WMBone = "Box01",
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
-        VMScale = 1.1,
+        VMScale = 1,
         WMScale = 1.3,
-        Pos_VM = Vector(-2, 0, 6),
+        Pos_VM = Vector(-2.2, 0, 6),
         Ang_VM = Angle(90, 0, 180),
         Pos_WM = Vector(0, 5, -2.75),
         Ang_WM = Angle(0, -90, 180),
