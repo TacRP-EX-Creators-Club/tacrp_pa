@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\tacint_extras\fort12\wpn_fort"
+	"$envmap" "env_cubemap"
+	"$bumpmap" "models\tacint_extras\fort12\wpn_fort_normal"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[.25 .25 .25]"
+}
