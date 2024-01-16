@@ -21,7 +21,7 @@ SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = "Assets: S.T.A.L.K.E.R. (ported by modderfreak)\nAnimation: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_fort12.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_p2000.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_fort12.mdl"
 
 SWEP.Slot = 1
 
@@ -264,7 +264,7 @@ SWEP.Attachments = {
         WMScale = 1,
         Pos_VM = Vector(0.05, 0, 0),
         Ang_VM = Angle(0, 90, 180),
-        Pos_WM = Vector(0, -1, -1),
+        Pos_WM = Vector(0.2, -2, -1),
         Ang_WM = Angle(0, -90, 0),
     },
     [2] = {
@@ -278,7 +278,7 @@ SWEP.Attachments = {
         WMScale = 0.5,
         Pos_VM = Vector(-3.1, -0.06, 8.55),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(0, 8, -1.5),
+        Pos_WM = Vector(0.1, 8, -1.55),
         Ang_WM = Angle(0, -90, 0),
     },
     [3] = {
