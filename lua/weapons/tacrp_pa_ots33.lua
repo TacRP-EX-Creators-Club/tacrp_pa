@@ -32,8 +32,8 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 25,
-        Damage_Min = 8,
+        Damage_Max = 22,
+        Damage_Min = 6,
         RPM = 800,
     },
     [TacRP.BALANCE_TTT] = {
@@ -45,10 +45,10 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MachinePistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 26
-SWEP.Damage_Min = 10
-SWEP.Range_Min = 600
-SWEP.Range_Max = 1800
+SWEP.Damage_Max = 25
+SWEP.Damage_Min = 9
+SWEP.Range_Min = 350
+SWEP.Range_Max = 2000
 SWEP.Penetration = 3
 SWEP.ArmorPenetration = 0.725
 SWEP.ArmorBonus = 0.75
@@ -70,7 +70,7 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemodes = {2, 1}
 
-SWEP.RPM = 950
+SWEP.RPM = 900
 
 SWEP.Spread = 0.008
 
@@ -139,7 +139,7 @@ SWEP.HolsterAng = Angle(90, 0, 0)
 SWEP.ClipSize = 27
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1
+SWEP.ReloadTimeMult = 1.15
 
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/p250.mdl"
 SWEP.DropMagazineImpact = "pistol"
