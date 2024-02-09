@@ -176,10 +176,10 @@ SWEP.AnimationTranslationTable = {
 }
 
 SWEP.ProceduralIronFire = {
-    vm_pos = Vector(0, -0.5, -0.6),
-    vm_ang = Angle(0, 2, 0),
-    t = 0.2,
-    tmax = 0.2,
+    vm_pos = Vector(0, -0.5, -0.4),
+    vm_ang = Angle(0, 1.5, 0),
+    t = 0.15,
+    tmax = 0.15,
     bones = {
         {
             bone = "xd45_rig.slide",
@@ -191,19 +191,19 @@ SWEP.ProceduralIronFire = {
             bone = "xd45_rig.hammer",
             ang = Angle(-15, 0, 0),
             t0 = 0,
-            t1 = 0.15,
+            t1 = 0.12,
         },
         {
             bone = "ValveBiped.Bip01_R_Finger1",
             ang = Angle(0, -15, 0),
             t0 = 0,
-            t1 = 0.2,
+            t1 = 0.1,
         },
         {
             bone = "ValveBiped.Bip01_R_Finger11",
             ang = Angle(-35, 0, 0),
             t0 = 0,
-            t1 = 0.15,
+            t1 = 0.1,
         },
     },
 }
