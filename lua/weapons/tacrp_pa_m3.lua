@@ -25,7 +25,7 @@ Animation: Tactical Intervention
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_m3.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_m4star10.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_m3.mdl"
 
 SWEP.Slot = 2
 SWEP.SlotAlt = 3
@@ -190,6 +190,9 @@ SWEP.AttachmentElements = {
         BGs_VM = {
             {1, 1}
         },
+        BGs_WM = {
+            {1, 1}
+        },
     },
 }
 
@@ -202,8 +205,9 @@ SWEP.Attachments = {
         AttachSound = "tacrp/weapons/optic_on.wav",
         DetachSound = "tacrp/weapons/optic_off.wav",
         VMScale = 0.75,
+        WMScale = 0.75,
         Pos_VM = Vector(-5.15, 0.18, 5.5),
-        Pos_WM = Vector(11, 1.5, -5.5),
+        Pos_WM = Vector(9, 1.3, -5.9),
         Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(0, 0, 180),
     },
