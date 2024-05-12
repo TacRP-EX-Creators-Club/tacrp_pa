@@ -21,7 +21,7 @@ SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = "Model: RusMarine85\nAnimation: Tactical Intervention\nPorted by: Arctic"
 
 SWEP.ViewModel = "models/weapons/tacint/v_toz106.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_spr.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_toz106.mdl"
 
 SWEP.Slot = 2
 SWEP.SlotAlt = 3
@@ -147,7 +147,7 @@ SWEP.HoldTypeBlindFire = false
 SWEP.HoldTypeNPC = "shotgun"
 
 SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
-SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
+SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
 SWEP.PassiveAng = Angle(0, 0, 0)
 SWEP.PassivePos = Vector(0, -2, -4)
