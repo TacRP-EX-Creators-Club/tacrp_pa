@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "5Shotgun"
 
-SWEP.Description = "A custom modification of the Mossberg 88 receiver, intended for extreme concealability. Packs a serious punch for a sidearm, but one must make each shot count."
+SWEP.Description = "A custom modification of the Mossberg 88 receiver, intended for extreme concealability. However, it sacrifices accuracy and capacity. Fits in sidearm holsters."
 
 SWEP.Trivia_Caliber = "12 Gauge"
 SWEP.Trivia_Manufacturer = "Serbu Firearms"
@@ -21,7 +21,7 @@ SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = "Assets: Millennia\nAnimations: Tactical Intervention\nPorted by: Arctic"
 
 SWEP.ViewModel = "models/weapons/tacint/v_shorty.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_tgs12.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_shorty.mdl"
 
 SWEP.Slot = 1
 SWEP.SlotAlt = 3
@@ -82,7 +82,7 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
-SWEP.Damage_Max = 18
+SWEP.Damage_Max = 12
 SWEP.Damage_Min = 4
 SWEP.Range_Min = 150 // distance for which to maintain maximum damage
 SWEP.Range_Max = 1500 // distance at which we drop to minimum damage
@@ -90,9 +90,9 @@ SWEP.Penetration = 1 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.5
 SWEP.ArmorBonus = 1.25
 
-SWEP.Num = 8
+SWEP.Num = 10
 
-SWEP.MuzzleVelocity = 8000
+SWEP.MuzzleVelocity = 12000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 1.5,
@@ -113,8 +113,8 @@ SWEP.FiremodeName = "Pump-Action" // only used externally for firemode name dist
 
 SWEP.RPM = 80
 
-SWEP.Spread = 0.0325
-SWEP.ShotgunPelletSpread = 0.02
+SWEP.Spread = 0.035
+SWEP.ShotgunPelletSpread = 0.12
 
 SWEP.ShootTimeMult = 0.75
 
@@ -153,7 +153,7 @@ SWEP.SprintToFireTime = 0.3
 
 // hold types
 
-SWEP.HoldType = "smg1"
+SWEP.HoldType = "smg"
 SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeBlindFire = false
 SWEP.HoldTypeNPC = "shotgun"
@@ -177,9 +177,9 @@ SWEP.CorrectivePos = Vector(0.09, 0, 0.05)
 SWEP.CorrectiveAng = Angle(0.25, -0.05, 0)
 
 SWEP.HolsterVisible = true
-SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_BACK2
-SWEP.HolsterPos = Vector(5, 4, -6)
-SWEP.HolsterAng = Angle(0, 0, 0)
+SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_PISTOL
+SWEP.HolsterPos = Vector(-3, 4, -4)
+SWEP.HolsterAng = Angle(90, 0, 0)
 
 // reload
 
@@ -239,13 +239,13 @@ SWEP.Attachments = {
         InstalledElements = {"tactical"},
         VMScale = 1.25,
         Pos_VM = Vector(4, 0.5, 12),
-        Pos_WM = Vector(20, 1.5, -4.5),
+        Pos_WM = Vector(15, 1, -5.75),
         Ang_VM = Angle(-90, 180, -90),
-        Ang_WM = Angle(0, 0, 90),
+        Ang_WM = Angle(-10, 0, 90),
     },
     [2] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_duffle", "acc_extmag_shotgun"},
+        Category = {"acc", "acc_holster", "acc_extmag_shotgun"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
     },

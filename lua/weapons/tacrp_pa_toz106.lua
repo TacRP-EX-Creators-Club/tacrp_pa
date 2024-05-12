@@ -240,15 +240,14 @@ SWEP.Attachments = {
     [1] = {
         PrintName = "Tactical",
         Category = {"tactical", "tactical_ebullet"},
-        WMBone = "Box01",
         Bone = "ValveBiped.uratio_rootbone",
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         InstalledElements = {"tactical"},
         Pos_VM = Vector(-2.5, 0, 17),
         Ang_VM = Angle(90, 0, 180),
-        Pos_WM = Vector(0, 19.5, -1.5),
-        Ang_WM = Angle(0, -90, 180),
+        Pos_WM = Vector(20, 1, -5.5),
+        Ang_WM = Angle(-10, 0, 0),
     },
     [2] = {
         PrintName = "Accessory",
