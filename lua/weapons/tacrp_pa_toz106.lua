@@ -232,7 +232,7 @@ SWEP.AnimationTranslationTable = {
     ["blind_fire"] = {"blind_shoot1"},
     ["melee"] = {"melee1", "melee2"},
     ["reload"] = "reload",
-    ["deploy"] = "midreload"
+    ["deploy"] = "unholster"
 }
 
 // attachments
