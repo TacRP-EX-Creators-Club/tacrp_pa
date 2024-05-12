@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP" // "Tactical RP (Arctic)"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Shotgun"
 
-SWEP.Description = "Bolt-action hunting shotgun. Piss-poor damage but surprisingly good at range."
+SWEP.Description = "Bolt-action hunting shotgun. Small caliber shells have excellent accuracy but are not very lethal."
 
 SWEP.Trivia_Caliber = "20 Gauge"
 SWEP.Trivia_Manufacturer = "Tulsky Oruzheiny Zavod"
@@ -29,11 +29,10 @@ SWEP.SlotAlt = 3
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
         Damage_Max = 12,
-        MoveSpeedMult = 0.9,
-        ShootingSpeedMult = 0.8,
-        SightedSpeedMult = 0.9,
-        MeleeSpeedMult = 1,
-        ReloadSpeedMult = 1,
+        Damage_Min = 6,
+        Range_Min = 1000,
+        ClipSize = 4,
+        ReloadTimeMult = 0.9,
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 14,
@@ -67,21 +66,21 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
-SWEP.Damage_Max = 8
-SWEP.Damage_Min = 2
-SWEP.Range_Min = 1500 // distance for which to maintain maximum damage
-SWEP.Range_Max = 8000 // distance at which we drop to minimum damage
+SWEP.Damage_Max = 10
+SWEP.Damage_Min = 4
+SWEP.Range_Min = 500 // distance for which to maintain maximum damage
+SWEP.Range_Max = 3000 // distance at which we drop to minimum damage
 SWEP.Penetration = 1 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.25
-SWEP.ArmorBonus = 1.25
+SWEP.ArmorBonus = 1
 
-SWEP.Num = 8
+SWEP.Num = 6
 
-SWEP.MuzzleVelocity = 15000
+SWEP.MuzzleVelocity = 11000
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 3,
-    [HITGROUP_CHEST] = 1.25,
+    [HITGROUP_HEAD] = 2.5,
+    [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -96,28 +95,28 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 50
+SWEP.RPM = 42
 
 SWEP.ShootTimeMult = 0.85
 
-SWEP.Spread = 0.0025
-SWEP.ShotgunPelletSpread = 0.005
+SWEP.Spread = 0.008
+SWEP.ShotgunPelletSpread = 0.01
 
-SWEP.HipFireSpreadPenalty = 0.01
-SWEP.MidAirSpreadPenalty = 0
+SWEP.HipfireSpreadPenalty = 0.02
+SWEP.MidAirSpreadPenalty = 0.02
 
 SWEP.ScopedSpreadPenalty = 0
 
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 3
-SWEP.RecoilResetTime = 0.25 // time after you stop shooting for recoil to start dissipating
+SWEP.RecoilMaximum = 1
+SWEP.RecoilResetTime = 0.3 // time after you stop shooting for recoil to start dissipating
 SWEP.RecoilDissipationRate = 1
-SWEP.RecoilFirstShotMult = 1.1
+SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 2
 SWEP.RecoilVisualShake = 2
 
-SWEP.RecoilKick = 10
+SWEP.RecoilKick = 9
 
 SWEP.RecoilSpreadPenalty = 0.02
 
@@ -126,10 +125,10 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.975
-SWEP.ShootingSpeedMult = 0.9
+SWEP.ShootingSpeedMult = 0.6
 SWEP.SightedSpeedMult = 0.75
 
-SWEP.ReloadSpeedMult = 0.5
+SWEP.ReloadSpeedMult = 0.75
 
 SWEP.AimDownSightsTime = 0.25
 SWEP.SprintToFireTime = 0.24
@@ -171,7 +170,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 
 // reload
 
-SWEP.ClipSize = 4
+SWEP.ClipSize = 3
 SWEP.Ammo = "buckshot"
 
 SWEP.ReloadTimeMult = 1
@@ -181,7 +180,7 @@ SWEP.ReloadTimeMult = 1
 SWEP.Sound_Shoot = "^tacrp/weapons/m4star10/fire-1.wav"
 SWEP.Sound_Shoot_Silenced = "TacRP/weapons/sg551/sg551_fire_silenced-1.wav"
 
-SWEP.Vol_Shoot = 130
+SWEP.Vol_Shoot = 115
 SWEP.ShootPitchVariance = 0 // amount to vary pitch by each shot
 
 // effects
@@ -271,7 +270,7 @@ SWEP.Attachments = {
     },
     [5] = {
         PrintName = "Ammo",
-        Category = {"ammo_shotgun"},
+        Category = {"ammo_shotgun2"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
