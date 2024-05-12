@@ -173,7 +173,11 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 3
 SWEP.Ammo = "buckshot"
 
+SWEP.DropMagazineModel = "models/weapons/tacint/magazines/uratio.mdl"
+SWEP.DropMagazineImpact = "pistol"
+SWEP.DropMagazineTime = 0.8
 SWEP.ReloadTimeMult = 1
+SWEP.ReloadUpInTime = 1.7
 
 // sounds
 
