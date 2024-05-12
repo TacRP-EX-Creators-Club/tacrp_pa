@@ -9,7 +9,7 @@ SWEP.AbbrevName = "OTs-33"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "1Elite"
-SWEP.SubCatType = "2Machine Pistol"
+SWEP.SubCatType = "3Machine Pistol"
 
 SWEP.Description = "Russian machine pistol with low recoil, designed for paramilitary forces."
 
