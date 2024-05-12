@@ -96,7 +96,7 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 60
+SWEP.RPM = 50
 
 SWEP.ShootTimeMult = 0.85
 
@@ -240,7 +240,7 @@ SWEP.AnimationTranslationTable = {
 SWEP.Attachments = {
     [1] = {
         PrintName = "Tactical",
-        Category = "tactical",
+        Category = {"tactical", "tactical_ebullet"},
         WMBone = "Box01",
         Bone = "ValveBiped.uratio_rootbone",
         AttachSound = "TacRP/weapons/flashlight_on.wav",
