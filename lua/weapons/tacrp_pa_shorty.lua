@@ -18,12 +18,12 @@ SWEP.Trivia_Manufacturer = "Serbu Firearms"
 SWEP.Trivia_Year = "1996"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
-SWEP.Credits = "Assets: Tactical Intervention"
+SWEP.Credits = "Assets: Millennia\nAnimations: Tactical Intervention\nPorted by: Arctic"
 
 SWEP.ViewModel = "models/weapons/tacint/v_shorty.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_tgs12.mdl"
 
-SWEP.Slot = 2
+SWEP.Slot = 1
 SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
@@ -87,7 +87,7 @@ SWEP.Damage_Min = 4
 SWEP.Range_Min = 150 // distance for which to maintain maximum damage
 SWEP.Range_Max = 1500 // distance at which we drop to minimum damage
 SWEP.Penetration = 1 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.7
+SWEP.ArmorPenetration = 0.5
 SWEP.ArmorBonus = 1.25
 
 SWEP.Num = 8
@@ -111,12 +111,12 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Pump-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 70
+SWEP.RPM = 80
 
-SWEP.Spread = 0.025
+SWEP.Spread = 0.0325
 SWEP.ShotgunPelletSpread = 0.02
 
-SWEP.ShootTimeMult = 0.8
+SWEP.ShootTimeMult = 0.75
 
 SWEP.MidAirSpreadPenalty = 0
 
@@ -135,25 +135,25 @@ SWEP.HipFireSpreadPenalty = 0.015
 
 SWEP.CanBlindFire = true
 
-SWEP.Sway = 0.5
-SWEP.ScopedSway = 0.5
+SWEP.Sway = 1
+SWEP.ScopedSway = 1
 
-SWEP.FreeAimMaxAngle = 2
+SWEP.FreeAimMaxAngle = 4
 
 // handling
 
-SWEP.MoveSpeedMult = 0.95
-SWEP.ShootingSpeedMult = 0.8
+SWEP.MoveSpeedMult = 0.975
+SWEP.ShootingSpeedMult = 0.65
 SWEP.SightedSpeedMult = 0.75
 
-SWEP.ReloadSpeedMult = 0.5
+SWEP.ReloadSpeedMult = 0.75
 
 SWEP.AimDownSightsTime = 0.25
 SWEP.SprintToFireTime = 0.3
 
 // hold types
 
-SWEP.HoldType = "ar2"
+SWEP.HoldType = "smg1"
 SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeBlindFire = false
 SWEP.HoldTypeNPC = "shotgun"
@@ -193,7 +193,7 @@ SWEP.ReloadTimeMult = 1
 
 local path = "tacrp/weapons/tgs12/"
 
-SWEP.Sound_Shoot = "^" .. path .. "fire-1.wav"
+SWEP.Sound_Shoot = "^tacint_extras/shorty/shorty-1.wav"
 SWEP.Sound_Shoot_Silenced = "tacrp/weapons/sg551/sg551_fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 110
