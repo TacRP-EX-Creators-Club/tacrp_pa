@@ -12,6 +12,7 @@ SWEP.SubCatTier = "3Security"
 SWEP.SubCatType = "5Machine Gun"
 
 SWEP.Description = "Amazingly heavy \"light\" machine gun that straddles the gap between an LMG and a mounted weapon. Boasts a near-bottomless magazine."
+SWEP.Description_Quote = "\"You can't leave me here with these... animals.\""
 
 SWEP.Trivia_Caliber = "7.62x51mm NATO"
 SWEP.Trivia_Manufacturer = "Fabrique National"
