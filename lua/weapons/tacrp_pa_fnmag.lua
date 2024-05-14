@@ -198,6 +198,7 @@ SWEP.BulletBodygroups = {
     [12] = {12, 1},
 }
 SWEP.DefaultBodygroups = "000000000000000000000000000"
+SWEP.BulletBodygroupsSetAll = true
 
 // sounds
 
