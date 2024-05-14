@@ -21,7 +21,7 @@ SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = "Model & Texture: Call to Arms\nAnimation: Tactical Intervention\nPorted By: Arctic"
 
 SWEP.ViewModel = "models/weapons/tacint/v_vykhlop.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_spr.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_vykhlop.mdl"
 
 SWEP.Slot = 2
 SWEP.SlotAlt = 3
@@ -156,7 +156,7 @@ SWEP.BipodKick = 0.125
 
 // hold types
 
-SWEP.HoldType = "ar2"
+SWEP.HoldType = "smg"
 SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeBlindFire = false
 SWEP.HoldTypeNPC = "shotgun"
@@ -255,6 +255,9 @@ SWEP.AttachmentElements = {
     },
     ["irons"] = {
         BGs_VM = {
+            {2, 1}
+        },
+        BGs_WM = {
             {2, 1}
         },
     },
