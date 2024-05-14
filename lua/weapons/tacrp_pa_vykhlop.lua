@@ -277,7 +277,7 @@ SWEP.Attachments = {
         VMScale = 1,
         Pos_VM = Vector(-5.3, 0, 1),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(4.5, 1, -7),
+        Pos_WM = Vector(4, 1, -5.8),
         Ang_WM = Angle(0, 0, 180),
     },
     [2] = {
@@ -289,8 +289,8 @@ SWEP.Attachments = {
         InstalledElements = {"tactical"},
         Pos_VM = Vector(-3, -1.05, 8),
         Ang_VM = Angle(90, 0, -90),
-        Pos_WM = Vector(14, 1, -6),
-        Ang_WM = Angle(0, 0, 180),
+        Pos_WM = Vector(12, 1.75, -4),
+        Ang_WM = Angle(0, 0, 90),
     },
     [3] = {
         PrintName = "Accessory",
