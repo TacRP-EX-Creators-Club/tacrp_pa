@@ -209,10 +209,10 @@ SWEP.AmmoTTT = "357"
 
 SWEP.ReloadTimeMult = 1
 SWEP.ShootTimeMult = 0.5
-SWEP.DropMagazineModel = "models/weapons/tacint/magazines/uratio.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint/magazines/vykhlop.mdl"
 
 SWEP.ReloadUpInTime = 2.1
-SWEP.DropMagazineTime = 1.4
+SWEP.DropMagazineTime = 0.7
 
 // sounds
 

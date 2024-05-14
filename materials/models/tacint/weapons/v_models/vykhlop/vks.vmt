@@ -8,8 +8,8 @@ vertexlitgeneric
  $envmaptint "[0.002 0.002 0.002]"
  $envmapfresnel 1
  $phong 1
- $phongboost "1.000000"
- $phongfresnelranges "[.2 18 68]"
+ $phongboost "0.400000"
+ $phongfresnelranges "[.2 8 20]"
  $phongexponent 32
  $rimlight 0
  $rimlightexponent 55
