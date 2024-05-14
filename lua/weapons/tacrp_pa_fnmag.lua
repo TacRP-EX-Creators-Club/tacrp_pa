@@ -19,7 +19,7 @@ SWEP.Trivia_Manufacturer = "Fabrique National"
 SWEP.Trivia_Year = "1958"
 
 SWEP.Faction = TacRP.FACTION_COALITION
-SWEP.Credits = "Model: Call to Arms\nAnimation: Tactical Intervention\nPorted By: Arctic"
+SWEP.Credits = "Model & Texture: Call to Arms\nAnimation: Tactical Intervention\nPorted By: Arctic"
 
 SWEP.ViewModel = "models/weapons/tacint/v_fnmag.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_fnmag.mdl"
