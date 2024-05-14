@@ -218,9 +218,10 @@ SWEP.DropMagazineTime = 0.7
 
 local path = "tacrp/weapons/aug/aug_"
 
-SWEP.Sound_Shoot = "^tacrp/weapons/m1/fire_silenced-1.wav"
+SWEP.Sound_Shoot = "^tacrp/weapons/sg551/sg551_fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 80
+SWEP.Pitch_Shoot = 80
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 
 // effects
