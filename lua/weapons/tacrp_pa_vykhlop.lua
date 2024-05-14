@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "7Sniper Rifle"
 
-SWEP.Description = "Heavy bolt action sniper rifle with a unique, powerful round with poor armor penetration and slow muzzle velocity."
+SWEP.Description = "Heavy straight-pull bolt action sniper rifle with a unique, powerful round with poor armor penetration and slow muzzle velocity."
 SWEP.Description_Quote = "Na'am seyidi, al qanas ala al khatt."
 
 SWEP.Trivia_Caliber = "12.7x55mm"
