@@ -240,7 +240,8 @@ SWEP.EjectDelay = 0.5
 SWEP.AnimationTranslationTable = {
     ["deploy"] = "deploy",
     ["fire"] = "fire_bolt",
-    ["blind_fire"] = "shoot1"
+    ["blind_fire"] = "shoot1",
+    ["jam"] = "midreload"
 }
 
 // attachments
