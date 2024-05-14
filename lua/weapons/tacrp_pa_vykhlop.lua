@@ -28,8 +28,8 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 95,
-        Damage_Min = 150,
+        Damage_Max = 45,
+        Damage_Min = 135,
 
         Range_Min = 900,
         Range_Max = 2000,
@@ -39,9 +39,9 @@ SWEP.BalanceStats = {
         Description = "Heavy bolt action sniper rifle with a unique, powerful round with poor armor penetration and slow muzzle velocity.",
 
         Damage_Max = 55,
-        Damage_Min = 90,
+        Damage_Min = 80,
 
-        Range_Min = 900,
+        Range_Min = 300,
         Range_Max = 2000,
 
         RPM = 45,
@@ -86,8 +86,8 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 150
-SWEP.Damage_Min = 95
+SWEP.Damage_Max = 135
+SWEP.Damage_Min = 75
 SWEP.Range_Min = 4000
 SWEP.Range_Max = 5000
 SWEP.Penetration = 10 // units of metal this weapon can penetrate
