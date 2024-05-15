@@ -241,6 +241,8 @@ SWEP.AttachmentElements = {
 
 //ValveBiped.MG4_root
 
+SWEP.NoTactical = true
+
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",

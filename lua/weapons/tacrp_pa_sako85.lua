@@ -247,6 +247,8 @@ SWEP.AttachmentElements = {
     },
 }
 
+SWEP.NoTactical = true
+
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
