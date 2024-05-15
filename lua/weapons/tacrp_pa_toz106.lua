@@ -12,6 +12,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Shotgun"
 
 SWEP.Description = "Bolt-action hunting shotgun. Small caliber shells have excellent accuracy but are not very lethal."
+SWEP.Description_Quote = ""
 
 SWEP.Trivia_Caliber = "20 Gauge"
 SWEP.Trivia_Manufacturer = "Tulsky Oruzheiny Zavod"
@@ -33,6 +34,7 @@ SWEP.BalanceStats = {
         Range_Min = 1000,
         ClipSize = 4,
         ReloadTimeMult = 0.9,
+        MuzzleVelocity = 17000
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 14,
@@ -100,7 +102,7 @@ SWEP.RPM = 42
 SWEP.ShootTimeMult = 0.85
 
 SWEP.Spread = 0.008
-SWEP.ShotgunPelletSpread = 0.01
+SWEP.ShotgunPelletSpread = 0
 
 SWEP.HipfireSpreadPenalty = 0.02
 SWEP.MidAirSpreadPenalty = 0.02
@@ -160,8 +162,8 @@ SWEP.SprintPos = Vector(5, 0, -2)
 SWEP.SightAng = Angle(0, 0, 0)
 SWEP.SightPos = Vector(-3.83424, -2, -3.2791)
 
-SWEP.CorrectivePos = Vector(0.275, 0, -0.2)
-SWEP.CorrectiveAng = Angle(1.21, 0.1, 0)
+SWEP.CorrectivePos = Vector(0, 0, 0)
+SWEP.CorrectiveAng = Angle(0, 0, -0.2)
 
 SWEP.HolsterVisible = true
 SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_BACK2
@@ -242,6 +244,17 @@ SWEP.AnimationTranslationTable = {
 
 SWEP.Attachments = {
     [1] = {
+        PrintName = "Optic",
+        Category = "optic_ak",
+        Bone = "ValveBiped.uratio_rootbone",
+        AttachSound = "tacrp/weapons/optic_on.wav",
+        DetachSound = "tacrp/weapons/optic_off.wav",
+        Pos_VM = Vector(-5.6, 0.5, 9),
+        Ang_VM = Angle(90, 0, 0),
+        Pos_WM = Vector(20, 1, -5.5),
+        Ang_WM = Angle(-10, 0, 0),
+    },
+    [2] = {
         PrintName = "Tactical",
         Category = {"tactical", "tactical_ebullet"},
         Bone = "ValveBiped.uratio_rootbone",
@@ -253,31 +266,31 @@ SWEP.Attachments = {
         Pos_WM = Vector(20, 1, -5.5),
         Ang_WM = Angle(-10, 0, 0),
     },
-    [2] = {
+    [3] = {
         PrintName = "Accessory",
         Category = {"acc", "acc_foldstock", "acc_extmag_sniper", "acc_sling", "acc_duffle", "acc_bipod"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [3] = {
+    [4] = {
         PrintName = "Bolt",
         Category = {"bolt_manual"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [4] = {
+    [5] = {
         PrintName = "Trigger",
         Category = {"trigger_manual"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [5] = {
+    [6] = {
         PrintName = "Ammo",
         Category = {"ammo_shotgun2"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [6] = {
+    [7] = {
         PrintName = "Perk",
         Category = {"perk", "perk_melee", "perk_shooting", "perk_reload"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",

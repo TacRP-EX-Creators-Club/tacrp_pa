@@ -30,7 +30,8 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
         Damage_Max = 18,
         Damage_Min = 5,
-        ClipSize = 5,
+        ClipSize = 3,
+        Spread = 0.015
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 10,
@@ -38,7 +39,7 @@ SWEP.BalanceStats = {
         Range_Min = 300,
         Range_Max = 1200,
         Num = 9,
-        ClipSize = 6,
+        ClipSize = 3,
 
         Spread = 0.05,
         ShotgunPelletSpread = 0.025,
