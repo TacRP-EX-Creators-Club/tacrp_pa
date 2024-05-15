@@ -125,3 +125,27 @@ ATT.Override_BodyDamageMultipliersExtra = {
 }
 
 TacRP.LoadAtt(ATT, "ammo_sako85_300mag")
+
+ATT = {}
+
+ATT.PrintName = "PU Scope"
+ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
+ATT.Description = "Soviet sniper scope for specific rifles."
+ATT.Pros = {"att.zoom.5"}
+
+ATT.Category = {"optic_pu"}
+
+ATT.SortOrder = 5
+
+ATT.Override_Scope = true
+ATT.Override_ScopeHideWeapon = true
+ATT.Override_ScopeOverlay = Material("tacrp/scopes/pu.png", "mips smooth")
+ATT.Override_ScopeFOV = 90 / 5
+
+ATT.InstalledElements = {"scope"}
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "optic_svt_pu")

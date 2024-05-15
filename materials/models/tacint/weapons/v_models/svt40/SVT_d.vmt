@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$translucent"	"1"
+	"$basetexture" "models/tacint/weapons/v_models/svt40\SVT_d"
+	"$bumpmap" "models/tacint/weapons/v_models/svt40\SVT_d_normal"
+	"$nocull"	"1"
+
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[.1 .1 .1]"
+	"$envmapcontrast" ".4"
+	
+	"$phong" 	"1"
+	"$phongexponent" 	"60"
+	"$phongboost"	 "1"
+	"$phongfresnelranges" "[.5 1 2]"
+	
+}
