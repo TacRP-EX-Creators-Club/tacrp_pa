@@ -59,17 +59,6 @@ SWEP.BalanceStats = {
             [HITGROUP_RIGHTLEG] = 0.5,
             [HITGROUP_GEAR] = 0.5
         },
-    },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 30,
-        Damage_Min = 20,
-        Range_Min = 800,
-        Range_Max = 5000,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        HipFireSpreadPenalty = 0.015,
-        RecoilSpreadPenalty = 0.01,
-        RecoilMaximum = 10
     }
 }
 
@@ -77,16 +66,16 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MarksmanRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 40 // damage at minimum range
-SWEP.Damage_Min = 32 // damage at maximum range
+SWEP.Damage_Max = 45 // damage at minimum range
+SWEP.Damage_Min = 28 // damage at maximum range
 SWEP.Range_Min = 900 // distance for which to maintain maximum damage
-SWEP.Range_Max = 5000 // distance at which we drop to minimum damage
-SWEP.Penetration = 17 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.85
+SWEP.Range_Max = 6000 // distance at which we drop to minimum damage
+SWEP.Penetration = 8 // units of metal this weapon can penetrate
+SWEP.ArmorPenetration = 0.725
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 4,
-    [HITGROUP_CHEST] = 1.25,
+    [HITGROUP_HEAD] = 3,
+    [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
@@ -95,33 +84,34 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.75
 }
 
-SWEP.MuzzleVelocity = 35000
+SWEP.MuzzleVelocity = 28000
 
 // misc. shooting
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 300
+SWEP.RPM = 360
+SWEP.RPMMultSemi = 0.7
 
 SWEP.Spread = 0.005
 
 SWEP.JamFactor = 0.015
 
-SWEP.ShootTimeMult = 0.5
+SWEP.ShootTimeMult = 0.7
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 5
-SWEP.RecoilResetTime = 0
-SWEP.RecoilDissipationRate = 6
-SWEP.RecoilFirstShotMult = 0.7
+SWEP.RecoilMaximum = 4
+SWEP.RecoilResetTime = 0.075
+SWEP.RecoilDissipationRate = 10
+SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 7
+SWEP.RecoilKick = 10
 SWEP.RecoilStability = 0.6
-SWEP.RecoilAltMultiplier = 50
+SWEP.RecoilAltMultiplier = 100
 
-SWEP.RecoilSpreadPenalty = 0.008
+SWEP.RecoilSpreadPenalty = 0.006
 SWEP.HipFireSpreadPenalty = 0.1
 SWEP.PeekPenaltyFraction = 0.1
 
@@ -133,7 +123,7 @@ SWEP.MoveSpeedMult = 0.85
 SWEP.ShootingSpeedMult = 0.75
 SWEP.SightedSpeedMult = 0.5
 
-SWEP.ReloadSpeedMult = 0.9
+SWEP.ReloadSpeedMult = 0.5
 
 SWEP.AimDownSightsTime = 0.4
 SWEP.SprintToFireTime = 0.5
@@ -182,7 +172,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 10
 SWEP.Ammo = "ar2"
 
-SWEP.ReloadTimeMult = 1
+SWEP.ReloadTimeMult = 1.1
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/svt40.mdl"
 SWEP.DropMagazineImpact = "metal"
 

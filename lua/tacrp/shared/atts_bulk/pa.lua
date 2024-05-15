@@ -128,10 +128,12 @@ TacRP.LoadAtt(ATT, "ammo_sako85_300mag")
 
 ATT = {}
 
-ATT.PrintName = "PU Scope"
+ATT.PrintName = "Scope"
+ATT.FullName = "SVT-40 PU Scope"
 ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
-ATT.Description = "Soviet sniper scope for specific rifles."
+ATT.Description = "Medium power scope with a weapon-specific mount."
 ATT.Pros = {"att.zoom.5"}
+ATT.Cons = {"stat.aimdownsights"}
 
 ATT.Category = {"optic_pu"}
 
@@ -141,6 +143,8 @@ ATT.Override_Scope = true
 ATT.Override_ScopeHideWeapon = true
 ATT.Override_ScopeOverlay = Material("tacrp/scopes/pu.png", "mips smooth")
 ATT.Override_ScopeFOV = 90 / 5
+
+ATT.Add_AimDownSightsTime = 0.04
 
 ATT.InstalledElements = {"scope"}
 
