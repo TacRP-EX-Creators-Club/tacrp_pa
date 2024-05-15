@@ -21,7 +21,7 @@ SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = "Model: MrRifleman\nTexture: BuLL5H1T"
 
 SWEP.ViewModel = "models/weapons/tacint/v_svt40.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_m14.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_svt40.mdl"
 
 SWEP.Slot = 2
 
