@@ -1,5 +1,0 @@
- "VertexLitGeneric"
-{
-	"$baseTexture" "models\tacint\weapons\v_models\makarov\parts"
-	"$bumpmap" "models\tacint\weapons\v_models\makarov\parts_bump"
-}

@@ -163,8 +163,8 @@ SWEP.BlindFireSuicidePos = Vector(25, 15, -6)
 SWEP.SprintAng = Angle(0, 30, 0)
 SWEP.SprintPos = Vector(2, 0, -12)
 
-SWEP.SightAng = Angle(-0.01, 0.2, 0)
-SWEP.SightPos = Vector(-3.44, 0, -3.65)
+SWEP.SightAng = Angle(-0.01, 0.3, 0)
+SWEP.SightPos = Vector(-3.5, 0, -3.45)
 
 SWEP.CorrectivePos = Vector(0, 0, 0)
 SWEP.CorrectiveAng = Angle(0, 0, 0)
@@ -256,27 +256,36 @@ SWEP.LastShot = true
 // attachments
 
 SWEP.NoTactical = true
+SWEP.NoOptic = true
 
 SWEP.Attachments = {
     [1] = {
         PrintName = "Muzzle",
-        Category = "silencer",
+        Category = {"silencer"},
         Bone = "ValveBiped.p2000_rootbone",
         WMBone = "Box01",
         AttachSound = "tacrp/weapons/silencer_on.wav",
         DetachSound = "tacrp/weapons/silencer_off.wav",
-        VMScale = 0.5,
+        VMScale = 0.6,
         WMScale = 0.5,
-        Pos_VM = Vector(-3.39, -0.05, 8.8),
+        Pos_VM = Vector(-3.2, -0.05, 9.22),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(0, 8, -1.5),
+        Pos_WM = Vector(0.2, 6.9, -1.8),
         Ang_WM = Angle(0, -90, 0),
     },
     [2] = {
         PrintName = "Tactical",
-        Category = {"tactical_ebullet"},
+        Category = {},
+        Bone = "ValveBiped.p2000_rootbone",
+        WMBone = "Box01",
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
+        VMScale = 1.1,
+        WMScale = 1.3,
+        Pos_VM = Vector(-2, 0, 6),
+        Ang_VM = Angle(90, 0, 180),
+        Pos_WM = Vector(0, 5, -2.75),
+        Ang_WM = Angle(0, -90, 180),
     },
     [3] = {
         PrintName = "Accessory",
