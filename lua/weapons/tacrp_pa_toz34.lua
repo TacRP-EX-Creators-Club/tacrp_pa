@@ -22,7 +22,7 @@ SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = "Model: SAM61 \nSound: Navaro & Vunsunta \nAnimations: speedonerd & 8Z"
 
 SWEP.ViewModel = "models/weapons/tacint/v_toz34.mdl"
-SWEP.WorldModel = "models/weapons/tacint_shark/w_dbshotgun.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_toz34.mdl"
 
 SWEP.Slot = 2
 SWEP.SlotAlt = 3
