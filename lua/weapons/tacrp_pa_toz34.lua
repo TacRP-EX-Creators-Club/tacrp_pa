@@ -145,7 +145,7 @@ SWEP.FreeAimMaxAngle = 7.5
 // hold types
 
 SWEP.HoldType = "shotgun"
-SWEP.HoldTypeSprint = "normal"
+SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeBlindFire = "pistol"
 
 SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
