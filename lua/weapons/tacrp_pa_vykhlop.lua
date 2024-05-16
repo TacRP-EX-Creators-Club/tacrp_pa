@@ -208,8 +208,8 @@ SWEP.ClipSize = 10
 SWEP.Ammo = "357"
 SWEP.AmmoTTT = "357"
 
-SWEP.ReloadTimeMult = 1
-SWEP.ShootTimeMult = 0.5
+SWEP.ReloadTimeMult = 1.2
+SWEP.ShootTimeMult = 0.6
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/vykhlop.mdl"
 
 SWEP.ReloadUpInTime = 2.1
