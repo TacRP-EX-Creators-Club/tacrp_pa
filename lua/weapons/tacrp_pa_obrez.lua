@@ -22,7 +22,7 @@ SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = "Assets: Bethesda Game Studios\nAnimation: Tactical Intervention\nPorted By: Arctic"
 
 SWEP.ViewModel = "models/weapons/tacint/v_obrez.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_spr.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_obrez.mdl"
 
 SWEP.Slot = 2
 SWEP.SlotAlt = 3
@@ -152,8 +152,8 @@ SWEP.FreeAimMaxAngle = 9
 
 // hold types
 
-SWEP.HoldType = "ar2"
-SWEP.HoldTypeSprint = "passive"
+SWEP.HoldType = "revolver"
+SWEP.HoldTypeSprint = "normal"
 SWEP.HoldTypeBlindFire = false
 SWEP.HoldTypeNPC = "shotgun"
 
