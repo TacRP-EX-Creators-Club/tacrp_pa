@@ -221,7 +221,7 @@ SWEP.QCA_Eject = 2
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.EjectEffect = 2
-SWEP.EjectDelay = 0.85
+SWEP.EjectDelay = 0.5
 
 // anims
 
