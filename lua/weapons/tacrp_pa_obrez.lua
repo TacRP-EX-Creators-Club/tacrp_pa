@@ -24,16 +24,15 @@ SWEP.Credits = "Assets: Bethesda Game Studios\nAnimation: Tactical Intervention\
 SWEP.ViewModel = "models/weapons/tacint/v_obrez.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_obrez.mdl"
 
-SWEP.Slot = 2
-SWEP.SlotAlt = 3
+SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 50,
-        Damage_Min = 70,
-
-        Range_Min = 500,
-        Range_Max = 1500,
+        Damage_Max = 65,
+        Damage_Min = 40,
+        RPM = 62,
+        ShootTimeMult = 0.66,
+        RecoilKick = 8,
     },
     [TacRP.BALANCE_TTT] = {
 
@@ -59,45 +58,24 @@ SWEP.BalanceStats = {
             [HITGROUP_GEAR] = 0.5
         },
     },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 22,
-        Damage_Min = 50,
-
-        Range_Min = 500,
-        Range_Max = 1750,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 2,
-            [HITGROUP_CHEST] = 1,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.75,
-            [HITGROUP_RIGHTARM] = 0.75,
-            [HITGROUP_LEFTLEG] = 0.5,
-            [HITGROUP_RIGHTLEG] = 0.5,
-            [HITGROUP_GEAR] = 0.5
-        },
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        HipFireSpreadPenalty = 0.018
-    }
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 105
-SWEP.Damage_Min = 60
+SWEP.Damage_Max = 55
+SWEP.Damage_Min = 38
 SWEP.Range_Min = 400
-SWEP.Range_Max = 2000
+SWEP.Range_Max = 2400
 SWEP.Penetration = 10 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.6
 SWEP.ArmorBonus = 1.25
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 3,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.75,
     [HITGROUP_RIGHTARM] = 0.75,
     [HITGROUP_LEFTLEG] = 0.5,
@@ -113,22 +91,23 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 70
+SWEP.RPM = 55
 
-SWEP.Spread = 0.004
+SWEP.Spread = 0.006
 
-SWEP.HipFireSpreadPenalty = 0.01
-SWEP.PeekPenaltyFraction = 0.25
+SWEP.HipFireSpreadPenalty = 0.015
+SWEP.PeekPenaltyFraction = 0.3
 
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 1
-SWEP.RecoilResetTime = 0.2
+SWEP.RecoilMaximum = 2
+SWEP.RecoilResetTime = 0.18
 SWEP.RecoilDissipationRate = 1
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
 SWEP.RecoilVisualKick = 5
 
-SWEP.RecoilKick = 15
+SWEP.RecoilKick = 14
+SWEP.RecoilStability = 0.5
 
 SWEP.RecoilSpreadPenalty = 0.05 // extra spread per one unit of recoil
 
@@ -137,27 +116,27 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.975
-SWEP.ShootingSpeedMult = 0.9
+SWEP.ShootingSpeedMult = 0.75
 SWEP.SightedSpeedMult = 0.8
 
-SWEP.ReloadSpeedMult = 0.2
+SWEP.ReloadSpeedMult = 0.6
 
-SWEP.AimDownSightsTime = 0.25
-SWEP.SprintToFireTime = 0.25
+SWEP.AimDownSightsTime = 0.28
+SWEP.SprintToFireTime = 0.3
 
-SWEP.Sway = 2
-SWEP.ScopedSway = 0.5
+SWEP.Sway = 1.2
+SWEP.ScopedSway = 0.35
 
-SWEP.FreeAimMaxAngle = 9
+SWEP.FreeAimMaxAngle = 4
 
 // hold types
 
 SWEP.HoldType = "revolver"
 SWEP.HoldTypeSprint = "normal"
 SWEP.HoldTypeBlindFire = false
-SWEP.HoldTypeNPC = "shotgun"
+SWEP.HoldTypeNPC = "pistol"
 
-SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
+SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
 SWEP.PassiveAng = Angle(0, 0, 0)
@@ -185,9 +164,9 @@ SWEP.CorrectivePos = Vector(0.05, 0, 0.2)
 SWEP.CorrectiveAng = Angle(-0.36, -0.3, 0)
 
 SWEP.HolsterVisible = true
-SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_BACK2
-SWEP.HolsterPos = Vector(5, 4, -6)
-SWEP.HolsterAng = Angle(0, 0, 0)
+SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_PISTOL
+SWEP.HolsterPos = Vector(0, 3, -4)
+SWEP.HolsterAng = Angle(90, 0, 0)
 
 // reload
 
@@ -195,12 +174,12 @@ SWEP.ClipSize = 5
 SWEP.Ammo = "357"
 SWEP.AmmoTTT = "357"
 
-SWEP.ReloadTimeMult = 0.8
-SWEP.ShootTimeMult = 0.6
+SWEP.ReloadTimeMult = 0.9
+SWEP.ShootTimeMult = 0.75
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/uratio.mdl" // why doesn't it have its own mag model?
 
-SWEP.ReloadUpInTime = 2.1 * 0.8
-SWEP.DropMagazineTime = 1.4 * 0.8
+SWEP.ReloadUpInTime = 2.1
+SWEP.DropMagazineTime = 1.4
 
 // sounds
 
@@ -239,7 +218,7 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     [1] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_extmag_sniper", "acc_sling", "acc_duffle", "acc_bipod"},
+        Category = {"acc", "acc_extmag_sniper", "acc_holster", "acc_brace"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
