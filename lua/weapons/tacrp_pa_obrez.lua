@@ -67,7 +67,7 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 SWEP.Damage_Max = 55
 SWEP.Damage_Min = 38
 SWEP.Range_Min = 400
-SWEP.Range_Max = 2400
+SWEP.Range_Max = 2800
 SWEP.Penetration = 10 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.6
 SWEP.ArmorBonus = 1.25
@@ -91,7 +91,7 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 55
+SWEP.RPM = 50
 
 SWEP.Spread = 0.006
 
@@ -107,9 +107,9 @@ SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 SWEP.RecoilVisualKick = 5
 
 SWEP.RecoilKick = 14
-SWEP.RecoilStability = 0.5
+SWEP.RecoilStability = 0.65
 
-SWEP.RecoilSpreadPenalty = 0.05 // extra spread per one unit of recoil
+SWEP.RecoilSpreadPenalty = 0.02 // extra spread per one unit of recoil
 
 SWEP.CanBlindFire = true
 
@@ -174,8 +174,8 @@ SWEP.ClipSize = 5
 SWEP.Ammo = "357"
 SWEP.AmmoTTT = "357"
 
-SWEP.ReloadTimeMult = 0.9
-SWEP.ShootTimeMult = 0.75
+SWEP.ReloadTimeMult = 1
+SWEP.ShootTimeMult = 0.8
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/uratio.mdl" // why doesn't it have its own mag model?
 
 SWEP.ReloadUpInTime = 2.1
