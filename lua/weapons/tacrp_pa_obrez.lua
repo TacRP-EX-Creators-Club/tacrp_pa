@@ -12,7 +12,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "2Magnum Pistol"
 
 SWEP.Description = "Cut-down hunting rifle built by the sidearm-deficient to be a concealable handgun substitute. Modification seriously harms accuracy and ranged performance."
-SWEP.Description_Quote = "\"Yippee-yay, I got no weddin' bells for today...\""
+SWEP.Description_Quote = "\"Yippee-yay, there'll be no weddin' bells for today...\""
 
 SWEP.Trivia_Caliber = ".308 Winchester"
 SWEP.Trivia_Manufacturer = "Remington Arms, Bubba"
