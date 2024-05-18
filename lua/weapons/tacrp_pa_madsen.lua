@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "3Submachine Gun"
 
-SWEP.Description = "Cost-effective Danish SMG that's easy to use but has unimpressive firepower."
+SWEP.Description = "Cost-effective Danish SMG that's easy to use but has unimpressive firepower. An optic cannot be mounted due to the top charging handle."
 SWEP.Description_Quote = "\"Do you renounce Satan... And all his works?\""
 
 SWEP.Trivia_Caliber = "9x19mm"
@@ -185,7 +185,7 @@ SWEP.QCA_Muzzle = 1
 SWEP.QCA_Eject = 2
 
 SWEP.MuzzleEffect = "muzzleflash_ak47"
-SWEP.EjectEffect = 2
+SWEP.EjectEffect = 1
 
 // anims
 
@@ -223,31 +223,31 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Attachments = {
+    -- [1] = {
+    --     PrintName = "Optic",
+    --     Category = {"optic_cqb", "optic_medium"},
+    --     Bone = "pdw_ROOT",
+    --     AttachSound = "TacRP/weapons/optic_on.wav",
+    --     DetachSound = "TacRP/weapons/optic_off.wav",
+    --     InstalledElements = {"optic"},
+    --     VMScale = 1,
+    --     Pos_VM = Vector(-4.8, -0.15, 6),
+    --     Pos_WM = Vector(7, 1.5, -6.5),
+    --     Ang_VM = Angle(90, 0, 0),
+    --     Ang_WM = Angle(0, -3.5, 180),
+    -- },
     [1] = {
-        PrintName = "Optic",
-        Category = {"optic_cqb", "optic_medium"},
-        Bone = "pdw_ROOT",
-        AttachSound = "TacRP/weapons/optic_on.wav",
-        DetachSound = "TacRP/weapons/optic_off.wav",
-        InstalledElements = {"optic"},
-        VMScale = 1,
-        Pos_VM = Vector(-4.8, -0.15, 6),
-        Pos_WM = Vector(7, 1.5, -6.5),
-        Ang_VM = Angle(90, 0, 0),
-        Ang_WM = Angle(0, -3.5, 180),
-    },
-    [2] = {
         PrintName = "Muzzle",
         Category = "silencer",
         Bone = "pdw_ROOT",
         AttachSound = "TacRP/weapons/silencer_on.wav",
         DetachSound = "TacRP/weapons/silencer_off.wav",
-        Pos_VM = Vector(-3.25, -0.1, 19),
+        Pos_VM = Vector(-2.85, -0.1, 24.5),
         Pos_WM = Vector(24, 2.5, -5),
         Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(0, -3.5, 180),
     },
-    [3] = {
+    [2] = {
         PrintName = "Tactical",
         Category = {"tactical", "tactical_zoom", "tactical_ebullet"},
         Bone = "pdw_ROOT",
@@ -259,31 +259,31 @@ SWEP.Attachments = {
         Ang_VM = Angle(90, 0, 90),
         Ang_WM = Angle(0, -3.5, -90),
     },
-    [4] = {
+    [3] = {
         PrintName = "Accessory",
         Category = {"acc", "acc_foldstock", "acc_sling", "acc_duffle", "perk_extendedmag"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
     },
-    [5] = {
+    [4] = {
         PrintName = "Bolt",
         Category = {"bolt_automatic"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [6] = {
+    [5] = {
         PrintName = "Trigger",
         Category = {"trigger_auto"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [7] = {
+    [6] = {
         PrintName = "Ammo",
         Category = {"ammo_rifle"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [8] = {
+    [7] = {
         PrintName = "Perk",
         Category = {"perk", "perk_melee", "perk_shooting", "perk_reload"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
