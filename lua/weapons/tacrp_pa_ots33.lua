@@ -26,7 +26,7 @@ Animation: Tactical Intervention
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_ots33.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_xd45.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_ots33.mdl"
 
 SWEP.Slot = 1
 
@@ -35,6 +35,9 @@ SWEP.BalanceStats = {
         Damage_Max = 22,
         Damage_Min = 6,
         RPM = 800,
+
+        FreeAimMaxAngle = 4,
+        HipFireSpreadPenalty = 0.028,
     },
     [TacRP.BALANCE_TTT] = {
         // TODO
@@ -81,7 +84,7 @@ SWEP.RecoilDissipationRate = 35
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 3
+SWEP.RecoilKick = 4
 SWEP.RecoilStability = 0.25
 
 SWEP.RecoilSpreadPenalty = 0.0018
@@ -103,7 +106,7 @@ SWEP.SprintToFireTime = 0.25
 SWEP.Sway = 1
 SWEP.ScopedSway = 0.4
 
-SWEP.FreeAimMaxAngle = 3
+SWEP.FreeAimMaxAngle = 3.5
 
 // hold types
 
