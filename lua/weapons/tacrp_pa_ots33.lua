@@ -144,7 +144,7 @@ SWEP.Ammo = "pistol"
 
 SWEP.ReloadTimeMult = 1.15
 
-SWEP.DropMagazineModel = "models/weapons/tacint/magazines/p250.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint_extras/magazines/ots33.mdl"
 SWEP.DropMagazineImpact = "pistol"
 
 SWEP.ReloadUpInTime = 1
