@@ -32,9 +32,13 @@ SWEP.BalanceStats = {
         Damage_Max = 16,
         Damage_Min = 10,
         RPM = 130,
+        ReloadTimeMult = 1.15,
+        ShootingSpeedMult = 0.8,
     },
     [TacRP.BALANCE_TTT] = {
-        // TODO
+        Damage_Max = 12,
+        Damage_Min = 6,
+        RPM = 85,
     },
 }
 
@@ -98,10 +102,10 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.85
-SWEP.ShootingSpeedMult = 0.5
+SWEP.ShootingSpeedMult = 0.75
 SWEP.SightedSpeedMult = 0.65
 
-SWEP.ReloadSpeedMult = 0.4
+SWEP.ReloadSpeedMult = 0.5
 
 SWEP.AimDownSightsTime = 0.42
 SWEP.SprintToFireTime = 0.44
@@ -151,7 +155,7 @@ SWEP.Ammo = "buckshot"
 
 SWEP.ReloadUpInTime = 1.85
 
-SWEP.ReloadTimeMult = 1.3
+SWEP.ReloadTimeMult = 1.25
 
 // sounds
 
