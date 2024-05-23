@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "1Pistol"
 
-SWEP.Description = "An obsolete sidearm designed for mass production. Poor lethality with poor customizability."
+SWEP.Description = "Mass production Soviet sidearm designed to be carried often and rarely shot. Lethality is poor beyond point blank."
 SWEP.Description_Quote = ""
 
 SWEP.Trivia_Caliber = "9x18mm"
@@ -83,13 +83,13 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 SWEP.Damage_Max = 18
 SWEP.Damage_Min = 8
-SWEP.Range_Min = 500
-SWEP.Range_Max = 1500
-SWEP.Penetration = 3
+SWEP.Range_Min = 200
+SWEP.Range_Max = 1400
+SWEP.Penetration = 2
 SWEP.ArmorPenetration = 0.55
 SWEP.ArmorBonus = 0.5
 
-SWEP.MuzzleVelocity = 13000
+SWEP.MuzzleVelocity = 11000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
@@ -106,8 +106,8 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 700
-SWEP.RPMMultSemi = 0.8
+SWEP.RPM = 720
+SWEP.RPMMultSemi = 0.75
 
 SWEP.Spread = 0.008
 
@@ -119,10 +119,11 @@ SWEP.RecoilDissipationRate = 16
 SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 3
-SWEP.RecoilStability = 0.2
+SWEP.RecoilKick = 4
+SWEP.RecoilStability = 0.15
 
 SWEP.RecoilSpreadPenalty = 0.002
+SWEP.HipFireSpreadPenalty = 0.014
 
 SWEP.CanBlindFire = true
 
@@ -130,9 +131,9 @@ SWEP.CanBlindFire = true
 
 SWEP.MoveSpeedMult = 1
 SWEP.ShootingSpeedMult = 0.9
-SWEP.SightedSpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.825
 
-SWEP.ReloadSpeedMult = 0.75
+SWEP.ReloadSpeedMult = 0.85
 
 SWEP.AimDownSightsTime = 0.21
 SWEP.SprintToFireTime = 0.21
@@ -289,7 +290,7 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_extmag_pistol", "acc_holster", "acc_brace"},
+        Category = {"acc", "acc_extmag_pistol2", "acc_holster", "acc_brace"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
     },
