@@ -68,8 +68,8 @@ SWEP.Damage_Max = 55
 SWEP.Damage_Min = 38
 SWEP.Range_Min = 400
 SWEP.Range_Max = 2800
-SWEP.Penetration = 10 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.6
+SWEP.Penetration = 7 // units of metal this weapon can penetrate
+SWEP.ArmorPenetration = 0.7
 SWEP.ArmorBonus = 1.25
 
 SWEP.BodyDamageMultipliers = {
@@ -140,7 +140,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(2, -2, -6)
+SWEP.PassivePos = Vector(1, -2, -5)
 
 SWEP.BlindFireAng = Angle(0, 15, -45)
 SWEP.BlindFirePos = Vector(1, -2, -3)
