@@ -8,7 +8,7 @@ SWEP.PrintName = "TOZ-34"
 SWEP.AbbrevName = "TOZ-34"
 SWEP.Category = "Tactical RP"
 
-SWEP.SubCatTier = "5Value"
+SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "5Shotgun"
 
 SWEP.Description = "Double-barrel hunting shotgun. Has decent accuracy and lethality, but its bulk and slow reload makes it ill-suited for combat."
@@ -29,7 +29,7 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 16,
+        Damage_Max = 17,
         Damage_Min = 10,
         RPM = 130,
         ReloadTimeMult = 1.15,
@@ -46,7 +46,7 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
-SWEP.Damage_Max = 14
+SWEP.Damage_Max = 15
 SWEP.Damage_Min = 8
 SWEP.Range_Min = 500
 SWEP.Range_Max = 2800
@@ -74,7 +74,7 @@ SWEP.Firemodes = {
     1
 }
 
-SWEP.RPM = 100
+SWEP.RPM = 90
 
 SWEP.Spread = 0.015
 SWEP.ShotgunPelletSpread = 0.012
@@ -134,10 +134,10 @@ SWEP.BlindFireSuicideAng = Angle(0, 120, 20)
 SWEP.BlindFireSuicidePos = Vector(-7, 30, -25)
 
 SWEP.SprintAng = Angle(45, -10, 0)
-SWEP.SprintPos = Vector(6, 0, 0)
+SWEP.SprintPos = Vector(8, 0, 1)
 
 SWEP.SightAng = Angle(0, 0.4, 0)
-SWEP.SightPos = Vector(-3.2, 0, 1.6)
+SWEP.SightPos = Vector(-3.2, -4, 1.6)
 
 SWEP.CustomizeAng = Angle(30, 15, 0)
 SWEP.CustomizePos = Vector(5, 0, -2)
@@ -155,7 +155,7 @@ SWEP.Ammo = "buckshot"
 
 SWEP.ReloadUpInTime = 1.85
 
-SWEP.ReloadTimeMult = 1.25
+SWEP.ReloadTimeMult = 1.3
 
 // sounds
 
