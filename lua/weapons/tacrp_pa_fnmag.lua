@@ -29,10 +29,8 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 28,
-        Damage_Min = 22,
-
-        ClipSize = 200,
+        Damage_Max = 45,
+        Damage_Min = 30,
     },
     [TacRP.BALANCE_TTT] = {
 
@@ -84,10 +82,10 @@ SWEP.BodyDamageMultipliers = {
 
 // "ballistics"
 
-SWEP.Damage_Max = 38
-SWEP.Damage_Min = 26
-SWEP.Range_Min = 1200
-SWEP.Range_Max = 6000
+SWEP.Damage_Max = 40
+SWEP.Damage_Min = 28
+SWEP.Range_Min = 1800
+SWEP.Range_Max = 5000
 SWEP.Penetration = 10
 SWEP.ArmorPenetration = 0.75
 
