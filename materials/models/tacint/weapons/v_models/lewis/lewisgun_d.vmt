@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+$basetexture 			"models/tacint/weapons/v_models/lewis/LewisGun_d"
+$bumpmap 		"models/tacint/weapons/v_models/lewis/LewisGun_n"
+$ambientocculusion 		"models/tacint/weapons/v_models/lewis/LewisGun_H"
+
+"$phongexponenttexture" 			"models/tacint/weapons/v_models/lewis/LewisGun_m"
+"$phong" "1"
+"$phongboost" ".01"
+"$phongfresnelranges" "[1 3 4]"
+"$phongalbedotint" "1"
+"$phongdisablehalflambert" "1"
+"$lightwarptexture" "models/tacint/weapons/v_models/lewis/Clothes_wrp"
+}
