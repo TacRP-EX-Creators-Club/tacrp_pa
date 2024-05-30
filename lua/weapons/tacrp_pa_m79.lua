@@ -21,11 +21,12 @@ SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = "Textures: Millenia\nModel: EdisLeado\nAnimations: speedonerd & 8z"
 
 SWEP.ViewModel = "models/weapons/tacint/v_m79.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_m320.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_m79.mdl"
 
 SWEP.NoRanger = true
 
-SWEP.Slot = 4
+SWEP.Slot = 2
+SWEP.SlotAlt = 4
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
@@ -104,12 +105,12 @@ SWEP.FreeAimMaxAngle = 12
 
 // hold types
 
-SWEP.HoldType = "smg"
+SWEP.HoldType = "shotgun"
 SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeBlindFire = false
 
-SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
-SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_AR2
+SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
+SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
 
 SWEP.PassiveAng = Angle(1, 0, 0)
 SWEP.PassivePos = Vector(0.25, 1, -2)
