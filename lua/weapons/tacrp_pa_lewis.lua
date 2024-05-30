@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "5Machine Gun"
 
-SWEP.Description = "Pan-fed light machine gun with a small magazine. Exceptionally controllable."
+SWEP.Description = "Pan-fed, water-cooled light machine gun with a small magazine. Exceptionally controllable."
 SWEP.Description_Quote = "\"All of you, get out of my way!\""
 
 SWEP.Trivia_Caliber = ".303 British"
@@ -23,6 +23,8 @@ SWEP.Credits = "Model & Texture: Verdun\nAnimation: Tactical Intervention\nPorte
 
 SWEP.ViewModel = "models/weapons/tacint/v_lewis.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_lewis.mdl"
+
+SWEP.ViewModelFOV = 55
 
 SWEP.Slot = 2
 SWEP.SlotAlt = 3
@@ -95,7 +97,7 @@ SWEP.Firemode = 2
 
 SWEP.RPM = 550
 
-SWEP.Spread = 0.006
+SWEP.Spread = 0.009
 
 SWEP.ShootTimeMult = 0.5
 
@@ -110,9 +112,9 @@ SWEP.RecoilKick = 2.5
 SWEP.RecoilAltMultiplier = 150
 SWEP.RecoilStability = 0.6
 
-SWEP.HipFireSpreadPenalty = 0.05
+SWEP.HipFireSpreadPenalty = 0.07
 SWEP.MoveSpreadPenalty = 0.02
-SWEP.RecoilSpreadPenalty = 0.002
+SWEP.RecoilSpreadPenalty = 0.000 // Water cooled!
 SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.CanBlindFire = true
@@ -148,7 +150,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SMG1
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(0, -2, -7)
+SWEP.PassivePos = Vector(1, -2, -7)
 
 SWEP.BlindFireAng = Angle(0, 5, 0)
 SWEP.BlindFirePos = Vector(0, -4, -3)
@@ -179,26 +181,11 @@ SWEP.DropMagazineImpact = "metal"
 SWEP.ReloadUpInTime = 2
 SWEP.DropMagazineTime = 0.7
 
-SWEP.BulletBodygroups = {
-    [1] = {1, 1},
-    [2] = {2, 1},
-    [3] = {3, 1},
-    [4] = {4, 1},
-    [5] = {5, 1},
-    [6] = {6, 1},
-    [7] = {7, 1},
-    [8] = {8, 1},
-    [9] = {9, 1},
-    [10] = {10, 1},
-    [11] = {11, 1},
-    [12] = {12, 1},
-}
 SWEP.DefaultBodygroups = "000000000000000000000000000"
-SWEP.BulletBodygroupsSetAll = true
 
 // sounds
 
-local path = "TacRP/weapons/mg4/"
+local path = "tacrp/weapons/p90/"
 local path1 = "tacint_extras/fnmag/"
 
 SWEP.Sound_Shoot = "^" .. path1 .. "fire.wav"
@@ -233,6 +220,14 @@ SWEP.AnimationTranslationTable = {
 // attachments
 
 SWEP.AttachmentElements = {
+    ["bipod"] = {
+        BGs_VM = {
+            {1, 1}
+        },
+        BGs_WM = {
+            {1, 1}
+        },
+    },
 }
 
 //ValveBiped.MG4_root
@@ -299,12 +294,11 @@ local function addsound(name, spath)
     })
 end
 
-addsound("TacInt_mg4.Clip_Out", path .. "clip_out-1.wav")
-addsound("TacInt_mg4.Clip_In", path .. "clip_in-1.wav")
-addsound("TacInt_mg4.bolt_release", path .. "bolt_release-1.wav")
-addsound("TacInt_mg4.bolt_back", path .. "bolt_back-1.wav")
-addsound("TacInt_mg4.bolt_forward", path .. "bolt_forward-1.wav")
-addsound("TacInt_mg4.feedcover_close", path .. "feed_cover_close-1.wav")
-addsound("TacInt_mg4.feedcover_open", path .. "feed_cover_open-1.wav")
-addsound("TacInt_mg4.insertbullets", path .. "insert_bullets-1.wav")
-addsound("TacInt_mg4.deploy", path .. "deploy-1.wav")
+addsound("tacint_p90.Clip_Out", path .. "clip_out.wav")
+addsound("tacint_p90.Clip_In", path .. "clip_in.wav")
+addsound("tacint_p90.Clip_slap", path .. "clip_slap.wav")
+addsound("tacint_p90.bolt_release", path .. "bolt_release.wav")
+addsound("tacint_p90.bolt_back", path .. "bolt_back.wav")
+addsound("tacint_p90.bolt_forward", path .. "bolt_forward.wav")
+addsound("tacint_p90.fire_select", path .. "fire_select.wav")
+addsound("tacint_p90.mag_release", path .. "mag_release.wav")
