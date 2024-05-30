@@ -228,6 +228,14 @@ SWEP.AttachmentElements = {
             {1, 1}
         },
     },
+    ["mount"] = {
+        BGs_VM = {
+            {2, 1}
+        },
+        BGs_WM = {
+            {2, 1}
+        },
+    }
 }
 
 //ValveBiped.MG4_root
@@ -237,13 +245,14 @@ SWEP.NoTactical = true
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
-        Category = {"optic_cqb", "optic_medium"},
-        Bone = "ValveBiped.feed_cover",
+        Category = "optic_cqb",
+        Bone = "p90_root",
+        InstalledElements = {"mount"},
         AttachSound = "TacRP/weapons/optic_on.wav",
         DetachSound = "TacRP/weapons/optic_off.wav",
         VMScale = 1.1,
-        Pos_VM = Vector(-1.1, -0.2, -4),
-        Pos_WM = Vector(8, 1.15, -7),
+        Pos_VM = Vector(-6.5, 0.12, 2.5),
+        Pos_WM = Vector(3.5, 1.15, -8),
         Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(0, 0, 180),
     },
