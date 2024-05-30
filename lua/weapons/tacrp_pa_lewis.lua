@@ -61,9 +61,9 @@ SWEP.BalanceStats = {
     },
     [TacRP.BALANCE_OLDSCHOOL] = {
         Description = "Balanced light machine gun that can put down some serious firepower.",
-        ClipSize = 75,
-        RecoilSpreadPenalty = 0.0013,
-        ReloadTimeMult = 1.1
+        ClipSize = 47,
+        RecoilSpreadPenalty = 0.000,
+        ReloadTimeMult = 0.75
     }
 }
 
@@ -175,7 +175,7 @@ SWEP.ClipSize = 47
 SWEP.Ammo = "ar2"
 
 SWEP.ReloadTimeMult = 1.1
-SWEP.DropMagazineModel = "models/weapons/tacint/magazines/fnmag.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint/magazines/lewis.mdl"
 SWEP.DropMagazineImpact = "metal"
 
 SWEP.ReloadUpInTime = 2
