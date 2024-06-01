@@ -5,13 +5,13 @@ AddCSLuaFile()
 
 // names and stuff
 SWEP.PrintName = "M79"
-SWEP.AbbrevName = "M79"
 SWEP.Category = "Tactical RP (Special)"
 
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "6Launcher"
 
-SWEP.Description = "Grenade launcher capable of firing a variety of payloads. Very accurate, but slower."
+SWEP.Description = "Wood stocked, long barrel grenade launcher from the jungles. Accurate and has fast muzzle velocity, but has considerable weight."
+SWEP.Description_Quote = "\"Goooooooooooooood morning, Vietnam!\""
 
 SWEP.Trivia_Caliber = "40mm Grenades"
 SWEP.Trivia_Manufacturer = "Springfield Armory"
@@ -43,7 +43,7 @@ SWEP.Range_Max = 6000
 SWEP.Range_Min = 1000
 
 SWEP.ShootEnt = "tacrp_proj_40mm_he"
-SWEP.ShootEntForce = 6000
+SWEP.ShootEntForce = 9000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 1,
@@ -56,7 +56,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.9
 }
 
-SWEP.MuzzleVelocity = 7000
+SWEP.MuzzleVelocity = 9000
 
 SWEP.Num = 1
 
@@ -68,40 +68,40 @@ SWEP.FiremodeName = "Single-Shot" // only used externally for firemode name dist
 
 SWEP.RPM = 60
 
-SWEP.Spread = 0.0001
+SWEP.Spread = 0.005
 
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 2
+SWEP.RecoilMaximum = 1
 SWEP.RecoilResetTime = 0.2 // time after you stop shooting for recoil to start dissipating
-SWEP.RecoilDissipationRate = 1
+SWEP.RecoilDissipationRate = 2
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 5
+SWEP.RecoilVisualKick = 2
 SWEP.RecoilVisualShake = 2
 
-SWEP.RecoilKick = 15
+SWEP.RecoilKick = 6
 
 SWEP.RecoilSpreadPenalty = 0 // extra spread per one unit of recoil
-SWEP.HipFireSpreadPenalty = 0.05
+SWEP.HipFireSpreadPenalty = 0.06
+SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.85
-SWEP.ShootingSpeedMult = 0.25
+SWEP.MoveSpeedMult = 0.9
+SWEP.ShootingSpeedMult = 0.3
 SWEP.SightedSpeedMult = 0.5
 
-SWEP.ReloadSpeedMult = 1.2
-SWEP.DeployTimeMult = 2
+SWEP.ReloadSpeedMult = 0.4
 
-SWEP.AimDownSightsTime = 0.5
-SWEP.SprintToFireTime = 0.5 // multiplies how long it takes to recover from sprinting
+SWEP.AimDownSightsTime = 0.38
+SWEP.SprintToFireTime = 0.42 // multiplies how long it takes to recover from sprinting
 
-SWEP.Sway = 1
-SWEP.ScopedSway = 0.2
+SWEP.Sway = 1.25
+SWEP.ScopedSway = 0.15
 
-SWEP.FreeAimMaxAngle = 12
+SWEP.FreeAimMaxAngle = 7
 
 // hold types
 
@@ -166,6 +166,9 @@ SWEP.QCA_Eject = 2
 SWEP.MuzzleEffect = "muzzleflash_m79"
 
 // anims
+
+SWEP.DeployTimeMult = 4
+SWEP.ReloadTimeMult = 1.15
 
 SWEP.AnimationTranslationTable = {
     ["deploy"] = "draw",
