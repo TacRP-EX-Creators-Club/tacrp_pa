@@ -5,13 +5,12 @@ AddCSLuaFile()
 
 // names and stuff
 SWEP.PrintName = "Lewis Gun"
-SWEP.AbbrevName = "Lewis Gun"
 SWEP.Category = "Tactical RP"
 
-SWEP.SubCatTier = "4Consumer"
+SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Machine Gun"
 
-SWEP.Description = "Pan-fed, water-cooled light machine gun with a small magazine. Exceptionally controllable."
+SWEP.Description = "Pan-fed, water-cooled light machine gun with a relatively small magazine."
 SWEP.Description_Quote = "\"All of you, get out of my way!\""
 
 SWEP.Trivia_Caliber = ".303 British"
@@ -31,8 +30,9 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 45,
-        Damage_Min = 30,
+        Damage_Max = 40,
+        Damage_Min = 28,
+        Spread = 0.008,
     },
     [TacRP.BALANCE_TTT] = {
 
@@ -52,18 +52,6 @@ SWEP.BalanceStats = {
             [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.9
         },
-    },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 19,
-        Damage_Min = 14,
-
-        ClipSize = 100,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        Description = "Balanced light machine gun that can put down some serious firepower.",
-        ClipSize = 47,
-        RecoilSpreadPenalty = 0.000,
-        ReloadTimeMult = 0.75
     }
 }
 
@@ -82,14 +70,14 @@ SWEP.BodyDamageMultipliers = {
 
 // "ballistics"
 
-SWEP.Damage_Max = 38
-SWEP.Damage_Min = 26
-SWEP.Range_Min = 2400
-SWEP.Range_Max = 4400
+SWEP.Damage_Max = 30
+SWEP.Damage_Min = 20
+SWEP.Range_Min = 1800
+SWEP.Range_Max = 3200
 SWEP.Penetration = 12
-SWEP.ArmorPenetration = 0.75
+SWEP.ArmorPenetration = 0.8
 
-SWEP.MuzzleVelocity = 19000
+SWEP.MuzzleVelocity = 16000
 
 // misc. shooting
 
@@ -97,38 +85,38 @@ SWEP.Firemode = 2
 
 SWEP.RPM = 550
 
-SWEP.Spread = 0.009
+SWEP.Spread = 0.012
 
 SWEP.ShootTimeMult = 0.5
 
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 10
-SWEP.RecoilResetTime = 0.15
-SWEP.RecoilDissipationRate = 15
-SWEP.RecoilFirstShotMult = 2
+SWEP.RecoilMaximum = 20
+SWEP.RecoilResetTime = 0.2
+SWEP.RecoilDissipationRate = 25
+SWEP.RecoilFirstShotMult = 1.5
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 2.5
+SWEP.RecoilKick = 6
 SWEP.RecoilAltMultiplier = 150
-SWEP.RecoilStability = 0.6
+SWEP.RecoilStability = 0.25
 
-SWEP.HipFireSpreadPenalty = 0.07
-SWEP.MoveSpreadPenalty = 0.02
-SWEP.RecoilSpreadPenalty = 0.000 // Water cooled!
+SWEP.HipFireSpreadPenalty = 0.05
+SWEP.MoveSpreadPenalty = 0.015
+SWEP.RecoilSpreadPenalty = 0.00025
 SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.9
+SWEP.MoveSpeedMult = 0.8
 SWEP.ShootingSpeedMult = 0.5
 SWEP.SightedSpeedMult = 0.5
 
-SWEP.ReloadSpeedMult = 0.5
+SWEP.ReloadSpeedMult = 0.25
 SWEP.ReloadSpeedMultTime = 1
 
-SWEP.AimDownSightsTime = 0.45
+SWEP.AimDownSightsTime = 0.54
 SWEP.SprintToFireTime = 0.65
 
 SWEP.Sway = 2
@@ -138,7 +126,7 @@ SWEP.FreeAimMaxAngle = 10
 
 SWEP.Bipod = true
 SWEP.BipodRecoil = 0.25
-SWEP.BipodKick = 0.125
+SWEP.BipodKick = 0.25
 
 // hold types
 
@@ -174,7 +162,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 47
 SWEP.Ammo = "ar2"
 
-SWEP.ReloadTimeMult = 1.1
+SWEP.ReloadTimeMult = 1.4
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/lewis.mdl"
 SWEP.DropMagazineImpact = "metal"
 
@@ -206,6 +194,9 @@ SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.EjectEffect = 2
 
 // anims
+
+SWEP.DeployTimeMult = 2
+SWEP.HolsterTimeMult = 2.5
 
 SWEP.AnimationTranslationTable = {
     ["fire_iron"] = "fire2_M",
@@ -264,7 +255,7 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Accessory",
-        Category = {"acc", "extendedbelt", "acc_duffle", "acc_bipod", "acc_sling"},
+        Category = {"acc", "acc_duffle", "acc_bipod", "acc_sling"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
@@ -303,11 +294,11 @@ local function addsound(name, spath)
     })
 end
 
-addsound("tacint_p90.Clip_Out", path .. "clip_out.wav")
-addsound("tacint_p90.Clip_In", path .. "clip_in.wav")
-addsound("tacint_p90.Clip_slap", path .. "clip_slap.wav")
-addsound("tacint_p90.bolt_release", path .. "bolt_release.wav")
-addsound("tacint_p90.bolt_back", path .. "bolt_back.wav")
-addsound("tacint_p90.bolt_forward", path .. "bolt_forward.wav")
-addsound("tacint_p90.fire_select", path .. "fire_select.wav")
-addsound("tacint_p90.mag_release", path .. "mag_release.wav")
+addsound("tacint_lewis.Clip_Out", path .. "clip_out.wav")
+addsound("tacint_lewis.Clip_In", path .. "clip_in.wav")
+addsound("tacint_lewis.Clip_slap", path .. "clip_slap.wav")
+addsound("tacint_lewis.bolt_release", path .. "bolt_release.wav")
+addsound("tacint_lewis.bolt_back", path .. "bolt_back.wav")
+addsound("tacint_lewis.bolt_forward", path .. "bolt_forward.wav")
+addsound("tacint_lewis.fire_select", path .. "fire_select.wav")
+addsound("tacint_lewis.mag_release", path .. "mag_release.wav")
