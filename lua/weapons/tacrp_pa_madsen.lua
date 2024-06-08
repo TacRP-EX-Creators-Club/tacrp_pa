@@ -21,7 +21,7 @@ SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = "Assets: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_madsen.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_pdw.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_madsen.mdl"
 
 SWEP.Slot = 2
 
@@ -194,7 +194,7 @@ SWEP.AnimationTranslationTable = {
     ["fire1"] = "fire1_M",
     ["fire2"] = "fire2_M",
     ["fire3"] = "fire3_M",
-    ["fire4"] = {"fire4_M", "fire4_L", "fire4_R"},
+    ["fire4"] = "fire4_M",
     ["melee"] = {"melee1", "melee2"}
 }
 
