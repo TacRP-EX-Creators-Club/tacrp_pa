@@ -22,7 +22,7 @@ SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = "Assets: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint/v_uzi_b.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_xd45.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_uzi_b.mdl"
 
 SWEP.Slot = 2
 
@@ -143,8 +143,8 @@ SWEP.FreeAimMaxAngle = 4
 
 // hold types
 
-SWEP.HoldType = "revolver"
-SWEP.HoldTypeSprint = "normal"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeBlindFire = false
 
 SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
