@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "2Magnum Pistol"
 
-SWEP.Description = "Rare revolver with a reputation for accuracy and power. Treat her well, and she'll never let you down."
+SWEP.Description = "Rare revolver with a reputation for accuracy and power. To be fired one-handed; cowboy style."
 SWEP.Description_Quote = "\"When you have to shoot, shoot. Don't talk.\""
 
 SWEP.Trivia_Caliber = ".357 Magnum"
@@ -105,8 +105,8 @@ SWEP.RecoilResetTime = 0
 SWEP.RecoilDissipationRate = 9
 SWEP.RecoilFirstShotMult = 0.9
 
-SWEP.RecoilVisualKick = 5
-SWEP.RecoilKick = 9
+SWEP.RecoilVisualKick = 10
+SWEP.RecoilKick = 14
 SWEP.RecoilStability = 0.5
 
 SWEP.RecoilSpreadPenalty = 0.004
@@ -128,7 +128,7 @@ SWEP.FreeAimMaxAngle = 6.5
 
 // hold types
 
-SWEP.HoldType = "revolver"
+SWEP.HoldType = "pistol"
 SWEP.HoldTypeSprint = "normal"
 SWEP.HoldTypeBlindFire = "pistol"
 
