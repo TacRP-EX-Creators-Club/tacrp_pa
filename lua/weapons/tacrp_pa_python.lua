@@ -22,7 +22,7 @@ SWEP.Faction = TacRP.FACTION_COALITION
 SWEP.Credits = "Assets: Damage Inc"
 
 SWEP.ViewModel = "models/weapons/tacint/v_python.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_mr96.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_python.mdl"
 
 SWEP.Slot = 1
 
@@ -136,7 +136,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_REVOLVER
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(0, -2, -4)
+SWEP.PassivePos = Vector(0, -2, -6)
 
 SWEP.BlindFireAng = Angle(0, 5, 0)
 SWEP.BlindFirePos = Vector(3, -2, -5)
@@ -150,7 +150,7 @@ SWEP.SprintPos = Vector(2, 0, -12)
 SWEP.SightAng = Angle(0, 0.8, 0)
 SWEP.SightPos = Vector(-3.395, 0, -3.5)
 
-SWEP.CorrectivePos = Vector(0, 0, 0.1)
+SWEP.CorrectivePos = Vector(0, 0, 0)
 
 SWEP.HolsterVisible = true
 SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_PISTOL
@@ -165,9 +165,9 @@ SWEP.ScopedSway = 0.6
 SWEP.ClipSize = 6
 SWEP.Ammo = "357"
 
-SWEP.ReloadTimeMult = 1
+SWEP.ReloadTimeMult = 0.9
 
-SWEP.ReloadUpInTime = 1.35
+SWEP.ReloadUpInTime = 1.2
 
 SWEP.JamSkipFix = true
 
@@ -246,14 +246,14 @@ SWEP.ProceduralIronFire = {
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
-        Category = {"optic_cqb", "optic_medium"},
+        Category = "optic_pistol",
         Bone = "ValveBiped.mr96_rootbone",
         WMBone = "Box01",
         AttachSound = "TacRP/weapons/optic_on.wav",
         DetachSound = "TacRP/weapons/optic_off.wav",
         VMScale = 0.8,
         WMScale = 1,
-        Pos_VM = Vector(-3.9, -0.125, 6.5),
+        Pos_VM = Vector(-3.4, -0.14, 4),
         Ang_VM = Angle(90, 0, 0),
         Pos_WM = Vector(0, 1.5, -0.8),
         Ang_WM = Angle(0, -90, 0),
