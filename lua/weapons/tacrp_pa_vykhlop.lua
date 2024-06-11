@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "7Sniper Rifle"
 
-SWEP.Description = "Heavy straight-pull bolt action sniper rifle with a unique, powerful round with poor armor penetration and slow muzzle velocity."
+SWEP.Description = "Sub-sonic sniper rifle with powerful and fast to cycle sub-sonic ammo, but has low muzzle velocity and poor armor penetration. Equipped with a 6x scope by default."
 SWEP.Description_Quote = "Na'am seyidi, al qanas ala al khatt."
 
 SWEP.Trivia_Caliber = "12.7x55mm"
@@ -29,26 +29,20 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 45,
-        Damage_Min = 135,
+        Damage_Max = 75,
+        Damage_Min = 120,
 
-        Range_Min = 900,
-        Range_Max = 2000,
+        Range_Min = 1500,
+        Range_Max = 4000,
     },
     [TacRP.BALANCE_TTT] = {
-
-        Description = "Heavy bolt action sniper rifle with a unique, powerful round with poor armor penetration and slow muzzle velocity.",
-
         Damage_Max = 55,
         Damage_Min = 80,
-
         Range_Min = 300,
         Range_Max = 2000,
-
         RPM = 45,
         ShootTimeMult = 0.9,
         HipFireSpreadPenalty = 0.025,
-
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 5,
             [HITGROUP_CHEST] = 1.25,
@@ -59,27 +53,6 @@ SWEP.BalanceStats = {
             [HITGROUP_RIGHTLEG] = 0.5,
             [HITGROUP_GEAR] = 0.5
         },
-    },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 45,
-        Damage_Min = 55,
-
-        Range_Min = 900,
-        Range_Max = 2000,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 2,
-            [HITGROUP_CHEST] = 1,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.75,
-            [HITGROUP_RIGHTARM] = 0.75,
-            [HITGROUP_LEFTLEG] = 0.5,
-            [HITGROUP_RIGHTLEG] = 0.5,
-            [HITGROUP_GEAR] = 0.5
-        },
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        HipFireSpreadPenalty = 0.018
     }
 }
 
@@ -87,18 +60,18 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 135
-SWEP.Damage_Min = 75
-SWEP.Range_Min = 4000
-SWEP.Range_Max = 5000
-SWEP.Penetration = 10 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.400
+SWEP.Damage_Max = 130
+SWEP.Damage_Min = 90
+SWEP.Range_Min = 3000
+SWEP.Range_Max = 7000
+SWEP.Penetration = 18 // units of metal this weapon can penetrate
+SWEP.ArmorPenetration = 0.5
 SWEP.ArmorBonus = 2.5
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.1,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.75,
     [HITGROUP_RIGHTARM] = 0.75,
     [HITGROUP_LEFTLEG] = 0.5,
@@ -106,7 +79,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.5
 }
 
-SWEP.MuzzleVelocity = 12500
+SWEP.MuzzleVelocity = 11500
 
 // misc. shooting
 
@@ -114,12 +87,12 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 65
+SWEP.RPM = 48
 
 SWEP.Spread = 0
 
 SWEP.HipFireSpreadPenalty = 0.1
-SWEP.PeekPenaltyFraction = 0.25
+SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 1
@@ -128,8 +101,8 @@ SWEP.RecoilDissipationRate = 1
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
 SWEP.RecoilVisualKick = 10
-
-SWEP.RecoilKick = 4
+SWEP.RecoilKick = 15
+SWEP.RecoilStability = 0.5
 
 SWEP.RecoilSpreadPenalty = 0 // extra spread per one unit of recoil
 
@@ -144,16 +117,16 @@ SWEP.SightedSpeedMult = 0.5
 SWEP.ReloadSpeedMult = 0.8
 
 SWEP.AimDownSightsTime = 0.5
-SWEP.SprintToFireTime = 0.55
+SWEP.SprintToFireTime = 0.6
 
-SWEP.Sway = 2
-SWEP.ScopedSway = 0.04
+SWEP.Sway = 3
+SWEP.ScopedSway = 0.2
 
-SWEP.FreeAimMaxAngle = 15
+SWEP.FreeAimMaxAngle = 10
 
 SWEP.Bipod = true
 SWEP.BipodRecoil = 0.25
-SWEP.BipodKick = 0.125
+SWEP.BipodKick = 0.2
 
 // hold types
 
@@ -198,7 +171,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 
 SWEP.Scope = true
 SWEP.ScopeOverlay = Material("tacrp/scopes/l96.png", "mips smooth") // Material("path/to/overlay")
-SWEP.ScopeFOV = 90 / 8
+SWEP.ScopeFOV = 90 / 6
 SWEP.ScopeLevels = 1 // 2 = like CS:S
 SWEP.ScopeHideWeapon = true
 
@@ -208,8 +181,10 @@ SWEP.ClipSize = 10
 SWEP.Ammo = "357"
 SWEP.AmmoTTT = "357"
 
-SWEP.ReloadTimeMult = 1.2
-SWEP.ShootTimeMult = 0.6
+SWEP.TracerNum = 0
+
+SWEP.ReloadTimeMult = 2
+SWEP.ShootTimeMult = 0.75
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/vykhlop.mdl"
 
 SWEP.ReloadUpInTime = 2.1
@@ -312,7 +287,7 @@ SWEP.Attachments = {
     },
     [6] = {
         PrintName = "Ammo",
-        Category = {"ammo_sniper"},
+        Category = {"ammo_rifle_sub"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
