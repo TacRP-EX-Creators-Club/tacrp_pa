@@ -18,8 +18,12 @@ SWEP.Trivia_Caliber = ".357 Magnum"
 SWEP.Trivia_Manufacturer = "Colt's Manufacturing Company"
 SWEP.Trivia_Year = "1955"
 
-SWEP.Faction = TacRP.FACTION_COALITION
-SWEP.Credits = "Assets: Damage Inc"
+SWEP.Faction = TacRP.FACTION_NEUTRAL
+SWEP.Credits = [[
+Model: Aggressive Napkin
+Texture: Teh Snake
+Sound: Vunsunta, XLongWayHome
+Animation: Tactical Intervention]]
 
 SWEP.ViewModel = "models/weapons/tacint/v_python.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_python.mdl"
@@ -30,13 +34,13 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 35,
-        Damage_Min = 20,
+        Damage_Max = 50,
+        Damage_Min = 25,
 
-        Range_Min = 600,
-        Range_Max = 1600,
+        Range_Min = 400,
+        Range_Max = 1800,
 
-        RPM = 60,
+        RPM = 75,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 4,
@@ -50,25 +54,17 @@ SWEP.BalanceStats = {
         },
 
         RecoilMaximum = 2,
-        RecoilDissipationRate = 2.5,
+        RecoilDissipationRate = 2,
     },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 55,
-        Damage_Min = 24,
-        RPM = 120,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilDissipationRate = 4
-    }
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 
 // "ballistics"
 
-SWEP.Damage_Max = 54 // damage at minimum range
-SWEP.Damage_Min = 28 // damage at maximum range
-SWEP.Range_Min = 700 // distance for which to maintain maximum damage
+SWEP.Damage_Max = 60 // damage at minimum range
+SWEP.Damage_Min = 35 // damage at maximum range
+SWEP.Range_Min = 800 // distance for which to maintain maximum damage
 SWEP.Range_Max = 2500 // distance at which we drop to minimum damage
 SWEP.Penetration = 6 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.9
@@ -76,7 +72,7 @@ SWEP.ArmorPenetration = 0.9
 SWEP.MuzzleVelocity = 15500
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 5,
+    [HITGROUP_HEAD] = 4,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1.25,
     [HITGROUP_LEFTARM] = 0.9,
@@ -92,7 +88,7 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Double-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 90
+SWEP.RPM = 150
 
 SWEP.Spread = 0.001
 
@@ -101,13 +97,13 @@ SWEP.ShootTimeMult = 1
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 2
-SWEP.RecoilResetTime = 0
-SWEP.RecoilDissipationRate = 9
-SWEP.RecoilFirstShotMult = 0.9
+SWEP.RecoilResetTime = 0.1
+SWEP.RecoilDissipationRate = 6
+SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 10
-SWEP.RecoilKick = 14
-SWEP.RecoilStability = 0.5
+SWEP.RecoilVisualKick = 6
+SWEP.RecoilKick = 15
+SWEP.RecoilStability = 0.6
 
 SWEP.RecoilSpreadPenalty = 0.004
 
@@ -117,14 +113,14 @@ SWEP.CanBlindFire = true
 
 SWEP.MoveSpeedMult = 0.9
 SWEP.ShootingSpeedMult = 0.75
-SWEP.SightedSpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.9
 
 SWEP.ReloadSpeedMult = 0.9
 
-SWEP.AimDownSightsTime = 0.28
-SWEP.SprintToFireTime = 0.34
+SWEP.AimDownSightsTime = 0.2
+SWEP.SprintToFireTime = 0.15
 
-SWEP.FreeAimMaxAngle = 6.5
+SWEP.FreeAimMaxAngle = 2
 
 // hold types
 
@@ -136,7 +132,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_REVOLVER
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(0, -2, -6)
+SWEP.PassivePos = Vector(0, -1, -5)
 
 SWEP.BlindFireAng = Angle(0, 5, 0)
 SWEP.BlindFirePos = Vector(3, -2, -5)
@@ -144,11 +140,11 @@ SWEP.BlindFirePos = Vector(3, -2, -5)
 SWEP.BlindFireSuicideAng = Angle(-125, 0, 45)
 SWEP.BlindFireSuicidePos = Vector(25, 12, -6)
 
-SWEP.SprintAng = Angle(0, 30, 0)
-SWEP.SprintPos = Vector(2, 0, -12)
+SWEP.SprintAng = Angle(0, 15, 0)
+SWEP.SprintPos = Vector(2, 0, -10)
 
-SWEP.SightAng = Angle(0, 0.8, 0)
-SWEP.SightPos = Vector(-3.395, 0, -3.5)
+SWEP.SightAng = Angle(0, 0.45, 0)
+SWEP.SightPos = Vector(-3.395, 0, -3.35)
 
 SWEP.CorrectivePos = Vector(0, 0, 0)
 
@@ -157,7 +153,7 @@ SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_PISTOL
 SWEP.HolsterPos = Vector(0, 3, -4)
 SWEP.HolsterAng = Angle(90, 0, 0)
 
-SWEP.Sway = 1.5
+SWEP.Sway = 1
 SWEP.ScopedSway = 0.6
 
 // reload
@@ -165,7 +161,7 @@ SWEP.ScopedSway = 0.6
 SWEP.ClipSize = 6
 SWEP.Ammo = "357"
 
-SWEP.ReloadTimeMult = 0.9
+SWEP.ReloadTimeMult = 1
 
 SWEP.ReloadUpInTime = 1.2
 
@@ -174,12 +170,9 @@ SWEP.JamSkipFix = true
 // sounds
 
 local path = "TacRP/weapons/mr96/"
+local path1 = "tacint_extras/python/"
 
-SWEP.Sound_Shoot = {
-    "^" .. path .. "mr96_fire-1.wav",
-    "^" .. path .. "mr96_fire-2.wav",
-    "^" .. path .. "mr96_fire-3.wav",
-}
+SWEP.Sound_Shoot =  "^" .. path1 .. "deagle-1.wav"
 
 SWEP.Vol_Shoot = 130
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
@@ -194,6 +187,8 @@ SWEP.EjectEffect = 0
 SWEP.MuzzleEffect = "muzzleflash_pistol_rbull"
 
 // anims
+
+SWEP.DeployTimeMult = 0.75
 
 SWEP.AnimationTranslationTable = {
     ["deploy"] = "sh_draw",
