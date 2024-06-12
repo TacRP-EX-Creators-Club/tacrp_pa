@@ -21,7 +21,7 @@ SWEP.Trivia_Year = "1950"
 SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = "Model: Firearms: Source 2.0 Team\nAnimations: Tactical Intervention\nPorted By: Arctic"
 
-SWEP.ViewModel = "models/weapons/tacint/v_hipointmdl"
+SWEP.ViewModel = "models/weapons/tacint/v_uzi_b.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_uzi_b.mdl"
 
 SWEP.Slot = 2
