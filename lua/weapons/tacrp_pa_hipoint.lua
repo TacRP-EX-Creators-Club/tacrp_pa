@@ -4,7 +4,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // names and stuff
-SWEP.PrintName = "Hi-Point Carbine"
+SWEP.PrintName = "Hi-Point 995"
 SWEP.AbbrevName = "Hi-Point"
 SWEP.Category = "Tactical RP"
 
@@ -22,7 +22,7 @@ SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = "Model: Yumyumshisha\nAnimations: Tactical Intervention\nPorted By: Arctic"
 
 SWEP.ViewModel = "models/weapons/tacint/v_hipoint.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_uzi_b.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_hipoint.mdl"
 
 SWEP.Slot = 2
 
@@ -179,7 +179,7 @@ SWEP.Ammo = "pistol"
 
 SWEP.ReloadTimeMult = 1.0
 
-SWEP.DropMagazineModel = "models/weapons/tacint/magazines/uzi.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint/magazines/p2000.mdl"
 SWEP.DropMagazineImpact = "pistol"
 
 SWEP.ReloadUpInTime = 1
