@@ -116,8 +116,8 @@ SWEP.RecoilResetTime = 0.02
 SWEP.RecoilDissipationRate = 33
 SWEP.RecoilFirstShotMult = 1.75
 
-SWEP.RecoilVisualKick = 1.0
-SWEP.RecoilKick = 1.25
+SWEP.RecoilVisualKick = 2.0
+SWEP.RecoilKick = 2.5
 SWEP.RecoilStability = 0.65
 SWEP.RecoilAltMultiplier = 200
 
@@ -286,7 +286,7 @@ SWEP.Attachments = {
     },
     [4] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_extmag_smg", "acc_holster"},
+        Category = {"acc", "acc_extmag_smg", "acc_sling", "acc_duffle"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
