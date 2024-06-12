@@ -161,8 +161,8 @@ SWEP.BlindFireSuicidePos = Vector(25, 19, -5)
 SWEP.SprintAng = Angle(30, -15, 0)
 SWEP.SprintPos = Vector(5, 0, -4)
 
-SWEP.SightAng = Angle(0.3, 1.3, 0)
-SWEP.SightPos = Vector(-3.30, -4, -3.8)
+SWEP.SightAng = Angle(0.23, 0.2, 0)
+SWEP.SightPos = Vector(-3.19, -10, -3.88)
 
 SWEP.HolsterVisible = true
 SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_BACK
@@ -242,7 +242,7 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/silencer_off.wav",
         VMScale = 1,
         WMScale = 1,
-        Pos_VM = Vector(-3.15, -0.25, 13.5),
+        Pos_VM = Vector(-3.25, -0.7, 27),
         Ang_VM = Angle(90, 0, 0),
         Pos_WM = Vector(18, 1.2, -3.8),
         Ang_WM = Angle(0, 0, 180),
@@ -256,14 +256,14 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         VMScale = 1,
         WMScale = 1,
-        Pos_VM = Vector(-2, -0.25, 7.5),
+        Pos_VM = Vector(-1.7, -0.7, 19),
         Ang_VM = Angle(90, 0, 180),
         Pos_WM = Vector(11, 1.2, -2.5),
         Ang_WM = Angle(0, 0, 0),
     },
     [3] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_foldstock", "acc_extmag_smg", "acc_holster"},
+        Category = {"acc", "acc_extmag_smg", "acc_holster"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
@@ -275,7 +275,7 @@ SWEP.Attachments = {
     },
     [5] = {
         PrintName = "Trigger",
-        Category = {"trigger_auto"},
+        Category = {"trigger_semi"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
