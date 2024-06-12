@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "7Sniper Rifle"
 
-SWEP.Description = "Sub-sonic sniper rifle with powerful and fast to cycle sub-sonic ammo, but has low muzzle velocity and poor armor penetration. Equipped with a 6x scope by default."
+SWEP.Description = "Sub-sonic sniper rifle with high damage and rate of fire, but low muzzle velocity and poor armor penetration. Equipped with a 6x scope by default."
 SWEP.Description_Quote = "Na'am seyidi, al qanas ala al khatt."
 
 SWEP.Trivia_Caliber = "12.7x55mm"

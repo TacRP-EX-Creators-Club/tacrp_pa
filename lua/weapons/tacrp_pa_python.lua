@@ -32,6 +32,9 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
+        Damage_Max = 60,
+        Damage_Min = 30,
+        RPM = 150,
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 50,
@@ -62,8 +65,8 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 
 // "ballistics"
 
-SWEP.Damage_Max = 60 // damage at minimum range
-SWEP.Damage_Min = 35 // damage at maximum range
+SWEP.Damage_Max = 70 // damage at minimum range
+SWEP.Damage_Min = 45 // damage at maximum range
 SWEP.Range_Min = 800 // distance for which to maintain maximum damage
 SWEP.Range_Max = 2500 // distance at which we drop to minimum damage
 SWEP.Penetration = 6 // units of metal this weapon can penetrate
@@ -88,7 +91,7 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Double-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 150
+SWEP.RPM = 180
 
 SWEP.Spread = 0.001
 
@@ -102,7 +105,7 @@ SWEP.RecoilDissipationRate = 6
 SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 6
-SWEP.RecoilKick = 15
+SWEP.RecoilKick = 16
 SWEP.RecoilStability = 0.6
 
 SWEP.RecoilSpreadPenalty = 0.004
@@ -206,8 +209,8 @@ SWEP.AnimationTranslationTable = {
 SWEP.ProceduralIronFire = {
     vm_pos = Vector(0, -3, -4.5),
     vm_ang = Angle(0, 20, 0),
-    t = 0.5,
-    tmax = 0.5,
+    t = 0.35,
+    tmax = 0.35,
     bones = {
         {
             bone = "ValveBiped.cylinder",
@@ -219,7 +222,7 @@ SWEP.ProceduralIronFire = {
             bone = "ValveBiped.hammer",
             ang = Angle(35, 0, 0),
             t0 = 0.05,
-            t1 = 0.15,
+            t1 = 0.2,
         },
         {
             bone = "ValveBiped.Bip01_R_Finger1",
