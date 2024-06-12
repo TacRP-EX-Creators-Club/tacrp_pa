@@ -153,3 +153,53 @@ if engine.ActiveGamemode() == "terrortown" then
 end
 
 TacRP.LoadAtt(ATT, "optic_svt_pu")
+
+------------------------------
+-- #region ammo_m202_smoke
+------------------------------
+ATT = {}
+
+ATT.PrintName = "Smoke"
+ATT.Icon = Material("entities/tacrp_att_ammo_m202.png", "mips smooth")
+ATT.Description = "Rocket that produces a concealing smokescreen on impact."
+ATT.Pros = {"att.procon.smoke"}
+ATT.Cons = {"att.procon.noexp"}
+
+ATT.Category = "ammo_m202"
+
+ATT.ShootEnt = "tacrp_proj_m202_smoke"
+
+ATT.InstalledElements = {"smoke"}
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_m202_smoke")
+-- #endregion
+
+------------------------------
+-- #region ammo_m202_apers
+------------------------------
+ATT = {}
+
+ATT.PrintName = "Hornet"
+ATT.Icon = Material("entities/tacrp_att_ammo_m202.png", "mips smooth")
+ATT.Description = "Airburst fragmentation rockets for direct fire anti-personnel use."
+ATT.Pros = {"att.procon.radius", "att.procon.proxfuse"}
+ATT.Cons = {"stat.damage", "stat.muzzlevelocity"}
+
+ATT.Category = "ammo_m202"
+
+ATT.Override_Damage_Max = 60
+ATT.Override_Damage_Min = 60
+
+ATT.ShootEnt = "tacrp_proj_m202_apers"
+ATT.Mult_ShootEntForce = 0.75
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_m202_apers")
+-- #endregion
