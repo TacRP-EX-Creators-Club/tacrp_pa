@@ -8,7 +8,7 @@ SWEP.PrintName = "IMI Uzi"
 SWEP.AbbrevName = "Uzi"
 SWEP.Category = "Tactical RP"
 
-SWEP.SubCatTier = "5Value"
+SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "3Submachine Gun"
 
 SWEP.Description = "Post-war submachine gun with amazing controllability. One of the most iconic guns ever invented. This version fires from a closed bolt."
