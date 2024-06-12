@@ -140,8 +140,8 @@ SWEP.BlindFirePos = Vector(3, -2, -5)
 SWEP.BlindFireSuicideAng = Angle(-125, 0, 45)
 SWEP.BlindFireSuicidePos = Vector(25, 12, -6)
 
-SWEP.SprintAng = Angle(0, 15, 0)
-SWEP.SprintPos = Vector(2, 0, -10)
+SWEP.SprintAng = Angle(0, 45, 0)
+SWEP.SprintPos = Vector(2, 0, -16)
 
 SWEP.SightAng = Angle(0, 0.45, 0)
 SWEP.SightPos = Vector(-3.395, 0, -3.35)
@@ -154,7 +154,7 @@ SWEP.HolsterPos = Vector(0, 3, -4)
 SWEP.HolsterAng = Angle(90, 0, 0)
 
 SWEP.Sway = 1
-SWEP.ScopedSway = 0.6
+SWEP.ScopedSway = 0.5
 
 // reload
 
@@ -188,7 +188,7 @@ SWEP.MuzzleEffect = "muzzleflash_pistol_rbull"
 
 // anims
 
-SWEP.DeployTimeMult = 0.75
+SWEP.DeployTimeMult = 1
 
 SWEP.AnimationTranslationTable = {
     ["deploy"] = "sh_draw",
@@ -248,7 +248,7 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/optic_off.wav",
         VMScale = 0.8,
         WMScale = 1,
-        Pos_VM = Vector(-3.4, -0.14, 4),
+        Pos_VM = Vector(-3.4, -0.14, 2.7),
         Ang_VM = Angle(90, 0, 0),
         Pos_WM = Vector(0, 1.5, -0.8),
         Ang_WM = Angle(0, -90, 0),
@@ -302,10 +302,10 @@ local function addsound(name, spath)
     })
 end
 
-addsound("TacInt_MR96.Release_Cylinder", path .. "mr96_release_cylinder.wav")
-addsound("TacInt_MR96.Eject_Shells", path .. "mr96_eject_shells.wav")
-addsound("TacInt_MR96.Insert_Bullets", path .. "mr96_insert_bullets.wav")
-addsound("TacInt_MR96.Shut_Cylinder", path .. "mr96_shut_cylinder.wav")
-addsound("TacInt_MR96.Insert_Bullets-Mid", path .. "mr96_insert_bullets-mid.wav")
-addsound("TacInt_MR96.Cock_Hammer", path .. "mr96_cockhammer.wav")
-addsound("TacInt_MR96.Deploy", path .. "mr96_deploy.wav")
+addsound("TacInt_Python.Release_Cylinder", path .. "mr96_release_cylinder.wav")
+addsound("TacInt_Python.Eject_Shells", path .. "mr96_eject_shells.wav")
+addsound("TacInt_Python.Insert_Bullets", path .. "mr96_insert_bullets.wav")
+addsound("TacInt_Python.Shut_Cylinder", path .. "mr96_shut_cylinder.wav")
+addsound("TacInt_Python.Insert_Bullets-Mid", path .. "mr96_insert_bullets-mid.wav")
+addsound("TacInt_Python.Cock_Hammer", path .. "mr96_cockhammer.wav")
+addsound("TacInt_Python.Deploy", path .. "mr96_deploy.wav")
