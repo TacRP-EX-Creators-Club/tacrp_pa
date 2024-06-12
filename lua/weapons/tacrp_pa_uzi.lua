@@ -19,9 +19,9 @@ SWEP.Trivia_Manufacturer = "Israeli Military Industries"
 SWEP.Trivia_Year = "1950"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
-SWEP.Credits = "Assets: Tactical Intervention"
+SWEP.Credits = "Model: Firearms: Source 2.0 Team\nAnimations: Tactical Intervention\nPorted By: Arctic"
 
-SWEP.ViewModel = "models/weapons/tacint/v_uzi_b.mdl"
+SWEP.ViewModel = "models/weapons/tacint/v_hipointmdl"
 SWEP.WorldModel = "models/weapons/tacint/w_uzi_b.mdl"
 
 SWEP.Slot = 2
@@ -88,7 +88,7 @@ SWEP.Penetration = 3
 SWEP.ArmorPenetration = 0.525
 SWEP.ArmorBonus = 0.5
 
-SWEP.MuzzleVelocity = 17000
+SWEP.MuzzleVelocity = 15000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 2,
@@ -172,7 +172,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 
 // reload
 
-SWEP.ClipSize = 32
+SWEP.ClipSize = 10
 SWEP.Ammo = "pistol"
 
 SWEP.ReloadTimeMult = 1.2
