@@ -11,10 +11,10 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Sporter"
 
-SWEP.Description = "Popular semi-automatic pistol-caliber carbine. Cheap and reliable."
+SWEP.Description = "Popular semi-automatic pistol-caliber carbine. Cheap and reliable, but not all that powerful."
 SWEP.Description_Quote = "\"Good wombs have borne bad sons.\""
 
-SWEP.Trivia_Caliber = "9x19mm Parabellum"
+SWEP.Trivia_Caliber = "9x19mm"
 SWEP.Trivia_Manufacturer = "Hi-Point Firearms"
 SWEP.Trivia_Year = "1998"
 
@@ -62,28 +62,16 @@ SWEP.BalanceStats = {
             [HITGROUP_GEAR] = 0.9
         },
     },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 15,
-        Damage_Min = 7,
-
-        RecoilSpreadPenalty = 0.004,
-        HipFireSpreadPenalty = 0.025,
-        RecoilKick = 8,
-        FreeAimMaxAngle = 4,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilMaximum = 20
-    }
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.MachinePistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 25
-SWEP.Damage_Min = 12
-SWEP.Range_Min = 1600
-SWEP.Range_Max = 4500
+SWEP.Damage_Max = 20
+SWEP.Damage_Min = 10
+SWEP.Range_Min = 1800
+SWEP.Range_Max = 4000
 SWEP.Penetration = 4
 SWEP.ArmorPenetration = 0.6
 SWEP.ArmorBonus = 0.5
@@ -93,7 +81,7 @@ SWEP.MuzzleVelocity = 17000
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.15,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.75,
@@ -105,38 +93,39 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 450
+SWEP.RPM = 420
+SWEP.RPMMultSemi = 0.8
 
 SWEP.Spread = 0.007
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 11
+SWEP.RecoilMaximum = 5
 SWEP.RecoilResetTime = 0.02
-SWEP.RecoilDissipationRate = 33
-SWEP.RecoilFirstShotMult = 1.75
+SWEP.RecoilDissipationRate = 15
+SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 1.0
-SWEP.RecoilKick = 1.25
+SWEP.RecoilVisualKick = 1
+SWEP.RecoilKick = 2
 SWEP.RecoilStability = 0.65
 SWEP.RecoilAltMultiplier = 200
 
 SWEP.RecoilSpreadPenalty = 0.0015
-SWEP.HipFireSpreadPenalty = 0.015
+SWEP.HipFireSpreadPenalty = 0.03
 
 // handling
 
-SWEP.MoveSpeedMult = 0.94
+SWEP.MoveSpeedMult = 0.92
 SWEP.ShootingSpeedMult = 0.9
-SWEP.SightedSpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.75
 
-SWEP.ReloadSpeedMult = 1
+SWEP.ReloadSpeedMult = 0.75
 
 SWEP.AimDownSightsTime = 0.27
 SWEP.SprintToFireTime = 0.3
 
-SWEP.Sway = 0.9
-SWEP.ScopedSway = 0.25
+SWEP.Sway = 1
+SWEP.ScopedSway = 0.15
 
 SWEP.FreeAimMaxAngle = 4
 
@@ -150,7 +139,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(0, -2, -5)
+SWEP.PassivePos = Vector(0, -6, -5.5)
 
 SWEP.BlindFireAng = Angle(0, 5, 0)
 SWEP.BlindFirePos = Vector(0, -2, -5)
@@ -177,7 +166,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 10
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1.0
+SWEP.ReloadTimeMult = 1.3
 
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/p2000.mdl"
 SWEP.DropMagazineImpact = "pistol"
