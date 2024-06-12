@@ -175,7 +175,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 32
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1
+SWEP.ReloadTimeMult = 1.2
 
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/uzi.mdl"
 SWEP.DropMagazineImpact = "pistol"
@@ -204,6 +204,7 @@ SWEP.MuzzleEffect = "muzzleflash_smg"
 
 SWEP.AnimationTranslationTable = {
     ["fire_iron"] = "fire1_M",
+    ["deploy"] = "unholster",
     ["fire1"] = "fire1_M",
     ["fire2"] = "fire2_M",
     ["fire3"] = "fire3_M",
