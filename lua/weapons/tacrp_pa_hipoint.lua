@@ -207,7 +207,7 @@ SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.AnimationTranslationTable = {
     ["fire_iron"] = "fire1_M",
     ["deploy"] = "unholster",
-    ["fire1"] = "fire1_M",
+    ["fire1"] = {"fire1_M", "fire1_L"},
     ["fire2"] = "fire2_M",
     ["fire3"] = "fire3_M",
     ["fire4"] = {"fire4_M", "fire4_L", "fire4_R"},
@@ -219,6 +219,15 @@ SWEP.ProceduralIronFire = {
     vm_ang = Angle(0, 0.25, 0),
     t = 0.2,
     tmax = 0.2,
+    bones = {
+        // charging handle
+        {
+            bone = "ValveBiped.bolt_handle",
+            pos = Vector(0, 0, -2),
+            t0 = 0,
+            t1 = 0.1
+        }
+    }
 }
 
 SWEP.ShootTimeMult = 0.5
