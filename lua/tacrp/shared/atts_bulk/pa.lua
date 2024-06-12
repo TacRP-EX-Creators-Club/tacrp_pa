@@ -203,3 +203,30 @@ end
 
 TacRP.LoadAtt(ATT, "ammo_m202_apers")
 -- #endregion
+
+------------------------------
+-- #region ammo_m202_harpoon
+------------------------------
+ATT = {}
+
+ATT.PrintName = "Harpoon"
+ATT.Icon = Material("entities/tacrp_att_ammo_m202.png", "mips smooth")
+ATT.Description = "Rounds containing a very sharp harpoon. Does nothing except on direct hit."
+ATT.Pros = {"stat.damage", "stat.muzzlevelocity"}
+ATT.Cons = {"att.procon.noexp"}
+
+ATT.Category = "ammo_m202"
+
+ATT.Override_Damage_Max = 500
+ATT.Override_Damage_Min = 60
+
+ATT.ShootEnt = "tacrp_proj_m202_harpoon"
+ATT.Mult_ShootEntForce = 1.25
+ATT.Mult_Spread = 0.1
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_m202_harpoon")
+-- #endregion
