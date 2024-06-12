@@ -105,8 +105,8 @@ SWEP.RecoilResetTime = 0.02
 SWEP.RecoilDissipationRate = 15
 SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 2
+SWEP.RecoilVisualKick = 2.0
+SWEP.RecoilKick = 2.5
 SWEP.RecoilStability = 0.65
 SWEP.RecoilAltMultiplier = 200
 
@@ -196,7 +196,7 @@ SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.AnimationTranslationTable = {
     ["fire_iron"] = "fire1_M",
     ["deploy"] = "unholster",
-    ["fire1"] = "fire1_M",
+    ["fire1"] = {"fire1_M", "fire1_L"},
     ["fire2"] = "fire2_M",
     ["fire3"] = "fire3_M",
     ["fire4"] = {"fire4_M", "fire4_L", "fire4_R"},
@@ -208,6 +208,15 @@ SWEP.ProceduralIronFire = {
     vm_ang = Angle(0, 0.25, 0),
     t = 0.2,
     tmax = 0.2,
+    bones = {
+        // charging handle
+        {
+            bone = "ValveBiped.bolt_handle",
+            pos = Vector(0, 0, -2),
+            t0 = 0,
+            t1 = 0.1
+        }
+    }
 }
 
 SWEP.ShootTimeMult = 0.5
@@ -266,7 +275,7 @@ SWEP.Attachments = {
     },
     [4] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_extmag_smg", "acc_holster"},
+        Category = {"acc", "acc_extmag_smg", "acc_sling", "acc_duffle"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
