@@ -162,8 +162,8 @@ SWEP.BlindFireSuicidePos = Vector(25, 19, -5)
 SWEP.SprintAng = Angle(30, -15, 0)
 SWEP.SprintPos = Vector(5, 0, -4)
 
-SWEP.SightAng = Angle(0, 1.1, 0)
-SWEP.SightPos = Vector(-3.34, -4, -4.6)
+SWEP.SightAng = Angle(0.3, 1.3, 0)
+SWEP.SightPos = Vector(-3.30, -4, -3.8)
 
 SWEP.HolsterVisible = true
 SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_BACK
@@ -172,7 +172,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 
 // reload
 
-SWEP.ClipSize = 20
+SWEP.ClipSize = 32
 SWEP.Ammo = "pistol"
 
 SWEP.ReloadTimeMult = 1
@@ -203,53 +203,22 @@ SWEP.MuzzleEffect = "muzzleflash_smg"
 // anims
 
 SWEP.AnimationTranslationTable = {
-    ["deploy"] = "draw",
-    ["fire1"] = "shoot1",
-    ["fire2"] = "shoot2",
-    ["fire3"] = "shoot3",
-    ["fire4"] = "shoot4",
-    ["fire5"] = "shoot5",
-    ["blind_fire"] = {"blind_shoot1", "blind_shoot2", "blind_shoot3"},
+    ["fire_iron"] = "fire1_M",
+    ["fire1"] = "fire1_M",
+    ["fire2"] = "fire2_M",
+    ["fire3"] = "fire3_M",
+    ["fire4"] = {"fire4_M", "fire4_L", "fire4_R"},
     ["melee"] = {"melee1", "melee2"}
 }
 
 SWEP.ProceduralIronFire = {
-    vm_pos = Vector(0, -0.5, -0.6),
-    vm_ang = Angle(0, 2, 0),
+    vm_pos = Vector(0, -0.5, -0.1),
+    vm_ang = Angle(0, 0.25, 0),
     t = 0.2,
     tmax = 0.2,
-    bones = {
-        {
-            bone = "xd45_rig.slide",
-            pos = Vector(0, 0, -3),
-            t0 = 0,
-            t1 = 0.1,
-        },
-        {
-            bone = "xd45_rig.hammer",
-            ang = Angle(-15, 0, 0),
-            t0 = 0,
-            t1 = 0.15,
-        },
-        {
-            bone = "ValveBiped.Bip01_R_Finger1",
-            ang = Angle(0, -15, 0),
-            t0 = 0,
-            t1 = 0.2,
-        },
-        {
-            bone = "ValveBiped.Bip01_R_Finger11",
-            ang = Angle(-35, 0, 0),
-            t0 = 0,
-            t1 = 0.15,
-        },
-    },
 }
 
 SWEP.ShootTimeMult = 0.5
-
-SWEP.LastShot = true
-SWEP.NoIdle = true
 
 // attachments
 
