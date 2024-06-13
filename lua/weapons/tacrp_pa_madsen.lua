@@ -64,9 +64,9 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SMG
 // "ballistics"
 
 SWEP.Damage_Max = 18
-SWEP.Damage_Min = 8
-SWEP.Range_Min = 600 // distance for which to maintain maximum damage
-SWEP.Range_Max = 2200 // distance at which we drop to minimum damage
+SWEP.Damage_Min = 12
+SWEP.Range_Min = 700 // distance for which to maintain maximum damage
+SWEP.Range_Max = 2800 // distance at which we drop to minimum damage
 SWEP.Penetration = 3 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.525
 SWEP.ArmorBonus = 0.5
@@ -103,10 +103,10 @@ SWEP.RecoilFirstShotMult = 1.75
 
 SWEP.RecoilVisualKick = 1.25
 SWEP.RecoilKick = 3
-SWEP.RecoilStability = 0.1
-SWEP.RecoilAltMultiplier = 150
+SWEP.RecoilStability = 0.15
+SWEP.RecoilAltMultiplier = 120
 
-SWEP.RecoilSpreadPenalty = 0.0025
+SWEP.RecoilSpreadPenalty = 0.002
 SWEP.HipFireSpreadPenalty = 0.015
 
 
@@ -114,13 +114,13 @@ SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.94
-SWEP.ShootingSpeedMult = 0.9
-SWEP.SightedSpeedMult = 0.8
+SWEP.MoveSpeedMult = 0.92
+SWEP.ShootingSpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.75
 
 SWEP.ReloadSpeedMult = 0.6
 
-SWEP.AimDownSightsTime = 0.27
+SWEP.AimDownSightsTime = 0.28
 SWEP.SprintToFireTime = 0.3
 
 SWEP.Sway = 0.9

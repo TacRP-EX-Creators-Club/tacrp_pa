@@ -33,27 +33,15 @@ SWEP.Slot = 2
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
         Damage_Max = 26,
-        Damage_Min = 6,
-
-        RecoilSpreadPenalty = 0.004,
-        HipFireSpreadPenalty = 0.025,
-        RecoilKick = 8,
-        FreeAimMaxAngle = 4,
+        Damage_Min = 14,
+        Range_Min = 1200,
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 20,
-        Damage_Min = 5,
-        Range_Min = 200,
-        Range_Max = 1200,
-        RPM = 650,
-
-        Spread = 0.0125,
-        FreeAimMaxAngle = 4,
-
-        HipFireSpreadPenalty = 0.035,
-        RecoilSpreadPenalty = 0.0065,
-        RecoilMaximum = 14,
-        RecoilResetTime = 0.15,
+        Damage_Min = 10,
+        Range_Min = 500,
+        Range_Max = 1800,
+        RPM = 500,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2.5,
@@ -74,7 +62,7 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MachinePistol
 
 SWEP.Damage_Max = 25
 SWEP.Damage_Min = 12
-SWEP.Range_Min = 1000
+SWEP.Range_Min = 700
 SWEP.Range_Max = 2500
 SWEP.Penetration = 3
 SWEP.ArmorPenetration = 0.525
@@ -110,12 +98,12 @@ SWEP.RecoilDissipationRate = 33
 SWEP.RecoilFirstShotMult = 1.5
 
 SWEP.RecoilVisualKick = 1.0
-SWEP.RecoilKick = 1.5
-SWEP.RecoilStability = 0.65
-SWEP.RecoilAltMultiplier = 200
+SWEP.RecoilKick = 2
+SWEP.RecoilStability = 0.5
+SWEP.RecoilAltMultiplier = 300
 
-SWEP.RecoilSpreadPenalty = 0.0011
-SWEP.HipFireSpreadPenalty = 0.015
+SWEP.RecoilSpreadPenalty = 0.0013
+SWEP.HipFireSpreadPenalty = 0.018
 
 // handling
 
