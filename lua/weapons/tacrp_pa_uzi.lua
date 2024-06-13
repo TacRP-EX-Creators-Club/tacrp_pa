@@ -14,12 +14,16 @@ SWEP.SubCatType = "3Submachine Gun"
 SWEP.Description = "Post-war submachine gun with amazing controllability. One of the most iconic guns ever invented. This version fires from a closed bolt."
 SWEP.Description_Quote = "\"You know your weapons, buddy.\""
 
-SWEP.Trivia_Caliber = "9x19mm Parabellum"
+SWEP.Trivia_Caliber = "9x19mm"
 SWEP.Trivia_Manufacturer = "Israeli Military Industries"
 SWEP.Trivia_Year = "1950"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
-SWEP.Credits = "Model: Firearms: Source 2.0 Team\nAnimations: Tactical Intervention\nPorted By: Arctic"
+SWEP.Credits = [[
+Model/Texture: Firearms: Source
+Sound: Ghost597879, Ganryu, Strelok, Sticer
+Animations: Tactical Intervention
+]]
 
 SWEP.ViewModel = "models/weapons/tacint/v_uzi_b.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_uzi_b.mdl"
@@ -61,18 +65,6 @@ SWEP.BalanceStats = {
             [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.9
         },
-    },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 15,
-        Damage_Min = 7,
-
-        RecoilSpreadPenalty = 0.004,
-        HipFireSpreadPenalty = 0.025,
-        RecoilKick = 8,
-        FreeAimMaxAngle = 4,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilMaximum = 20
     }
 }
 
@@ -80,8 +72,8 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MachinePistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 30
-SWEP.Damage_Min = 10
+SWEP.Damage_Max = 25
+SWEP.Damage_Min = 12
 SWEP.Range_Min = 1000
 SWEP.Range_Max = 2500
 SWEP.Penetration = 3
@@ -112,17 +104,17 @@ SWEP.Spread = 0.01
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 11
+SWEP.RecoilMaximum = 14
 SWEP.RecoilResetTime = 0.02
 SWEP.RecoilDissipationRate = 33
-SWEP.RecoilFirstShotMult = 1.75
+SWEP.RecoilFirstShotMult = 1.5
 
 SWEP.RecoilVisualKick = 1.0
-SWEP.RecoilKick = 1.25
+SWEP.RecoilKick = 1.5
 SWEP.RecoilStability = 0.65
 SWEP.RecoilAltMultiplier = 200
 
-SWEP.RecoilSpreadPenalty = 0.0015
+SWEP.RecoilSpreadPenalty = 0.0011
 SWEP.HipFireSpreadPenalty = 0.015
 
 // handling
@@ -175,7 +167,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 32
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1.2
+SWEP.ReloadTimeMult = 1.3
 
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/uzi.mdl"
 SWEP.DropMagazineImpact = "pistol"
@@ -186,9 +178,10 @@ SWEP.DropMagazineTime = 0.3
 // sounds
 
 local path = "tacrp/weapons/uzi/"
+local path1 = "tacint_extras/uzi/"
 
-SWEP.Sound_Shoot = "^" .. path .. "fire-1.wav"
-SWEP.Sound_Shoot_Silenced = path .. "fire_silenced-1.wav"
+SWEP.Sound_Shoot = "^" .. path1 .. "mac10-1.wav"
+SWEP.Sound_Shoot_Silenced = path1 .. "mp5-1.wav"
 
 SWEP.Vol_Shoot = 110
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
@@ -206,9 +199,10 @@ SWEP.AnimationTranslationTable = {
     ["fire_iron"] = "fire1_M",
     ["deploy"] = "unholster",
     ["fire1"] = "fire1_M",
-    ["fire2"] = "fire2_M",
-    ["fire3"] = "fire3_M",
-    ["fire4"] = {"fire4_M", "fire4_L", "fire4_R"},
+    ["fire2"] = "fire1_M",
+    ["fire3"] = "fire2_M",
+    ["fire4"] = "fire3_M",
+    ["fire5"] = {"fire4_M", "fire4_L", "fire4_R"},
     ["melee"] = {"melee1", "melee2"}
 }
 
@@ -219,7 +213,7 @@ SWEP.ProceduralIronFire = {
     tmax = 0.2,
 }
 
-SWEP.ShootTimeMult = 0.5
+SWEP.ShootTimeMult = 0.75
 
 // attachments
 
@@ -303,7 +297,7 @@ local function addsound(name, spath)
     })
 end
 
-addsound("tacint_uzi.insert_clip", path .. "insert_clip.wav")
-addsound("tacint_uzi.remove_clip", path .. "remove_clip.wav")
-addsound("tacint_uzi.bolt_action", path .. "bolt_action.wav")
+addsound("tacint_uzi.insert_clip", path1 .. "Clipin.wav")
+addsound("tacint_uzi.remove_clip", path1 .. "Clipout.wav")
+addsound("tacint_uzi.bolt_action", path1 .. "Boltpull.wav")
 addsound("tacint_uzi.foldingstock_back", path .. "foldingstock_back.wav")
