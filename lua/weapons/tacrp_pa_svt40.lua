@@ -208,6 +208,21 @@ SWEP.AnimationTranslationTable = {
     ["blind_fire"] = "blind_shoot1"
 }
 
+SWEP.ProceduralIronFire = {
+    vm_pos = Vector(0, -0.75, -0.2),
+    vm_ang = Angle(0, 1, 0),
+    t = 0.25,
+    tmax = 0.25,
+    bones = {
+        {
+            bone = "ValveBiped.bolt_handle",
+            pos = Vector(0, 0, -3),
+            t0 = 0.05,
+            t1 = 0.2,
+        },
+    },
+}
+
 // attachments
 
 SWEP.AttachmentElements = {
