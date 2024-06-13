@@ -18,7 +18,10 @@ SWEP.Trivia_Manufacturer = "Dansk Industri Syndikat"
 SWEP.Trivia_Year = "1950"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
-SWEP.Credits = "Assets: Tactical Intervention"
+SWEP.Credits = [[
+Model/Texture: jesamabin
+Sound: xLongWayHome
+Animation: Tactical Intervention, 8Z]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_madsen.mdl"
 SWEP.WorldModel = "models/weapons/tacint_extras/w_madsen.mdl"
@@ -31,6 +34,7 @@ SWEP.BalanceStats = {
         Damage_Min = 9,
 
         RecoilKick = 5,
+        ClipSize = 32,
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 16,
@@ -59,7 +63,7 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SMG
 
 // "ballistics"
 
-SWEP.Damage_Max = 16
+SWEP.Damage_Max = 18
 SWEP.Damage_Min = 8
 SWEP.Range_Min = 600 // distance for which to maintain maximum damage
 SWEP.Range_Max = 2200 // distance at which we drop to minimum damage
@@ -100,7 +104,7 @@ SWEP.RecoilFirstShotMult = 1.75
 SWEP.RecoilVisualKick = 1.25
 SWEP.RecoilKick = 3
 SWEP.RecoilStability = 0.1
-SWEP.RecoilAltMultiplier = 200
+SWEP.RecoilAltMultiplier = 150
 
 SWEP.RecoilSpreadPenalty = 0.0025
 SWEP.HipFireSpreadPenalty = 0.015
@@ -120,7 +124,7 @@ SWEP.AimDownSightsTime = 0.27
 SWEP.SprintToFireTime = 0.3
 
 SWEP.Sway = 0.9
-SWEP.ScopedSway = 0.25
+SWEP.ScopedSway = 0.3
 
 SWEP.FreeAimMaxAngle = 4
 
@@ -155,7 +159,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 
 // reload
 
-SWEP.ClipSize = 32
+SWEP.ClipSize = 27
 SWEP.Ammo = "pistol"
 
 SWEP.ReloadTimeMult = 1
@@ -170,11 +174,13 @@ SWEP.LastShot = true
 // sounds
 
 local path = "TacRP/weapons/pdw/"
+local path1 = "tacint_extras/madsen/"
 
-SWEP.Sound_Shoot = "^" .. path .. "fire-1.wav"
+SWEP.Sound_Shoot = "^" .. path1 .. "mac10-1.wav"
 SWEP.Sound_Shoot_Silenced = path .. "fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 130
+SWEP.Pitch_Shoot = 95
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 
 // effects
@@ -237,19 +243,6 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Attachments = {
-    -- [1] = {
-    --     PrintName = "Optic",
-    --     Category = {"optic_cqb", "optic_medium"},
-    --     Bone = "pdw_ROOT",
-    --     AttachSound = "TacRP/weapons/optic_on.wav",
-    --     DetachSound = "TacRP/weapons/optic_off.wav",
-    --     InstalledElements = {"optic"},
-    --     VMScale = 1,
-    --     Pos_VM = Vector(-4.8, -0.15, 6),
-    --     Pos_WM = Vector(7, 1.5, -6.5),
-    --     Ang_VM = Angle(90, 0, 0),
-    --     Ang_WM = Angle(0, -3.5, 180),
-    -- },
     [1] = {
         PrintName = "Muzzle",
         Category = "silencer",
@@ -275,7 +268,7 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_foldstock", "acc_sling", "acc_duffle", "perk_extendedmag"},
+        Category = {"acc", "acc_foldstock", "acc_sling", "acc_duffle", "acc_extmag_smg"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
     },
