@@ -31,8 +31,8 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
         Damage_Max = 18,
         Damage_Min = 5,
-        ClipSize = 3,
-        Spread = 0.015
+        Spread = 0.03,
+        ShotgunPelletSpread = 0.03,
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 10,
@@ -84,10 +84,10 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
-SWEP.Damage_Max = 12
+SWEP.Damage_Max = 14
 SWEP.Damage_Min = 4
-SWEP.Range_Min = 150 // distance for which to maintain maximum damage
-SWEP.Range_Max = 1500 // distance at which we drop to minimum damage
+SWEP.Range_Min = 100 // distance for which to maintain maximum damage
+SWEP.Range_Max = 1200 // distance at which we drop to minimum damage
 SWEP.Penetration = 1 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.5
 SWEP.ArmorBonus = 1.25
@@ -115,8 +115,8 @@ SWEP.FiremodeName = "Pump-Action" // only used externally for firemode name dist
 
 SWEP.RPM = 80
 
-SWEP.Spread = 0.035
-SWEP.ShotgunPelletSpread = 0.12
+SWEP.Spread = 0.045
+SWEP.ShotgunPelletSpread = 0.045
 
 SWEP.ShootTimeMult = 0.75
 
@@ -129,8 +129,8 @@ SWEP.RecoilDissipationRate = 1
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
 SWEP.RecoilVisualKick = 4
-SWEP.RecoilKick = 16
-SWEP.RecoilStability = 0.25
+SWEP.RecoilKick = 20
+SWEP.RecoilStability = 0.2
 
 SWEP.RecoilSpreadPenalty = 0.02
 SWEP.HipFireSpreadPenalty = 0.015
@@ -146,12 +146,12 @@ SWEP.FreeAimMaxAngle = 4
 
 SWEP.MoveSpeedMult = 0.975
 SWEP.ShootingSpeedMult = 0.65
-SWEP.SightedSpeedMult = 0.75
+SWEP.SightedSpeedMult = 0.9
 
 SWEP.ReloadSpeedMult = 0.75
 
 SWEP.AimDownSightsTime = 0.25
-SWEP.SprintToFireTime = 0.3
+SWEP.SprintToFireTime = 0.28
 
 // hold types
 
