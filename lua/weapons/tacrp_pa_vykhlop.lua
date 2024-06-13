@@ -60,9 +60,9 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 130
+SWEP.Damage_Max = 120
 SWEP.Damage_Min = 90
-SWEP.Range_Min = 3000
+SWEP.Range_Min = 3500
 SWEP.Range_Max = 7000
 SWEP.Penetration = 18 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.5
@@ -87,7 +87,7 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 48
+SWEP.RPM = 40
 
 SWEP.Spread = 0
 
@@ -184,7 +184,7 @@ SWEP.AmmoTTT = "357"
 SWEP.TracerNum = 0
 
 SWEP.ReloadTimeMult = 2
-SWEP.ShootTimeMult = 0.75
+SWEP.ShootTimeMult = 0.8
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/vykhlop.mdl"
 
 SWEP.ReloadUpInTime = 2.1
@@ -287,7 +287,7 @@ SWEP.Attachments = {
     },
     [6] = {
         PrintName = "Ammo",
-        Category = {"ammo_rifle_sub"},
+        Category = {"ammo_amr"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
