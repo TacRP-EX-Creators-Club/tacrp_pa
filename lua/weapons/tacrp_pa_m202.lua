@@ -45,6 +45,8 @@ SWEP.Range_Min = 3000
 SWEP.ShootEnt = "tacrp_proj_m202"
 SWEP.ShootEntForce = 7500
 
+SWEP.NotShotgun = true
+
 SWEP.Num = 1
 
 // misc. shooting

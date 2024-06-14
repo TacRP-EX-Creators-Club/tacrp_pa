@@ -211,18 +211,27 @@ ATT = {}
 
 ATT.PrintName = "Harpoon"
 ATT.Icon = Material("entities/tacrp_att_ammo_m202.png", "mips smooth")
-ATT.Description = "Rounds containing a very sharp harpoon. Does nothing except on direct hit."
-ATT.Pros = {"stat.damage", "stat.muzzlevelocity"}
+ATT.Description = "Launch fiery harpoons that do tremendous damage on impact."
+ATT.Pros = {"stat.damage", "rating.mobility", "stat.spread"}
 ATT.Cons = {"att.procon.noexp"}
 
 ATT.Category = "ammo_m202"
 
-ATT.Override_Damage_Max = 500
-ATT.Override_Damage_Min = 60
+ATT.Override_Damage_Max = 300
+ATT.Override_Damage_Min = 50
+
+ATT.Override_Sound_Shoot = "weapons/crossbow/fire1.wav"
+
+ATT.Override_ShootingSpeedMult = 0.75
+ATT.Override_ReloadSpeedMult = 0.5
+
+-- ATT.Override_Num = 1
+
+ATT.Ammo = "xbowbolt"
 
 ATT.ShootEnt = "tacrp_proj_m202_harpoon"
-ATT.Mult_ShootEntForce = 1.25
-ATT.Mult_Spread = 0.1
+-- ATT.Mult_ShootEntForce = 1.25
+ATT.Mult_Spread = 0.25
 
 if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
