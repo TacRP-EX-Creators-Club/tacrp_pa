@@ -23,7 +23,7 @@ Assets: No More Room In Hell
 Animations: Tactical Intervention]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_sw686.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_mr96.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_sw686.mdl"
 
 SWEP.Slot = 1
 
@@ -248,7 +248,7 @@ SWEP.Attachments = {
         WMScale = 1,
         Pos_VM = Vector(-3.75, -0.125, 6),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(0, 1.5, -0.8),
+        Pos_WM = Vector(0, 4, -0.2),
         Ang_WM = Angle(0, -90, 0),
     },
     [2] = {
