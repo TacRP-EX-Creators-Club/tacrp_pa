@@ -1,4 +1,7 @@
+EFFECT.Model = "models/Items/AR2_Grenade.mdl"
+
 function EFFECT:Init(data)
+    self:SetModel(self.Model)
     local emitter = ParticleEmitter(data:GetOrigin())
     if not IsValid(emitter) then return end
     for i = 1, 10 do
