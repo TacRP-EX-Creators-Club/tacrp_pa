@@ -266,7 +266,7 @@ SWEP.Attachments = {
         WMScale = 0.7,
         Pos_VM = Vector(3.5, -0.015, 14),
         Ang_VM = Angle(90, 0, 180),
-        Pos_WM = Vector(1.5, 1.25, -4.3),
+        Pos_WM = Vector(1.5, 1.25, -4.0),
         Ang_WM = Angle(0, 0, 180),
     },
     [2] = {
@@ -278,9 +278,9 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         VMScale = 0.75,
         WMScale = 0.75,
-        Pos_VM = Vector(3, 0, 8),
+        Pos_VM = Vector(2.6, 0, 8.5),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(-4, 1.25, -3.5),
+        Pos_WM = Vector(-5.0, 1.25, -3.0),
         Ang_WM = Angle(0, 0, 0),
     },
     [3] = {
