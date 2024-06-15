@@ -187,7 +187,7 @@ SWEP.DropMagazineTime = 0.2
 
 local path = "TacRP/weapons/skorpion/"
 
-SWEP.Sound_Shoot = "^" .. path .. "fire-1.wav"
+SWEP.Sound_Shoot = "tacint_extras/klin/glock18-1.wav"
 SWEP.Sound_Shoot_Silenced = path .. "fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 100
