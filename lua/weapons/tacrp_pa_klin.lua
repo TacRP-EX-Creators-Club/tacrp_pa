@@ -21,7 +21,7 @@ SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = "Assets: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint/v_klin.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_skorpion.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_klin.mdl"
 
 SWEP.Slot = 1
 
@@ -177,7 +177,7 @@ SWEP.ClipSize = 30
 SWEP.Ammo = "pistol"
 
 SWEP.ReloadTimeMult = 1
-SWEP.DropMagazineModel = "models/weapons/tacint/magazines/skorpion.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint/magazines/klin.mdl"
 SWEP.DropMagazineImpact = "pistol"
 
 SWEP.ReloadUpInTime = 0.9
