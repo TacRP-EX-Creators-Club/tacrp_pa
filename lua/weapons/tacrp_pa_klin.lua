@@ -11,14 +11,15 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "3Machine Pistol"
 
-SWEP.Description = "Simple, lightweight, cheap machine pistol. Somewhat unreliable."
+SWEP.Description = "Simple, lightweight, cheap machine pistol.\nHas a high fire rate but is prone to jamming."
 
 SWEP.Trivia_Caliber = "9x18mm Makarov"
 SWEP.Trivia_Manufacturer = "Izhmash"
 SWEP.Trivia_Year = "1963"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
-SWEP.Credits = "Assets: Tactical Intervention"
+SWEP.Credits = [[Model/Texture: Teh Snake
+Animation: Tactical Intervention]] // idk who made the sound because gamebanana did not credit it
 
 SWEP.ViewModel = "models/weapons/tacint/v_klin.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_klin.mdl"
@@ -27,24 +28,23 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 18,
-        Damage_Min = 10,
+        Damage_Max = 20,
+        Damage_Min = 8,
         ArmorPenetration = 0.6,
 
-        RecoilKick = 1,
+        RecoilKick = 2,
+        JamFactor = 0.02,
 
-        ClipSize = 30,
-        DefaultBodygroups = "0000",
+        HipFireSpreadPenalty = 0.01,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 9,
-        Damage_Min = 5,
-        Range_Min = 500,
-        Range_Max = 2500,
+        Damage_Max = 10,
+        Damage_Min = 4,
+        Range_Min = 300,
+        Range_Max = 1500,
         RPM = 850,
 
-        ClipSize = 30,
-        DefaultBodygroups = "0000",
+        JamFactor = 0,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2,
@@ -56,13 +56,8 @@ SWEP.BalanceStats = {
             [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.9
         },
-    },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 6,
-        Damage_Min = 3,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilMaximum = 10
+
+        ReloadTimeMult = 1.25,
     }
 }
 
@@ -73,14 +68,14 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MachinePistol
 SWEP.DefaultBodygroups = "0000"
 
 SWEP.Damage_Max = 18
-SWEP.Damage_Min = 9
+SWEP.Damage_Min = 8
 SWEP.Range_Min = 400
-SWEP.Range_Max = 1500
-SWEP.Penetration = 4 // units of metal this weapon can penetrate
+SWEP.Range_Max = 1800
+SWEP.Penetration = 2
 SWEP.ArmorPenetration = 0.5
 SWEP.ArmorBonus = 0.75
 
-SWEP.MuzzleVelocity = 13500
+SWEP.MuzzleVelocity = 11000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
@@ -100,44 +95,44 @@ SWEP.Firemodes = {
     1
 }
 
-SWEP.RPM = 800
+SWEP.RPM = 900
 
-SWEP.Spread = 0.009
-SWEP.RecoilSpreadPenalty = 0.0014
-SWEP.HipFireSpreadPenalty = 0.011
+SWEP.Spread = 0.006
+SWEP.RecoilSpreadPenalty = 0.002
+SWEP.HipFireSpreadPenalty = 0.02
 
-SWEP.JamFactor = 0.2
+SWEP.JamFactor = 0.1
 
 SWEP.ShootTimeMult = 0.5
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 9
+SWEP.RecoilMaximum = 12
 SWEP.RecoilResetTime = 0.01
-SWEP.RecoilDissipationRate = 40
-SWEP.RecoilFirstShotMult = 1.25
+SWEP.RecoilDissipationRate = 25
+SWEP.RecoilFirstShotMult = 1.5
 
-SWEP.RecoilVisualKick = 0.5
-SWEP.RecoilKick = 2.5
-SWEP.RecoilStability = 0.4
+SWEP.RecoilVisualKick = 1
+SWEP.RecoilKick = 2
+SWEP.RecoilStability = 0.15
 
 SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.975
-SWEP.ShootingSpeedMult = 0.75
+SWEP.MoveSpeedMult = 1
+SWEP.ShootingSpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.8
 
 SWEP.ReloadSpeedMult = 0.6
 
-SWEP.AimDownSightsTime = 0.275
-SWEP.SprintToFireTime = 0.30
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.27
 
 SWEP.Sway = 1
 SWEP.ScopedSway = 0.3
 
-SWEP.FreeAimMaxAngle = 3
+SWEP.FreeAimMaxAngle = 2.5
 
 // hold types
 
