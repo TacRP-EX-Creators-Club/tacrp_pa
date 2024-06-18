@@ -52,18 +52,6 @@ SWEP.BalanceStats = {
             [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.9
         },
-    },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 19,
-        Damage_Min = 14,
-
-        ClipSize = 100,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        Description = "Balanced light machine gun that can put down some serious firepower.",
-        ClipSize = 75,
-        RecoilSpreadPenalty = 0.0013,
-        ReloadTimeMult = 1.1
     }
 }
 
