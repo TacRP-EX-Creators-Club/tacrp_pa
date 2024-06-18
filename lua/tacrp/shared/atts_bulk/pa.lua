@@ -212,10 +212,13 @@ ATT = {}
 ATT.PrintName = "Harpoon"
 ATT.Icon = Material("entities/tacrp_att_ammo_m202.png", "mips smooth")
 ATT.Description = "Launch fiery harpoons that do tremendous damage on impact."
-ATT.Pros = {"stat.damage", "rating.mobility", "stat.spread"}
+ATT.Pros = {"stat.damage", "rating.mobility", "rating.precision"}
 ATT.Cons = {"att.procon.noexp"}
 
 ATT.Category = "ammo_m202"
+
+ATT.Mult_Spread = 0.5
+ATT.Mult_RecoilSpreadPenalty = 0.5
 
 ATT.Override_Damage_Max = 300
 ATT.Override_Damage_Min = 50

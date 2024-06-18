@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP (Special)"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "6Launcher"
 
-SWEP.Description = "Incendiary rocket launcher. Fires four thermobaric rockets in quick succession."
+SWEP.Description = "Incendiary rocket launcher. Fires four thermobaric rockets in quick succession, which can ignite targets but have low explosive power."
 SWEP.Description_Quote = "\"Fire and forget!\""
 
 SWEP.Trivia_Caliber = "66mm Rockets"
@@ -55,18 +55,20 @@ SWEP.Firemode = 2
 
 SWEP.RPM = 300
 
-SWEP.Spread = 0.01
+SWEP.Spread = 0.005
 
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 1
-SWEP.RecoilResetTime = 0.2// time after you stop shooting for recoil to start dissipating
-SWEP.RecoilDissipationRate = 1
+SWEP.RecoilMaximum = 3
+SWEP.RecoilResetTime = 0.3 // time after you stop shooting for recoil to start dissipating
+SWEP.RecoilDissipationRate = 6
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
+
+SWEP.NeverAltRecoil = true
 
 SWEP.RecoilVisualKick = 5
 SWEP.RecoilVisualShake = 0.2
 
-SWEP.RecoilKick = 0
+SWEP.RecoilKick = 0.5
 
 SWEP.RecoilSpreadPenalty = 0.015 // extra spread per one unit of recoil
 

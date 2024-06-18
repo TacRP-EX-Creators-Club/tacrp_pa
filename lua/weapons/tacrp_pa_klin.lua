@@ -13,7 +13,7 @@ SWEP.SubCatType = "3Machine Pistol"
 
 SWEP.Description = "Simple, lightweight, cheap machine pistol.\nHas a high fire rate but is prone to jamming."
 
-SWEP.Trivia_Caliber = "9x18mm Makarov"
+SWEP.Trivia_Caliber = "9x18mm"
 SWEP.Trivia_Manufacturer = "Izhmash"
 SWEP.Trivia_Year = "1963"
 
@@ -38,13 +38,13 @@ SWEP.BalanceStats = {
         HipFireSpreadPenalty = 0.01,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 10,
+        Damage_Max = 9,
         Damage_Min = 4,
-        Range_Min = 300,
-        Range_Max = 1500,
-        RPM = 850,
+        Range_Min = 600,
+        Range_Max = 1800,
+        RPM = 900,
 
-        JamFactor = 0,
+        JamFactor = 0.04,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2,

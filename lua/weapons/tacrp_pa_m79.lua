@@ -82,21 +82,21 @@ SWEP.RecoilVisualShake = 2
 SWEP.RecoilKick = 6
 
 SWEP.RecoilSpreadPenalty = 0 // extra spread per one unit of recoil
-SWEP.HipFireSpreadPenalty = 0.06
+SWEP.HipFireSpreadPenalty = 0.08
 SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.9
+SWEP.MoveSpeedMult = 0.875
 SWEP.ShootingSpeedMult = 0.3
 SWEP.SightedSpeedMult = 0.5
 
 SWEP.ReloadSpeedMult = 0.4
 
-SWEP.AimDownSightsTime = 0.38
-SWEP.SprintToFireTime = 0.42 // multiplies how long it takes to recover from sprinting
+SWEP.AimDownSightsTime = 0.36
+SWEP.SprintToFireTime = 0.44 // multiplies how long it takes to recover from sprinting
 
 SWEP.Sway = 1.25
 SWEP.ScopedSway = 0.15
