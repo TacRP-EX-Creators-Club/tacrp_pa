@@ -5,13 +5,12 @@ AddCSLuaFile()
 
 // names and stuff
 SWEP.PrintName = "SVT-40"
-SWEP.AbbrevName = "SVT-40"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Battle Rifle"
 
-SWEP.Description = "World War 2 era semi-automatic rifle designed for extreme mass production. Powerful, but inaccurate and unreliable. Limited optic choices."
+SWEP.Description = "WW2-era mass production semi-automatic rifle. Unreliable and has limited optic options, but still packs raw power."
 
 SWEP.Trivia_Caliber = "7.62x54mmR"
 SWEP.Trivia_Manufacturer = "Tula Arsenal"
@@ -29,10 +28,21 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
         Damage_Max = 50,
         Damage_Min = 30,
-        Range_Min = 1000,
-        Range_Max = 6500,
+        Range_Min = 1800,
+        Range_Max = 5000,
         SpreadMult = 0.6,
         ArmorPenetration = 0.95,
+
+        BodyDamageMultipliers = {
+            [HITGROUP_HEAD] = 4,
+            [HITGROUP_CHEST] = 1,
+            [HITGROUP_STOMACH] = 1.25,
+            [HITGROUP_LEFTARM] = 0.9,
+            [HITGROUP_RIGHTARM] = 0.9,
+            [HITGROUP_LEFTLEG] = 0.75,
+            [HITGROUP_RIGHTLEG] = 0.75,
+            [HITGROUP_GEAR] = 0.75
+        }
     },
     [TacRP.BALANCE_TTT] = {
 
@@ -66,10 +76,10 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MarksmanRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 45 // damage at minimum range
+SWEP.Damage_Max = 42 // damage at minimum range
 SWEP.Damage_Min = 28 // damage at maximum range
 SWEP.Range_Min = 900 // distance for which to maintain maximum damage
-SWEP.Range_Max = 6000 // distance at which we drop to minimum damage
+SWEP.Range_Max = 4500 // distance at which we drop to minimum damage
 SWEP.Penetration = 8 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.725
 

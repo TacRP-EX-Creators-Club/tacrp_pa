@@ -35,6 +35,7 @@ SWEP.BalanceStats = {
         Damage_Max = 60,
         Damage_Min = 30,
         RPM = 150,
+        RecoilKick = 16,
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 50,
@@ -104,8 +105,8 @@ SWEP.RecoilResetTime = 0.1
 SWEP.RecoilDissipationRate = 6
 SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 6
-SWEP.RecoilKick = 16
+SWEP.RecoilVisualKick = 4
+SWEP.RecoilKick = 10
 SWEP.RecoilStability = 0.6
 
 SWEP.RecoilSpreadPenalty = 0.004

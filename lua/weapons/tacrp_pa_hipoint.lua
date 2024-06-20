@@ -174,6 +174,9 @@ SWEP.DropMagazineImpact = "pistol"
 SWEP.ReloadUpInTime = 1
 SWEP.DropMagazineTime = 0.3
 
+SWEP.DeployTimeMult = 2.5
+SWEP.HolsterTimeMult = 2
+
 // sounds
 
 local path = "tacrp/weapons/uzi/"
