@@ -218,10 +218,10 @@ ATT.Cons = {"att.procon.noexp"}
 ATT.Category = "ammo_m202"
 
 ATT.Mult_Spread = 0.5
-ATT.Mult_RecoilSpreadPenalty = 0.5
+ATT.Mult_RecoilSpreadPenalty = 0.65
 
-ATT.Override_Damage_Max = 300
-ATT.Override_Damage_Min = 50
+ATT.Override_Damage_Max = 100
+ATT.Override_Damage_Min = 10
 
 ATT.Override_Sound_Shoot = "weapons/crossbow/fire1.wav"
 

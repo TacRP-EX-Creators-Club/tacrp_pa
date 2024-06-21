@@ -30,6 +30,7 @@ ENT.Sound_MeleeHitBody = {
 
 function ENT:OnInitialize()
     if SERVER then
+        self:GetPhysicsObject():SetMass(25)
         self:GetPhysicsObject():SetDragCoefficient(10)
         self:Ignite(30)
     end
@@ -39,6 +40,8 @@ function ENT:Impact(data, collider)
     local tgt = data.HitEntity
     local attacker = self.Attacker or self:GetOwner() or self
     local d = data.OurOldVelocity:GetNormalized()
+    local forward = data.OurOldVelocity:Dot(self:GetAngles():Forward())
+    if forward <= 100 then return true end
     if IsValid(tgt) then
         local ang = data.OurOldVelocity:Angle()
         local fx = EffectData()
@@ -52,26 +55,12 @@ function ENT:Impact(data, collider)
             local dmginfo = DamageInfo()
             dmginfo:SetAttacker(attacker)
             dmginfo:SetInflictor(self)
-            dmginfo:SetDamageType(DMG_SLASH)
-            dmginfo:SetDamage(self.NPCDamage and 25 or math.Clamp(self:GetVelocity():Length() / 15, 25, 400))
+            dmginfo:SetDamageType(DMG_CLUB)
+            dmginfo:SetDamage(self.NPCDamage and 25 or math.Clamp(forward / 70, 10, 200))
             dmginfo:SetDamageForce(data.OurOldVelocity)
             dmginfo:SetDamagePosition(data.HitPos)
             data.HitEntity:TakeDamageInfo(dmginfo)
         end
-
-        if data.HitEntity:IsNPC() or data.HitEntity:IsPlayer() or data.HitEntity:IsNextBot() then
-            self:EmitSound("weapons/crossbow/bolt_skewer1.wav", 80, 90)
-            timer.Simple(0, function()
-                if !IsValid(data.HitEntity) or data.HitEntity:Health() <= 0 then
-                    self:GetPhysicsObject():SetVelocityInstantaneous(data.OurOldVelocity * 0.5)
-                    self:GetPhysicsObject():SetAngleVelocityInstantaneous(data.OurOldAngularVelocity)
-                else
-                    self:Remove()
-                end
-            end)
-        end
-
-        self.Armed = false
     else
         local ang = data.OurOldVelocity:Angle()
         local fx = EffectData()
@@ -95,28 +84,80 @@ function ENT:Impact(data, collider)
             Src = data.HitPos - ang:Forward(),
             IgnoreEntity = self,
             Callback = function(atk, tr, dmginfo)
-                dmginfo:SetInflictor(IsValid(self.Inflictor) and self.Inflictor or self)
+                dmginfo:SetDamageType(DMG_SLASH)
+                dmginfo:SetInflictor(attacker)
             end
         })
-
-        -- freeze the projectile in place
-        self:SetPos(data.HitPos - d * 8)
-        self:SetAngles(ang)
-        self:SetMoveType(MOVETYPE_NONE)
-        self:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
-        self:Ignite(5, 128)
-
-
-        timer.Simple(5, function()
-            if IsValid(self) then
-                self:SetRenderMode(RENDERMODE_TRANSALPHA)
-                self:SetRenderFX(kRenderFxFadeFast)
-            end
-        end)
-        SafeRemoveEntityDelayed(self, 7)
     end
 
+    if tgt:IsWorld() or (IsValid(tgt) and tgt:GetPhysicsObject():IsValid()) then
+        local angles = data.OurOldVelocity:Angle()
+        self:GetPhysicsObject():Sleep()
+
+        timer.Simple(0, function()
+            if tgt:IsWorld() or (IsValid(tgt) and (!(tgt:IsNPC() or tgt:IsPlayer()) or tgt:Health() > 0)) then
+                self:SetSolid(SOLID_NONE)
+                self:SetMoveType(MOVETYPE_NONE)
+
+                local f = {self, self:GetOwner()}
+                table.Add(f, tgt:GetChildren())
+                local tr = util.TraceLine({
+                    start = data.HitPos - data.OurOldVelocity,
+                    endpos = data.HitPos + data.OurOldVelocity,
+                    filter = f,
+                    mask = MASK_SOLID,
+                    ignoreworld = true,
+                })
+
+                local bone = (tr.Entity == tgt) and tr.PhysicsBone == 0
+                        and tr.Entity:GetHitBoxBone(tr.HitBox, tr.Entity:GetHitboxSet())
+                        or tr.PhysicsBone or -1
+                local matrix = tgt:GetBoneMatrix(bone)
+                if tr.Entity == tgt and matrix then
+                    local bpos = matrix:GetTranslation()
+                    local bang = matrix:GetAngles()
+                    self:SetPos(data.HitPos)
+                    self:FollowBone(tgt, bone)
+                    local n_pos, n_ang = WorldToLocal(tr.HitPos + tr.HitNormal * self:GetModelRadius() * 0.5, angles, bpos, bang)
+                    self:SetLocalPos(n_pos)
+                    self:SetLocalAngles(n_ang)
+                    debugoverlay.Cross(pos, 8, 5, Color(255, 0, 255), true)
+                else
+                    self:SetAngles(angles)
+                    self:SetPos(data.HitPos - data.OurOldVelocity:GetNormalized() * self:GetModelRadius() * 0.5)
+                    if !tgt:IsWorld() then
+                        self:SetParent(tgt)
+                    end
+                end
+            else
+                self:GetPhysicsObject():SetVelocity(data.OurOldVelocity * 0.75)
+                self:GetPhysicsObject():SetAngleVelocity(data.OurOldAngularVelocity)
+                self.Armed = false
+            end
+        end)
+    end
+    timer.Simple(5, function()
+        if IsValid(self) then
+            self:SetRenderMode(RENDERMODE_TRANSALPHA)
+            self:SetRenderFX(kRenderFxFadeFast)
+        end
+    end)
+    SafeRemoveEntityDelayed(self, 7)
+
     return true
+end
+
+local g = Vector(0, 0, -9.81)
+function ENT:PhysicsUpdate(phys)
+    if !self.Armed and phys:IsGravityEnabled() and self:WaterLevel() <= 2 then
+        local v = phys:GetVelocity()
+        self:SetAngles(v:Angle())
+        phys:SetVelocityInstantaneous(v * 0.985 + g)
+    end
+
+    -- local v = phys:GetVelocity()
+    -- self:SetAngles(v:Angle() + Angle(2, 0, 0))
+    -- phys:SetVelocityInstantaneous(self:GetForward() * v:Length())
 end
 
 ENT.SmokeTrail = true
