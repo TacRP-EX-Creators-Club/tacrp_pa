@@ -112,8 +112,8 @@ SWEP.HoldTypeBlindFire = false
 SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
 
-SWEP.PassiveAng = Angle(1, 0, 0)
-SWEP.PassivePos = Vector(0.25, 1, -2)
+SWEP.PassiveAng = Angle(1, -5, 0)
+SWEP.PassivePos = Vector(0.25, 1, 0)
 
 SWEP.BlindFireAng = Angle(0, 0, 0)
 SWEP.BlindFirePos = Vector(2, 2, -1)
@@ -124,8 +124,8 @@ SWEP.BlindFireSuicidePos = Vector(-7, 30, -25)
 SWEP.SprintAng = Angle(45, -10, 0)
 SWEP.SprintPos = Vector(6, 0, 0)
 
-SWEP.SightAng = Angle(0, 5.5, -0.1)
-SWEP.SightPos = Vector(-3.25, -7, -3)
+SWEP.SightAng = Angle(0, -2, -0.1)
+SWEP.SightPos = Vector(-3.2, -7, -0.2)
 
 SWEP.CorrectiveAng = Angle(-0.2, 0, 0.5)
 SWEP.CorrectivePos = Vector(-0.025, 0, 0.15)
