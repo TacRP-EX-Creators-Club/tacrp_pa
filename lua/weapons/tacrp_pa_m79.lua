@@ -167,7 +167,7 @@ SWEP.MuzzleEffect = "muzzleflash_m79"
 
 // anims
 
-SWEP.DeployTimeMult = 4
+SWEP.DeployTimeMult = 2
 SWEP.ReloadTimeMult = 1.15
 
 SWEP.AnimationTranslationTable = {
