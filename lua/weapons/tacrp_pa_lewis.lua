@@ -148,11 +148,13 @@ SWEP.BlindFirePos = Vector(0, -4, -3)
 SWEP.SprintAng = Angle(30, -15, 0)
 SWEP.SprintPos = Vector(5, 0, -2)
 
-SWEP.SightAng = Angle(-0, 0, 0)
-SWEP.SightPos = Vector(-3.72, -5, -4.25)
+SWEP.SightAng = Angle(-.28, 0, 0)
+SWEP.SightPos = Vector(-4.12, -5, -4)
 
 SWEP.CorrectivePos = Vector(0.025, 0, 0.125)
 SWEP.CorrectiveAng = Angle(0, 0, 0)
+
+SWEP.CustomizePos = Vector(8, 0, -8.5)
 
 SWEP.HolsterVisible = true
 SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_BACK2
@@ -164,7 +166,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 47
 SWEP.Ammo = "ar2"
 
-SWEP.ReloadTimeMult = 1.4
+SWEP.ReloadTimeMult = 1.45
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/lewis.mdl"
 SWEP.DropMagazineImpact = "metal"
 
@@ -202,11 +204,11 @@ SWEP.HolsterTimeMult = 2.5
 
 SWEP.AnimationTranslationTable = {
     ["fire_iron"] = "fire2_M",
-    ["fire1"] = "fire1_L",
-    ["fire2"] = "fire2_R",
-    ["fire3"] = "fire3_R",
-    ["fire4"] = "fire4_R",
-    ["fire5"] = "fire5_R",
+    ["fire1"] = "fire1_M",
+    ["fire2"] = "fire2_M",
+    ["fire3"] = "fire3_M",
+    ["fire4"] = "fire4_M",
+    ["fire5"] = "fire5_M",
     ["melee"] = {"melee1", "melee2"}
 }
 
@@ -244,7 +246,7 @@ SWEP.Attachments = {
         AttachSound = "TacRP/weapons/optic_on.wav",
         DetachSound = "TacRP/weapons/optic_off.wav",
         VMScale = 1.1,
-        Pos_VM = Vector(-6.5, 0.12, 2.5),
+        Pos_VM = Vector(-6.5, 0.4, 1.5),
         Pos_WM = Vector(3.5, 1.15, -8),
         Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(0, 0, 180),
