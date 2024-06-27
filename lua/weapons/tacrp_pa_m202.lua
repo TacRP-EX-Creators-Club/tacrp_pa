@@ -96,7 +96,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(4, 0, -4)
+SWEP.PassivePos = Vector(4, 0, -6)
 
 SWEP.BlindFireAng = Angle(0, 0, 0)
 SWEP.BlindFirePos = Vector(1, -3, 2)
@@ -165,10 +165,12 @@ SWEP.MuzzleEffect = "muzzleflash_1"
 // anims
 
 SWEP.AnimationTranslationTable = {
-    ["deploy"] = "draw",
+    ["deploy"] = "unholster",
     ["blind_fire"] = "aimed_fire",
     ["blind_idle"] = "aimed_idle",
 }
+
+SWEP.DeployTimeMult = 2
 
 // attachments
 
