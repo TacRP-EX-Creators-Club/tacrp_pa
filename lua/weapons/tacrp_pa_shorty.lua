@@ -11,8 +11,8 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "5Shotgun"
 
-SWEP.Description = "A custom modification of the Mossberg 88 receiver, intended for extreme concealability. However, it sacrifices accuracy and capacity. Fits in sidearm holsters."
-SWEP.Description_Quote = "\"Shawty got low, low, low, low...\""
+SWEP.Description = "A custom-made ultra short shotgun, intended for extreme concealability but sacrifices accuracy and capacity. Fits in sidearm holsters."
+SWEP.Description_Quote = ""
 
 SWEP.Trivia_Caliber = "12 Gauge"
 SWEP.Trivia_Manufacturer = "Serbu Firearms"
