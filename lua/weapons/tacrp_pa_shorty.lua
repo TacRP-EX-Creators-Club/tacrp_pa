@@ -12,7 +12,7 @@ SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "5Shotgun"
 
 SWEP.Description = "A custom-made ultra short shotgun, intended for extreme concealability but sacrifices accuracy and capacity. Fits in sidearm holsters."
-SWEP.Description_Quote = ""
+SWEP.Description_Quote = nil
 
 SWEP.Trivia_Caliber = "12 Gauge"
 SWEP.Trivia_Manufacturer = "Serbu Firearms"
