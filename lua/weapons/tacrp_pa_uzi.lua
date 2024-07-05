@@ -285,8 +285,7 @@ local function addsound(name, spath)
     })
 end
 
--- UZI PRO USES "UZI" NAME!!!!!!!!!!!
--- addsound("tacint_uzi.insert_clip", path1 .. "Clipin.wav")
--- addsound("tacint_uzi.remove_clip", path1 .. "Clipout.wav")
--- addsound("tacint_uzi.bolt_action", path1 .. "Boltpull.wav")
--- addsound("tacint_uzi.foldingstock_back", path .. "foldingstock_back.wav")
+addsound("tacint_uzi.insert_clip", path1 .. "Clipin.wav")
+addsound("tacint_uzi.remove_clip", path1 .. "Clipout.wav")
+addsound("tacint_uzi.bolt_action", path1 .. "Boltpull.wav")
+addsound("tacint_uzi.foldingstock_back", path .. "foldingstock_back.wav")
