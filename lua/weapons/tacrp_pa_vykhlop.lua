@@ -180,6 +180,7 @@ SWEP.ScopeHideWeapon = true
 SWEP.ClipSize = 10
 SWEP.Ammo = "357"
 SWEP.AmmoTTT = "357"
+SWEP.Ammo_Expanded = "ti_sniper"
 
 SWEP.TracerNum = 0
 

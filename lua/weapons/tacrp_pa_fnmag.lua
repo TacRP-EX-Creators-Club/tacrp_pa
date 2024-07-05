@@ -5,16 +5,15 @@ AddCSLuaFile()
 
 // names and stuff
 SWEP.PrintName = "FN MAG"
-SWEP.AbbrevName = "FN MAG"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "3Security"
 SWEP.SubCatType = "5Machine Gun"
 
-SWEP.Description = "Amazingly heavy \"light\" machine gun that straddles the gap between an LMG and a mounted weapon. Boasts a near-bottomless magazine."
+SWEP.Description = "Machine gun with practically no mobility but compensates with incredible firepower and capacity."
 SWEP.Description_Quote = "\"You can't leave me here with these... animals.\""
 
-SWEP.Trivia_Caliber = "7.62x51mm NATO"
+SWEP.Trivia_Caliber = "7.62x51mm"
 SWEP.Trivia_Manufacturer = "Fabrique National"
 SWEP.Trivia_Year = "1958"
 

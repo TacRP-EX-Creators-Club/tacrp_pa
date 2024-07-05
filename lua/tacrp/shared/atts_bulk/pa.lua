@@ -77,6 +77,7 @@ ATT.Category = "ammo_sako85"
 ATT.SortOrder = 1
 
 ATT.Override_Ammo = "smg1"
+ATT.Override_Ammo_Expanded = "smg1"
 ATT.Override_Sound_Shoot = "^tacint_extras/sako85/m16_fire_01.wav"
 
 ATT.Mult_RPM = 1.2
@@ -109,6 +110,8 @@ ATT.Category = "ammo_sako85"
 ATT.SortOrder = 2
 
 ATT.Override_Ammo = "357"
+ATT.Override_Ammo_Expanded = "ti_rifle"
+
 ATT.Override_Sound_Shoot = "^tacint_extras/sako85/win1892_fire_01.wav"
 
 ATT.Mult_RPM = 0.9
