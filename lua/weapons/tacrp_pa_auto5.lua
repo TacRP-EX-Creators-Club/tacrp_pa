@@ -22,7 +22,7 @@ SWEP.Faction = TacRP.FACTION_COALITION
 SWEP.Credits = "Animation: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint/v_auto5.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_m4star10.mdl"
+SWEP.WorldModel = "models/weapons/tacint/w_auto5.mdl"
 
 SWEP.Slot = 2
 SWEP.SlotAlt = 3
