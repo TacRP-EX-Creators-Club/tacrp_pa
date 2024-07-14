@@ -1,0 +1,33 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\tacint_extras\thatgun\blaster_albedo"
+	"$bumpmap" 			"models\tacint_extras\thatgun\blaster_normal"
+//    "$color2"			"[0.8 0.8 0.8]"
+
+//	"$halflambert" 					"1"
+	"$phong"                        "1"	
+	"$phongalbedotint"              "1"	
+	"$phongexponenttexture"			"models\tacint_extras\thatgun\exponent"
+	"$phongexponent"                "16"	
+	"$phongboost"                   "20"
+	"$phongfresnelranges"           "[0.75 1.5 3]"
+
+	"$basetexturealphaenvmapmask"	"1"
+	"$envmap"			"models\tacint_extras\thatgun\envmap"
+	"$envmaptint"			"[0.025 0.025 0.025]"
+	"$envmapfresnel"			"0.5"		
+
+	"$detail" "models\tacint_extras\thatgun\dt_metal1"
+	"$detailscale" "12"
+	"$detailblendfactor" "1"
+	"$detailblendmode" "0"	
+
+	// Emissive parameters.
+	$emissiveBlendEnabled 1
+	$emissiveBlendTexture vgui\white
+	$emissiveBlendBaseTexture "models\tacint_extras\thatgun\blaster_emissive"
+	$emissiveBlendFlowTexture vgui\white
+	$emissiveBlendTint "{255 255 255}"
+	$emissiveBlendStrength .5
+	$emissiveBlendScrollVector "[0 0]"			
+}
