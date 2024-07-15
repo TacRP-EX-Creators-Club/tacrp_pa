@@ -8,17 +8,17 @@ SWEP.PrintName = "Browning Auto 5"
 SWEP.AbbrevName = "Auto 5"
 SWEP.Category = "Tactical RP"
 
-SWEP.SubCatTier = "4Consumer"
+SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Shotgun"
 
-SWEP.Description = "Old school automatic shotgun. Accurate, but with very poor stopping power."
+SWEP.Description = "Old school automatic shotgun. Small caliber shells have good range and firerate, but poor stopping power."
 SWEP.Description_Quote = "\"Line 'em up and knock 'em down.\""
 
 SWEP.Trivia_Caliber = "20 Gauge"
 SWEP.Trivia_Manufacturer = "Browning Arms"
 SWEP.Trivia_Year = "1900"
 
-SWEP.Faction = TacRP.FACTION_COALITION
+SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = "Animation: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint/v_auto5.mdl"
@@ -30,21 +30,18 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 20,
-        Damage_Min = 5,
-
-        FreeAimMaxAngle = 5,
+        Damage_Max = 10,
+        Damage_Min = 7,
+        RPM = 330,
+        RecoilKick = 3.5,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 10,
-        Damage_Min = 3,
+        Damage_Max = 8,
+        Damage_Min = 5,
         Range_Min = 300,
-        Range_Max = 2000,
-        RPM = 180,
-
-        FreeAimMaxAngle = 5,
-
-        RecoilSpreadPenalty = 0.02,
+        Range_Max = 1000,
+        RPM = 200,
+        RPMMultSemi = 1,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2,
@@ -56,31 +53,6 @@ SWEP.BalanceStats = {
             [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.9
         },
-    },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 11,
-        Damage_Min = 7,
-        RPM = 240,
-
-        RecoilKick = 8,
-        RecoilSpreadPenalty = 0.0075,
-        Spread = 0.02,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 1.5,
-            [HITGROUP_CHEST] = 1,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.75,
-            [HITGROUP_RIGHTARM] = 0.75,
-            [HITGROUP_LEFTLEG] = 0.5,
-            [HITGROUP_RIGHTLEG] = 0.5,
-            [HITGROUP_GEAR] = 0.9
-        },
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilMaximum = 3,
-        RecoilDissipationRate = 5,
-        RecoilResetTime = 0.3,
     }
 }
 
@@ -90,20 +62,20 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.AutoShotgun
 
 SWEP.ShootTimeMult = 0.5
 
-SWEP.Damage_Max = 12
-SWEP.Damage_Min = 9
+SWEP.Damage_Max = 9
+SWEP.Damage_Min = 6
 SWEP.Range_Min = 1000 // distance for which to maintain maximum damage
-SWEP.Range_Max = 1600 // distance at which we drop to minimum damage
+SWEP.Range_Max = 2200 // distance at which we drop to minimum damage
 SWEP.Penetration = 1 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.8
+SWEP.ArmorPenetration = 0.5
 SWEP.ArmorBonus = 2
 
 SWEP.Num = 6
 
-SWEP.MuzzleVelocity = 11500
+SWEP.MuzzleVelocity = 14500
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 1.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
@@ -117,25 +89,28 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 400
+SWEP.RPM = 250
+SWEP.RPMMultSemi = 0.8
 
-SWEP.Spread = 0.02
-SWEP.ShotgunPelletSpread = 0.01
+SWEP.Spread = 0.018
+SWEP.ShotgunPelletSpread = 0.015
 
-SWEP.HipFireSpreadPenalty = 0.015
+SWEP.HipFireSpreadPenalty = 0.03
 SWEP.MidAirSpreadPenalty = 0
 
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 2
 SWEP.RecoilResetTime = 0.2 // time after you stop shooting for recoil to start dissipating
-SWEP.RecoilDissipationRate = 3.5
-SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
+SWEP.RecoilDissipationRate = 4
+SWEP.RecoilFirstShotMult = 1.25 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 1.5
-SWEP.RecoilKick = 4
-SWEP.RecoilStability = 0.1
+SWEP.RecoilVisualKick = 1
+SWEP.RecoilKick = 5
+SWEP.RecoilStability = 0.2
+SWEP.RecoilAltMultiplier = 300
+SWEP.NoRecoilPattern = true
 
-SWEP.RecoilSpreadPenalty = 0.025
+SWEP.RecoilSpreadPenalty = 0.01
 
 SWEP.CanBlindFire = true
 
