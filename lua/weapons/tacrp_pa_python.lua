@@ -15,7 +15,7 @@ SWEP.Description = "Rare revolver with a reputation for accuracy and power. To b
 SWEP.Description_Quote = "\"When you have to shoot, shoot. Don't talk.\""
 
 SWEP.Trivia_Caliber = ".357 Magnum"
-SWEP.Trivia_Manufacturer = "Colt's Manufacturing Company"
+SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Year = "1955"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
