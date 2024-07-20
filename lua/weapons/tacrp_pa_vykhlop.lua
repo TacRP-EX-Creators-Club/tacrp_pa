@@ -60,10 +60,10 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 120
+SWEP.Damage_Max = 135
 SWEP.Damage_Min = 90
-SWEP.Range_Min = 3500
-SWEP.Range_Max = 7000
+SWEP.Range_Min = 1000
+SWEP.Range_Max = 5000
 SWEP.Penetration = 18 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.5
 SWEP.ArmorBonus = 2.5
