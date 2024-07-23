@@ -301,7 +301,7 @@ TacRP.LoadAtt(ATT, "optic_mosin_pu")
 ATT = {}
 
 ATT.PrintName = "PEM"
-ATT.FullName = "Mosin-Nagant 5x PEM Scope"
+ATT.FullName = "Mosin-Nagant 6x PEM Scope"
 ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
 ATT.Description = "Side-mounted sniper scope for the Mosin-Nagant."
 ATT.Pros = {"stat.spread", "att.zoom.6"}
