@@ -53,7 +53,6 @@ ATT.SortOrder = 0
 ATT.Override_ScopeHideWeapon = false
 ATT.Override_ScopeOverlay = false
 ATT.Override_ScopeFOV = 90 / 1.25
-ATT.Override_ScopeLevels = 1
 
 ATT.Add_AimDownSightsTime = -0.05
 ATT.Add_SprintToFireTime = -0.04
@@ -131,11 +130,11 @@ TacRP.LoadAtt(ATT, "ammo_sako85_300mag")
 
 ATT = {}
 
-ATT.PrintName = "Scope"
-ATT.FullName = "SVT-40 PU Scope"
+ATT.PrintName = "PU"
+ATT.FullName = "PU 3.5x Scope"
 ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
-ATT.Description = "Medium power scope with a weapon-specific mount."
-ATT.Pros = {"att.zoom.5"}
+ATT.Description = "Low power scope used by the SVT-40 and Mosin-Nagant."
+ATT.Pros = {"att.zoom.3.5"}
 ATT.Cons = {"stat.aimdownsights"}
 
 ATT.Category = {"optic_pu"}
@@ -145,7 +144,7 @@ ATT.SortOrder = 5
 ATT.Override_Scope = true
 ATT.Override_ScopeHideWeapon = true
 ATT.Override_ScopeOverlay = Material("tacrp/scopes/pu.png", "mips smooth")
-ATT.Override_ScopeFOV = 90 / 5
+ATT.Override_ScopeFOV = 90 / 3.5
 
 ATT.Add_AimDownSightsTime = 0.04
 
@@ -245,3 +244,139 @@ end
 
 TacRP.LoadAtt(ATT, "ammo_m202_harpoon")
 -- #endregion
+
+ATT = {}
+
+ATT.PrintName = "Sniper"
+ATT.FullName = "Sniper Bolt"
+ATT.Icon = Material("entities/tacrp_att_optic_irons.png", "mips smooth")
+ATT.Description = "Use the sniper bolt without a scope, increasing accuracy."
+ATT.Pros = {"stat.spread", "stat.zoom"}
+ATT.Cons = {"stat.rpm"}
+
+ATT.Category = "optic_mosin"
+ATT.Free = true
+
+ATT.SortOrder = 1
+
+ATT.Override_ScopeFOV = 90 / 1.5
+ATT.Mult_Spread = 0.333
+ATT.Mult_RPM = 48 / 54
+ATT.Mult_ShootTimeMult = 0.7 / 0.65
+
+ATT.InstalledElements = {"bolt"}
+
+TacRP.LoadAtt(ATT, "optic_mosin_irons")
+
+
+ATT = {}
+
+ATT.PrintName = "PU"
+ATT.FullName = "PU 3.5x Scope"
+ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
+ATT.Description = "Low power scope used by the SVT-40 and Mosin-Nagant."
+ATT.Pros = {"stat.spread", "att.zoom.3.5"}
+ATT.Cons = {"stat.rpm", "stat.aimdownsights"}
+
+ATT.Category = "optic_mosin"
+ATT.InvAtt = "optic_svt_pu"
+
+ATT.SortOrder = 3.5
+
+ATT.Override_Scope = true
+ATT.Override_ScopeHideWeapon = true
+ATT.Override_ScopeOverlay = Material("tacrp/scopes/pu.png", "mips smooth")
+ATT.Override_ScopeFOV = 90 / 3.5
+
+ATT.Mult_Spread = 0.333
+ATT.Add_AimDownSightsTime = 0.03
+ATT.Mult_RPM = 48 / 54
+ATT.Mult_ShootTimeMult = 0.7 / 0.65
+
+ATT.InstalledElements = {"scope1", "bolt"}
+
+TacRP.LoadAtt(ATT, "optic_mosin_pu")
+
+
+ATT = {}
+
+ATT.PrintName = "PEM"
+ATT.FullName = "Mosin-Nagant 5x PEM Scope"
+ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
+ATT.Description = "Side-mounted sniper scope for the Mosin-Nagant."
+ATT.Pros = {"stat.spread", "att.zoom.6"}
+ATT.Cons = {"stat.rpm", "stat.aimdownsights"}
+
+ATT.Category = "optic_mosin"
+
+ATT.SortOrder = 6
+
+ATT.Override_Scope = true
+ATT.Override_ScopeHideWeapon = true
+ATT.Override_ScopeOverlay = Material("tacrp/scopes/pu.png", "mips smooth")
+ATT.Override_ScopeFOV = 90 / 6
+
+ATT.Mult_Spread = 0.333
+ATT.Add_AimDownSightsTime = 0.03
+ATT.Mult_RPM = 48 / 54
+ATT.Mult_ShootTimeMult = 0.7 / 0.65
+
+ATT.InstalledElements = {"scope2", "bolt"}
+
+TacRP.LoadAtt(ATT, "optic_mosin_pem")
+
+
+ATT = {}
+
+ATT.PrintName = "PE"
+ATT.FullName = "Mosin-Nagant 4x PE Scope"
+ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
+ATT.Description = "Top-mounted medium range scope for the Mosin-Nagant."
+ATT.Pros = {"stat.spread", "att.zoom.4"}
+ATT.Cons = {"stat.rpm", "stat.aimdownsights"}
+
+ATT.Category = "optic_mosin"
+
+ATT.SortOrder = 4
+
+ATT.Override_Scope = true
+ATT.Override_ScopeHideWeapon = true
+ATT.Override_ScopeOverlay = Material("tacrp/scopes/pu.png", "mips smooth")
+ATT.Override_ScopeFOV = 90 / 4
+
+ATT.Mult_Spread = 0.333
+ATT.Add_AimDownSightsTime = 0.03
+ATT.Mult_RPM = 48 / 54
+ATT.Mult_ShootTimeMult = 0.7 / 0.65
+
+ATT.InstalledElements = {"scope3", "bolt"}
+
+TacRP.LoadAtt(ATT, "optic_mosin_pe")
+
+
+ATT = {}
+
+ATT.PrintName = "Bayonet"
+ATT.FullName = "Mosin-Nagant Spike Bayonet"
+ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
+ATT.Description = "For stabbing fascist scum."
+ATT.Pros = {"stat.meleedamage", "stat.meleerange"}
+ATT.Cons = {"stat.sightedspeed", "stat.scopedsway", "stat.meleeattacktime"}
+
+ATT.Category = "muzz_mosin"
+
+ATT.SortOrder = 999
+
+ATT.Add_MeleeRange = 24
+ATT.Mult_MeleeDamage = 2
+ATT.Mult_MeleeAttackTime = 1.25
+
+ATT.Mult_SightedSpeedMult = 0.85
+ATT.Add_ScopedSway = 0.1
+
+ATT.InstalledElements = {"bayonet"}
+
+ATT.Override_Sound_MeleeHit = "tacint_extras/mosin/melee_hitworld.ogg"
+ATT.Override_Sound_MeleeHitBody = "tacint_extras/mosin/melee_hitbody.ogg"
+
+TacRP.LoadAtt(ATT, "muzz_mosin_bayonet")
