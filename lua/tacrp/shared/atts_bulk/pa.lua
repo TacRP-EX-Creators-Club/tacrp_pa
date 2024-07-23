@@ -80,7 +80,7 @@ ATT.Override_Ammo_Expanded = "smg1"
 ATT.Override_Sound_Shoot = "^tacint_extras/sako85/m16_fire_01.wav"
 
 ATT.Mult_RPM = 1.2
-ATT.Mult_ShootTimeMult = 1 / 1.2
+ATT.Mult_ShootTimeMult = 1.15 / 1.2
 
 ATT.Mult_Damage_Max = 0.85
 ATT.Mult_Damage_Min = 0.85
@@ -114,7 +114,7 @@ ATT.Override_Ammo_Expanded = "ti_rifle"
 ATT.Override_Sound_Shoot = "^tacint_extras/sako85/win1892_fire_01.wav"
 
 ATT.Mult_RPM = 0.9
-ATT.Mult_ShootTimeMult = 1 / 0.9
+ATT.Mult_ShootTimeMult = 1.15 / 0.9
 
 ATT.Mult_Damage_Max = 1.16
 ATT.Mult_Damage_Min = 1.16
@@ -261,8 +261,8 @@ ATT.SortOrder = 1
 
 ATT.Override_ScopeFOV = 90 / 1.5
 ATT.Mult_Spread = 0.333
-ATT.Mult_RPM = 48 / 54
-ATT.Mult_ShootTimeMult = 0.7 / 0.65
+ATT.Mult_RPM = 45 / 52
+ATT.Mult_ShootTimeMult = 1.15
 
 ATT.InstalledElements = {"bolt"}
 
@@ -290,8 +290,8 @@ ATT.Override_ScopeFOV = 90 / 3.5
 
 ATT.Mult_Spread = 0.333
 ATT.Add_AimDownSightsTime = 0.03
-ATT.Mult_RPM = 48 / 54
-ATT.Mult_ShootTimeMult = 0.7 / 0.65
+ATT.Mult_RPM = 45 / 52
+ATT.Mult_ShootTimeMult = 1.15
 
 ATT.InstalledElements = {"scope1", "bolt"}
 
@@ -318,8 +318,8 @@ ATT.Override_ScopeFOV = 90 / 6
 
 ATT.Mult_Spread = 0.333
 ATT.Add_AimDownSightsTime = 0.03
-ATT.Mult_RPM = 48 / 54
-ATT.Mult_ShootTimeMult = 0.7 / 0.65
+ATT.Mult_RPM = 45 / 52
+ATT.Mult_ShootTimeMult = 1.15
 
 ATT.InstalledElements = {"scope2", "bolt"}
 
@@ -346,8 +346,8 @@ ATT.Override_ScopeFOV = 90 / 4
 
 ATT.Mult_Spread = 0.333
 ATT.Add_AimDownSightsTime = 0.03
-ATT.Mult_RPM = 48 / 54
-ATT.Mult_ShootTimeMult = 0.7 / 0.65
+ATT.Mult_RPM = 45 / 52
+ATT.Mult_ShootTimeMult = 1.15
 
 ATT.InstalledElements = {"scope3", "bolt"}
 

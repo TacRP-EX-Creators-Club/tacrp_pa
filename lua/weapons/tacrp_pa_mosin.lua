@@ -32,9 +32,11 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 80,
-        Damage_Min = 55,
+        Damage_Max = 78,
+        Damage_Min = 45,
 
+        RPM = 55,
+        ShootTimeMult = 0.65,
         HipFireSpreadPenalty = 0.03,
         Spread = 0.0075,
 
@@ -77,9 +79,9 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 // "ballistics"
 
 SWEP.Damage_Max = 78
-SWEP.Damage_Min = 38
+SWEP.Damage_Min = 36
 SWEP.Range_Min = 800
-SWEP.Range_Max = 3800
+SWEP.Range_Max = 2800
 SWEP.Penetration = 12
 SWEP.ArmorPenetration = 0.8
 SWEP.ArmorBonus = 1
@@ -103,7 +105,7 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 54
+SWEP.RPM = 52
 
 SWEP.Spread = 0.01 // WW2 rifles weren't all that accurate...
 
@@ -198,7 +200,7 @@ SWEP.ShotgunFullCancel = true
 SWEP.ShotgunNoReverseStart = true
 
 SWEP.ReloadTimeMult = 1
-SWEP.ShootTimeMult = 0.65
+SWEP.ShootTimeMult = 0.675
 SWEP.DropMagazineModel = false
 
 SWEP.ShotgunLoadInTime = 0
