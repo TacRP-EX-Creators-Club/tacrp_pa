@@ -68,11 +68,11 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MachinePistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 20
-SWEP.Damage_Min = 10
-SWEP.Range_Min = 1800
+SWEP.Damage_Max = 18
+SWEP.Damage_Min = 9
+SWEP.Range_Min = 1500
 SWEP.Range_Max = 4000
-SWEP.Penetration = 4
+SWEP.Penetration = 3
 SWEP.ArmorPenetration = 0.6
 SWEP.ArmorBonus = 0.5
 
@@ -105,7 +105,7 @@ SWEP.RecoilResetTime = 0.02
 SWEP.RecoilDissipationRate = 15
 SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 2.0
+SWEP.RecoilVisualKick = 1
 SWEP.RecoilKick = 2.5
 SWEP.RecoilStability = 0.65
 SWEP.RecoilAltMultiplier = 200
@@ -115,7 +115,7 @@ SWEP.HipFireSpreadPenalty = 0.03
 
 // handling
 
-SWEP.MoveSpeedMult = 0.92
+SWEP.MoveSpeedMult = 0.93
 SWEP.ShootingSpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.75
 
@@ -166,7 +166,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 10
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1.3
+SWEP.ReloadTimeMult = 1.25
 
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/p2000.mdl"
 SWEP.DropMagazineImpact = "pistol"

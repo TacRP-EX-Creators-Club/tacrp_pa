@@ -12,14 +12,14 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "1Pistol"
 
 SWEP.Description = "Mass production Soviet sidearm designed to be carried often and rarely shot. Lethality is poor beyond point blank."
-SWEP.Description_Quote = nil
+SWEP.Description_Quote = "\"Finish the job, James! Blow them all to hell!\""
 
 SWEP.Trivia_Caliber = "9x18mm"
 SWEP.Trivia_Manufacturer = "Izhevsk Mechanical Plant"
 SWEP.Trivia_Year = "1948"
 
 SWEP.Faction = TacRP.FACTION_COALITION
-SWEP.Credits = "Assets: TehSnake\nAnimation: Tactical Intervention\nPorted By: Arctic"
+SWEP.Credits = "Assets: TehSnake\nAnimation: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint/v_makarov.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_makarov.mdl"
@@ -81,10 +81,10 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 18
-SWEP.Damage_Min = 8
-SWEP.Range_Min = 200
-SWEP.Range_Max = 1400
+SWEP.Damage_Max = 20
+SWEP.Damage_Min = 5
+SWEP.Range_Min = 250
+SWEP.Range_Max = 1200
 SWEP.Penetration = 2
 SWEP.ArmorPenetration = 0.55
 SWEP.ArmorBonus = 0.5
@@ -92,7 +92,7 @@ SWEP.ArmorBonus = 0.5
 SWEP.MuzzleVelocity = 11000
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 3,
+    [HITGROUP_HEAD] = 2.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
@@ -106,23 +106,23 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 720
-SWEP.RPMMultSemi = 0.75
+SWEP.RPM = 700
+SWEP.RPMMultSemi = 0.7
 
 SWEP.Spread = 0.008
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 4
-SWEP.RecoilResetTime = 0.02
-SWEP.RecoilDissipationRate = 16
+SWEP.RecoilMaximum = 3
+SWEP.RecoilResetTime = 0.03
+SWEP.RecoilDissipationRate = 12
 SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 4
+SWEP.RecoilKick = 3
 SWEP.RecoilStability = 0.15
 
-SWEP.RecoilSpreadPenalty = 0.002
+SWEP.RecoilSpreadPenalty = 0.003
 SWEP.HipFireSpreadPenalty = 0.014
 
 SWEP.CanBlindFire = true
@@ -270,7 +270,7 @@ SWEP.Attachments = {
         DetachSound = "tacrp/weapons/silencer_off.wav",
         VMScale = 0.6,
         WMScale = 0.5,
-        Pos_VM = Vector(-3.2, -0.05, 9.22),
+        Pos_VM = Vector(-3.2, 0, 9.22),
         Ang_VM = Angle(90, 0, 0),
         Pos_WM = Vector(0.2, 6.9, -1.8),
         Ang_WM = Angle(0, -90, 0),
