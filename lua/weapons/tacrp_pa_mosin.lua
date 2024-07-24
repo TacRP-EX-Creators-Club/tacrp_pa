@@ -213,10 +213,11 @@ SWEP.BulletBodygroups = {
 // local path = "TacRP/weapons/spr/"
 local path1 = "tacint_extras/mosin/"
 
-SWEP.Sound_Shoot = "^" .. path1 .. "k98_shoot3.wav"
+SWEP.Sound_Shoot = "^" .. path1 .. "scout_fire-1.wav"
 SWEP.Sound_Shoot_Silenced = "TacRP/weapons/ak47/ak47_fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 130
+SWEP.Pitch_Shoot = 103
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 
 // effects
