@@ -25,7 +25,7 @@ Texture: Crash
 Sound: Vunsunta, DMG, Strelok]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_woodsman.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_vertec.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_woodsman.mdl"
 
 SWEP.Slot = 1
 
@@ -252,7 +252,7 @@ SWEP.Attachments = {
         WMScale = 1,
         Pos_VM = Vector(0, 1, 0.15),
         Ang_VM = Angle(0, 90, 180),
-        Pos_WM = Vector(0, -1, -1),
+        Pos_WM = Vector(0.125, -2.75, -1.2),
         Ang_WM = Angle(0, -90, 0),
     },
     [2] = {
@@ -266,7 +266,7 @@ SWEP.Attachments = {
         WMScale = 0.5,
         Pos_VM = Vector(0.35, 0, 9.35),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(0, 8.5, -1.5),
+        Pos_WM = Vector(0.125, 13.5, -1.75),
         Ang_WM = Angle(0, -90, 0),
     },
     [3] = {
@@ -277,10 +277,10 @@ SWEP.Attachments = {
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         VMScale = 1,
-        WMScale = 1.3,
+        WMScale = 1,
         Pos_VM = Vector(-2.5, 0, 7),
         Ang_VM = Angle(90, 0, 180),
-        Pos_WM = Vector(0, 5, -2.75),
+        Pos_WM = Vector(0, 7, -2.2),
         Ang_WM = Angle(0, -90, 180),
     },
     [4] = {
