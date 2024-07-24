@@ -56,7 +56,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.9
 }
 
-SWEP.MuzzleVelocity = 9000
+SWEP.MuzzleVelocity = 8000
 
 SWEP.Num = 1
 
@@ -76,26 +76,24 @@ SWEP.RecoilResetTime = 0.2 // time after you stop shooting for recoil to start d
 SWEP.RecoilDissipationRate = 2
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 2
-SWEP.RecoilVisualShake = 2
-
-SWEP.RecoilKick = 6
+SWEP.RecoilVisualKick = 1
+SWEP.RecoilKick = 5
 
 SWEP.RecoilSpreadPenalty = 0 // extra spread per one unit of recoil
-SWEP.HipFireSpreadPenalty = 0.08
-SWEP.PeekPenaltyFraction = 0.2
+SWEP.HipFireSpreadPenalty = 0.05
+SWEP.PeekPenaltyFraction = 0.25
 
 SWEP.CanBlindFire = true
 
 // handling
 
 SWEP.MoveSpeedMult = 0.875
-SWEP.ShootingSpeedMult = 0.3
+SWEP.ShootingSpeedMult = 0.75
 SWEP.SightedSpeedMult = 0.5
 
 SWEP.ReloadSpeedMult = 0.4
 
-SWEP.AimDownSightsTime = 0.36
+SWEP.AimDownSightsTime = 0.34
 SWEP.SprintToFireTime = 0.44 // multiplies how long it takes to recover from sprinting
 
 SWEP.Sway = 1.25
@@ -168,7 +166,7 @@ SWEP.MuzzleEffect = "muzzleflash_m79"
 // anims
 
 SWEP.DeployTimeMult = 2
-SWEP.ReloadTimeMult = 1.15
+SWEP.ReloadTimeMult = 1
 
 SWEP.AnimationTranslationTable = {
     ["deploy"] = "draw",
