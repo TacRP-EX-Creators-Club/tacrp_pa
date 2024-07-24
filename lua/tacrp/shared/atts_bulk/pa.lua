@@ -131,9 +131,9 @@ TacRP.LoadAtt(ATT, "ammo_sako85_300mag")
 ATT = {}
 
 ATT.PrintName = "PU"
-ATT.FullName = "PU 3.5x Scope"
+ATT.FullName = "SVT-40 PU 3.5x Scope"
 ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
-ATT.Description = "Low power scope used by the SVT-40 and Mosin-Nagant."
+ATT.Description = "Low power scope with specialized mount for the SVT-40."
 ATT.Pros = {"att.zoom.3.5"}
 ATT.Cons = {"stat.aimdownsights"}
 
@@ -272,14 +272,13 @@ TacRP.LoadAtt(ATT, "optic_mosin_irons")
 ATT = {}
 
 ATT.PrintName = "PU"
-ATT.FullName = "PU 3.5x Scope"
-ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
-ATT.Description = "Low power scope used by the SVT-40 and Mosin-Nagant."
+ATT.FullName = "Mosin-Nagant PU 3.5x Scope"
+ATT.Icon = Material("entities/tacrp_att_optic_mosin_pu.png", "mips smooth")
+ATT.Description = "Side-mounted low power scope for the Mosin-Nagant."
 ATT.Pros = {"stat.spread", "att.zoom.3.5"}
 ATT.Cons = {"stat.rpm", "stat.aimdownsights"}
 
 ATT.Category = "optic_mosin"
-ATT.InvAtt = "optic_svt_pu"
 
 ATT.SortOrder = 3.5
 
@@ -302,7 +301,7 @@ ATT = {}
 
 ATT.PrintName = "PEM"
 ATT.FullName = "Mosin-Nagant 6x PEM Scope"
-ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
+ATT.Icon = Material("entities/tacrp_att_optic_mosin_pem.png", "mips smooth")
 ATT.Description = "Side-mounted sniper scope for the Mosin-Nagant."
 ATT.Pros = {"stat.spread", "att.zoom.6"}
 ATT.Cons = {"stat.rpm", "stat.aimdownsights"}
@@ -330,7 +329,7 @@ ATT = {}
 
 ATT.PrintName = "PE"
 ATT.FullName = "Mosin-Nagant 4x PE Scope"
-ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
+ATT.Icon = Material("entities/tacrp_att_optic_mosin_pe.png", "mips smooth")
 ATT.Description = "Top-mounted medium range scope for the Mosin-Nagant."
 ATT.Pros = {"stat.spread", "att.zoom.4"}
 ATT.Cons = {"stat.rpm", "stat.aimdownsights"}
@@ -358,7 +357,7 @@ ATT = {}
 
 ATT.PrintName = "Bayonet"
 ATT.FullName = "Mosin-Nagant Spike Bayonet"
-ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
+ATT.Icon = Material("entities/tacrp_att_muzz_mosin_bayonet.png", "mips smooth")
 ATT.Description = "For stabbing fascist scum."
 ATT.Pros = {"stat.meleedamage", "stat.meleerange"}
 ATT.Cons = {"stat.sightedspeed", "stat.scopedsway", "stat.meleeattacktime"}
