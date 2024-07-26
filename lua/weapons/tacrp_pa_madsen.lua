@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "3Submachine Gun"
 
-SWEP.Description = "Cost-effective Danish SMG that's easy to use but has unimpressive firepower. An optic cannot be mounted due to the top charging handle."
+SWEP.Description = "Cost-effective Danish SMG with decent firepower but awkward ergonomics. An optic cannot be mounted due to the top charging handle."
 SWEP.Description_Quote = "\"Do you renounce Satan... And all his works?\""
 
 SWEP.Trivia_Caliber = "9x19mm"
@@ -30,8 +30,8 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 22,
-        Damage_Min = 9,
+        Damage_Max = 24,
+        Damage_Min = 12,
 
         RecoilKick = 5,
         ClipSize = 32,
@@ -63,10 +63,10 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SMG
 
 // "ballistics"
 
-SWEP.Damage_Max = 18
-SWEP.Damage_Min = 12
-SWEP.Range_Min = 700 // distance for which to maintain maximum damage
-SWEP.Range_Max = 2800 // distance at which we drop to minimum damage
+SWEP.Damage_Max = 20
+SWEP.Damage_Min = 10
+SWEP.Range_Min = 400 // distance for which to maintain maximum damage
+SWEP.Range_Max = 1600 // distance at which we drop to minimum damage
 SWEP.Penetration = 3 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.525
 SWEP.ArmorBonus = 0.5
@@ -74,7 +74,7 @@ SWEP.ArmorBonus = 0.5
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.15,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.75,
@@ -96,15 +96,15 @@ SWEP.ShootTimeMult = 0.6
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 11
+SWEP.RecoilMaximum = 10
 SWEP.RecoilResetTime = 0.02
 SWEP.RecoilDissipationRate = 33
 SWEP.RecoilFirstShotMult = 1.75
 
 SWEP.RecoilVisualKick = 1.25
-SWEP.RecoilKick = 3
+SWEP.RecoilKick = 4
 SWEP.RecoilStability = 0.15
-SWEP.RecoilAltMultiplier = 120
+SWEP.RecoilAltMultiplier = 150
 
 SWEP.RecoilSpreadPenalty = 0.002
 SWEP.HipFireSpreadPenalty = 0.015
