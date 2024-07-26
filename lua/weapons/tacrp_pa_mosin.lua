@@ -20,12 +20,12 @@ SWEP.Trivia_Year = "1891"
 SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = [[
 Model/Texture: Red Orchestra 2
-Sound: rzen1th
+Sound: Red Orchestra 2, rzen1th
 Animations: Cry of Fear, Lazarus
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_mosin.mdl"
-SWEP.WorldModel = "models/weapons/tacint_extras/w_k98.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_mosin.mdl"
 
 SWEP.Slot = 2
 SWEP.SlotAlt = 3
@@ -213,11 +213,11 @@ SWEP.BulletBodygroups = {
 // local path = "TacRP/weapons/spr/"
 local path1 = "tacint_extras/mosin/"
 
-SWEP.Sound_Shoot = "^" .. path1 .. "scout_fire-1.wav"
+SWEP.Sound_Shoot = "^" .. path1 .. "mosin_fire.wav"
 SWEP.Sound_Shoot_Silenced = "TacRP/weapons/ak47/ak47_fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 130
-SWEP.Pitch_Shoot = 103
+SWEP.Pitch_Shoot = 100
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 
 // effects
