@@ -22,55 +22,15 @@ ENT.AudioLoop = "TacRP/weapons/rpg7/rocket_flight-1.wav"
 
 ENT.SmokeTrail = true
 
-ENT.FlareColor = Color(255, 255, 255)
-
-function ENT:Impact(data, collider)
-    if self.SpawnTime + self.SafetyFuse > CurTime() and !self.NPCDamage then
-        local attacker = self.Attacker or self:GetOwner()
-        local ang = data.OurOldVelocity:Angle()
-        local fx = EffectData()
-        fx:SetOrigin(data.HitPos)
-        fx:SetNormal(-ang:Forward())
-        fx:SetAngles(-ang)
-        util.Effect("ManhackSparks", fx)
-
-        if IsValid(data.HitEntity) then
-            local dmginfo = DamageInfo()
-            dmginfo:SetAttacker(attacker)
-            dmginfo:SetInflictor(self)
-            dmginfo:SetDamageType(DMG_CRUSH + DMG_CLUB)
-            dmginfo:SetDamage(250 * (self.NPCDamage and 0.5 or 1))
-            dmginfo:SetDamageForce(data.OurOldVelocity * 25)
-            dmginfo:SetDamagePosition(data.HitPos)
-            data.HitEntity:TakeDamageInfo(dmginfo)
-        end
-
-        self:EmitSound("weapons/rpg/shotdown.wav", 80)
-
-        for i = 1, 4 do
-            local prop = ents.Create("prop_physics")
-            prop:SetPos(self:GetPos())
-            prop:SetAngles(self:GetAngles())
-            prop:SetModel("models/weapons/tacint/rpg7_shrapnel_p" .. i .. ".mdl")
-            prop:Spawn()
-            prop:GetPhysicsObject():SetVelocityInstantaneous(data.OurNewVelocity * 0.5 + VectorRand() * 75)
-            prop:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
-
-            SafeRemoveEntityDelayed(prop, 3)
-        end
-
-        self:Remove()
-        return true
-    end
-end
+ENT.FlareColor = Color(255, 200, 150)
 
 function ENT:Detonate()
     local attacker = self.Attacker or self:GetOwner()
 
     local mult = TacRP.ConVars["mult_damage_explosive"]:GetFloat()
     local dmg = DamageInfo()
-    dmg:SetDamageType(DMG_BURN)
-    dmg:SetDamage(60 * mult)
+    dmg:SetDamageType(DMG_BLAST + DMG_BURN)
+    dmg:SetDamage(200 * mult)
     dmg:SetDamagePosition(self:GetPos())
     dmg:SetInflictor(self)
     dmg:SetAttacker(attacker)
@@ -83,7 +43,7 @@ function ENT:Detonate()
         Src = self:GetPos(),
         Dir = self:GetForward(),
         HullSize = 0,
-        Distance = 96,
+        Distance = 128,
         IgnoreEntity = self,
         Callback = function(atk, btr, dmginfo)
             dmginfo:SetDamageType(DMG_AIRBOAT + DMG_SNIPER + DMG_BLAST) // airboat damage for helicopters and LVS vehicles
@@ -107,7 +67,7 @@ function ENT:Detonate()
         local tr = util.QuickTrace(self:GetPos(), ent:GetPos() - self:GetPos(), {self, ent})
         if tr.Fraction == 1 then
             // Ignite based on distance
-            ent:Ignite(9 * (math.Clamp(122500 - ent:GetPos():DistToSqr(self:GetPos()), 0, 122500) / 122500), 0)
+            ent:Ignite(12 * (math.Clamp(122500 - ent:GetPos():DistToSqr(self:GetPos()), 0, 122500) / 122500), 0)
         end
     end
 
