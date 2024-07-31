@@ -7,7 +7,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Sako 85"
 SWEP.Category = "Tactical RP"
 
-SWEP.SubCatTier = "4Consumer"
+SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "7Sniper Rifle"
 
 SWEP.Description = "A simple, rugged hunting rifle with no room for tactical nonsense. Equipped with an adjustable 6x scope."
@@ -81,8 +81,8 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 65
-SWEP.Damage_Min = 55
+SWEP.Damage_Max = 60
+SWEP.Damage_Min = 52
 SWEP.Range_Min = 1000
 SWEP.Range_Max = 6000
 SWEP.Penetration = 12 // units of metal this weapon can penetrate
@@ -100,7 +100,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.5
 }
 
-SWEP.MuzzleVelocity = 31000
+SWEP.MuzzleVelocity = 30000
 
 // misc. shooting
 
