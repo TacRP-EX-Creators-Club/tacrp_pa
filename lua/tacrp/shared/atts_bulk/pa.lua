@@ -72,6 +72,7 @@ ATT.Pros = {"stat.rpm", "stat.recoilkick", "stat.clipsize"}
 ATT.Cons = {"stat.damage"}
 
 ATT.Category = "ammo_sako85"
+ATT.Free = true
 
 ATT.SortOrder = 1
 
@@ -105,6 +106,7 @@ ATT.Pros = {"stat.damage"}
 ATT.Cons = {"stat.recoilkick", "stat.rpm", "stat.clipsize"}
 
 ATT.Category = "ammo_sako85"
+ATT.Free = true
 
 ATT.SortOrder = 2
 
