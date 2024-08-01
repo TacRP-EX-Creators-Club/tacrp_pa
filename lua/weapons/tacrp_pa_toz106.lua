@@ -12,7 +12,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Shotgun"
 
 SWEP.Description = "Bolt-action hunting shotgun. Small caliber shells have excellent accuracy but are not very lethal."
-SWEP.Description_Quote = nil
+SWEP.Description_Quote = "\"Head, eyes\""
 
 SWEP.Trivia_Caliber = "20 Gauge"
 SWEP.Trivia_Manufacturer = "Tulsky Oruzheiny Zavod"
