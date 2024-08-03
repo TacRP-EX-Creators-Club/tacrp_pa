@@ -24,33 +24,36 @@ ENT.SmokeTrail = true
 
 ENT.FlareColor = Color(255, 200, 150)
 
-function ENT:Detonate()
+ENT.Radius = 400
+
+function ENT:Detonate(ent)
     local attacker = self.Attacker or self:GetOwner()
 
     local mult = TacRP.ConVars["mult_damage_explosive"]:GetFloat()
     local dmg = DamageInfo()
-    dmg:SetDamageType(DMG_BLAST + DMG_BURN)
-    dmg:SetDamage(200 * mult)
     dmg:SetDamagePosition(self:GetPos())
     dmg:SetInflictor(self)
     dmg:SetAttacker(attacker)
-    util.BlastDamageInfo(dmg, self:GetPos(), 350)
 
-    self:FireBullets({
-        Attacker = attacker,
-        Damage = 100 * mult,
-        Tracer = 0,
-        Src = self:GetPos(),
-        Dir = self:GetForward(),
-        HullSize = 0,
-        Distance = 128,
-        IgnoreEntity = self,
-        Callback = function(atk, btr, dmginfo)
-            dmginfo:SetDamageType(DMG_AIRBOAT + DMG_SNIPER + DMG_BLAST) // airboat damage for helicopters and LVS vehicles
-            dmginfo:SetDamageForce(self:GetForward() * 700) // LVS uses this to calculate penetration!
-            util.Decal("Scorch", btr.StartPos, btr.HitPos - (btr.HitNormal * 16), self)
-        end,
+    // Apply a small instance of damage to ignite first, before doing the real damage
+    // This will ensure if the target dies it is on fire first (so it can ignite its ragdolls etc.)
+    dmg:SetDamageType(DMG_SLOWBURN)
+    dmg:SetDamage(5)
+    util.BlastDamageInfo(dmg, self:GetPos(), self.Radius)
+
+    dmg:SetDamageType(DMG_BLAST + DMG_BURN)
+    dmg:SetDamage(150 * mult)
+    util.BlastDamageInfo(dmg, self:GetPos(), self.Radius)
+
+    self:ImpactTraceAttack(ent, 100 * mult, 100)
+
+    local decaltr = util.TraceLine({
+        start = self:GetPos(),
+        endpos = self:GetPos() + self:GetForward() * 128,
+        filter = self,
+        mask = MASK_SOLID,
     })
+    util.Decal("Scorch", decaltr.StartPos, decaltr.HitPos - (decaltr.HitNormal * 16), self)
 
     local fx = EffectData()
     fx:SetOrigin(self:GetPos())
@@ -63,13 +66,13 @@ function ENT:Detonate()
         self:EmitSound("^ambient/fire/ignite.wav", 110, 110)
     end
 
-    for _, ent in pairs(ents.FindInSphere(self:GetPos(), 350)) do
-        local tr = util.QuickTrace(self:GetPos(), ent:GetPos() - self:GetPos(), {self, ent})
-        if tr.Fraction == 1 then
-            // Ignite based on distance
-            ent:Ignite(12 * (math.Clamp(122500 - ent:GetPos():DistToSqr(self:GetPos()), 0, 122500) / 122500), 0)
-        end
-    end
-
     self:Remove()
 end
+
+hook.Add("PostEntityTakeDamage", "tacrp_pa_m202", function(ent, dmginfo, took)
+    local infl = dmginfo:GetInflictor()
+    if took and IsValid(infl) and infl:GetClass() == "tacrp_proj_m202" and dmginfo:GetDamageType() == DMG_SLOWBURN then
+        local fr = math.Clamp(1 - (ent:GetPos():Distance(dmginfo:GetDamagePosition())) / infl.Radius, 0, 1)
+        ent:Ignite(fr * 12)
+    end
+end)

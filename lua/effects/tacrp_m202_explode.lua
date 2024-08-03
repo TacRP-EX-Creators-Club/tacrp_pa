@@ -61,9 +61,11 @@ function EFFECT:Init(data)
         fire:SetCollide(false)
     end
 
-    for i = 1, 10 do
+    for i = 1, 20 do
         local fire = emitter:Add("effects/fire_embers" .. math.random(1, 3), data:GetOrigin())
-        fire:SetVelocity(VectorRand() * 1500)
+        local v = VectorRand() * 1500
+        v.z = v.z * 0.25
+        fire:SetVelocity(v)
         fire:SetGravity(Vector(0, 0, -750))
         fire:SetDieTime(math.Rand(1.2, 3))
         fire:SetStartAlpha(200)
