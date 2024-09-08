@@ -28,12 +28,12 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 26,
-        Damage_Min = 6,
+        Damage_Max = 28,
+        Damage_Min = 12,
 
         RecoilSpreadPenalty = 0.004,
         HipFireSpreadPenalty = 0.025,
-        RecoilKick = 8,
+        RecoilKick = 5,
         FreeAimMaxAngle = 4,
     },
     [TacRP.BALANCE_TTT] = {
@@ -68,8 +68,8 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MachinePistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 18
-SWEP.Damage_Min = 9
+SWEP.Damage_Max = 20
+SWEP.Damage_Min = 12
 SWEP.Range_Min = 1500
 SWEP.Range_Max = 4000
 SWEP.Penetration = 3
@@ -93,7 +93,7 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 420
+SWEP.RPM = 360
 SWEP.RPMMultSemi = 0.8
 
 SWEP.Spread = 0.007
@@ -192,7 +192,8 @@ SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 // the .qc attachment for the muzzle
 SWEP.QCA_Muzzle = 1
 
-SWEP.MuzzleEffect = "muzzleflash_smg"
+SWEP.MuzzleEffect = "muzzleflash_pistol"
+SWEP.EjectEffect = 1
 
 // anims
 

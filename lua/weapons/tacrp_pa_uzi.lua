@@ -180,6 +180,7 @@ SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 SWEP.QCA_Muzzle = 1
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
+SWEP.EjectEffect = 1
 
 // anims
 
