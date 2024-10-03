@@ -151,7 +151,7 @@ SWEP.SprintPos = Vector(5, 0, -2)
 SWEP.SightAng = Angle(-.28, 0, 0)
 SWEP.SightPos = Vector(-4.12, -5, -4)
 
-SWEP.CorrectivePos = Vector(0.025, 0, 0.125)
+SWEP.CorrectivePos = Vector(0.025, 0, 0.05)
 SWEP.CorrectiveAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(8, 0, -8.5)
