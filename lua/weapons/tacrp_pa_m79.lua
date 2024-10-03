@@ -18,7 +18,12 @@ SWEP.Trivia_Manufacturer = "Springfield Armory"
 SWEP.Trivia_Year = "1961"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
-SWEP.Credits = "Textures: Millenia\nModel: EdisLeado\nAnimations: speedonerd & 8z"
+SWEP.Credits = [[
+Textures: Millenia
+Model: EdisLeado
+Animations: speedonerd & 8z
+Sounds: Firearms: Source
+]]
 
 SWEP.ViewModel = "models/weapons/tacint/v_m79.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_m79.mdl"
@@ -147,9 +152,9 @@ SWEP.Ammo = "smg1_grenade"
 
 // sounds
 
-local path = "TacRP/weapons/m320/"
+local path = "tacint_extras/m79/m79_"
 
-SWEP.Sound_Shoot = "^" .. path .. "fire-1.wav"
+SWEP.Sound_Shoot = path .. "fire1.wav"
 
 SWEP.Vol_Shoot = 130
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
@@ -246,12 +251,11 @@ local function addsound(name, spath)
     })
 end
 
-addsound("TacInt_m320.Tube_Open", path .. "tube_open-1.wav")
-addsound("TacInt_m320.Tube_close", path .. "tube_close-1.wav")
-addsound("TacInt_m320.shell_out", path .. "shell_out-1.wav")
-addsound("TacInt_m320.shell_in", path .. "shell_in-1.wav")
-addsound("TacInt_m320.buttstock_back", path .. "buttstock_back-1.wav")
-addsound("TacInt_m320.sight_flipup", path .. "sight_flipup-1.wav")
+addsound("tacint_m79.open", path .. "open.wav")
+addsound("tacint_m79.shells", path .. "remove.wav")
+addsound("tacint_m79.magin", path .. "insert.wav")
+addsound("tacint_m79.close", path .. "close.wav")
+addsound("tacint_m79.unholster", path .. "unholster.wav")
 
 SWEP.AutoSpawnable = false
 
