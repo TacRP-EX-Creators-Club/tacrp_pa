@@ -1,5 +1,5 @@
 SWEP.Base = "tacrp_base"
-SWEP.Spawnable = true
+SWEP.Spawnable = false -- bring it back when that cunt actually finishes something he's working on for once
 
 AddCSLuaFile()
 
