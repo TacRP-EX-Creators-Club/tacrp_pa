@@ -12,7 +12,7 @@ SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "7Sniper Rifle"
 
 SWEP.Description = "Robust magnum sniper with great power and unmatched range but is slow to cycle.\nEquipped with a 12x scope by default."
-SWEP.Description_Quote = "\"Oh camper, camper...\""
+SWEP.Description_Quote = "\"He's a madman, a scientist, and a sharpshooter.\""
 
 SWEP.Trivia_Caliber = ".338 Lapua Magnum" -- "7.62x51mm" is more common but also too lightweight of a caliber
 SWEP.Trivia_Manufacturer = "Accuracy International"
