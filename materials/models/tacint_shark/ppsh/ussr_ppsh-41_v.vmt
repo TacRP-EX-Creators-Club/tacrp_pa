@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\tacint_shark\ppsh\ussr_ppsh-41_v"
+	"$bumpmap"     "models\tacint_shark\ppsh\ussr_ppsh-41_v_normal"
+	"$nocull" "1"
+}
