@@ -12,9 +12,9 @@ SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "7Sniper Rifle"
 
 SWEP.Description = "Robust magnum sniper with great power and unmatched range but is slow to cycle.\nEquipped with a 12x scope by default."
-SWEP.Description_Quote = "\"He's a madman, a scientist, and a sharpshooter.\""
+SWEP.Description_Quote = "\"He's a madman, a scientist, and a sharpshooter.\"" -- Nifty's 51 frags at IEM Sydney 2018
 
-SWEP.Trivia_Caliber = ".338 Lapua Magnum" -- "7.62x51mm" is more common but also too lightweight of a caliber
+SWEP.Trivia_Caliber = ".338 Lapua Magnum"
 SWEP.Trivia_Manufacturer = "Accuracy International"
 SWEP.Trivia_Year = "1988"
 
@@ -120,7 +120,7 @@ SWEP.RecoilResetTime = 0.5 // time after you stop shooting for recoil to start d
 SWEP.RecoilDissipationRate = 1
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 12
+SWEP.RecoilVisualKick = 8
 
 SWEP.RecoilKick = 3
 
