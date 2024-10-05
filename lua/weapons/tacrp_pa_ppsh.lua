@@ -10,8 +10,8 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "3Submachine Gun"
 
-SWEP.Description = "Cheap, vintage SMG with a giant drum mag. Its age makes it unsuitable for most attachments and hampers its reliability."
-SWEP.Description_Quote = ""
+SWEP.Description = "Soviet SMG with a high fire rate and suitably massive but unreliable drum magazine. Accuracy is non-existent and very much optional."
+SWEP.Description_Quote = "Ура!"
 
 SWEP.Trivia_Caliber = "7.62x25mm Tokarev"
 SWEP.Trivia_Manufacturer = "Various"
@@ -32,68 +32,27 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 32,
-        Damage_Min = 55,
-        Range_Min = 1200,
-        Range_Max = 3000,
-        ArmorPenetration = 0.95,
     },
     [TacRP.BALANCE_TTT] = {
 
-        Description = "Semi-automatic rifle with excellent accuracy and a lethal headshot at long range.\nEquipped with a 6x scope by default.",
-
-        Damage_Max = 25,
-        Damage_Min = 34,
-        Range_Min = 500,
-        Range_Max = 2200,
-        RPM = 150,
-
-        RecoilResetInstant = true,
-        RecoilResetTime = 0.18,
-        RecoilDissipationRate = 3,
-        RecoilMaximum = 3,
-        RecoilSpreadPenalty = 0.01,
-        RecoilFirstShotMult = 0.5,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 3.5,
-            [HITGROUP_CHEST] = 1.25,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.75,
-            [HITGROUP_RIGHTARM] = 0.75,
-            [HITGROUP_LEFTLEG] = 0.5,
-            [HITGROUP_RIGHTLEG] = 0.5,
-            [HITGROUP_GEAR] = 0.5
-        },
     },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 15,
-        Damage_Min = 34,
-        Range_Min = 1200,
-        Range_Max = 3000,
-        RPM = 200,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        HipFireSpreadPenalty = 0.015,
-        RecoilSpreadPenalty = 0.01,
-        RecoilMaximum = 10
-    }
 }
 
-SWEP.TTTReplace = TacRP.TTTReplacePreset.MarksmanRifle
+SWEP.TTTReplace = TacRP.TTTReplacePreset.SMG
 
 // "ballistics"
 
-SWEP.Damage_Max = 15 // damage at minimum range
-SWEP.Damage_Min = 9 // damage at maximum range
-SWEP.Range_Min = 600 // distance for which to maintain maximum damage
-SWEP.Range_Max = 1100 // distance at which we drop to minimum damage
+SWEP.Damage_Max = 18 // damage at minimum range
+SWEP.Damage_Min = 7 // damage at maximum range
+SWEP.Range_Min = 500 // distance for which to maintain maximum damage
+SWEP.Range_Max = 1500 // distance at which we drop to minimum damage
 SWEP.Penetration = 5 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.4
+SWEP.ArmorPenetration = 0.75
+SWEP.ArmorBonus = 0.5
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 1.75,
-    [HITGROUP_CHEST] = 1.25,
+    [HITGROUP_HEAD] = 1.5,
+    [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
     [HITGROUP_RIGHTARM] = 0.9,
@@ -102,34 +61,33 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.75
 }
 
-SWEP.MuzzleVelocity = 32000
+SWEP.MuzzleVelocity = 27000
 
 // misc. shooting
 
 SWEP.Firemodes = {2, 1}
 
-SWEP.RPM = 1000
+SWEP.RPM = 900
 
-SWEP.Spread = 0.0097
+SWEP.Spread = 0.016
 
-SWEP.JamFactor = 0.05
+SWEP.JamFactor = 0.015
 
 SWEP.ShootTimeMult = 0.5
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 8
+SWEP.RecoilMaximum = 20
 SWEP.RecoilResetTime = 0
-SWEP.RecoilDissipationRate = 6
-SWEP.RecoilFirstShotMult = 0.7
+SWEP.RecoilDissipationRate = 60
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 2
-SWEP.RecoilStability = 0.3
-SWEP.RecoilAltMultiplier = 50
+SWEP.RecoilKick = 3.5
+SWEP.RecoilStability = 0.25
+SWEP.RecoilAltMultiplier = 100
 
-SWEP.RecoilSpreadPenalty = 0.0055
-SWEP.HipFireSpreadPenalty = 0.075
+SWEP.RecoilSpreadPenalty = 0.0018
+SWEP.HipFireSpreadPenalty = 0.03
 SWEP.PeekPenaltyFraction = 0.1
 
 SWEP.CanBlindFire = true
@@ -137,18 +95,18 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.85
-SWEP.ShootingSpeedMult = 0.75
+SWEP.ShootingSpeedMult = 0.5
 SWEP.SightedSpeedMult = 0.5
 
-SWEP.ReloadSpeedMult = 0.4
+SWEP.ReloadSpeedMult = 0.25
 
 SWEP.AimDownSightsTime = 0.32
 SWEP.SprintToFireTime = 0.3
 
-SWEP.Sway = 2
-SWEP.ScopedSway = 0.1
+SWEP.Sway = 1.5
+SWEP.ScopedSway = 0.25
 
-SWEP.FreeAimMaxAngle = 7.5
+SWEP.FreeAimMaxAngle = 5
 
 // hold types
 
@@ -231,7 +189,7 @@ SWEP.AnimationTranslationTable = {
     ["fire_iron"] = "shoot2",
     ["deploy"] = "draw",
     ["fire"] = {"shoot1", "shoot2"},
-	["melee"] = "melee2",
+    ["melee"] = "melee2",
     ["blind_fire"] = "blind_shoot1"
 }
 
