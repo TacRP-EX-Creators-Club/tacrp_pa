@@ -256,13 +256,13 @@ SWEP.Attachments = {
     },
     [5] = {
         PrintName = "Trigger",
-        Category = {"trigger_semi"},
+        Category = {"trigger_auto"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
     [6] = {
         PrintName = "Ammo",
-        Category = {"ammo_sniper"},
+        Category = {"ammo_pistol"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     }
