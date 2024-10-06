@@ -4,7 +4,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // names and stuff
-SWEP.PrintName = "CZ 75 Auto" // Actually a CZ 75 B
+SWEP.PrintName = "CZ 75 Automatic" // Actually a CZ 75 B
 SWEP.AbbrevName = "CZ 75"
 SWEP.Category = "Tactical RP"
 
@@ -12,7 +12,7 @@ SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "3Machine Pistol"
 
 SWEP.Description = "Automatic variant of a classic Cold War-era pistol. Fast firing and controllable, but magazine capacity is very low."
-SWEP.Description_Quote = "The originial Wonder Nine."
+SWEP.Description_Quote = "\"...But, a bike will never let you down.\"" -- GTA IV: The Lost and the Damned
 
 SWEP.Trivia_Caliber = "9x19mm"
 SWEP.Trivia_Manufacturer = "Česká zbrojovka"
@@ -25,7 +25,7 @@ Sound: Hk, Vunsunta, xLongWayHome, Strelok, Cas, IceFluxx
 Animation: Tactical Intervention]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_cz75.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_sphinx.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_cz75.mdl"
 
 SWEP.Slot = 1
 
@@ -137,12 +137,12 @@ SWEP.HolsterAng = Angle(90, 0, 0)
 
 // reload
 
-SWEP.ClipSize = 12
+SWEP.ClipSize = 16 // this is the actual capacity of the CZ75, CSGO lied to you
 SWEP.Ammo = "pistol"
 
 SWEP.ReloadTimeMult = 1.15
 
-SWEP.DropMagazineModel = "models/weapons/tacint/magazines/p250.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint_extras/magazines/cz75.mdl"
 SWEP.DropMagazineImpact = "pistol"
 
 SWEP.ReloadUpInTime = 1.2
@@ -153,7 +153,7 @@ SWEP.DropMagazineTime = 0.2
 local path = "tacint_extras/cz75/"
 local path1 = "tacrp/weapons/sphinx/"
 
-SWEP.Sound_Shoot = "^" .. path .. "fiveseven-1.wav"
+SWEP.Sound_Shoot = "^" .. path .. "p228-1.wav"
 SWEP.Sound_Shoot_Silenced = path1 .. "/fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 110
@@ -257,9 +257,9 @@ SWEP.Attachments = {
         WMBone = "Box01",
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
-        VMScale = 1.1,
+        VMScale = 0.7,
         WMScale = 1.3,
-        Pos_VM = Vector(-2, 0, 7),
+        Pos_VM = Vector(-1.9, 0, 5.5),
         Ang_VM = Angle(90, 0, 180),
         Pos_WM = Vector(0, 5, -2.75),
         Ang_WM = Angle(0, -90, 180),
@@ -309,6 +309,6 @@ addsound("tacint_cz75.clip_in", path .. "fiveseven_clipin.wav")
 addsound("tacint_cz75.clip_out", path .. "fiveseven_clipout.wav")
 addsound("tacint_cz75.slide_back", path .. "fiveseven_slideback2.wav")
 addsound("tacint_cz75.slide_forward", path1 .. "slide_forward-2.wav")
-addsound("tacint_cz75.slide_shut", path1 .. "fiveseven_sliderelease.wav")
+addsound("tacint_cz75.slide_shut", path .. "fiveseven_sliderelease.wav")
 addsound("tacint_cz75.cock_hammer", path1 .. "cockhammer.wav")
 addsound("tacint_cz75.safety_switch", path1 .. "safety_switch.wav")
