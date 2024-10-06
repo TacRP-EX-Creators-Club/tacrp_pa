@@ -5,13 +5,13 @@ AddCSLuaFile()
 
 // names and stuff
 SWEP.PrintName = "CZ 75 Automatic" // Actually a CZ 75 B
-SWEP.AbbrevName = "CZ 75"
+SWEP.AbbrevName = "CZ 75 Auto"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "3Machine Pistol"
 
-SWEP.Description = "Automatic variant of a classic Cold War-era pistol. Fast firing and controllable, but magazine capacity is very low."
+SWEP.Description = "Automatic variant of a classic Cold War-era pistol.\nPowerful and controllable, but capacity is low."
 SWEP.Description_Quote = "\"...But, a bike will never let you down.\"" -- GTA IV: The Lost and the Damned
 
 SWEP.Trivia_Caliber = "9x19mm"
@@ -31,6 +31,8 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
+        Damage_Max = 24,
+        Damage_Min = 10,
     },
     [TacRP.BALANCE_TTT] = {
     },
@@ -40,10 +42,10 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 18
+SWEP.Damage_Max = 20
 SWEP.Damage_Min = 8
 SWEP.Range_Min = 400
-SWEP.Range_Max = 2000
+SWEP.Range_Max = 1600
 SWEP.Penetration = 3 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.65
 SWEP.ArmorBonus = 1
@@ -65,10 +67,10 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemodes = {2, 1}
 
-SWEP.RPM = 900
-SWEP.RPMMultSemi = 0.7
+SWEP.RPM = 850
+SWEP.RPMMultSemi = 0.8
 
-SWEP.Spread = 0.007
+SWEP.Spread = 0.005
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
@@ -78,12 +80,12 @@ SWEP.RecoilDissipationRate = 30
 SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 3.5
-SWEP.RecoilStability = 0.35
+SWEP.RecoilKick = 3
+SWEP.RecoilStability = 0.5
 SWEP.RecoilAltMultiplier = 300
 
-SWEP.RecoilSpreadPenalty = 0.007
-SWEP.HipFireSpreadPenalty = 0.026
+SWEP.RecoilSpreadPenalty = 0.0075
+SWEP.HipFireSpreadPenalty = 0.028
 
 SWEP.CanBlindFire = true
 
@@ -137,10 +139,10 @@ SWEP.HolsterAng = Angle(90, 0, 0)
 
 // reload
 
-SWEP.ClipSize = 16 // this is the actual capacity of the CZ75, CSGO lied to you
+SWEP.ClipSize = 12 // not realism capacity but it's the gun's gimmick
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1.15
+SWEP.ReloadTimeMult = 1.1
 
 SWEP.DropMagazineModel = "models/weapons/tacint_extras/magazines/cz75.mdl"
 SWEP.DropMagazineImpact = "pistol"
