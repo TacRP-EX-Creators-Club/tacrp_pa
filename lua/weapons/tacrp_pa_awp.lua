@@ -8,7 +8,7 @@ SWEP.PrintName = "AI AWM-F"
 SWEP.AbbrevName = "AWM"
 SWEP.Category = "Tactical RP"
 
-SWEP.SubCatTier = "2Operator"
+SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "7Sniper Rifle"
 
 SWEP.Description = "Robust magnum sniper with great power and unmatched range but is slow to cycle.\nEquipped with a 12x scope by default."
@@ -34,62 +34,35 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 65,
-        Damage_Min = 92,
+        Damage_Max = 90,
+        Damage_Min = 125,
 
-        Range_Min = 1000,
-        Range_Max = 3500,
+        Range_Min = 2000,
+        Range_Max = 6000,
+
+        Sway = 2,
+        ScopedSway = 0.075,
     },
     [TacRP.BALANCE_TTT] = {
-
-        Description = "Lightweight sniper rifle with high mobility and good damage at distance.\nEquipped with a 10x scope by default.",
-
-        Damage_Max = 30,
-        Damage_Min = 65,
-        Range_Min = 600,
-        Range_Max = 1800,
-
-        RPM = 20,
-        ShootTimeMult = 1.6,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 5,
-            [HITGROUP_CHEST] = 1.25,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.75,
-            [HITGROUP_RIGHTARM] = 0.75,
-            [HITGROUP_LEFTLEG] = 0.5,
-            [HITGROUP_RIGHTLEG] = 0.5,
-            [HITGROUP_GEAR] = 0.5
-        },
     },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 25,
-        Damage_Min = 55,
-        Range_Min = 1000,
-        Range_Max = 3500,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        HipFireSpreadPenalty = 0.024
-    }
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 105
-SWEP.Damage_Min = 85
-SWEP.Range_Min = 1200
-SWEP.Range_Max = 7000
-SWEP.Penetration = 17
-SWEP.ArmorPenetration = 0.9
-SWEP.ArmorBonus = 3
+SWEP.Damage_Max = 125
+SWEP.Damage_Min = 90
+SWEP.Range_Min = 2000
+SWEP.Range_Max = 6000
+SWEP.Penetration = 25
+SWEP.ArmorPenetration = 0.95
+SWEP.ArmorBonus = 4
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.125,
+    [HITGROUP_STOMACH] = 1.15,
     [HITGROUP_LEFTARM] = 0.75,
     [HITGROUP_RIGHTARM] = 0.75,
     [HITGROUP_LEFTLEG] = 0.5,
@@ -97,7 +70,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.5
 }
 
-SWEP.MuzzleVelocity = 45000
+SWEP.MuzzleVelocity = 35000
 
 // misc. shooting
 
@@ -105,14 +78,14 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 25
+SWEP.RPM = 26
 
-SWEP.ShootTimeMult = 1.4
+SWEP.ShootTimeMult = 1.35
 
 SWEP.Spread = 0.00
 
-SWEP.HipFireSpreadPenalty = 0.03
-SWEP.PeekPenaltyFraction = 0.35
+SWEP.HipFireSpreadPenalty = 0.05
+SWEP.PeekPenaltyFraction = 0.3
 
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 1
@@ -120,9 +93,9 @@ SWEP.RecoilResetTime = 0.5 // time after you stop shooting for recoil to start d
 SWEP.RecoilDissipationRate = 1
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 8
+SWEP.RecoilVisualKick = 6
 
-SWEP.RecoilKick = 3
+SWEP.RecoilKick = 8
 
 SWEP.RecoilSpreadPenalty = 0 // extra spread per one unit of recoil
 
@@ -130,19 +103,19 @@ SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.925
-SWEP.ShootingSpeedMult = 0.75
-SWEP.SightedSpeedMult = 0.55
+SWEP.MoveSpeedMult = 0.85
+SWEP.ShootingSpeedMult = 0.65
+SWEP.SightedSpeedMult = 0.5
 
 SWEP.ReloadSpeedMult = 0.3
 
-SWEP.AimDownSightsTime = 0.36
-SWEP.SprintToFireTime = 0.4
+SWEP.AimDownSightsTime = 0.38
+SWEP.SprintToFireTime = 0.44
 
 SWEP.Sway = 2
-SWEP.ScopedSway = 0.075
+SWEP.ScopedSway = 0.1
 
-SWEP.FreeAimMaxAngle = 8.5
+SWEP.FreeAimMaxAngle = 9
 
 // hold types
 
@@ -193,7 +166,7 @@ SWEP.Ammo = "357"
 SWEP.AmmoTTT = "357"
 SWEP.Ammo_Expanded = "ti_rifle"
 
-SWEP.ReloadTimeMult = 1.5
+SWEP.ReloadTimeMult = 1.3
 SWEP.DropMagazineImpact = "metal"
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/uratio.mdl"
 
