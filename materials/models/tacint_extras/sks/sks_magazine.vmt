@@ -5,7 +5,7 @@ VertexLitGeneric
 	"$phongexponenttexture" "models/albedotint"
 	"$envmap" "env_cubemap"
 	"$envmaptint" "[0.08 0.08 0.08]"
-	"$phong" 			"1"
+	"$phong" 			"0"
 	"$phongexponent"		"10"
 	"$phongboost" 			"20"
 	"$phongfresnelranges"		"[0.1 0.4 .8]"//"[0.1 0.4 .8]"

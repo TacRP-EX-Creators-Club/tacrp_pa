@@ -230,7 +230,7 @@ SWEP.Attachments = {
         Bone = "ValveBiped.m14_rootbone",
         AttachSound = "TacRP/weapons/silencer_on.wav",
         DetachSound = "TacRP/weapons/silencer_off.wav",
-        Pos_VM = Vector(-3.45, 0.2, 32.25),
+        Pos_VM = Vector(-2.825, 0.2, 35.2),
         Pos_WM = Vector(30, 0, -14.5),
         Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(-22.5, 5, 180),
@@ -243,7 +243,7 @@ SWEP.Attachments = {
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         InstalledElements = {"tactical"},
-        Pos_VM = Vector(-3, -0.35, 20),
+        Pos_VM = Vector(-2.9, -0.2, 22),
         Pos_WM = Vector(23, 0, -11),
         Ang_VM = Angle(90, 0, -90),
         Ang_WM = Angle(-22.5, 5, 90),
@@ -274,7 +274,7 @@ SWEP.Attachments = {
     },
     [7] = {
         PrintName = "Ammo",
-        Category = {"ammo_sniper"},
+        Category = {"ammo_rifle"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     }
