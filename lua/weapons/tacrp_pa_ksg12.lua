@@ -4,7 +4,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // names and stuff
-SWEP.PrintName = "Kel-Tec KSG"
+SWEP.PrintName = "KelTec KSG"
 SWEP.AbbrevName = "KSG"
 SWEP.Category = "Tactical RP"
 
@@ -14,8 +14,8 @@ SWEP.SubCatType = "5Shotgun"
 SWEP.Description = "A bizarre bullpup, twin-tubed, pump-action shotgun. Super high capacity but very unweildy."
 
 SWEP.Trivia_Caliber = "12 Gauge"
-SWEP.Trivia_Manufacturer = "O.F. Mossberg & Sons"
-SWEP.Trivia_Year = "1988"
+SWEP.Trivia_Manufacturer = "Kel-Tec CNC Industries"
+SWEP.Trivia_Year = "2011"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = [[
@@ -177,7 +177,7 @@ SWEP.SprintPos = Vector(5, 0, -2)
 SWEP.SightAng = Angle(-0.3, 0.3, 0)
 SWEP.SightPos = Vector(-3.11, -3, -5.2)
 
-SWEP.CorrectivePos = Vector(0.09, 0, 0.05)
+SWEP.CorrectivePos = Vector(0.05, 0, 0.05)
 SWEP.CorrectiveAng = Angle(0.25, -0.05, 0)
 
 SWEP.HolsterVisible = true
@@ -219,7 +219,7 @@ SWEP.AnimationTranslationTable = {
     ["fire"] = {"shoot1", "shoot2"},
     ["blind_fire"] = {"blind_shoot1"},
     ["melee"] = {"melee1", "melee2"},
-    ["reload"] = {"reload", "reload2"},
+    ["reload"] = {"reload"},
     ["jam"] = "reload_finish"
 }
 
