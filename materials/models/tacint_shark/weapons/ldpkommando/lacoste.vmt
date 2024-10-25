@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+
+    "$basetexture"	"models\tacint_shark\weapons\ldpkommando\lacoste_diffuse"
+    "$bumpmap"	"models\tacint_shark\weapons\ldpkommando\lacoste_normal"
+	"$PhongExponentTexture"	"models\tacint_shark\weapons\ldpkommando\lacoste_exponent"
+
+}
