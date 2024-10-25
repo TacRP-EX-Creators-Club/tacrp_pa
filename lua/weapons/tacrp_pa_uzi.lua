@@ -195,6 +195,8 @@ SWEP.AnimationTranslationTable = {
     ["melee"] = {"melee1", "melee2"}
 }
 
+SWEP.DeployTimeMult = 2
+
 SWEP.ProceduralIronFire = {
     vm_pos = Vector(0, -0.5, -0.1),
     vm_ang = Angle(0, 0.25, 0),
@@ -247,7 +249,7 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_foldstock2", "acc_extmag_smg", "acc_holster"},
+        Category = {"acc", "acc_foldstock", "acc_sling", "acc_duffle", "acc_extmag_smg"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
