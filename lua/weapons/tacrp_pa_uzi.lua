@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "3Submachine Gun"
 
-SWEP.Description = "Post-war submachine gun with amazing controllability. One of the most iconic guns ever invented. This version fires from a closed bolt."
+SWEP.Description = "Post-war submachine gun with amazing controllability. One of the most iconic guns ever invented."
 SWEP.Description_Quote = "\"You know your weapons, buddy.\""
 
 SWEP.Trivia_Caliber = "9x19mm"
