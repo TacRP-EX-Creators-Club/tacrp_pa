@@ -25,7 +25,7 @@ Sounds:
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_stg44.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_sg551.mdl"
+SWEP.WorldModel = "models/weapons/tacint_shark/w_stg44.mdl"
 
 SWEP.Slot = 2
 
@@ -154,7 +154,7 @@ SWEP.ClipSize = 30
 SWEP.Ammo = "ar2"
 
 SWEP.ReloadTimeMult = 1
-SWEP.DropMagazineModel = "models/weapons/tacint/magazines/sg551.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/stg44.mdl"
 SWEP.DropMagazineImpact = "metal"
 
 SWEP.ReloadUpInTime = 1.7
@@ -230,41 +230,41 @@ SWEP.Attachments = {
         Category = {"optic_cqb", "optic_medium", "optic_sniper"},
         InstalledElements = {"sights"},
         Bone = "ValveBiped.sg551_rootbone",
-        WMBone = "Box01",
+        WMBone = "ValveBiped.Bip01_R_Hand",
         AttachSound = "tacrp/weapons/optic_on.wav",
         DetachSound = "tacrp/weapons/optic_off.wav",
         VMScale = 0.75,
         Pos_VM = Vector(-5.1, 0, 2.6),
-        Pos_WM = Vector(-0.1, 5, 1.15),
+        Pos_WM = Vector(5, 1.2, -6),
         Ang_VM = Angle(90, 0, 0),
-        Ang_WM = Angle(0, -90, 0),
+        Ang_WM = Angle(180, 180, 0),
     },
     [2] = {
         PrintName = "Muzzle",
         Category = "silencer",
         Bone = "ValveBiped.sg551_rootbone",
-        WMBone = "Box01",
+        WMBone = "ValveBiped.Bip01_R_Hand",
         AttachSound = "tacrp/weapons/silencer_on.wav",
         DetachSound = "tacrp/weapons/silencer_off.wav",
 		VMScale = 0.75,
         Pos_VM = Vector(-3.3, -0.05, 25),
-        Pos_WM = Vector(-0.1, 25, -0.9),
+        Pos_WM = Vector(32, 1.2, -4.8),
         Ang_VM = Angle(90, 0, 0),
-        Ang_WM = Angle(0, -90, 0),
+        Ang_WM = Angle(180, 180, 0),
     },
     [3] = {
         PrintName = "Tactical",
         Category = {"tactical", "tactical_zoom", "tactical_ebullet"},
         InstalledElements = {"tactical"},
         Bone = "ValveBiped.sg551_rootbone",
-        WMBone = "Box01",
+        WMBone = "ValveBiped.Bip01_R_Hand",
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
 		VMScale = 0.85,
         Pos_VM = Vector(-4.05, -0.65, 15),
-        Pos_WM = Vector(2, 13, -0.5),
+        Pos_WM = Vector(20, 1.5, -4.8),
         Ang_VM = Angle(90, 0, -90),
-        Ang_WM = Angle(-90, -90 + 3.5, 0),
+        Ang_WM = Angle(180, 180, -90),
     },
     [4] = {
         PrintName = "Accessory",
