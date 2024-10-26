@@ -15,7 +15,7 @@ SWEP.Description = "Automatic variant of the quintessential \"Wonder Nine\".\nFa
 SWEP.Description_Quote = "\"...But, a bike will never let you down.\"" -- GTA IV: The Lost and the Damned
 
 SWEP.Trivia_Caliber = "9x19mm"
-SWEP.Trivia_Manufacturer = "Česká zbrojovka"
+SWEP.Trivia_Manufacturer = "CZ Uherský Brod"
 SWEP.Trivia_Year = "1993"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
