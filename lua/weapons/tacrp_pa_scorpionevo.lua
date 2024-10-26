@@ -12,7 +12,7 @@ SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "3Submachine Gun"
 
 SWEP.Description = "Modern SMG with a extremely high rate of fire."
-SWEP.Description_Quote = ""
+SWEP.Description_Quote = "Despite its name, it is not a Vz. 61"
 
 SWEP.Trivia_Caliber = "9x19mm"
 SWEP.Trivia_Manufacturer = "CZ Uherský Brod"
