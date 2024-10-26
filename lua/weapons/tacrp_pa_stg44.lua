@@ -8,10 +8,10 @@ SWEP.PrintName = "Sturmgewehr 44"
 SWEP.AbbrevName = "Stg-44"
 SWEP.Category = "Tactical RP"
 
-SWEP.SubCatTier = "2Operator"
+SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "4Assault Rifle"
 
-SWEP.Description = "Vintage assault rifle, considered by many to be the first of its kind. Decent stats and low rate of fire but prone to malfunctions."
+SWEP.Description = "Vintage assault rifle, considered by many to be the first of its kind. Somewhat powerful but prone to malfunctions."
 SWEP.Description_Quote = "\"Mein carbine did not kill you? I will use gas! More gas!\"" -- Killing Floor 2
 
 SWEP.Trivia_Caliber = "7.92x33mm Kurz"
@@ -31,69 +31,43 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 22,
-        Damage_Min = 10,
+        Damage_Max = 30,
+        Damage_Min = 15,
+        RecoilKick = 4,
 
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 6,
+            [HITGROUP_HEAD] = 4,
             [HITGROUP_CHEST] = 1,
-            [HITGROUP_STOMACH] = 1.25,
+            [HITGROUP_STOMACH] = 1,
             [HITGROUP_LEFTARM] = 1,
             [HITGROUP_RIGHTARM] = 1,
-            [HITGROUP_LEFTLEG] = 0.9,
-            [HITGROUP_RIGHTLEG] = 0.9,
-            [HITGROUP_GEAR] = 0.9
-        },
-
-        ClipSize = 20,
-    },
-    [TacRP.BALANCE_TTT] = {
-        Damage_Max = 16,
-        Damage_Min = 12,
-        Range_Min = 800,
-        Range_Max = 2000,
-        RPM = 700,
-
-        ClipSize = 20,
-
-        RecoilSpreadPenalty = 0.0025,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 3,
-            [HITGROUP_CHEST] = 1.25,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.9,
-            [HITGROUP_RIGHTARM] = 0.9,
             [HITGROUP_LEFTLEG] = 0.75,
             [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.9
         },
+
+        RPM = 550,
     },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 12,
-        Damage_Min = 9,
+    [TacRP.BALANCE_TTT] = {
+        // TODO
     },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilMaximum = 20,
-        RecoilDissipationRate = 18
-    }
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.AssaultRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 26
-SWEP.Damage_Min = 17
-SWEP.Range_Min = 1400 // distance for which to maintain maximum damage
-SWEP.Range_Max = 4200 // distance at which we drop to minimum damage
+SWEP.Damage_Max = 28
+SWEP.Damage_Min = 11
+SWEP.Range_Min = 1000 // distance for which to maintain maximum damage
+SWEP.Range_Max = 2800 // distance at which we drop to minimum damage
 SWEP.Penetration = 8 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.775
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 4.5,
+    [HITGROUP_HEAD] = 3.5,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.25,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.75,
@@ -101,19 +75,17 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.9
 }
 
-SWEP.MuzzleVelocity = 22000
+SWEP.MuzzleVelocity = 19000
 
 // misc. shooting
 
 SWEP.Firemodes = {2, 1}
 
-SWEP.RPM = 450
-
-SWEP.PostBurstDelay = 0.1
+SWEP.RPM = 520
 
 SWEP.JamFactor = 0.01
 
-SWEP.Spread = 0.001
+SWEP.Spread = 0.0065
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
@@ -123,11 +95,11 @@ SWEP.RecoilDissipationRate = 32
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 3
+SWEP.RecoilKick = 5
 SWEP.RecoilStability = 0.4
 
 SWEP.RecoilSpreadPenalty = 0.0025
-SWEP.HipFireSpreadPenalty = 0.035
+SWEP.HipFireSpreadPenalty = 0.03
 
 SWEP.CanBlindFire = true
 
@@ -179,7 +151,7 @@ SWEP.ScopedSway = 0.15
 // reload
 
 SWEP.ClipSize = 30
-SWEP.Ammo = "smg1"
+SWEP.Ammo = "ar2"
 
 SWEP.ReloadTimeMult = 1
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/sg551.mdl"
@@ -302,7 +274,7 @@ SWEP.Attachments = {
     },
     [5] = {
         PrintName = "Bolt",
-        Category = {"bolt_automatic"},
+        Category = {"bolt_automatic", "bolt_jammable"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },

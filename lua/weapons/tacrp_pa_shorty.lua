@@ -12,7 +12,7 @@ SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "5Shotgun"
 
 SWEP.Description = "A custom-made ultra short shotgun, intended for extreme concealability but sacrifices accuracy and capacity. Fits in sidearm holsters."
-SWEP.Description_Quote = nil
+SWEP.Description_Quote = "\"Need a facelift, pretty boy?\"" // The Expendables
 
 SWEP.Trivia_Caliber = "12 Gauge"
 SWEP.Trivia_Manufacturer = "Serbu Firearms"
@@ -115,8 +115,8 @@ SWEP.FiremodeName = "Pump-Action" // only used externally for firemode name dist
 
 SWEP.RPM = 80
 
-SWEP.Spread = 0.045
-SWEP.ShotgunPelletSpread = 0.045
+SWEP.Spread = 0.035
+SWEP.ShotgunPelletSpread = 0.035
 
 SWEP.ShootTimeMult = 0.75
 

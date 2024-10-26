@@ -32,9 +32,11 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
+        Range_Min = 800,
+        Range_Max = 1800,
+        HipFireSpreadPenalty = 0.025,
     },
     [TacRP.BALANCE_TTT] = {
-
     },
 }
 

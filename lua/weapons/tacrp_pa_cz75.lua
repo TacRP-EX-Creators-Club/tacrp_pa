@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "3Machine Pistol"
 
-SWEP.Description = "Automatic variant of a classic Cold War-era pistol.\nPowerful and controllable, but capacity is low."
+SWEP.Description = "Automatic variant of the quintessential \"Wonder Nine\".\nFast firing and controllable, but capacity is low."
 SWEP.Description_Quote = "\"...But, a bike will never let you down.\"" -- GTA IV: The Lost and the Damned
 
 SWEP.Trivia_Caliber = "9x19mm"

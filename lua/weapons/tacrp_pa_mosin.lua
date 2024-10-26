@@ -21,7 +21,7 @@ SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = [[
 Model/Texture: Red Orchestra 2
 Sound: Red Orchestra 2, rzen1th
-Animations: Cry of Fear, Lazarus
+Animations: Cry of Fear, Lazarus, 8Z
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_mosin.mdl"
