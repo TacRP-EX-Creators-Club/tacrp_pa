@@ -410,3 +410,37 @@ ATT.Override_Sound_MeleeHit = "tacint_extras/mosin/melee_hitworld.ogg"
 ATT.Override_Sound_MeleeHitBody = "tacint_extras/mosin/melee_hitbody.ogg"
 
 TacRP.LoadAtt(ATT, "muzz_mosin_bayonet")
+
+
+ATT = {}
+
+ATT.PrintName = "SVU Supp."
+ATT.FullName = "SVU Suppressor"
+ATT.Icon = Material("entities/tacrp_att_muzz_supp_weighted.png", "mips smooth")
+ATT.Description = "Weapon-specific suppressor."
+ATT.Pros = {"stat.rpm"}
+ATT.Cons = {"rating.range", "rating.maneuvering"}
+
+ATT.InstalledElements = {"supp"}
+
+ATT.ModelOffset = Vector(0.4, 0, -0.05)
+
+ATT.Category = "muzz_svu"
+
+ATT.SortOrder = 1
+
+ATT.Add_Vol_Shoot = -25
+
+ATT.Mult_RPM = 1.2
+
+ATT.Mult_Range_Max = 0.75
+ATT.Mult_Range_Min = 0.5
+
+ATT.Add_FreeAimMaxAngle = 0.5
+ATT.Add_Sway = 0.1
+ATT.Add_ScopedSway = 0.05
+
+ATT.Silencer = true
+ATT.Override_MuzzleEffect = "muzzleflash_suppressed"
+
+TacRP.LoadAtt(ATT, "muzz_svu_supp")
