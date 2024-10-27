@@ -36,9 +36,11 @@ SWEP.BalanceStats = {
         ShootingSpeedMult = 0.8,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 12,
-        Damage_Min = 6,
+        Damage_Max = 14,
+        Damage_Min = 5,
         RPM = 85,
+        Range_Min = 500,
+        Range_Max = 1500,
     },
 }
 
@@ -48,8 +50,8 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 SWEP.Damage_Max = 15
 SWEP.Damage_Min = 8
-SWEP.Range_Min = 500
-SWEP.Range_Max = 2800
+SWEP.Range_Min = 800
+SWEP.Range_Max = 3200
 SWEP.Penetration = 1
 SWEP.ArmorPenetration = 0.45
 

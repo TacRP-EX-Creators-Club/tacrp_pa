@@ -11,8 +11,8 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "3Submachine Gun"
 
-SWEP.Description = "Modern SMG with a extremely high rate of fire."
-SWEP.Description_Quote = "Despite its name, it is not a Vz. 61"
+SWEP.Description = "Modern SMG with a extremely high rate of fire and intense recoil."
+SWEP.Description_Quote = "Not to be confused with the vz. 61."
 
 SWEP.Trivia_Caliber = "9x19mm"
 SWEP.Trivia_Manufacturer = "CZ Uherský Brod"
@@ -32,67 +32,28 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 20,
-        Damage_Min = 14,
-
-        Range_Min = 1500,
-        Range_Max = 4000,
-
-        HipFireSpreadPenalty = 0.025,
-
-        RecoilKick = 3.5,
+        Damage_Max = 16,
+        Damage_Min = 5,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 14,
-        Damage_Min = 9,
-
-        RecoilSpreadPenalty = 0.0015,
-        HipFireSpreadPenalty = 0.03,
-        RecoilMaximum = 12,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 2,
-            [HITGROUP_CHEST] = 1,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 1,
-            [HITGROUP_RIGHTARM] = 1,
-            [HITGROUP_LEFTLEG] = 0.75,
-            [HITGROUP_RIGHTLEG] = 0.75,
-            [HITGROUP_GEAR] = 0.9
-        },
     },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 8,
-        Damage_Min = 4,
-
-        Range_Min = 1500,
-        Range_Max = 4000,
-
-        HipFireSpreadPenalty = 0.02,
-
-        RecoilKick = 2,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilMaximum = 20,
-        RecoilDissipationRate = 25
-    }
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.SMG
 
 // "ballistics"
 
-SWEP.Damage_Max = 18
+SWEP.Damage_Max = 22
 SWEP.Damage_Min = 10
-SWEP.Range_Min = 800 // distance for which to maintain maximum damage
-SWEP.Range_Max = 2500 // distance at which we drop to minimum damage
+SWEP.Range_Min = 600 // distance for which to maintain maximum damage
+SWEP.Range_Max = 2400 // distance at which we drop to minimum damage
 SWEP.Penetration = 6 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.7
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 4.5,
+    [HITGROUP_HEAD] = 2.5,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.25,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.9,
@@ -106,28 +67,33 @@ SWEP.MuzzleVelocity = 13500
 
 SWEP.Firemodes = {
     2,
-	-3,
+    -3,
     1
 }
 
-SWEP.RPM = 1150
+SWEP.PostBurstDelay = 0.1
+SWEP.RunawayBurst = false
 
-SWEP.Spread = 0.0038
+SWEP.RPM = 1000
+SWEP.RPMMultBurst = 1.25
+
+SWEP.Spread = 0.0055
 
 SWEP.ShootTimeMult = 0.5
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 12
+SWEP.RecoilMaximum = 8
 SWEP.RecoilResetTime = 0
-SWEP.RecoilDissipationRate = 40
-SWEP.RecoilFirstShotMult = 0.9
+SWEP.RecoilDissipationRate = 45
+SWEP.RecoilFirstShotMult = 0.75
 
-SWEP.RecoilVisualKick = 0.5
-SWEP.RecoilKick = 3
-SWEP.RecoilStability = 0.4
+SWEP.RecoilVisualKick = 1
+SWEP.RecoilKick = 6
+SWEP.RecoilStability = 0.5
+SWEP.RecoilAltMultiplier = 300
 
-SWEP.RecoilSpreadPenalty = 0.002
+SWEP.RecoilSpreadPenalty = 0.0035
 SWEP.HipFireSpreadPenalty = 0.025
 
 SWEP.CanBlindFire = true
@@ -182,7 +148,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 30
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1.05
+SWEP.ReloadTimeMult = 1.1
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/evo3.mdl"
 SWEP.DropMagazineImpact = "plastic"
 
@@ -243,9 +209,9 @@ SWEP.AttachmentElements = {
         BGs_VM = {
             {2, 1}
         },
-		BGs_WM = {
-			{2, 1}
-		},
+        BGs_WM = {
+            {2, 1}
+        },
     },
     ["tactical"] = {
         BGs_VM = {
@@ -275,8 +241,8 @@ SWEP.Attachments = {
         Bone = "ValveBiped.mp5_rootbone",
         AttachSound = "TacRP/weapons/silencer_on.wav",
         DetachSound = "TacRP/weapons/silencer_off.wav",
-		VMScale = 0.85,
-		WMScale = 0.85,
+        VMScale = 0.85,
+        WMScale = 0.85,
         Pos_VM = Vector(-3.4, -0.25, 17.6),
         Pos_WM = Vector(20.5, 2.3, -4),
         Ang_VM = Angle(90, 0, 0),
@@ -289,7 +255,7 @@ SWEP.Attachments = {
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         InstalledElements = {"tactical"},
-		VMScale = 1.05,
+        VMScale = 1.05,
         Pos_VM = Vector(-2.3, -0.25, 13),
         Pos_WM = Vector(14, 1.3, -5),
         Ang_VM = Angle(90, 0, 180),
