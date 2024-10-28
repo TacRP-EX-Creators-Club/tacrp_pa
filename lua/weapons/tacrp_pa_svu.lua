@@ -118,8 +118,8 @@ SWEP.SprintPos = Vector(5, 0, -2)
 SWEP.SightAng = Angle(-0.9, 0, 0.2)
 SWEP.SightPos = Vector(-4.08, -7.5, -3.5)
 
-SWEP.CorrectivePos = Vector(0.3, 0, -0.2)
-SWEP.CorrectiveAng = Angle(0.95, 0.9, -0.5)
+SWEP.CorrectivePos = Vector(0.25, 0, 0.1)
+SWEP.CorrectiveAng = Angle(0.9, 0, 0)
 
 SWEP.CorrectiveBoneAng = Angle(90, 38, 38)
 
@@ -138,7 +138,7 @@ SWEP.ClipSize = 10
 SWEP.Ammo = "357"
 SWEP.Ammo_Expanded = "ti_rifle"
 
-SWEP.ReloadTimeMult = 1.55
+SWEP.ReloadTimeMult = 1.5
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/groza.mdl"
 SWEP.DropMagazineImpact = "metal"
 
@@ -208,6 +208,11 @@ SWEP.AttachmentElements = {
             {1, 1}
         },
     },
+    ["irons"] = {
+        BGs_VM = {
+            {1, 2}
+        },
+    },
     ["supp"] = {
         BGs_VM = {
             {2, 1}
@@ -218,15 +223,14 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
-        Category = "ironsights_sniper",
+        Category = {"ironsights_sniper", "optic_cqb", "optic_medium", "optic_sniper"},
         Bone = "ValveBiped.AUG_rootbone",
         WMBone = "ValveBiped.Bip01_R_Hand",
         InstalledElements = {"rail"},
         AttachSound = "tacrp/weapons/optic_on.wav",
         DetachSound = "tacrp/weapons/optic_off.wav",
-        VMScale = 0.75,
-        WMScale = 0.75,
-        Pos_VM = Vector(-7.1, -0.15, 0.5),
+        VMScale = 0.8,
+        Pos_VM = Vector(-5.9, -0.15, 4),
         Ang_VM = Angle(90, 0, 0),
         Pos_WM = Vector(7.6, 1, -8.3),
         Ang_WM = Angle(0, 0, 180),

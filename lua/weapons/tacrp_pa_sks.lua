@@ -26,6 +26,11 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
+        Damage_Max = 35,
+        Damage_Min = 22,
+        Range_Min = 1500,
+        Range_Max = 4000,
+        RPM = 500,
     },
     [TacRP.BALANCE_TTT] = {
     },
@@ -35,11 +40,11 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MarksmanRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 35 // damage at minimum range
-SWEP.Damage_Min = 24 // damage at maximum range
-SWEP.Range_Min = 1500 // distance for which to maintain maximum damage
-SWEP.Range_Max = 4400 // distance at which we drop to minimum damage
-SWEP.Penetration = 12 // units of metal this weapon can penetrate
+SWEP.Damage_Max = 30 // damage at minimum range
+SWEP.Damage_Min = 20 // damage at maximum range
+SWEP.Range_Min = 1200 // distance for which to maintain maximum damage
+SWEP.Range_Max = 3500 // distance at which we drop to minimum damage
+SWEP.Penetration = 8 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.705
 
 SWEP.BodyDamageMultipliers = {
@@ -59,7 +64,8 @@ SWEP.MuzzleVelocity = 32000
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 330
+SWEP.RPM = 450
+SWEP.RPMMultSemi = 0.75
 
 SWEP.Spread = 0.003
 
@@ -72,10 +78,10 @@ SWEP.RecoilResetTime = 0.01
 SWEP.RecoilDissipationRate = 35
 SWEP.RecoilFirstShotMult = 0.9
 
-SWEP.RecoilVisualKick = 1.5
+SWEP.RecoilVisualKick = 1
 SWEP.RecoilKick = 4
-SWEP.RecoilStability = 0.35
-SWEP.RecoilAltMultiplier = 400
+SWEP.RecoilStability = 0.5
+SWEP.RecoilAltMultiplier = 300
 
 SWEP.RecoilSpreadPenalty = 0.0025
 SWEP.HipFireSpreadPenalty = 0.04
@@ -109,7 +115,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SMG1
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(0, -2, -6)
+SWEP.PassivePos = Vector(0, -2, -5)
 
 SWEP.BlindFireAng = Angle(0, 5, 0)
 SWEP.BlindFirePos = Vector(3, -2, -5)
@@ -143,7 +149,7 @@ SWEP.ScopeFOV = 90 / 1.1
 SWEP.ClipSize = 20
 SWEP.Ammo = "ar2"
 
-SWEP.ReloadTimeMult = 1.1
+SWEP.ReloadTimeMult = 1.15
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/m14.mdl"
 SWEP.DropMagazineImpact = "metal"
 
