@@ -36,6 +36,27 @@ SWEP.BalanceStats = {
         Range_Min = 400,
     },
     [TacRP.BALANCE_TTT] = {
+        Damage_Max = 12,
+        Damage_Min = 8,
+        Range_Min = 500,
+        Range_Max = 2000,
+
+        RPM = 750,
+        RecoilMaximum = 6,
+        RecoilResetTime = 0,
+        RecoilDissipationRate = 18,
+        RecoilSpreadPenalty = 0.006,
+
+        BodyDamageMultipliers = {
+            [HITGROUP_HEAD] = 2.5,
+            [HITGROUP_CHEST] = 1,
+            [HITGROUP_STOMACH] = 1,
+            [HITGROUP_LEFTARM] = 0.9,
+            [HITGROUP_RIGHTARM] = 0.9,
+            [HITGROUP_LEFTLEG] = 0.75,
+            [HITGROUP_RIGHTLEG] = 0.75,
+            [HITGROUP_GEAR] = 0.9
+        },
     },
 }
 
@@ -45,16 +66,16 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 SWEP.Damage_Max = 20
 SWEP.Damage_Min = 8
-SWEP.Range_Min = 500
+SWEP.Range_Min = 300
 SWEP.Range_Max = 1800
-SWEP.Penetration = 3 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.65
+SWEP.Penetration = 4 // units of metal this weapon can penetrate
+SWEP.ArmorPenetration = 0.7
 SWEP.ArmorBonus = 1
 
 SWEP.MuzzleVelocity = 17500
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 4,
+    [HITGROUP_HEAD] = 3.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
@@ -143,7 +164,7 @@ SWEP.HolsterAng = Angle(90, 0, 0)
 SWEP.ClipSize = 12 // not realism capacity but it's the gun's gimmick
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1.1
+SWEP.ReloadTimeMult = 1.15
 
 SWEP.DropMagazineModel = "models/weapons/tacint_extras/magazines/cz75.mdl"
 SWEP.DropMagazineImpact = "pistol"
@@ -224,6 +245,17 @@ SWEP.LastShot = true
 
 // attachments
 
+SWEP.AttachmentElements = {
+    ["magazine"] = {
+        BGs_VM = {
+            {2, 1}
+        },
+        BGs_WM = {
+            {2, 1}
+        },
+    },
+}
+
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
@@ -234,7 +266,7 @@ SWEP.Attachments = {
         DetachSound = "tacrp/weapons/optic_off.wav",
         VMScale = 1,
         WMScale = 1,
-        Pos_VM = Vector(0, 0, 0.4),
+        Pos_VM = Vector(0, 0, 0.5),
         Ang_VM = Angle(0, -90, 0),
         Pos_WM = Vector(0, -1, -1),
         Ang_WM = Angle(0, -90, 0),
@@ -255,7 +287,7 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Tactical",
-        Category = {"tactical", "tactical_zoom", "tactical_ebullet"},
+        Category = {"tactical", "tactical_zoom", "tactical_ebullet", "tactical_cz75"},
         Bone = "sphinx_ROOT",
         WMBone = "Box01",
         AttachSound = "tacrp/weapons/flashlight_on.wav",

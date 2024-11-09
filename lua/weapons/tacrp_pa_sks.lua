@@ -212,6 +212,14 @@ SWEP.AttachmentElements = {
             {1, 1}
         }
     },
+    ["bayonet"] = {
+        BGs_VM = {
+            {2, 1}
+        },
+        BGs_WM = {
+            {2, 1}
+        }
+    },
 }
 
 SWEP.NoRMR = true
@@ -232,7 +240,7 @@ SWEP.Attachments = {
     },
     [2] = {
         PrintName = "Muzzle",
-        Category = "silencer",
+        Category = {"silencer", "muzz_sks"},
         Bone = "ValveBiped.m14_rootbone",
         AttachSound = "TacRP/weapons/silencer_on.wav",
         DetachSound = "TacRP/weapons/silencer_off.wav",

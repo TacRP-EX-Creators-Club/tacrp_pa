@@ -444,3 +444,58 @@ ATT.Silencer = true
 ATT.Override_MuzzleEffect = "muzzleflash_suppressed"
 
 TacRP.LoadAtt(ATT, "muzz_svu_supp")
+
+
+ATT = {}
+
+ATT.PrintName = "Bayonet"
+ATT.FullName = "SKS Folding Bayonet"
+ATT.Icon = Material("entities/tacrp_att_muzz_mosin_bayonet.png", "mips smooth")
+ATT.Description = "For stabbing capitalist scum."
+ATT.Pros = {"stat.meleedamage", "stat.meleerange"}
+ATT.Cons = {"stat.sightedspeed", "stat.scopedsway", "stat.meleeattacktime"}
+
+ATT.Category = "muzz_sks"
+ATT.Free = true
+
+ATT.SortOrder = 999
+
+ATT.Add_MeleeRange = 24
+ATT.Mult_MeleeDamage = 2
+ATT.Mult_MeleeAttackTime = 1.25
+
+ATT.Mult_SightedSpeedMult = 0.85
+ATT.Add_ScopedSway = 0.1
+
+ATT.InstalledElements = {"bayonet"}
+
+ATT.Override_Sound_MeleeHit = "tacint_extras/mosin/melee_hitworld.ogg"
+ATT.Override_Sound_MeleeHitBody = "tacint_extras/mosin/melee_hitbody.ogg"
+
+TacRP.LoadAtt(ATT, "muzz_sks_bayonet")
+
+
+------------------------------
+-- #region tac_cz75_mag
+------------------------------
+ATT = {}
+
+ATT.PrintName = "Backup Mag"
+ATT.FullName = "CZ-75 Backup Magazine"
+ATT.Icon = Material("entities/tacrp_att_tac_cz75_mag.png", "mips smooth")
+ATT.Description = "An extra magazine mounted on the gun for peace of mind."
+ATT.Pros = {"stat.reloadtime"}
+ATT.Cons = {"stat.sightedspeed", "rating.stability"}
+
+ATT.InstalledElements = {"magazine"}
+
+ATT.Category = "tactical_cz75"
+ATT.Free = true
+ATT.SortOrder = 999
+
+ATT.Mult_ReloadTimeMult = 0.95
+ATT.Mult_SightedSpeedMult = 0.9
+ATT.Add_Sway = 0.25
+ATT.Add_ScopedSway = 0.1
+
+TacRP.LoadAtt(ATT, "tac_cz75_mag")
