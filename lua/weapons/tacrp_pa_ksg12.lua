@@ -12,6 +12,7 @@ SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "5Shotgun"
 
 SWEP.Description = "A bizarre bullpup, twin-tubed, pump-action shotgun. Super high capacity offset by extreme heft."
+SWEP.Description_Quote = "\"Hey! Quit eyeballing the chicks.\"" // blops 2 karma mission
 
 SWEP.Trivia_Caliber = "12 Gauge"
 SWEP.Trivia_Manufacturer = "Kel-Tec CNC Industries"

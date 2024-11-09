@@ -450,7 +450,7 @@ ATT = {}
 
 ATT.PrintName = "Bayonet"
 ATT.FullName = "SKS Folding Bayonet"
-ATT.Icon = Material("entities/tacrp_att_muzz_mosin_bayonet.png", "mips smooth")
+ATT.Icon = Material("entities/tacrp_att_muzz_sks_bayonet.png", "mips smooth")
 ATT.Description = "For stabbing capitalist scum."
 ATT.Pros = {"stat.meleedamage", "stat.meleerange"}
 ATT.Cons = {"stat.sightedspeed", "stat.scopedsway", "stat.meleeattacktime"}
