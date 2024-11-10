@@ -220,6 +220,21 @@ SWEP.AttachmentElements = {
             {2, 1}
         }
     },
+    ["akmount"] = {
+        BGs_VM = {
+            {1, 0}
+        },
+        BGs_WM = {
+            {1, 0}
+        },
+        AttPosMods = {
+            [1] = {
+                Pos_VM = Vector(-5, 0.55, 3),
+                Pos_WM = Vector(-0.4, 2, 0.5),
+            }
+        },
+        SortOrder = 2,
+    },
 }
 
 SWEP.NoRMR = true
@@ -227,7 +242,7 @@ SWEP.NoRMR = true
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
-        Category = {"optic_cqb", "optic_medium"}, // "optic_sniper"
+        Category = {"optic_cqb", "optic_medium", "optic_ak"}, // "optic_sniper"
         Bone = "ValveBiped.m14_rootbone",
         InstalledElements = {"sights"},
         AttachSound = "TacRP/weapons/optic_on.wav",
