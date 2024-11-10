@@ -55,7 +55,7 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 // "ballistics"
 
 SWEP.Damage_Max = 15
-SWEP.Damage_Min = 10
+SWEP.Damage_Min = 9
 SWEP.Range_Min = 900
 SWEP.Range_Max = 3000
 SWEP.Penetration = 4
@@ -65,7 +65,7 @@ SWEP.ArmorBonus = 0.5
 SWEP.MuzzleVelocity = 32000
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 3.5,
+    [HITGROUP_HEAD] = 4,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
@@ -79,7 +79,7 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 450
+SWEP.RPM = 500
 SWEP.RPMMultSemi = 0.8
 
 SWEP.Spread = 0.003
@@ -170,7 +170,8 @@ local path1 = "tacint_extras/woodsman/"
 SWEP.Sound_Shoot = "^" .. path1 .. "p228-1.wav"
 SWEP.Sound_Shoot_Silenced = path .. "fire_silenced-1.wav"
 
-SWEP.Vol_Shoot = 110
+SWEP.Vol_Shoot = 95
+SWEP.Pitch_Shoot = 105
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 
 // effects
@@ -183,8 +184,8 @@ SWEP.EjectEffect = 1
 
 // anims
 
-SWEP.DeployTimeMult = 0.9
-SWEP.HolsterTimeMult = 0.75
+SWEP.DeployTimeMult = 0.5
+SWEP.HolsterTimeMult = 0.5
 
 -- SWEP.AnimationTranslationTable = {
 --     ["deploy"] = "draw",
