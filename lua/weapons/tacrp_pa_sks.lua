@@ -11,6 +11,7 @@ SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "5Battle Rifle"
 
 SWEP.Description = "Soviet semi-automatic rifle intended to complement the AK. A well-rounded medium range firearm."
+SWEP.Description_Quote = "\"Don't breathe.\"" // Mad Max: Fury Road, when Furiosa snipes Bullet Farmer's spotlight
 
 SWEP.Trivia_Caliber = "7.62x39mm"
 SWEP.Trivia_Manufacturer = "Tula Arsenal"
@@ -20,7 +21,7 @@ SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = "Assets: Firearms: Source\nAnimations: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_sks.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_m14.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_sks.mdl"
 
 SWEP.Slot = 2
 
@@ -29,10 +30,34 @@ SWEP.BalanceStats = {
         Damage_Max = 35,
         Damage_Min = 22,
         Range_Min = 1500,
-        Range_Max = 4000,
+        Range_Max = 3000,
         RPM = 500,
     },
     [TacRP.BALANCE_TTT] = {
+        Damage_Max = 25,
+        Damage_Min = 16,
+        Range_Min = 1000,
+        Range_Max = 2500,
+
+        RPM = 300,
+        RPMMultSemi = 0.75,
+
+        RecoilMaximum = 6,
+        RecoilResetTime = 0.03,
+        RecoilDissipationRate = 18,
+        RecoilFirstShotMult = 0.8,
+        RecoilSpreadPenalty = 0.003,
+
+        BodyDamageMultipliers = {
+            [HITGROUP_HEAD] = 3,
+            [HITGROUP_CHEST] = 1,
+            [HITGROUP_STOMACH] = 1,
+            [HITGROUP_LEFTARM] = 0.75,
+            [HITGROUP_RIGHTARM] = 0.75,
+            [HITGROUP_LEFTLEG] = 0.5,
+            [HITGROUP_RIGHTLEG] = 0.5,
+            [HITGROUP_GEAR] = 0.5
+        },
     },
 }
 
@@ -42,13 +67,13 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MarksmanRifle
 
 SWEP.Damage_Max = 30 // damage at minimum range
 SWEP.Damage_Min = 20 // damage at maximum range
-SWEP.Range_Min = 1200 // distance for which to maintain maximum damage
-SWEP.Range_Max = 3500 // distance at which we drop to minimum damage
+SWEP.Range_Min = 600 // distance for which to maintain maximum damage
+SWEP.Range_Max = 2800 // distance at which we drop to minimum damage
 SWEP.Penetration = 8 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.705
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 4,
+    [HITGROUP_HEAD] = 3.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
@@ -64,12 +89,12 @@ SWEP.MuzzleVelocity = 32000
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 450
+SWEP.RPM = 480
 SWEP.RPMMultSemi = 0.75
 
 SWEP.Spread = 0.003
 
-SWEP.ShootTimeMult = 0.5
+SWEP.ShootTimeMult = 0.65
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
@@ -78,26 +103,26 @@ SWEP.RecoilResetTime = 0.01
 SWEP.RecoilDissipationRate = 35
 SWEP.RecoilFirstShotMult = 0.9
 
-SWEP.RecoilVisualKick = 1
+SWEP.RecoilVisualKick = 0.75
 SWEP.RecoilKick = 4
 SWEP.RecoilStability = 0.5
-SWEP.RecoilAltMultiplier = 300
+SWEP.RecoilAltMultiplier = 200
 
 SWEP.RecoilSpreadPenalty = 0.0025
-SWEP.HipFireSpreadPenalty = 0.04
+SWEP.HipFireSpreadPenalty = 0.03
 SWEP.PeekPenaltyFraction = 0.15
 
 SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.875
+SWEP.MoveSpeedMult = 0.9
 SWEP.ShootingSpeedMult = 0.75
-SWEP.SightedSpeedMult = 0.75
+SWEP.SightedSpeedMult = 0.7
 
-SWEP.ReloadSpeedMult = 0.4
+SWEP.ReloadSpeedMult = 0.5
 
-SWEP.AimDownSightsTime = 0.36
+SWEP.AimDownSightsTime = 0.4
 SWEP.SprintToFireTime = 0.42
 
 SWEP.Sway = 1.25
@@ -131,7 +156,7 @@ SWEP.SprintMidPoint = {
 SWEP.SightAng = Angle(0, -0, 0)
 SWEP.SightPos = Vector(-3.81, -7.5, -2.6)
 
-SWEP.CorrectivePos = Vector(0.03, 0, 0.1)
+SWEP.CorrectivePos = Vector(0, 0, 0.1)
 SWEP.CorrectiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterVisible = true
@@ -230,14 +255,14 @@ SWEP.AttachmentElements = {
         AttPosMods = {
             [1] = {
                 Pos_VM = Vector(-5, 0.55, 3),
-                Pos_WM = Vector(-0.4, 2, 0.5),
+                Pos_WM = Vector(5.4, 0.9, -6.1),
             }
         },
         SortOrder = 2,
     },
 }
 
-SWEP.NoRMR = true
+SWEP.NoRMR = false
 
 SWEP.Attachments = {
     [1] = {
@@ -248,8 +273,8 @@ SWEP.Attachments = {
         AttachSound = "TacRP/weapons/optic_on.wav",
         DetachSound = "TacRP/weapons/optic_off.wav",
         VMScale = 1,
-        Pos_VM = Vector(-5, 0.2, 2.5),
-        Pos_WM = Vector(14.5, 0.6, -9.1),
+        Pos_VM = Vector(-4.95, 0.2, 2),
+        Pos_WM = Vector(5.4, 1.1, -6.1),
         Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(-22.5, 5, 180),
     },
