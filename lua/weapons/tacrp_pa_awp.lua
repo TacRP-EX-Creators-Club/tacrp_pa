@@ -164,7 +164,6 @@ SWEP.ScopeOverlaySize = 0.75
 SWEP.ClipSize = 5
 SWEP.Ammo = "357"
 SWEP.AmmoTTT = "357"
-SWEP.Ammo_Expanded = "ti_rifle"
 
 SWEP.ReloadTimeMult = 1.3
 SWEP.DropMagazineImpact = "metal"
