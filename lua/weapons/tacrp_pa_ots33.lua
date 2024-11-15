@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "3Machine Pistol"
 
-SWEP.Description = "Russian machine pistol with low recoil, designed for paramilitary forces."
+SWEP.Description = "Russian machine pistol with low recoil and high mobility, designed for paramilitary forces."
 
 SWEP.Trivia_Caliber = "9x18mm"
 SWEP.Trivia_Manufacturer = "KBP Instrument Design Bureau"
@@ -49,8 +49,8 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MachinePistol
 // "ballistics"
 
 SWEP.Damage_Max = 25
-SWEP.Damage_Min = 9
-SWEP.Range_Min = 350
+SWEP.Damage_Min = 8
+SWEP.Range_Min = 400
 SWEP.Range_Max = 2000
 SWEP.Penetration = 3
 SWEP.ArmorPenetration = 0.725
@@ -77,25 +77,26 @@ SWEP.RPM = 900
 
 SWEP.Spread = 0.008
 
+SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 12
-SWEP.RecoilResetTime = 0.14 // time after you stop shooting for recoil to start dissipating
-SWEP.RecoilDissipationRate = 35
+SWEP.RecoilMaximum = 15
+SWEP.RecoilResetTime = 0
+SWEP.RecoilDissipationRate = 48
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 4
-SWEP.RecoilStability = 0.25
+SWEP.RecoilVisualKick = 0.75
+SWEP.RecoilKick = 3.5
+SWEP.RecoilStability = 0.35
 
-SWEP.RecoilSpreadPenalty = 0.0018
-SWEP.HipFireSpreadPenalty = 0.022
+SWEP.RecoilSpreadPenalty = 0.0015
+SWEP.HipFireSpreadPenalty = 0.02
 
 SWEP.CanBlindFire = true
 
 // handling
 
 SWEP.MoveSpeedMult = 0.975
-SWEP.ShootingSpeedMult = 0.75
+SWEP.ShootingSpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.8
 
 SWEP.ReloadSpeedMult = 0.75
@@ -106,7 +107,7 @@ SWEP.SprintToFireTime = 0.25
 SWEP.Sway = 1
 SWEP.ScopedSway = 0.4
 
-SWEP.FreeAimMaxAngle = 3.5
+SWEP.FreeAimMaxAngle = 3
 
 // hold types
 
