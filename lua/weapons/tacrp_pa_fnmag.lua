@@ -28,13 +28,10 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 45,
-        Damage_Min = 30,
+        Damage_Max = 50,
+        Damage_Min = 34,
     },
     [TacRP.BALANCE_TTT] = {
-
-        Description = "Machine gun with a nearly bottomless magazine capacity.",
-
         Damage_Max = 20,
         Damage_Min = 12,
         Range_Min = 750,
@@ -57,7 +54,7 @@ SWEP.BalanceStats = {
 SWEP.TTTReplace = TacRP.TTTReplacePreset.MachineGun
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 2.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.9,
@@ -69,10 +66,10 @@ SWEP.BodyDamageMultipliers = {
 
 // "ballistics"
 
-SWEP.Damage_Max = 40
+SWEP.Damage_Max = 45
 SWEP.Damage_Min = 28
 SWEP.Range_Min = 1800
-SWEP.Range_Max = 5000
+SWEP.Range_Max = 6000
 SWEP.Penetration = 10
 SWEP.ArmorPenetration = 0.75
 
@@ -94,9 +91,9 @@ SWEP.RecoilResetTime = 0.2
 SWEP.RecoilDissipationRate = 25
 SWEP.RecoilFirstShotMult = 2
 
-SWEP.RecoilVisualKick = 1.5
-SWEP.RecoilKick = 8
-SWEP.RecoilAltMultiplier = 200
+SWEP.RecoilVisualKick = 1.25
+SWEP.RecoilKick = 5
+SWEP.RecoilAltMultiplier = 170
 SWEP.RecoilStability = 0.05
 
 SWEP.HipFireSpreadPenalty = 0.05
@@ -109,8 +106,8 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.65
-SWEP.ShootingSpeedMult = 0.3
-SWEP.SightedSpeedMult = 0.4
+SWEP.ShootingSpeedMult = 0.1
+SWEP.SightedSpeedMult = 0.35
 
 SWEP.ReloadSpeedMult = 0.1
 SWEP.ReloadSpeedMultTime = 1
