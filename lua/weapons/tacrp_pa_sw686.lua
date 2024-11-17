@@ -52,14 +52,6 @@ SWEP.BalanceStats = {
 
         RecoilMaximum = 2,
         RecoilDissipationRate = 2.5,
-    },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 55,
-        Damage_Min = 24,
-        RPM = 120,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilDissipationRate = 4
     }
 }
 
@@ -68,9 +60,9 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 // "ballistics"
 
 SWEP.Damage_Max = 50 // damage at minimum range
-SWEP.Damage_Min = 30 // damage at maximum range
-SWEP.Range_Min = 500 // distance for which to maintain maximum damage
-SWEP.Range_Max = 3200 // distance at which we drop to minimum damage
+SWEP.Damage_Min = 25 // damage at maximum range
+SWEP.Range_Min = 400 // distance for which to maintain maximum damage
+SWEP.Range_Max = 3500 // distance at which we drop to minimum damage
 SWEP.Penetration = 6 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.75
 
