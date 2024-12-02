@@ -90,8 +90,8 @@ SWEP.RecoilResetTime = 0.25
 SWEP.RecoilDissipationRate = 2
 SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 5
-SWEP.RecoilKick = 16
+SWEP.RecoilVisualKick = 6
+SWEP.RecoilKick = 20
 SWEP.RecoilAltMultiplier = 200
 
 SWEP.RecoilSpreadPenalty = 0.02
@@ -102,11 +102,11 @@ SWEP.CanBlindFire = true
 
 SWEP.MoveSpeedMult = 0.825
 SWEP.ShootingSpeedMult = 0.4
-SWEP.SightedSpeedMult = 0.5
+SWEP.SightedSpeedMult = 0.65
 
 SWEP.ReloadSpeedMult = 0.5
 
-SWEP.AimDownSightsTime = 0.5
+SWEP.AimDownSightsTime = 0.46
 SWEP.SprintToFireTime = 0.5
 
 SWEP.Sway = 1.25
@@ -198,12 +198,19 @@ SWEP.MuzzleEffect = "muzzleflash_shotgun"
 // attack1
 SWEP.AnimationTranslationTable = false
 SWEP.AnimationTranslationTable = {
-    ["idle"] = "idle",
-    ["idle_2"] = "idle_2",
-    ["idle_1"] = "idle_1",
-    ["deploy"] = "draw",
+    ["deploy"] = "deploy",
     ["blind_fire"] = {"blind_fire1", "blind_fire2"},
-    ["melee"] = "melee1",
+    ["melee"] = "melee",
+}
+
+local hammeranims = {
+    ["idle"] = true,
+    ["melee"] = true,
+    ["deploy"] = true,
+    ["holster"] = true,
+    ["prime_grenade"] = true,
+    ["throw_grenade"] = true,
+    ["throw_grenade_underhand"] = true,
 }
 
 SWEP.Hook_TranslateSequence = function(self, seq)
@@ -213,13 +220,13 @@ SWEP.Hook_TranslateSequence = function(self, seq)
         else
             return "fire2"
         end
-    elseif seq == "idle" then
+    elseif seq == "reload" and self:Clip1() == 1 then
+        return "reload_1"
+    elseif hammeranims[seq] then
         if self:Clip1() == 2 then
-            return "idle_2"
+            return seq .. "_2"
         elseif self:Clip1() == 1 then
-            return "idle_1"
-        else
-            return "idle"
+            return seq .. "_1"
         end
     end
 end
@@ -231,7 +238,7 @@ SWEP.LastShot = false
 // attachments
 
 SWEP.AttachmentElements = {
-    ["optic"] = {
+    ["short"] = {
         BGs_VM = {
             {1, 1}
         },
@@ -243,18 +250,24 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     [1] = {
+        PrintName = "Barrel",
+        Category = "barrel_coachgun",
+        AttachSound = "TacRP/weapons/flashlight_on.wav",
+        DetachSound = "TacRP/weapons/flashlight_off.wav",
+    },
+    [2] = {
         PrintName = "Accessory",
         Category = {"acc", "acc_sling"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [2] = {
+    [3] = {
         PrintName = "Ammo",
         Category = {"ammo_shotgun"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [3] = {
+    [4] = {
         PrintName = "Perk",
         Category = {"perk", "perk_melee", "perk_shooting", "perk_reload"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
@@ -275,6 +288,6 @@ addsound("tacint_coachgun.open", path .. "coach_open.wav")
 addsound("tacint_coachgun.close", path .. "coach_close.wav")
 addsound("tacint_coachgun.magout", path .. "coach_extract.wav")
 addsound("tacint_coachgun.magin", path1 .. "grab.ogg")
--- addsound("tacint_coachgun.deploy", path .. "deploy.wav")
--- addsound("tacint_coachgun.holster", path .. "holster.wav")
+addsound("tacint_coachgun.deploy", path1 .. "deploy.wav")
+addsound("tacint_coachgun.holster", path1 .. "holster.wav")
 addsound("tacint_coachgun.hammer", "tacrp/weapons/mr96/mr96_cockhammer.wav")

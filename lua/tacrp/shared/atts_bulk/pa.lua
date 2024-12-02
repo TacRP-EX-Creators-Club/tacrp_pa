@@ -499,3 +499,43 @@ ATT.Add_Sway = 0.25
 ATT.Add_ScopedSway = 0.1
 
 TacRP.LoadAtt(ATT, "tac_cz75_mag")
+
+
+------------------------------
+-- #region barrel_coachgun_short
+------------------------------
+ATT = {}
+
+ATT.PrintName = "Short"
+ATT.FullName = "Coachgun Short Barrels"
+ATT.Icon = Material("entities/tacrp_att_tac_cz75_mag.png", "mips smooth")
+ATT.Description = "Significantly shortened barrel for close range encounters."
+ATT.Pros = {"stat.rpm", "rating.maneuvering", "rating.mobility"}
+ATT.Cons = {"stat.spread", "stat.recoilkick", "stat.range"}
+
+ATT.InstalledElements = {"short"}
+
+ATT.Category = "barrel_coachgun"
+ATT.Free = false
+ATT.SortOrder = 999
+
+ATT.Mult_RPM = 1.1
+ATT.Add_RecoilKick = 30
+ATT.Add_RecoilVisualKick = 4
+ATT.Add_Spread = 0.02
+ATT.Add_HipFireSpreadPenalty = -0.005
+ATT.Add_FreeAimMaxAngle = -2.5
+ATT.Add_AimDownSightsTime = -0.18
+ATT.Add_SprintToFireTime = -0.15
+ATT.Add_MoveSpeedMult = 0.04
+ATT.Add_SightedSpeedMult = 0.15
+ATT.Mult_DeployTimeMult = 0.75
+ATT.Mult_HolsterTimeMult = 0.75
+ATT.Add_ShootingSpeedMult = -0.15
+ATT.Add_Range_Min = -400
+ATT.Add_Range_Max = -1200
+
+ATT.Override_Sound_Shoot = "^tacint_extras/coachgun/coach_fire1.wav"
+
+TacRP.LoadAtt(ATT, "barrel_coachgun_short")
+

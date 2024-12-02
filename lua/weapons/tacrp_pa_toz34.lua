@@ -78,8 +78,8 @@ SWEP.Firemodes = {
 
 SWEP.RPM = 90
 
-SWEP.Spread = 0.015
-SWEP.ShotgunPelletSpread = 0.012
+SWEP.Spread = 0.014
+SWEP.ShotgunPelletSpread = 0.01
 
 SWEP.HipFireSpreadPenalty = 0.01
 SWEP.MidAirSpreadPenalty = 0
@@ -104,12 +104,12 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.85
-SWEP.ShootingSpeedMult = 0.75
+SWEP.ShootingSpeedMult = 0.5
 SWEP.SightedSpeedMult = 0.65
 
 SWEP.ReloadSpeedMult = 0.5
 
-SWEP.AimDownSightsTime = 0.42
+SWEP.AimDownSightsTime = 0.4
 SWEP.SprintToFireTime = 0.44
 
 SWEP.Sway = 1.5
@@ -162,7 +162,6 @@ SWEP.ReloadTimeMult = 1.3
 // sounds
 
 local path = "tacint_extras/toz34/"
-local path1 = "tacint_shark/nitrorifle/"
 
 SWEP.Sound_Shoot = "^" .. path .. "fire-01.ogg"
 
@@ -256,6 +255,6 @@ end
 addsound("tacint_toz34.open", path .. "open.ogg")
 addsound("tacint_toz34.close", path .. "close.ogg")
 addsound("tacint_toz34.magin", path .. "grab.ogg")
-addsound("tacint_toz34.deploy", path1 .. "deploy.wav")
-addsound("tacint_toz34.holster", path1 .. "holster.wav")
+addsound("tacint_toz34.deploy", path .. "deploy.wav")
+addsound("tacint_toz34.holster", path .. "holster.wav")
 addshellsound("tacint_toz34.shells", path .. "eject.ogg")
