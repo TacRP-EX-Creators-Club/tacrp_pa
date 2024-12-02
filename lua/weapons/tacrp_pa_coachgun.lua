@@ -10,14 +10,14 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Shotgun"
 
-SWEP.Description = "Western double barrel shotgun with external hammers. Cumbersome and slow, but still packs a punch."
+SWEP.Description = "Double barrel shotgun from the Old West.\nCumbersome and inaccurate, but still packs a punch."
 SWEP.Description_Quote = "Lock, stock, and two smoking barrels."
 
 SWEP.Trivia_Caliber = "12 Gauge"
 SWEP.Trivia_Manufacturer = "Stoeger"
 SWEP.Trivia_Year = "1875"
 
-SWEP.Faction = TacRP.FACTION_NEUTRAL
+SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = [[
 Model/Textures: Fistful of Frags (Macaroane, Paul68Rageous, Tigg)
 Sounds: Fistful of Frags, rzen1th
@@ -33,6 +33,7 @@ SWEP.BalanceStats = {
         Damage_Max = 20,
         Damage_Min = 6,
         RPM = 80,
+        RecoilKick = 14,
         Spread = 0.02,
         ShotgunPelletSpread = 0.02,
         ReloadTimeMult = 1.35,
@@ -42,7 +43,7 @@ SWEP.BalanceStats = {
     },
 }
 
-SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
+SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
@@ -94,7 +95,7 @@ SWEP.RecoilVisualKick = 6
 SWEP.RecoilKick = 20
 SWEP.RecoilAltMultiplier = 200
 
-SWEP.RecoilSpreadPenalty = 0.02
+SWEP.RecoilSpreadPenalty = 0
 
 SWEP.CanBlindFire = true
 
@@ -155,7 +156,7 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 2
 SWEP.Ammo = "buckshot"
 
-SWEP.ReloadUpInTime = 1.8
+SWEP.ReloadUpInTime = 1.7
 
 SWEP.ReloadTimeMult = 1.5
 
@@ -263,7 +264,7 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Ammo",
-        Category = {"ammo_shotgun"},
+        Category = {"ammo_shotgun2"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },

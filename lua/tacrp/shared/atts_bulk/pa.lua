@@ -519,9 +519,11 @@ ATT.Category = "barrel_coachgun"
 ATT.Free = false
 ATT.SortOrder = 999
 
-ATT.Mult_RPM = 1.1
-ATT.Add_RecoilKick = 30
-ATT.Add_RecoilVisualKick = 4
+ATT.Mult_MuzzleVelocity = 0.85
+ATT.Mult_RPM = 1.075
+ATT.Add_RecoilKick = 15
+ATT.Mult_RecoilKick = 1.4
+ATT.Add_RecoilVisualKick = 3
 ATT.Add_Spread = 0.02
 ATT.Add_HipFireSpreadPenalty = -0.005
 ATT.Add_FreeAimMaxAngle = -2.5
