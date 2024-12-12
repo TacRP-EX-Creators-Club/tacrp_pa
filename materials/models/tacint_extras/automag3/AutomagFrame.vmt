@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/tacint_extras/automag3/AutomagFrame_d"
+	"$bumpmap" "models/tacint_extras/automag3/AutomagFrame_n"
+	"$nocull" "0"
+	"$normalmapalphaenvmapmask" "1"
+ 	"$phong" "1"
+	"$phongexponent" "150"
+	"$phongboost" "0.3"
+	"$phongfresnelranges" "[0.2 1 2]"
+	"$phongalbedotint" "1"
+}
