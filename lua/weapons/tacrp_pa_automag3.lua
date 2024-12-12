@@ -142,7 +142,7 @@ SWEP.FreeAimMaxAngle = 5
 SWEP.ClipSize = 8
 SWEP.Ammo = "357"
 
-SWEP.ReloadTimeMult = 1.35
+SWEP.ReloadTimeMult = 1.3
 
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/hardballer.mdl"
 SWEP.DropMagazineImpact = "pistol"
@@ -234,6 +234,14 @@ SWEP.AttachmentElements = {
             {2, 1},
         },
     },
+    ["comp"] = {
+        BGs_VM = {
+            {3, 1},
+        },
+        BGs_WM = {
+            {3, 1},
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -253,28 +261,28 @@ SWEP.Attachments = {
     },
     [2] = {
         PrintName = "Muzzle",
-        Category = "silencer",
+        Category = {"silencer", "automag3_muzz"},
         Bone = "sphinx_ROOT",
         WMBone = "Box01",
         AttachSound = "TacRP/weapons/silencer_on.wav",
         DetachSound = "TacRP/weapons/silencer_off.wav",
         VMScale = 0.6,
         WMScale = 0.6,
-        Pos_VM = Vector(-0.6, 0, 10.3),
+        Pos_VM = Vector(-2.85, 0, 13.1),
         Ang_VM = Angle(90, 0, 0),
         Pos_WM = Vector(0, 11.85, -1.75),
         Ang_WM = Angle(0, -90, 0),
     },
     [3] = {
         PrintName = "Tactical",
-        Category = {"tactical_zoom", "tactical_ebullet"},
+        Category = {"tactical", "tactical_zoom", "tactical_ebullet"},
         Bone = "sphinx_ROOT",
         WMBone = "Box01",
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         VMScale = 1.1,
         WMScale = 1.3,
-        Pos_VM = Vector(-2, 0.1, 6.5),
+        Pos_VM = Vector(-1.9, 0.1, 9),
         Ang_VM = Angle(90, 0, 180),
         Pos_WM = Vector(0, 5.5, -2.75),
         Ang_WM = Angle(0, -90, 180),

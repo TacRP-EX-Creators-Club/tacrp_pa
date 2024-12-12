@@ -541,3 +541,29 @@ ATT.Override_Sound_Shoot = "^tacint_extras/coachgun/coach_fire1.wav"
 
 TacRP.LoadAtt(ATT, "barrel_coachgun_short")
 
+
+------------------------------
+-- #region muzz_pistol_comp
+------------------------------
+ATT = {}
+
+ATT.PrintName = "att.muzz_pistol_comp.name"
+ATT.Icon = Material("entities/tacrp_att_muzz_pistol_comp.png", "mips smooth")
+ATT.Description = "att.muzz_pistol_comp.desc"
+ATT.Pros = {"stat.recoil", "stat.spread", "stat.range_min"}
+ATT.Cons = {"stat.rpm"}
+
+ATT.InvAtt = "muzz_pistol_comp"
+
+ATT.Category = "automag3_muzz"
+
+ATT.InstalledElements = {"comp"}
+
+ATT.SortOrder = 1
+
+ATT.Mult_RecoilKick = 0.5
+ATT.Mult_RPM = 0.9
+ATT.Mult_Spread = 0.6
+ATT.Add_Range_Min = 500
+
+TacRP.LoadAtt(ATT, "muzz_pistol_comp_automag3")
