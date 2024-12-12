@@ -567,3 +567,38 @@ ATT.Mult_Spread = 0.6
 ATT.Add_Range_Min = 500
 
 TacRP.LoadAtt(ATT, "muzz_pistol_comp_automag3")
+
+ATT = {}
+
+ATT.PrintName = ".30 Carbine"
+ATT.FullName = "AutoMag III .30 Carbine Mod Kit"
+ATT.Icon = Material("entities/tacrp_pa_sako85.png", "mips smooth")
+ATT.Description = "Load a carbine cartridge for improved firerate and range."
+ATT.Pros = {"stat.rpm", "stat.recoil", "stat.range"}
+ATT.Cons = {"stat.damage"}
+
+ATT.Category = "ammo_automag3"
+ATT.Free = true
+
+ATT.SortOrder = 0
+
+ATT.Override_Ammo = "smg1"
+ATT.Override_Ammo_Expanded = "ti_pdw"
+
+ATT.Mult_RPM = 1.5
+ATT.Mult_ShootTimeMult = 1 / 1.5
+
+ATT.Mult_Damage_Max = 0.62
+ATT.Mult_Damage_Min = 0.825
+
+ATT.Add_Range_Min = 1000
+ATT.Add_Range_Max = 2000
+
+ATT.Mult_RecoilKick = 0.5
+ATT.Mult_RecoilSpreadPenalty = 0.5
+
+ATT.Override_BodyDamageMultipliersExtra = {
+    [HITGROUP_STOMACH] = -1,
+}
+
+TacRP.LoadAtt(ATT, "ammo_automag3_30carbine")

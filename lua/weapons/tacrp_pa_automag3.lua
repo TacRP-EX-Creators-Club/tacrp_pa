@@ -49,7 +49,7 @@ SWEP.Penetration = 6 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.65
 SWEP.ArmorBonus = 0.5
 
-SWEP.MuzzleVelocity = 12000
+SWEP.MuzzleVelocity = 22000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
@@ -135,14 +135,14 @@ SWEP.HolsterAng = Angle(90, 0, 0)
 SWEP.Sway = 1
 SWEP.ScopedSway = 0.5
 
-SWEP.FreeAimMaxAngle = 5
+SWEP.FreeAimMaxAngle = 4
 
 // reload
 
 SWEP.ClipSize = 8
 SWEP.Ammo = "357"
 
-SWEP.ReloadTimeMult = 1.3
+SWEP.ReloadTimeMult = 1.25
 
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/hardballer.mdl"
 SWEP.DropMagazineImpact = "pistol"
@@ -307,7 +307,7 @@ SWEP.Attachments = {
     },
     [7] = {
         PrintName = "Ammo",
-        Category = {"ammo_pistol"},
+        Category = {"ammo_pistol", "ammo_automag3"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
