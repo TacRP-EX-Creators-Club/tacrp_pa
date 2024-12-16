@@ -78,9 +78,9 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
-SWEP.Damage_Max = 10
+SWEP.Damage_Max = 14
 SWEP.Damage_Min = 4
-SWEP.Range_Min = 500 // distance for which to maintain maximum damage
+SWEP.Range_Min = 800 // distance for which to maintain maximum damage
 SWEP.Range_Max = 3000 // distance at which we drop to minimum damage
 SWEP.Penetration = 1 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.25
@@ -91,7 +91,7 @@ SWEP.Num = 6
 SWEP.MuzzleVelocity = 11000
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 2.5,
+    [HITGROUP_HEAD] = 1,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
