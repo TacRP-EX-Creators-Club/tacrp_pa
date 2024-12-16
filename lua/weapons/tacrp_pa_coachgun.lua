@@ -4,7 +4,8 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // names and stuff
-SWEP.PrintName = "Coachgun"
+SWEP.PrintName = "Stoeger Coachgun"
+SWEP.AbbrevName = "Coachgun"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "5Value"
@@ -24,7 +25,7 @@ Sounds: Fistful of Frags, rzen1th
 Animations: 8Z
 ]]
 SWEP.ViewModel = "models/weapons/tacint_extras/v_coachgun.mdl"
-SWEP.WorldModel = "models/weapons/tacint_shark/w_nitrorifle.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_coachgun.mdl"
 
 SWEP.Slot = 2
 
@@ -40,6 +41,11 @@ SWEP.BalanceStats = {
         ShootingSpeedMult = 0.8,
     },
     [TacRP.BALANCE_TTT] = {
+        Damage_Max = 15,
+        Damage_Min = 4,
+        RPM = 65,
+        Range_Min = 250,
+        Range_Max = 1200,
     },
 }
 

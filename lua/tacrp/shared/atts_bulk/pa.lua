@@ -510,7 +510,7 @@ ATT = {}
 
 ATT.PrintName = "Short"
 ATT.FullName = "Coachgun Short Barrels"
-ATT.Icon = Material("entities/tacrp_att_tac_cz75_mag.png", "mips smooth")
+ATT.Icon = Material("entities/tacrp_att_barrel_coachgun_short.png", "mips smooth")
 ATT.Description = "Significantly shortened barrel for close range encounters."
 ATT.Pros = {"stat.rpm", "rating.maneuvering", "rating.mobility"}
 ATT.Cons = {"stat.spread", "stat.recoilkick", "stat.range"}
@@ -522,11 +522,11 @@ ATT.Free = false
 ATT.SortOrder = 999
 
 ATT.Mult_MuzzleVelocity = 0.85
-ATT.Mult_RPM = 1.075
-ATT.Add_RecoilKick = 15
-ATT.Mult_RecoilKick = 1.4
-ATT.Add_RecoilVisualKick = 3
-ATT.Add_Spread = 0.02
+ATT.Mult_RPM = 1.1
+ATT.Add_RecoilKick = 10
+ATT.Mult_RecoilKick = 1.25
+ATT.Add_RecoilVisualKick = 2
+ATT.Add_Spread = 0.015
 ATT.Add_HipFireSpreadPenalty = -0.005
 ATT.Add_FreeAimMaxAngle = -2.5
 ATT.Add_AimDownSightsTime = -0.18
