@@ -416,10 +416,10 @@ ATT = {}
 
 ATT.PrintName = "SVU Supp."
 ATT.FullName = "SVU Suppressor"
-ATT.Icon = Material("entities/tacrp_att_muzz_supp_weighted.png", "mips smooth")
-ATT.Description = "Weapon-specific suppressor."
+ATT.Icon = Material("entities/tacrp_att_muzz_svu_supp.png", "mips smooth")
+ATT.Description = "Weapon-specific suppressor that boosts fire rate."
 ATT.Pros = {"stat.rpm"}
-ATT.Cons = {"rating.range", "rating.maneuvering"}
+ATT.Cons = {"stat.recoilstability", "rating.range", "rating.maneuvering"}
 
 ATT.InstalledElements = {"supp"}
 
@@ -429,12 +429,14 @@ ATT.Category = "muzz_svu"
 
 ATT.SortOrder = 1
 
-ATT.Add_Vol_Shoot = -25
+ATT.Add_Vol_Shoot = -20
 
-ATT.Mult_RPM = 1.2
+ATT.Mult_RPM = 1.15
 
-ATT.Mult_Range_Max = 0.75
-ATT.Mult_Range_Min = 0.5
+ATT.Mult_RecoilStability = 0.66667
+
+ATT.Mult_Range_Max = 0.66667
+ATT.Mult_Range_Min = 0.25
 
 ATT.Add_FreeAimMaxAngle = 0.5
 ATT.Add_Sway = 0.1

@@ -20,9 +20,10 @@ SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = "Assets: B0T\nSound: NightmareMutant, sHiBaN, xLongWayHome\nAnimations: Tactical Intervention, edited by speedonerd"
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_svu.mdl"
-SWEP.WorldModel = "models/weapons/tacint_shark/w_groza.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_svu.mdl"
 
 SWEP.Slot = 2
+SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
@@ -34,6 +35,29 @@ SWEP.BalanceStats = {
         RPM = 200,
     },
     [TacRP.BALANCE_TTT] = {
+        Damage_Max = 25,
+        Damage_Min = 35,
+        Range_Min = 300,
+        Range_Max = 2500,
+        RPM = 120,
+
+        RecoilResetInstant = true,
+        RecoilResetTime = 0.27,
+        RecoilDissipationRate = 3,
+        RecoilMaximum = 3,
+        RecoilSpreadPenalty = 0.005,
+        RecoilFirstShotMult = 0.9,
+
+        BodyDamageMultipliers = {
+            [HITGROUP_HEAD] = 3.5,
+            [HITGROUP_CHEST] = 1.25,
+            [HITGROUP_STOMACH] = 1,
+            [HITGROUP_LEFTARM] = 0.75,
+            [HITGROUP_RIGHTARM] = 0.75,
+            [HITGROUP_LEFTLEG] = 0.5,
+            [HITGROUP_RIGHTLEG] = 0.5,
+            [HITGROUP_GEAR] = 0.5
+        },
     },
 }
 
@@ -42,9 +66,9 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.AssaultRifle
 // "ballistics"
 
 SWEP.Damage_Max = 52
-SWEP.Damage_Min = 34
+SWEP.Damage_Min = 32
 SWEP.Range_Min = 1400 // distance for which to maintain maximum damage
-SWEP.Range_Max = 4500 // distance at which we drop to minimum damage
+SWEP.Range_Max = 5000 // distance at which we drop to minimum damage
 SWEP.Penetration = 11 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.8
 SWEP.ArmorBonus = 2
@@ -60,7 +84,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.9
 }
 
-SWEP.MuzzleVelocity = 32000
+SWEP.MuzzleVelocity = 30000
 
 // misc. shooting
 
@@ -145,7 +169,7 @@ SWEP.Ammo = "357"
 SWEP.Ammo_Expanded = "ti_rifle"
 
 SWEP.ReloadTimeMult = 1.5
-SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/groza.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/svu.mdl"
 SWEP.DropMagazineImpact = "metal"
 
 SWEP.ReloadUpInTime = 1.25
@@ -156,7 +180,6 @@ SWEP.FreeAimMaxAngle = 5
 // sounds
 
 local path = "tacint_extras/svu/"
-local path1 = "tacrp/weapons/ak47/ak47_"
 
 SWEP.Sound_Shoot = "^" .. path .. "g3sg1-2.wav"
 SWEP.Sound_Shoot_Silenced = path .. "g3sg1-1.wav"
@@ -213,14 +236,23 @@ SWEP.AttachmentElements = {
         BGs_VM = {
             {1, 1}
         },
+        BGs_WM = {
+            {1, 1}
+        },
     },
     ["irons"] = {
         BGs_VM = {
             {1, 2}
         },
+        BGs_WM = {
+            {1, 2}
+        },
     },
     ["supp"] = {
         BGs_VM = {
+            {2, 1}
+        },
+        BGs_WM = {
             {2, 1}
         },
     },
@@ -229,16 +261,17 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
-        Category = {"ironsights_sniper", "optic_cqb", "optic_medium", "optic_sniper"},
+        Category = {"ironsights_sniper", "optic_cqb_verytall", "optic_medium", "optic_sniper"},
         Bone = "ValveBiped.AUG_rootbone",
         WMBone = "ValveBiped.Bip01_R_Hand",
         InstalledElements = {"rail"},
         AttachSound = "tacrp/weapons/optic_on.wav",
         DetachSound = "tacrp/weapons/optic_off.wav",
         VMScale = 0.8,
+        WMScale = 0.8,
         Pos_VM = Vector(-5.9, -0.15, 4),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(7.6, 1, -8.3),
+        Pos_WM = Vector(7.3, 1.15, -6.9),
         Ang_WM = Angle(0, 0, 180),
     },
     [2] = {
@@ -248,9 +281,10 @@ SWEP.Attachments = {
         AttachSound = "tacrp/weapons/silencer_on.wav",
         DetachSound = "tacrp/weapons/silencer_off.wav",
         VMScale = 0.9,
+        WMScale = 0.9,
         Pos_VM = Vector(-2.75, -0.15, 22),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(23, 1, -4.5),
+        Pos_WM = Vector(25.5, 1.15, -3.9),
         Ang_WM = Angle(0, 0, 180),
     },
     [3] = {
@@ -261,7 +295,7 @@ SWEP.Attachments = {
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
         Pos_VM = Vector(-3.4, -0.8, 9),
-        Pos_WM = Vector(4, 1.5, -3.75),
+        Pos_WM = Vector(12, 1.8, -4.25),
         Ang_VM = Angle(90, 0, -75),
         Ang_WM = Angle(0, 0, 90),
     },

@@ -11,8 +11,8 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "7Sniper Rifle"
 
-SWEP.Description = "Robust magnum sniper with great power and unmatched range but is slow to cycle.\nEquipped with a 12x scope by default."
-SWEP.Description_Quote = "\"He's a madman, a scientist, and a sharpshooter.\"" -- Nifty's 51 frags at IEM Sydney 2018
+SWEP.Description = "Robust magnum sniper with unmatched power and accuracy.\nEquipped with a 12x scope by default."
+SWEP.Description_Quote = "\"He's a madman, a scientist, and a sharpshooter.\"" // Nifty's 51 frags at IEM Sydney 2018
 
 SWEP.Trivia_Caliber = ".338 Lapua Magnum"
 SWEP.Trivia_Manufacturer = "Accuracy International"
@@ -52,21 +52,21 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 // "ballistics"
 
 SWEP.Damage_Max = 125
-SWEP.Damage_Min = 90
-SWEP.Range_Min = 2000
+SWEP.Damage_Min = 100
+SWEP.Range_Min = 1000
 SWEP.Range_Max = 6000
 SWEP.Penetration = 25
-SWEP.ArmorPenetration = 0.95
+SWEP.ArmorPenetration = 1
 SWEP.ArmorBonus = 4
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.15,
-    [HITGROUP_LEFTARM] = 0.75,
-    [HITGROUP_RIGHTARM] = 0.75,
-    [HITGROUP_LEFTLEG] = 0.5,
-    [HITGROUP_RIGHTLEG] = 0.5,
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 0.9,
+    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTLEG] = 0.75,
+    [HITGROUP_RIGHTLEG] = 0.75,
     [HITGROUP_GEAR] = 0.5
 }
 
@@ -78,9 +78,9 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 26
+SWEP.RPM = 30
 
-SWEP.ShootTimeMult = 1.35
+SWEP.ShootTimeMult = 1.2
 
 SWEP.Spread = 0.00
 
@@ -93,9 +93,9 @@ SWEP.RecoilResetTime = 0.5 // time after you stop shooting for recoil to start d
 SWEP.RecoilDissipationRate = 1
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 6
+SWEP.RecoilVisualKick = 5
 
-SWEP.RecoilKick = 8
+SWEP.RecoilKick = 10
 
 SWEP.RecoilSpreadPenalty = 0 // extra spread per one unit of recoil
 
@@ -104,16 +104,16 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.85
-SWEP.ShootingSpeedMult = 0.65
+SWEP.ShootingSpeedMult = 0.6
 SWEP.SightedSpeedMult = 0.5
 
 SWEP.ReloadSpeedMult = 0.3
 
 SWEP.AimDownSightsTime = 0.38
-SWEP.SprintToFireTime = 0.44
+SWEP.SprintToFireTime = 0.45
 
-SWEP.Sway = 2
-SWEP.ScopedSway = 0.1
+SWEP.Sway = 1.5
+SWEP.ScopedSway = 0.025
 
 SWEP.FreeAimMaxAngle = 9
 
