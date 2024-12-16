@@ -527,6 +527,7 @@ ATT.Add_RecoilKick = 10
 ATT.Mult_RecoilKick = 1.25
 ATT.Add_RecoilVisualKick = 2
 ATT.Add_Spread = 0.015
+ATT.Add_ShotgunPelletSpread = 0.01
 ATT.Add_HipFireSpreadPenalty = -0.005
 ATT.Add_FreeAimMaxAngle = -2.5
 ATT.Add_AimDownSightsTime = -0.18
@@ -536,8 +537,8 @@ ATT.Add_SightedSpeedMult = 0.15
 ATT.Mult_DeployTimeMult = 0.75
 ATT.Mult_HolsterTimeMult = 0.75
 ATT.Add_ShootingSpeedMult = -0.15
-ATT.Add_Range_Min = -400
-ATT.Add_Range_Max = -1200
+ATT.Mult_Range_Min = 0.5
+ATT.Mult_Range_Max = 0.5
 
 ATT.Override_Sound_Shoot = "^tacint_extras/coachgun/coach_fire1.wav"
 

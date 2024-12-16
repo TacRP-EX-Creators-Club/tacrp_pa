@@ -40,7 +40,7 @@ SWEP.BalanceStats = {
         Damage_Min = 5,
         RPM = 85,
         Range_Min = 500,
-        Range_Max = 1500,
+        Range_Max = 1600,
     },
 }
 
