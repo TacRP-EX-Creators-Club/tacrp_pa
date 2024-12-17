@@ -18,8 +18,8 @@ SWEP.Trivia_Caliber = "9x18mm"
 SWEP.Trivia_Manufacturer = "Izhevsk Mechanical Plant"
 SWEP.Trivia_Year = "1948"
 
-SWEP.Faction = TacRP.FACTION_COALITION
-SWEP.Credits = "Assets: TehSnake\nAnimation: Tactical Intervention"
+SWEP.Faction = TacRP.FACTION_MILITIA
+SWEP.Credits = "Assets: TehSnake\nSound: Hk, Vunsunta\nAnimation: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint/v_makarov.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_makarov.mdl"
@@ -192,8 +192,9 @@ SWEP.DropMagazineImpact = "pistol"
 // sounds
 
 local path = "tacrp/weapons/p2000/p2000_"
+local path1 = "tacint_extras/makarov/"
 
-SWEP.Sound_Shoot = "^tacint_extras/makarov/makarov-1.wav"
+SWEP.Sound_Shoot = "^" .. path1 .. "makarov-1.wav"
 SWEP.Sound_Shoot_Silenced = path .. "fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 110
@@ -331,9 +332,9 @@ local function addsound(name, spath)
     })
 end
 
-addsound("tacint_p2000.clip_in", path .. "clip_in.wav")
-addsound("tacint_p2000.clip_in-mid", path .. "clip_in-mid.wav")
-addsound("tacint_p2000.clip_out", path .. "clip_out.wav")
-addsound("tacint_p2000.slide_action", path .. "slide_action.wav")
-addsound("tacint_p2000.slide_shut", path .. "slide_shut.wav")
-addsound("tacint_p2000.cock_hammer", path .. "cockhammer.wav")
+addsound("tacint_makarov.clip_in", path1 .. "MagInTap.wav")
+addsound("tacint_makarov.clip_in-mid", path1 .. "MagInScratch.wav")
+addsound("tacint_makarov.clip_out", path1 .. "MagOut.wav")
+addsound("tacint_makarov.slide_action", path1 .. "SlideBack.wav")
+addsound("tacint_makarov.slide_shut", path1 .. "Sliderelease.wav")
+addsound("tacint_makarov.cock_hammer", path .. "cockhammer.wav")
