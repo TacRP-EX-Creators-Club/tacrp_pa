@@ -26,18 +26,42 @@ Animation: Tactical Intervention
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_automag3.mdl"
-SWEP.WorldModel = "models/weapons/tacint_shark/w_hardballer.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_automag3.mdl"
 
 SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
+        Damage_Max = 40,
+        Damage_Min = 24,
+        RPMMultSemi = 0.75,
     },
     [TacRP.BALANCE_TTT] = {
+        Damage_Max = 30,
+        Damage_Min = 18,
+
+        Range_Min = 700,
+        Range_Max = 2000,
+
+        RPM = 200,
+        RPMMultSemi = 1,
+
+        BodyDamageMultipliers = {
+            [HITGROUP_HEAD] = 2.5,
+            [HITGROUP_CHEST] = 1,
+            [HITGROUP_STOMACH] = 1,
+            [HITGROUP_LEFTARM] = 1,
+            [HITGROUP_RIGHTARM] = 1,
+            [HITGROUP_LEFTLEG] = 0.75,
+            [HITGROUP_RIGHTLEG] = 0.75,
+            [HITGROUP_GEAR] = 0.75
+        },
+
+        RecoilDissipationRate = 4.5,
     },
 }
 
-SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
+SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 
 // "ballistics"
 
@@ -144,7 +168,7 @@ SWEP.Ammo = "357"
 
 SWEP.ReloadTimeMult = 1.25
 
-SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/hardballer.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/automag3.mdl"
 SWEP.DropMagazineImpact = "pistol"
 
 SWEP.ReloadUpInTime = 1
@@ -256,7 +280,7 @@ SWEP.Attachments = {
         WMScale = 1,
         Pos_VM = Vector(-0, 0, 0.6),
         Ang_VM = Angle(0, -90, 0),
-        Pos_WM = Vector(0, -1, -1),
+        Pos_WM = Vector(0, -1.75, -1),
         Ang_WM = Angle(0, -90, 0),
     },
     [2] = {
