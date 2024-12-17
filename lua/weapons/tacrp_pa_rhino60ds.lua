@@ -4,71 +4,52 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // names and stuff
-SWEP.PrintName = "SW Model 686"
-SWEP.AbbrevName = "SW M686"
+SWEP.PrintName = "Chiappa Rhino 60DS"
+SWEP.AbbrevName = "Rhino 60DS"
 SWEP.Category = "Tactical RP"
 
-SWEP.SubCatTier = "3Security"
+SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "2Magnum Pistol"
 
-SWEP.Description = "Magnum revolver with balanced, reliable performance."
+SWEP.Description = "Modern long barrel revolver with hexagonal cylinder.\nBulky and has a heavy trigger, but recoil control is excellent."
 
 SWEP.Trivia_Caliber = ".357 Magnum"
-SWEP.Trivia_Manufacturer = "Smith & Wesson"
-SWEP.Trivia_Year = "1981"
+SWEP.Trivia_Manufacturer = "Chiappa Firearms"
+SWEP.Trivia_Year = "2008"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
-SWEP.Credits = [[
-Assets: No More Room In Hell
-Animations: Tactical Intervention]]
+SWEP.Credits = "Assets: Crytek, ported by Dorian15\nAnimation: Tactical Intervention"
 
-SWEP.ViewModel = "models/weapons/tacint_extras/v_sw686.mdl"
-SWEP.WorldModel = "models/weapons/tacint_extras/w_sw686.mdl"
+SWEP.ViewModel = "models/weapons/tacint_extras/v_rhino60ds.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_rhino60ds.mdl"
 
 SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        RPM = 160,
-        RecoilKick = 6,
+        Damage_Max = 50,
+        Damage_Min = 25,
+        Range_Min = 600,
+        Range_Max = 4000,
+        RPM = 120,
+        RecoilKick = 5,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 35,
-        Damage_Min = 20,
-
-        Range_Min = 600,
-        Range_Max = 1600,
-
-        RPM = 120,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 4,
-            [HITGROUP_CHEST] = 1.25,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 1,
-            [HITGROUP_RIGHTARM] = 1,
-            [HITGROUP_LEFTLEG] = 0.75,
-            [HITGROUP_RIGHTLEG] = 0.75,
-            [HITGROUP_GEAR] = 0.75
-        },
-
-        RecoilMaximum = 2,
-        RecoilDissipationRate = 2.5,
-    }
+    },
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 
 // "ballistics"
 
-SWEP.Damage_Max = 50 // damage at minimum range
-SWEP.Damage_Min = 25 // damage at maximum range
-SWEP.Range_Min = 400 // distance for which to maintain maximum damage
-SWEP.Range_Max = 3000 // distance at which we drop to minimum damage
+SWEP.Damage_Max = 48 // damage at minimum range
+SWEP.Damage_Min = 26 // damage at maximum range
+SWEP.Range_Min = 600 // distance for which to maintain maximum damage
+SWEP.Range_Max = 3500 // distance at which we drop to minimum damage
 SWEP.Penetration = 6 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.75
+SWEP.ArmorPenetration = 0.9
 
-SWEP.MuzzleVelocity = 11000
+SWEP.MuzzleVelocity = 12000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
@@ -87,9 +68,9 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Double-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 140
+SWEP.RPM = 110
 
-SWEP.Spread = 0.003
+SWEP.Spread = 0.004
 
 SWEP.ShootTimeMult = 1
 
@@ -97,29 +78,29 @@ SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 2
 SWEP.RecoilResetTime = 0
-SWEP.RecoilDissipationRate = 9
+SWEP.RecoilDissipationRate = 10
 SWEP.RecoilFirstShotMult = 0.9
 
-SWEP.RecoilVisualKick = 5
-SWEP.RecoilKick = 7
-SWEP.RecoilStability = 0.5
+SWEP.RecoilVisualKick = 4
+SWEP.RecoilKick = 5.5
+SWEP.RecoilStability = 0.65
 
-SWEP.RecoilSpreadPenalty = 0.016
+SWEP.RecoilSpreadPenalty = 0.01
 
 SWEP.CanBlindFire = true
 
 // handling
 
 SWEP.MoveSpeedMult = 0.9
-SWEP.ShootingSpeedMult = 0.75
-SWEP.SightedSpeedMult = 0.8
+SWEP.ShootingSpeedMult = 0.7
+SWEP.SightedSpeedMult = 0.75
 
 SWEP.ReloadSpeedMult = 0.75
 
-SWEP.AimDownSightsTime = 0.22
-SWEP.SprintToFireTime = 0.3
+SWEP.AimDownSightsTime = 0.28
+SWEP.SprintToFireTime = 0.32
 
-SWEP.FreeAimMaxAngle = 4.5
+SWEP.FreeAimMaxAngle = 5
 
 // hold types
 
@@ -142,8 +123,8 @@ SWEP.BlindFireSuicidePos = Vector(25, 12, -6)
 SWEP.SprintAng = Angle(0, 30, 0)
 SWEP.SprintPos = Vector(2, 0, -12)
 
-SWEP.SightAng = Angle(-0.05, 0, 0)
-SWEP.SightPos = Vector(-3.45, 0, -3.2)
+SWEP.SightAng = Angle(0.1, -0.1, 0)
+SWEP.SightPos = Vector(-3.4, 0, -3.43)
 
 SWEP.CorrectivePos = Vector(0, 0, 0.1)
 
@@ -160,7 +141,7 @@ SWEP.ScopedSway = 0.6
 SWEP.ClipSize = 6
 SWEP.Ammo = "357"
 
-SWEP.ReloadTimeMult = 1
+SWEP.ReloadTimeMult = 1.1
 
 SWEP.ReloadUpInTime = 1.35
 
@@ -168,10 +149,11 @@ SWEP.JamSkipFix = true
 
 // sounds
 
-local path = "TacRP/weapons/mr96/"
-local path1 = "tacint_extras/sw686/"
+local path = "tacint_extras/rhino60ds/"
+local path1 = "TacRP/weapons/mr96/"
 
-SWEP.Sound_Shoot = "^" .. path1 .. "revolver_fire_01.wav"
+SWEP.Sound_Shoot = "^" .. path .. "pt25_fire_fp_131.wav"
+
 SWEP.Vol_Shoot = 130
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 
@@ -196,10 +178,10 @@ SWEP.AnimationTranslationTable = {
 }
 
 SWEP.ProceduralIronFire = {
-    vm_pos = Vector(0, -3, -4.5),
-    vm_ang = Angle(0, 15, 0),
-    t = 0.5,
-    tmax = 0.5,
+    vm_pos = Vector(0, -3, -3),
+    vm_ang = Angle(0, 9, 0),
+    t = 0.4,
+    tmax = 0.4,
     bones = {
         {
             bone = "ValveBiped.cylinder",
@@ -233,16 +215,16 @@ SWEP.ProceduralIronFire = {
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
-        Category = {"optic_cqb", "optic_medium"},
+        Category = {"optic_cqb_verytall", "optic_medium"},
         Bone = "ValveBiped.mr96_rootbone",
         WMBone = "Box01",
         AttachSound = "TacRP/weapons/optic_on.wav",
         DetachSound = "TacRP/weapons/optic_off.wav",
-        VMScale = 0.8,
-        WMScale = 1,
-        Pos_VM = Vector(-3.75, -0.125, 6),
+        VMScale = 0.85,
+        WMScale = 0.85,
+        Pos_VM = Vector(-3.9, -0.09, 7.5),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(0, 4, -0.2),
+        Pos_WM = Vector(0.14, 5, -0.4),
         Ang_WM = Angle(0, -90, 0),
     },
     [2] = {
@@ -254,9 +236,9 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         VMScale = 1,
         WMScale = 1,
-        Pos_VM = Vector(-2.25, -0.125, 9),
+        Pos_VM = Vector(-1.5, -0.125, 10),
         Ang_VM = Angle(90, 0, 180),
-        Pos_WM = Vector(0, 8, -2.25),
+        Pos_WM = Vector(0.14, 8, -3),
         Ang_WM = Angle(0, -90, 180),
     },
     [3] = {
@@ -294,10 +276,10 @@ local function addsound(name, spath)
     })
 end
 
-addsound("tacint_sw686.Release_Cylinder", path .. "mr96_release_cylinder.wav")
-addsound("tacint_sw686.Eject_Shells", path .. "mr96_eject_shells.wav")
-addsound("tacint_sw686.Insert_Bullets", path .. "mr96_insert_bullets.wav")
-addsound("tacint_sw686.Shut_Cylinder", path .. "mr96_shut_cylinder.wav")
-addsound("tacint_sw686.Insert_Bullets-Mid", path .. "mr96_insert_bullets-mid.wav")
-addsound("tacint_sw686.Cock_Hammer", path1 .. "revolver_hammerback1.wav")
-addsound("tacint_sw686.Deploy", path1 .. "revolver_spincyl.wav")
+addsound("tacint_rhino60ds.Release_Cylinder", path .. "pt25_reload_fp_03_cyl_open.wav")
+addsound("tacint_rhino60ds.Eject_Shells", path .. "pt25_reload_fp_04_shell_out.wav")
+addsound("tacint_rhino60ds.Insert_Bullets", path1 .. "mr96_insert_bullets.wav")
+addsound("tacint_rhino60ds.Shut_Cylinder", path .. "pt25_reload_fp_09_cyl_close.wav")
+addsound("tacint_rhino60ds.Insert_Bullets-Mid", path1 .. "mr96_insert_bullets-mid.wav")
+addsound("tacint_rhino60ds.Cock_Hammer", path1 .. "mr96_cockhammer.wav")
+addsound("tacint_rhino60ds.Deploy", path1 .. "mr96_deploy.wav")
