@@ -28,13 +28,13 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 27,
-        Damage_Min = 12,
+        Damage_Max = 25,
+        Damage_Min = 11,
 
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 3,
+            [HITGROUP_HEAD] = 3.5,
             [HITGROUP_CHEST] = 1,
-            [HITGROUP_STOMACH] = 1,
+            [HITGROUP_STOMACH] = 1.15,
             [HITGROUP_LEFTARM] = 1,
             [HITGROUP_RIGHTARM] = 1,
             [HITGROUP_LEFTLEG] = 0.75,
@@ -43,11 +43,11 @@ SWEP.BalanceStats = {
         },
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 15,
-        Damage_Min = 10,
-        Range_Min = 500,
-        Range_Max = 2000,
-        RPM = 420,
+        Damage_Max = 18,
+        Damage_Min = 6,
+        Range_Min = 200,
+        Range_Max = 1200,
+        RPM = 400,
         RPMMultSemi = 1,
 
         RecoilResetInstant = true,
@@ -66,14 +66,6 @@ SWEP.BalanceStats = {
             [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.9
         },
-
-        ReloadTimeMult = 1.2 * 1.25,
-    },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 9,
-        Damage_Min = 4,
-        RPM = 500,
-        RecoilKick = 4,
     },
 }
 
