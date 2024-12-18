@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "3Submachine Gun"
 
-SWEP.Description = "Cost-effective Danish SMG with decent firepower but awkward ergonomics. An optic cannot be mounted due to the top charging handle."
+SWEP.Description = "Cost-effective Danish SMG with reliable firepower but awkward ergonomics. An optic cannot be mounted due to the top charging handle."
 SWEP.Description_Quote = "\"Do you renounce Satan... And all his works?\""
 
 SWEP.Trivia_Caliber = "9x19mm"
@@ -37,18 +37,15 @@ SWEP.BalanceStats = {
         ClipSize = 32,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 16,
-        Damage_Min = 13,
-        Range_Min = 800,
-        Range_Max = 1800,
-        RPM = 650,
-
-        RecoilSpreadPenalty = 0.0028,
-        HipFireSpreadPenalty = 0.04,
+        Damage_Max = 18,
+        Damage_Min = 10,
+        Range_Min = 500,
+        Range_Max = 1600,
+        RPM = 550,
 
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 3,
-            [HITGROUP_CHEST] = 1.25,
+            [HITGROUP_HEAD] = 2,
+            [HITGROUP_CHEST] = 1,
             [HITGROUP_STOMACH] = 1,
             [HITGROUP_LEFTARM] = 0.9,
             [HITGROUP_RIGHTARM] = 0.9,
@@ -102,8 +99,8 @@ SWEP.RecoilDissipationRate = 33
 SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 4
-SWEP.RecoilStability = 0.15
+SWEP.RecoilKick = 4.5
+SWEP.RecoilStability = 0
 SWEP.RecoilAltMultiplier = 120
 
 SWEP.RecoilSpreadPenalty = 0.0015
