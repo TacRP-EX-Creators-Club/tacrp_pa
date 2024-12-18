@@ -12,7 +12,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "1Pistol"
 
 SWEP.Description = "Mass production Soviet sidearm designed to be carried often and rarely shot. Lethality is poor beyond point blank."
-SWEP.Description_Quote = "\"Finish the job, James! Blow them all to hell!\""
+SWEP.Description_Quote = "\"You're listening to Apocalypse Radio.\" \"The only surviving radio station for miles.\"" // ROBLOX - Apocalypse Rising 
 
 SWEP.Trivia_Caliber = "9x18mm"
 SWEP.Trivia_Manufacturer = "Izhevsk Mechanical Plant"
