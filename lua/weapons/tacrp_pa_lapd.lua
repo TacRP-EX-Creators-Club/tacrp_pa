@@ -11,14 +11,17 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "2Magnum Pistol"
 
-SWEP.Description = "High-caliber revolver, featuring excellent handling and an integrated laser sight."
+SWEP.Description = "Gunsmith-custom based on an iconic film weapon, featuring excellent handling and an integrated laser sight."
+SWEP.Description_Quote = "\"Quite an experience to live in fear, isn't it? That's what it is to be a slave.\"" // I dont need to tell you where this is from
 
 SWEP.Trivia_Caliber = "5.56x45mm"
 SWEP.Trivia_Manufacturer = "Steyr, Charter Arms"
 SWEP.Trivia_Year = "2019"
 
 SWEP.Faction = TacRP.FACTION_COALITION
-SWEP.Credits = "Assets: Tactical Intervention"
+SWEP.Credits = [[
+Assets: Fallout: New Vegas
+Animations: Tactical Intervention]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_thatgun.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_mr96.mdl"

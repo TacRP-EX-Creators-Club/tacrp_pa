@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "2Magnum Pistol"
 
-SWEP.Description = "Rare revolver with a reputation for accuracy and power. To be fired one-handed; cowboy style."
+SWEP.Description = "Quality revolver with pinpoint precision but harsh recoil."
 SWEP.Description_Quote = "\"When you have to shoot, shoot. Don't talk.\""
 
 SWEP.Trivia_Caliber = ".357 Magnum"

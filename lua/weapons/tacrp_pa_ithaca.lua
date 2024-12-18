@@ -10,7 +10,8 @@ SWEP.Category = "Tactical RP" // "Tactical RP (Arctic)"
 SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "5Shotgun"
 
-SWEP.Description = "WW2-era shotgun that has seen both police and military use. Capable of fast slam-fire but has poor spread and a low shell capacity."
+SWEP.Description = "Vintage shotgun that has seen both police and military use. Capable of fast slam-fire but has poor spread and a low shell capacity."
+SWEP.Description_Quote = "\"What? It was obvious! He's the RED Spy!\"" // take a wild guess
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_ithaca.mdl"
 SWEP.WorldModel = "models/weapons/tacint_shark/w_ithaca.mdl"
