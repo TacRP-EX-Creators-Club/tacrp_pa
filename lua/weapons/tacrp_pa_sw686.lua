@@ -12,6 +12,7 @@ SWEP.SubCatTier = "3Security"
 SWEP.SubCatType = "2Magnum Pistol"
 
 SWEP.Description = "Magnum revolver with balanced, reliable performance."
+SWEP.Description_Quote = "\"Who's 'we', sucka?\" \"Smith and Wesson, and me.\"" // Sudden Impact, although that one is a Model 10/19
 
 SWEP.Trivia_Caliber = ".357 Magnum"
 SWEP.Trivia_Manufacturer = "Smith & Wesson"
