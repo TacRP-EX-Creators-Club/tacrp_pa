@@ -11,6 +11,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "3Akimbo"
 
 SWEP.Description = "A pair of Soviet pistols to compensate for the lack of firepower with just one. Minimal recoil, but lethality remains poor past point blank."
+SWEP.Description_Quote = "\"Finish the job, James! Blow them all to hell!\"" // as far as i know he didn't use two at once... but some NERD had to put in a stupid roblox quote on the single makarov
 
 SWEP.Trivia_Caliber = "9x18mm"
 SWEP.Trivia_Manufacturer = "Izhevsk Mechanical Plant"

@@ -5,7 +5,7 @@ AddCSLuaFile()
 
 // names and stuff
 SWEP.PrintName = "LAPD 2019 Blaster"
-SWEP.AbbrevName = "Blaster"
+SWEP.AbbrevName = "LAPD 2019"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "2Operator"
@@ -14,17 +14,17 @@ SWEP.SubCatType = "2Magnum Pistol"
 SWEP.Description = "Gunsmith-custom based on an iconic film weapon, featuring excellent handling and an integrated laser sight."
 SWEP.Description_Quote = "\"Quite an experience to live in fear, isn't it? That's what it is to be a slave.\"" // I dont need to tell you where this is from
 
-SWEP.Trivia_Caliber = "5.56x45mm"
+SWEP.Trivia_Caliber = ".44 Special" // The Fallout homage to this gun uses 5.56, but the model clearly has magnum cartridges loaded.
 SWEP.Trivia_Manufacturer = "Steyr, Charter Arms"
 SWEP.Trivia_Year = "2019"
 
 SWEP.Faction = TacRP.FACTION_COALITION
 SWEP.Credits = [[
 Assets: Fallout: New Vegas
-Animations: Tactical Intervention]]
+Animations: Tactical Intervention, Fesiug, 8Z]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_thatgun.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_mr96.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_thatgun.mdl"
 
 SWEP.Slot = 1
 
@@ -68,7 +68,7 @@ SWEP.Range_Max = 3000 // distance at which we drop to minimum damage
 SWEP.Penetration = 7 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.725
 
-SWEP.MuzzleVelocity = 12500
+SWEP.MuzzleVelocity = 18000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
@@ -95,16 +95,16 @@ SWEP.ShootTimeMult = 1
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 2
+SWEP.RecoilMaximum = 2.5
 SWEP.RecoilResetTime = 0
-SWEP.RecoilDissipationRate = 20
-SWEP.RecoilFirstShotMult = 1
+SWEP.RecoilDissipationRate = 24
+SWEP.RecoilFirstShotMult = 0.9
 
 SWEP.RecoilVisualKick = 4
-SWEP.RecoilKick = 6
-SWEP.RecoilStability = 0.5
+SWEP.RecoilKick = 7
+SWEP.RecoilStability = 0.45
 
-SWEP.RecoilSpreadPenalty = 0.01
+SWEP.RecoilSpreadPenalty = 0.008
 SWEP.HipFireSpreadPenalty = 0.014
 
 SWEP.CanBlindFire = true
@@ -159,7 +159,7 @@ SWEP.ScopedSway = 0.6
 // reload
 
 SWEP.ClipSize = 5
-SWEP.Ammo = "smg1"
+SWEP.Ammo = "357"
 
 SWEP.ReloadTimeMult = 1.25
 
@@ -183,7 +183,7 @@ SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 // effects
 
 // the .qc attachment for the muzzle
-SWEP.QCA_Muzzle = 2
+SWEP.QCA_Muzzle = 1
 SWEP.QCA_Eject = 0
 SWEP.EjectEffect = 0
 
@@ -191,7 +191,7 @@ SWEP.MuzzleEffect = "muzzleflash_1"
 
 // anims
 
-SWEP.ShootTimeMult = 0.85
+SWEP.ShootTimeMult = 0.75
 SWEP.AnimationTranslationTable = {
     ["deploy"] = "draw",
     ["fire"] = {"shoot1", "shoot3"},
@@ -203,7 +203,7 @@ SWEP.AnimationTranslationTable = {
 
 SWEP.ProceduralIronFire = {
     vm_pos = Vector(0, -3, -2.4),
-    vm_ang = Angle(0, 10, 0),
+    vm_ang = Angle(0, 12, 0),
     t = 0.3,
     tmax = 0.3,
     bones = {
