@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "2Magnum Pistol"
 
-SWEP.Description = "Stainless steel pistol chambered in an obscure cartridge. Not very powerful for a magnum pistol, but has good range and capacity."
+SWEP.Description = "Stainless steel pistol chambered in an obscure cartridge. Not very powerful for a magnum pistol, but has good capacity."
 SWEP.Description_Quote = ""
 
 SWEP.Trivia_Caliber = "9mm Win Mag" // Most AutoMag IIIs were in .30 Carbine, but this is our excuse for it to be magnum caliber
@@ -35,6 +35,7 @@ SWEP.BalanceStats = {
         Damage_Max = 40,
         Damage_Min = 24,
         RPMMultSemi = 0.75,
+        HipFireSpreadPenalty = 0.02,
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 30,
@@ -58,6 +59,7 @@ SWEP.BalanceStats = {
         },
 
         RecoilDissipationRate = 4.5,
+        HipFireSpreadPenalty = 0.022,
     },
 }
 
@@ -65,15 +67,15 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 
 // "ballistics"
 
-SWEP.Damage_Max = 36
-SWEP.Damage_Min = 22
-SWEP.Range_Min = 500 // distance for which to maintain maximum damage
-SWEP.Range_Max = 3000 // distance at which we drop to minimum damage
+SWEP.Damage_Max = 34
+SWEP.Damage_Min = 20
+SWEP.Range_Min = 600 // distance for which to maintain maximum damage
+SWEP.Range_Max = 2000 // distance at which we drop to minimum damage
 SWEP.Penetration = 6 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.65
 SWEP.ArmorBonus = 0.5
 
-SWEP.MuzzleVelocity = 22000
+SWEP.MuzzleVelocity = 16000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 3,
@@ -93,7 +95,7 @@ SWEP.Firemode = 1
 SWEP.RPM = 300
 SWEP.RPMMultSemi = 0.7
 
-SWEP.Spread = 0.006
+SWEP.Spread = 0.0075
 SWEP.RecoilSpreadPenalty = 0.013
 SWEP.HipFireSpreadPenalty = 0.028
 
@@ -106,8 +108,7 @@ SWEP.RecoilResetTime = 0.17
 SWEP.RecoilDissipationRate = 5
 SWEP.RecoilFirstShotMult = 0.9
 
-SWEP.RecoilVisualKick = 2
-
+SWEP.RecoilVisualKick = 2.5
 SWEP.RecoilKick = 7
 SWEP.RecoilStability = 0.5
 
@@ -166,7 +167,7 @@ SWEP.FreeAimMaxAngle = 4
 SWEP.ClipSize = 8
 SWEP.Ammo = "357"
 
-SWEP.ReloadTimeMult = 1.25
+SWEP.ReloadTimeMult = 1.1
 
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/automag3.mdl"
 SWEP.DropMagazineImpact = "pistol"
