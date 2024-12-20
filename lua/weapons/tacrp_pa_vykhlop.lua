@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "7Sniper Rifle"
 
-SWEP.Description = "Sub-sonic sniper rifle with high damage and rate of fire, but low muzzle velocity and poor armor penetration. Equipped with a 6x scope by default."
+SWEP.Description = "Subsonic sniper rifle with high capacity and rate of fire, but low muzzle velocity and poor handling.\nEquipped with a 6x scope by default."
 SWEP.Description_Quote = "Na'am seyidi, al qanas ala al khatt."
 
 SWEP.Trivia_Caliber = "12.7x55mm"
@@ -19,7 +19,7 @@ SWEP.Trivia_Manufacturer = "TsKIB SOO"
 SWEP.Trivia_Year = "2002"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
-SWEP.Credits = "Model & Texture: Call to Arms\nAnimation: Tactical Intervention\nPorted By: Arctic"
+SWEP.Credits = "Model/Texture: Call to Arms\nAnimations: Tactical Intervention, Arctic"
 
 SWEP.ViewModel = "models/weapons/tacint/v_vykhlop.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_vykhlop.mdl"
@@ -60,12 +60,12 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 135
-SWEP.Damage_Min = 90
-SWEP.Range_Min = 1000
+SWEP.Damage_Max = 125
+SWEP.Damage_Min = 85
+SWEP.Range_Min = 800
 SWEP.Range_Max = 5000
 SWEP.Penetration = 18 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.5
+SWEP.ArmorPenetration = 0.8
 SWEP.ArmorBonus = 2.5
 
 SWEP.BodyDamageMultipliers = {
@@ -87,7 +87,8 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 40
+SWEP.RPM = 44
+SWEP.ShootTimeMult = 0.42
 
 SWEP.Spread = 0
 
@@ -96,7 +97,7 @@ SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 1
-SWEP.RecoilResetTime = 0.2
+SWEP.RecoilResetTime = 0.4
 SWEP.RecoilDissipationRate = 1
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
@@ -110,11 +111,11 @@ SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.78
-SWEP.ShootingSpeedMult = 0.65
-SWEP.SightedSpeedMult = 0.5
+SWEP.MoveSpeedMult = 0.75
+SWEP.ShootingSpeedMult = 0.25
+SWEP.SightedSpeedMult = 0.4
 
-SWEP.ReloadSpeedMult = 0.8
+SWEP.ReloadSpeedMult = 0.25
 
 SWEP.AimDownSightsTime = 0.5
 SWEP.SprintToFireTime = 0.6
