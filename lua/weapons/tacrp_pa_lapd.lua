@@ -32,48 +32,19 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 35,
-        Damage_Min = 20,
-
-        Range_Min = 600,
-        Range_Max = 1600,
-
-        RPM = 120,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 4,
-            [HITGROUP_CHEST] = 1.25,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 1,
-            [HITGROUP_RIGHTARM] = 1,
-            [HITGROUP_LEFTLEG] = 0.75,
-            [HITGROUP_RIGHTLEG] = 0.75,
-            [HITGROUP_GEAR] = 0.75
-        },
-
-        RecoilMaximum = 2,
-        RecoilDissipationRate = 2.5,
     },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 55,
-        Damage_Min = 24,
-        RPM = 120,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilDissipationRate = 4
-    }
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 
 // "ballistics"
 
-SWEP.Damage_Max = 54 // damage at minimum range
-SWEP.Damage_Min = 28 // damage at maximum range
-SWEP.Range_Min = 300 // distance for which to maintain maximum damage
-SWEP.Range_Max = 2500 // distance at which we drop to minimum damage
-SWEP.Penetration = 6 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.9
+SWEP.Damage_Max = 50 // damage at minimum range
+SWEP.Damage_Min = 34 // damage at maximum range
+SWEP.Range_Min = 800 // distance for which to maintain maximum damage
+SWEP.Range_Max = 3000 // distance at which we drop to minimum damage
+SWEP.Penetration = 7 // units of metal this weapon can penetrate
+SWEP.ArmorPenetration = 0.725
 
 SWEP.MuzzleVelocity = 12500
 
@@ -94,9 +65,9 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Double-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 160
+SWEP.RPM = 150
 
-SWEP.Spread = 0.001
+SWEP.Spread = 0.0025
 
 SWEP.ShootTimeMult = 1
 
@@ -107,11 +78,12 @@ SWEP.RecoilResetTime = 0
 SWEP.RecoilDissipationRate = 9
 SWEP.RecoilFirstShotMult = 0.9
 
-SWEP.RecoilVisualKick = 5
-SWEP.RecoilKick = 9
+SWEP.RecoilVisualKick = 4
+SWEP.RecoilKick = 6
 SWEP.RecoilStability = 0.5
 
 SWEP.RecoilSpreadPenalty = 0.018
+SWEP.HipFireSpreadPenalty = 0.014
 
 SWEP.CanBlindFire = true
 
@@ -123,10 +95,10 @@ SWEP.SightedSpeedMult = 0.8
 
 SWEP.ReloadSpeedMult = 0.75
 
-SWEP.AimDownSightsTime = 0.22
-SWEP.SprintToFireTime = 0.3
+SWEP.AimDownSightsTime = 0.2
+SWEP.SprintToFireTime = 0.27
 
-SWEP.FreeAimMaxAngle = 4.5
+SWEP.FreeAimMaxAngle = 3.5
 
 // hold types
 
@@ -150,7 +122,7 @@ SWEP.SprintAng = Angle(0, 30, 0)
 SWEP.SprintPos = Vector(2, 0, -12)
 
 SWEP.SightAng = Angle(-0.15, 0, 0)
-SWEP.SightPos = Vector(-3.5, 0, -4.05)
+SWEP.SightPos = Vector(-3.5, 0, -4.1)
 
 SWEP.CorrectivePos = Vector(0, 0, 0.1)
 
@@ -200,7 +172,7 @@ SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShootTimeMult = 0.85
 SWEP.AnimationTranslationTable = {
     ["deploy"] = "draw",
-    ["fire"] = {"shoot1", "shoot3"}, -- removed shoot2
+    ["fire"] = {"shoot1", "shoot3"},
     ["fire_iron"] = "shoot1",
     ["blind_fire"] = {"blind_shoot1", "blind_shoot2"},
     ["melee"] = {"melee1", "melee2"},
@@ -208,34 +180,28 @@ SWEP.AnimationTranslationTable = {
 }
 
 SWEP.ProceduralIronFire = {
-    vm_pos = Vector(0, -3, -4.5),
-    vm_ang = Angle(0, 15, 0),
-    t = 0.5,
-    tmax = 0.5,
+    vm_pos = Vector(0, -3, -2.4),
+    vm_ang = Angle(0, 10, 0),
+    t = 0.3,
+    tmax = 0.3,
     bones = {
         {
             bone = "ValveBiped.cylinder",
             ang = Angle(-60, 0, 0),
             t0 = 0,
-            t1 = 0.25,
-        },
-        {
-            bone = "ValveBiped.hammer",
-            ang = Angle(35, 0, 0),
-            t0 = 0.05,
-            t1 = 0.15,
+            t1 = 0.2,
         },
         {
             bone = "ValveBiped.Bip01_R_Finger1",
             ang = Angle(0, -15, 0),
             t0 = 0,
-            t1 = 0.2,
+            t1 = 0.3,
         },
         {
             bone = "ValveBiped.Bip01_R_Finger11",
             ang = Angle(-35, 0, 0),
             t0 = 0,
-            t1 = 0.15,
+            t1 = 0.3,
         },
     },
 }
@@ -254,15 +220,9 @@ SWEP.TacticalName = "Laser"
 SWEP.Attachments = {
     {
         PrintName = "Accessory",
-        Category = {"acc", "acc_holster", "acc_brace", "acc_bipod"}, // yes, MR96 with bipod is a real thing!
+        Category = {"acc", "acc_holster", "acc_brace", "acc_bipod"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
-    },
-    {
-        PrintName = "Perk",
-        Category = {"perk", "perk_melee", "perk_shooting", "perk_reload"},
-        AttachSound = "tacrp/weapons/flashlight_on.wav",
-        DetachSound = "tacrp/weapons/flashlight_off.wav",
     },
     {
         PrintName = "Trigger",
@@ -275,7 +235,13 @@ SWEP.Attachments = {
         Category = {"ammo_pistol", "ammo_roulette"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
-    }
+    },
+    {
+        PrintName = "Perk",
+        Category = {"perk", "perk_melee", "perk_shooting", "perk_reload"},
+        AttachSound = "tacrp/weapons/flashlight_on.wav",
+        DetachSound = "tacrp/weapons/flashlight_off.wav",
+    },
 }
 
 local function addsound(name, spath)
@@ -293,5 +259,4 @@ addsound("TacInt_thatgun.Insert_Bullets",	path .. "reload-03.ogg")
 addsound("TacInt_thatgun.Shut_Cylinder",	path .. "reload-04.ogg")
 addsound("TacInt_thatgun.Cock_Hammer",		path .. "cock.ogg")
 addsound("TacInt_thatgun.Deploy",			path .. "equip.ogg")
-
 addsound("TacInt_thatgun.Insert_Bullets-Mid", path .. "reload-03.ogg")
