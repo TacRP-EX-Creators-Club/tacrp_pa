@@ -233,11 +233,12 @@ SWEP.ProceduralIronFire = {
 SWEP.Laser = true
 SWEP.BlindFireCamera = true
 SWEP.LaserPower = 1
-SWEP.LaserQCAttachmentVM = 1
+SWEP.LaserQCAttachmentVM = 2
 SWEP.LaserQCAttachmentWM = 1
 SWEP.LaserAlwaysAccurate = false
 SWEP.CanToggle = true
 SWEP.TacticalName = "Laser"
+SWEP.LaserColor = Color(0, 255, 0)
 
 SWEP.Attachments = {
     {
