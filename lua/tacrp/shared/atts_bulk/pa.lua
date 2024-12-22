@@ -602,7 +602,6 @@ ATT.Mult_RecoilKick = 1.15
 TacRP.LoadAtt(ATT, "ammo_automag3_30carbine")
 
 
-
 ATT = {}
 
 ATT.PrintName = "No. 32 Scope"
@@ -629,3 +628,324 @@ ATT.Mult_ReloadTimeMult = 1.1
 ATT.InstalledElements = {"scope"}
 
 TacRP.LoadAtt(ATT, "optic_smle_no32")
+
+
+------------------------------
+-- Flare Pistol Ammo
+------------------------------
+
+ATT = {}
+
+ATT.PrintName = "Smoke"
+ATT.FullName = "P2A1 Smoke Rounds"
+ATT.Icon = Material("entities/tacrp_att_ammo_40mm_smoke.png", "mips smooth")
+ATT.Description = "Rounds that produce concealing smokescreen on impact."
+ATT.Pros = {"att.procon.smoke"}
+ATT.Cons = {"att.procon.noflare"}
+
+ATT.Category = "ammo_p2a1"
+ATT.InvAtt = "ammo_40mm_smoke"
+
+ATT.SortOrder = 0
+ATT.Override_ShootEnt = "tacrp_proj_40mm_smoke"
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_smoke")
+
+ATT = {}
+
+ATT.PrintName = "Medi-Smoke"
+ATT.FullName = "P2A1 Medi-Smoke Rounds"
+ATT.Icon = Material("entities/tacrp_att_ammo_40mm_smoke.png", "mips smooth")
+ATT.Description = "Rounds that produce restorative gas on impact."
+ATT.Pros = {"att.procon.heal"}
+ATT.Cons = {"att.procon.noflare"}
+
+ATT.Category = "ammo_p2a1"
+ATT.InvAtt = "ammo_40mm_heal"
+
+ATT.SortOrder = 0.5
+ATT.Override_ShootEnt = "tacrp_proj_40mm_heal"
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+ATT.Ignore = true -- too good?
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_heal")
+
+
+ATT = {}
+
+ATT.PrintName = "Magnum Buck"
+ATT.FullName = "P2A1 Magnum Buckshot Rounds"
+ATT.Icon = Material("entities/tacrp_att_acc_magnum.png", "mips smooth")
+ATT.Description = "Cram some shotshells into your flare gun for direct firepower."
+ATT.Pros = {"att.procon.direct"}
+ATT.Cons = {"att.procon.noflare", "rating.mobility"}
+
+ATT.Category = "ammo_p2a1"
+ATT.InvAtt = "ammo_shotgun_mag"
+
+ATT.SortOrder = 1
+
+ATT.Override_ShootEnt = false
+ATT.Add_RecoilKick = 30
+ATT.Override_Spread = 0.044
+ATT.Override_ShotgunPelletSpread = 0.044
+ATT.Override_Damage_Max = 10
+ATT.Override_Damage_Min = 4
+ATT.Override_Range_Min = 150
+ATT.Override_Range_Max = 1000
+ATT.Override_NoRanger = false
+ATT.Override_Num = 12
+ATT.Mult_ShootingSpeedMult = 0.5
+
+ATT.Override_Sound_ShootAdd = "^tacrp/weapons/m4star10/fire-2.wav"
+ATT.Override_MuzzleEffect = "muzzleflash_shotgun"
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_buckshot")
+
+ATT = {}
+
+ATT.PrintName = "Birdshot"
+ATT.FullName = "P2A1 Birdshot Rounds"
+ATT.Icon = Material("entities/tacrp_att_acc_bird.png", "mips smooth")
+ATT.Description = "Cram some birdshells into your flare gun. Insane spread but hard to miss."
+ATT.Pros = {"att.procon.direct", "att.procon.moreproj"}
+ATT.Cons = {"att.procon.noflare", "stat.spread", "stat.damage"}
+
+ATT.Category = "ammo_p2a1"
+ATT.InvAtt = "ammo_shotgun_bird"
+
+ATT.SortOrder = 2
+
+ATT.Override_ShootEnt = false
+ATT.Add_RecoilKick = 18
+ATT.Override_Spread = 0.08
+ATT.Override_ShotgunPelletSpread = 0.05
+ATT.Override_Damage_Max = 5
+ATT.Override_Damage_Min = 2
+ATT.Override_Range_Min = 150
+ATT.Override_Range_Max = 1000
+ATT.Override_NoRanger = false
+ATT.Override_Num = 24
+ATT.Mult_ShootingSpeedMult = 0.75
+
+ATT.Override_Sound_ShootAdd = "^tacrp/weapons/m4star10/fire-2.wav"
+ATT.Override_MuzzleEffect = "muzzleflash_shotgun"
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_bird")
+
+
+ATT = {}
+
+ATT.PrintName = "att.ammo_shotgun_slugs.name"
+ATT.FullName = "P2A1 Slug Rounds"
+ATT.Icon = Material("entities/tacrp_att_acc_slugs.png", "mips smooth")
+ATT.Description = "Cram a slug round into your flare gun. Short barrel limits accuracy and range."
+ATT.Pros = {"att.procon.direct", "stat.range"}
+ATT.Cons = {"att.procon.noflare", "att.procon.1proj"}
+
+ATT.Category = "ammo_p2a1"
+ATT.InvAtt = "ammo_shotgun_slugs"
+
+ATT.SortOrder = 3
+
+ATT.Override_ShootEnt = false
+ATT.Add_RecoilKick = 18
+ATT.Override_Spread = 0.01
+ATT.Override_Damage_Max = 60
+ATT.Override_Damage_Min = 25
+ATT.Override_Range_Min = 200
+ATT.Override_Range_Max = 1200
+ATT.Override_NoRanger = false
+ATT.Mult_ShootingSpeedMult = 0.5
+ATT.Mult_MuzzleVelocity = 1.25
+ATT.Add_HipFireSpreadPenalty = 0.015
+
+ATT.Override_Sound_ShootAdd = "^tacrp/weapons/m4star10/fire-2.wav"
+ATT.Override_MuzzleEffect = "muzzleflash_slug"
+
+ATT.Override_BodyDamageMultipliers = {
+    [HITGROUP_HEAD] = 2,
+    [HITGROUP_CHEST] = 1,
+    [HITGROUP_STOMACH] = 1.25,
+    [HITGROUP_LEFTARM] = 0.9,
+    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTLEG] = 0.75,
+    [HITGROUP_RIGHTLEG] = 0.75,
+    [HITGROUP_GEAR] = 0.75
+}
+
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_slug")
+
+
+ATT = {}
+
+ATT.PrintName = "Frag"
+ATT.FullName = "P2A1 HE Frag Rounds"
+ATT.Icon = Material("entities/tacrp_att_ammo_frag12.png", "mips smooth")
+ATT.Description = "Turn your flare gun into a knockoff grenade pistol."
+ATT.Pros = {"att.procon.explosive", "att.procon.radius"}
+ATT.Cons = {"att.procon.noflare"}
+
+ATT.Category = "ammo_p2a1"
+ATT.InvAtt = "ammo_shotgun_frag"
+
+ATT.SortOrder = 4
+
+ATT.Override_ShootEnt = false
+ATT.Add_RecoilKick = 18
+ATT.Override_Spread = 0.012
+ATT.Override_Damage_Max = 10
+ATT.Override_Damage_Min = 10
+ATT.Override_ExplosiveEffect = "HelicopterMegaBomb"
+ATT.Add_ExplosiveDamage = 70
+ATT.Add_ExplosiveRadius = 256
+ATT.Override_NoRanger = false
+ATT.Add_HipFireSpreadPenalty = 0.015
+ATT.Mult_MuzzleVelocity = 0.5
+
+ATT.Override_Sound_ShootAdd = "^tacrp/weapons/m4star10/fire-2.wav"
+ATT.Override_MuzzleEffect = "muzzleflash_slug"
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_frag")
+
+ATT = {}
+
+ATT.PrintName = "Zvezda"
+ATT.FullName = "P2A1 Zvezda Flash Shells"
+ATT.Icon = Material("entities/tacrp_att_ammo_ks23_flashbang.png", "mips smooth")
+ATT.Description = "Wait, what? Is this allowed? I guess it would fit..."
+ATT.Pros = {"att.procon.flash"}
+ATT.Cons = {"att.procon.noflare", "att.procon.timedfuse"}
+
+ATT.SortOrder = 11
+ATT.Category = "ammo_p2a1"
+ATT.InvAtt = "ammo_ks23_flashbang"
+
+ATT.Override_ShootEnt = "tacrp_proj_ks23_flashbang"
+ATT.Override_ShootEntForce = 1500
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_flashbang")
+
+
+ATT = {}
+
+ATT.PrintName = "Breach"
+ATT.FullName = "P2A1 Breaching Rounds"
+ATT.Icon = Material("entities/tacrp_att_ammo_breaching.png", "mips smooth")
+ATT.Description = "Load a specialized breaching slug for pesky doors."
+ATT.Pros = {"att.procon.doorbreach"}
+ATT.Cons = {"att.procon.noflare"}
+
+ATT.Category = "ammo_p2a1"
+ATT.InvAtt = "ammo_shotgun_breach"
+
+ATT.SortOrder = 10
+ATT.Override_ShootEntForce = 2000
+ATT.Override_ShootEnt = "tacrp_proj_breach_slug"
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_breach")
+
+ATT = {}
+
+ATT.PrintName = "Rocks"
+ATT.FullName = "P2A1 Rock Rounds"
+ATT.Icon = Material("entities/tacrp_att_ammo_p2a1_rock.png", "mips smooth")
+ATT.Description = "Neolithic buckshot."
+ATT.Pros = {"att.procon.throwrocks"}
+ATT.Cons = {"att.procon.noflare"}
+
+ATT.Category = "ammo_p2a1"
+ATT.Free = true
+
+
+ATT.SortOrder = 90
+ATT.Override_Spread = 0.05
+ATT.Override_ShotgunPelletSpread = 0.03
+ATT.Override_ShootEnt = "tacrp_proj_nade_rock"
+ATT.Override_Num = 5
+ATT.Override_Damage_Max = 10
+ATT.Override_Damage_Min = 10
+ATT.Override_Sound_ShootAdd = "physics/concrete/boulder_impact_hard4.wav"
+
+ATT.Hook_PreShootEnt = function(wep, rocket)
+    rocket.AllowFunny = false
+end
+ATT.Hook_PostShootEnt = function(wep, rocket)
+    rocket:SetPhysicsAttacker(wep:GetOwner(), 10)
+    local phys = rocket:GetPhysicsObject()
+    if phys:IsValid() then
+        phys:AddAngleVelocity(VectorRand() * 1500)
+    end
+end
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_rock")
+
+
+ATT = {}
+
+ATT.PrintName = "Confetti"
+ATT.FullName = "P2A1 Confetti Rounds"
+ATT.Icon = Material("entities/tacrp_att_ammo_p2a1_confetti.png", "mips smooth")
+ATT.Description = "For celebration use. Yippie!"
+ATT.Pros = {"att.procon.infiniteammo"}
+ATT.Cons = {"att.procon.noflare", "att.procon.nonlethal"}
+
+ATT.Category = "ammo_p2a1"
+ATT.Free = true
+
+ATT.SortOrder = 100
+ATT.Override_ShootEnt = false
+ATT.Override_Num = 0
+ATT.Override_Damage_Max = 0
+ATT.Override_Damage_Min = 0
+ATT.Override_Sound_Shoot = "^tacint_extras/p2a1/confetti.wav"
+ATT.Override_Vol_Shoot = 80
+ATT.Override_MuzzleEffect = false
+
+ATT.Hook_PostShoot = function(wep)
+    if IsFirstTimePredicted() then
+        local fx = EffectData()
+        fx:SetOrigin(wep:GetMuzzleOrigin() + wep:GetShootDir():Forward() * 32)
+        fx:SetAngles(wep:GetShootDir())
+        fx:SetScale(0.6)
+        fx:SetMagnitude(500)
+        util.Effect("tacrp_confetti", fx)
+        wep:EmitSound("tacrp/kids_cheering.mp3", 80, 97, 0.8, CHAN_ITEM)
+    end
+
+end
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_confetti")

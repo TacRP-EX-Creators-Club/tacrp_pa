@@ -69,10 +69,15 @@ function ENT:Detonate(ent)
     self:Remove()
 end
 
+local burn = {
+    tacrp_proj_m202 = 12,
+    tacrp_proj_p2a1_flare = 5,
+}
+
 hook.Add("PostEntityTakeDamage", "tacrp_pa_m202", function(ent, dmginfo, took)
     local infl = dmginfo:GetInflictor()
-    if took and IsValid(infl) and infl:GetClass() == "tacrp_proj_m202" and dmginfo:GetDamageType() == DMG_SLOWBURN then
-        local fr = math.Clamp(1 - (ent:GetPos():Distance(dmginfo:GetDamagePosition())) / infl.Radius, 0, 1)
-        ent:Ignite(fr * 12)
+    if took and IsValid(infl) and burn[infl:GetClass()] and dmginfo:GetDamageType() == DMG_SLOWBURN then
+        local fr = math.Clamp(1 - (ent:GetPos():Distance(dmginfo:GetDamagePosition())) / infl.Radius, 0.1, 1)
+        ent:Ignite(fr * burn[infl:GetClass()] )
     end
 end)
