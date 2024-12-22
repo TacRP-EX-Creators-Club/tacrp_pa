@@ -600,3 +600,32 @@ ATT.Mult_MuzzleVelocity = 1.4
 ATT.Mult_RecoilKick = 1.15
 
 TacRP.LoadAtt(ATT, "ammo_automag3_30carbine")
+
+
+
+ATT = {}
+
+ATT.PrintName = "No. 32 Scope"
+ATT.FullName = "Lee-Enfield No. 32 Telescope Sight"
+ATT.Icon = Material("entities/tacrp_att_optic_mosin_pe.png", "mips smooth")
+ATT.Description = "Top-mounted medium range scope for the Lee-Enfield."
+ATT.Pros = {"stat.spread", "att.zoom.3.5"}
+ATT.Cons = {"stat.reloadtime", "stat.aimdownsights"}
+
+ATT.Category = "optic_smle"
+
+ATT.SortOrder = 3.5
+
+ATT.Override_Scope = true
+ATT.Override_ScopeHideWeapon = true
+ATT.Override_ScopeOverlay = Material("tacrp/scopes/pu.png", "mips smooth")
+ATT.Override_ScopeFOV = 90 / 3.5
+
+ATT.Mult_Spread = 0.25
+ATT.Add_AimDownSightsTime = 0.03
+ATT.Mult_ReloadTimeMult = 1.1
+
+
+ATT.InstalledElements = {"scope"}
+
+TacRP.LoadAtt(ATT, "optic_smle_no32")

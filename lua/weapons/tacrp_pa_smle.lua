@@ -4,34 +4,51 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // names and stuff
-SWEP.PrintName = "Lee-Enfield Mk III*"
-SWEP.AbbrevName = "SMLE Mk III"
+SWEP.PrintName = "Lee-Enfield Mk III"
+SWEP.AbbrevName = "Lee-Enfield"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "6Marksman Rifle"
 
-SWEP.Description = "British bolt-action rifle with high capacity and firerate."
-SWEP.Description_Quote = ""
+SWEP.Description = "Mass production British bolt-action rifle with high capacity."
+SWEP.Description_Quote = "Tally ho, lads!" // TODO: real quote here
 SWEP.Trivia_Caliber = ".303 British"
 SWEP.Trivia_Manufacturer = "Royal Small Arms Factory"
 SWEP.Trivia_Year = "1907"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = [[
-Model/Texture: Cry of Fear
-Sound: rzen1th
+Assets: Cry of Fear
 Animations: Cry of Fear, Lazarus
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_smle.mdl"
-SWEP.WorldModel = "models/weapons/tacint_extras/w_k98.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_smle.mdl"
 
 SWEP.Slot = 2
 SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
+        Damage_Max = 72,
+        Damage_Min = 42,
+
+        RPM = 52,
+        ShootTimeMult = 0.69,
+        HipFireSpreadPenalty = 0.03,
+        Spread = 0.004,
+
+        BodyDamageMultipliers = {
+            [HITGROUP_HEAD] = 3,
+            [HITGROUP_CHEST] = 1,
+            [HITGROUP_STOMACH] = 1.25,
+            [HITGROUP_LEFTARM] = 0.75,
+            [HITGROUP_RIGHTARM] = 0.75,
+            [HITGROUP_LEFTLEG] = 0.5,
+            [HITGROUP_RIGHTLEG] = 0.5,
+            [HITGROUP_GEAR] = 0.5
+        },
     },
     [TacRP.BALANCE_TTT] = {
     }
@@ -41,16 +58,16 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 85
-SWEP.Damage_Min = 46
+SWEP.Damage_Max = 68
+SWEP.Damage_Min = 34
 SWEP.Range_Min = 300
 SWEP.Range_Max = 2800
-SWEP.Penetration = 12
+SWEP.Penetration = 10
 SWEP.ArmorPenetration = 0.8
 SWEP.ArmorBonus = 1
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.75,
@@ -60,7 +77,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.5
 }
 
-SWEP.MuzzleVelocity = 32000
+SWEP.MuzzleVelocity = 30000
 
 // misc. shooting
 
@@ -68,12 +85,12 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 45
+SWEP.RPM = 50
 
-SWEP.Spread = 0.002
+SWEP.Spread = 0.0075 // WW2 rifles weren't all that accurate...
 
 SWEP.HipFireSpreadPenalty = 0.04
-SWEP.PeekPenaltyFraction = 0.3
+SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 1
@@ -91,7 +108,7 @@ SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.925
+SWEP.MoveSpeedMult = 0.85
 SWEP.ShootingSpeedMult = 0.75
 SWEP.SightedSpeedMult = 0.55
 
@@ -133,11 +150,8 @@ SWEP.BlindFireSuicidePos = Vector(-2, 45, -35)
 SWEP.SprintAng = Angle(30, -15, 0)
 SWEP.SprintPos = Vector(2, 4.5, 0.75)
 
-SWEP.SightAng = Angle(0, 0.1, -0.1)
-SWEP.SightPos = Vector(-2.3, 1, 1.88)
-
-SWEP.CorrectivePos = Vector(0.05, 0, 0.2)
-SWEP.CorrectiveAng = Angle(0.1, -0.3, 0)
+SWEP.SightAng = Angle(0, 0, -0.1)
+SWEP.SightPos = Vector(-2.3, 1, 1.95)
 
 SWEP.CustomizePos = Vector(4, 3, -1.5)
 SWEP.CustomizeAng = Angle(30, 15, 0)
@@ -163,21 +177,19 @@ SWEP.ShotgunThreeload = false
 SWEP.ShotgunFullCancel = true
 SWEP.ShotgunNoReverseStart = true
 
-SWEP.ReloadTimeMult = 0.95
-SWEP.ShootTimeMult = 0.8
+SWEP.ReloadTimeMult = 0.85
+SWEP.ShootTimeMult = 0.72
 SWEP.DropMagazineModel = false
 
 SWEP.ShotgunLoadInTime = 0
-SWEP.BulletBodygroups = {
-    [1] = {1, 1},
-}
+SWEP.BulletBodygroups = {}
 
 // sounds
 
 // local path = "TacRP/weapons/spr/"
-local path1 = "tacint_extras/k98/"
+local path1 = "tacint_extras/smle/"
 
-SWEP.Sound_Shoot = "^" .. path1 .. "scout_fire-1.wav"
+SWEP.Sound_Shoot = "^" .. path1 .. "rifle_fire.wav"
 SWEP.Sound_Shoot_Silenced = "TacRP/weapons/ak47/ak47_fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 130
@@ -210,21 +222,12 @@ SWEP.AnimationTranslationTable = {
 // attachments
 
 SWEP.AttachmentElements = {
-    ["optic"] = {
-        BGs_VM = {
-            {2, 1}
-        },
-        BGs_WM = {
-            {1, 1}
-        },
-    },
     ["scope"] = {
         BGs_VM = {
-            {2, 2}
+            {1, 1}
         },
         BGs_WM = {
-            {1, 2},
-            {2, 1}
+            {1, 1},
         },
     },
 }
@@ -237,7 +240,6 @@ SWEP.Attachments = {
         Bone = "rifle",
         AttachSound = "TacRP/weapons/optic_on.wav",
         DetachSound = "TacRP/weapons/optic_off.wav",
-        InstalledElements = {"optic"},
         VMScale = 0.8,
         Pos_VM = Vector(0.01, 0, 2),
         Ang_VM = Angle(0, -90, 0),
@@ -253,8 +255,8 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/silencer_off.wav",
         VMScale = 0.75,
         WMScale = 0.75,
-        Pos_VM = Vector(-0.02, 20.5, 0.8),
-        Pos_WM = Vector(25.5, 1.2, -4.9),
+        Pos_VM = Vector(-0.02, 27.25, 0.8),
+        Pos_WM = Vector(24.75, 1., -4.75),
         Ang_VM = Angle(0, -90, 0),
         Ang_WM = Angle(0, 0, 180),
     },
@@ -267,7 +269,7 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         InstalledElements = {"tactical"},
         Pos_VM = Vector(0.5, 11, 0.5),
-        Pos_WM = Vector(8, 2, -4),
+        Pos_WM = Vector(8, 1.8, -4),
         Ang_VM = Angle(0, -90, -90),
         Ang_WM = Angle(0, 0, 90),
     },
@@ -312,11 +314,6 @@ local function addsound(name, spath)
     })
 end
 
-addsound("tacint_smle.Clip_Out", path1 .. "magout.wav")
-addsound("tacint_smle.Clip_In", path1 .. "magin.wav")
-addsound("tacint_smle.CockBack", path1 .. "boltback.wav")
-addsound("tacint_smle.CockForward", path1 .. "boltforward.wav")
-addsound("tacint_smle.safety", path1 .. "magrelease.wav")
-addsound("tacint_smle.InsertShell", path1 .. "roundinsert.wav")
-addsound("tacint_smle.bolt_up", path1 .. "boltlatch.wav")
-addsound("tacint_smle.bolt_down", path1 .. "boltrelease.wav")
+addsound("tacint_smle.CockBack", path1 .. "rifle_cock_back.wav")
+addsound("tacint_smle.CockForward", path1 .. "rifle_cock_forward.wav")
+addsound("tacint_smle.InsertShell", path1 .. "rifle_insert.wav")

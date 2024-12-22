@@ -87,7 +87,7 @@ SWEP.ArmorPenetration = 0.8
 SWEP.ArmorBonus = 1
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1.15,
     [HITGROUP_LEFTARM] = 0.75,
@@ -127,8 +127,8 @@ SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.925
-SWEP.ShootingSpeedMult = 0.7
+SWEP.MoveSpeedMult = 0.85
+SWEP.ShootingSpeedMult = 0.75
 SWEP.SightedSpeedMult = 0.55
 
 SWEP.ReloadSpeedMult = 0.3
@@ -139,7 +139,7 @@ SWEP.SprintToFireTime = 0.42
 SWEP.Sway = 1
 SWEP.ScopedSway = 0.1
 
-SWEP.FreeAimMaxAngle = 8
+SWEP.FreeAimMaxAngle = 7
 
 // hold types
 
