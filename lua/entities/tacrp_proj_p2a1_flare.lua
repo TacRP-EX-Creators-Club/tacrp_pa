@@ -134,8 +134,8 @@ function ENT:Draw()
             self.Light.r = 255
             self.Light.g = 75
             self.Light.b = 60
-            self.Light.Brightness = 1.5
-            self.Light.Size = 512
+            self.Light.Brightness = 1
+            self.Light.Size = 1024
             self.Light.DieTime = CurTime() + 30
         end
     else
@@ -148,10 +148,10 @@ end
 
 function ENT:OnRemove()
     if self.Light then
-        self.Light.Size = 728
-        self.Light.Brightness = 3
+        self.Light.Size = 1200
+        self.Light.Brightness = 1.5
         self.Light.DieTime = CurTime() + 1
-        self.Light.Decay = 1000
+        self.Light.Decay = 2000
     end
     if !self.FireSound then return end
     self.FireSound:Stop()
@@ -163,22 +163,22 @@ function ENT:DoSmokeTrail()
 
         local smoke = emitter:Add("particles/smokey", self:GetPos())
 
-        smoke:SetStartAlpha(50)
+        smoke:SetStartAlpha(30)
         smoke:SetEndAlpha(0)
 
         smoke:SetStartSize(4)
-        smoke:SetEndSize(math.Rand(25, 35))
+        smoke:SetEndSize(math.Rand(30, 40))
 
         smoke:SetRoll(math.Rand(-180, 180))
         smoke:SetRollDelta(math.Rand(-1, 1))
 
         smoke:SetPos(self:GetPos())
-        smoke:SetVelocity(VectorRand() * 32)
+        smoke:SetVelocity(VectorRand() * 4)
 
         smoke:SetColor(255, 50, 25)
         smoke:SetLighting(false)
-        smoke:SetDieTime(math.Rand(0.75, 1))
-        smoke:SetGravity(Vector(0, 0, 0))
+        smoke:SetDieTime(math.Rand(3.5, 4.5))
+        smoke:SetGravity(Vector(0, 0, -7))
         smoke:SetNextThink( CurTime() + FrameTime() )
         smoke:SetThinkFunction( function(pa)
             if !pa then return end
