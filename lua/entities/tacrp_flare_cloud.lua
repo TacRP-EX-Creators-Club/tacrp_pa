@@ -8,7 +8,7 @@ ENT.AdminSpawnable = false
 
 ENT.Model = "models/Items/AR2_Grenade.mdl"
 
-ENT.FireTime = 12
+ENT.FireTime = 15
 
 ENT.Armed = false
 
@@ -68,7 +68,7 @@ function ENT:Think()
                 self.Light.g = 75
                 self.Light.b = 60
                 self.Light.Brightness = 1.5
-                self.Light.Size = 728
+                self.Light.Size = 512
                 self.Light.DieTime = CurTime() + self.FireTime
             end
         else
@@ -81,9 +81,10 @@ function ENT:Think()
         if !IsValid(emitter) then return end
 
         if self.Ticks % math.ceil(2 + d * 8) == 0 then
-            local fire = emitter:Add("particles/smokey", self:GetPos() + Vector(math.Rand(-4, 4), math.Rand(-4, 4), 0))
-            fire:SetVelocity( (VectorRand() * 75) + (self:GetAngles():Up() * 500) + self:GetVelocity() )
-            fire:SetGravity( Vector(0, 0, 2500) )
+            local fire = emitter:Add("particles/smokey", self:GetPos() + Vector(math.Rand(-4, 4), math.Rand(-4, 4), 8))
+            local wind = Vector(math.sin(CurTime() / 60), math.cos(CurTime() / 60), 0) * math.Rand(1000, 1400)
+            fire:SetVelocity( VectorRand() * 75 + self:GetVelocity() )
+            fire:SetGravity( wind + Vector(0, 0, 2500) )
             fire:SetDieTime( self.FlareLength * math.Rand(2, 3) )
             fire:SetStartAlpha( 100 )
             fire:SetEndAlpha( 0 )
@@ -96,7 +97,7 @@ function ENT:Think()
             fire:SetPos( self:GetPos() )
             fire:SetLighting( false )
             fire:SetCollide(true)
-            fire:SetBounce(0.7)
+            fire:SetBounce(1)
             fire:SetNextThink( CurTime() + FrameTime() )
             fire:SetThinkFunction( function(pa)
                 if !pa then return end
@@ -134,6 +135,7 @@ function ENT:Think()
             fire.Ticks = 0
         end
 
+        --[[]
         self.NextFlareTime = self.NextFlareTime or CurTime()
 
         if self.NextFlareTime <= CurTime() then
@@ -206,6 +208,7 @@ function ENT:Think()
                 pa:SetNextThink( CurTime() + FrameTime() )
             end )
         end
+        ]]
 
         emitter:Finish()
 
@@ -227,7 +230,7 @@ function ENT:Think()
         dmg:SetDamage(10)
         dmg:SetInflictor(self)
         dmg:SetAttacker(self:GetOwner())
-        util.BlastDamageInfo(dmg, IsValid(self:GetParent()) and self:GetParent():GetPos() or self:GetPos(), 100)
+        util.BlastDamageInfo(dmg, IsValid(self:GetParent()) and self:GetParent():GetPos() or self:GetPos(), 128)
 
         if self.SpawnTime + self.FireTime <= CurTime() then self:Remove() return end
 
@@ -272,4 +275,14 @@ function ENT:Detonate()
 
         self:Remove()
     end)
+end
+
+ENT.FlareColor = Color(255, 200, 200)
+ENT.FlareSizeMin = 48
+ENT.FlareSizeMax = 64
+
+local mat = Material("effects/ar2_altfire1b")
+function ENT:Draw()
+    render.SetMaterial(mat)
+    render.DrawSprite(self:GetPos() + Vector(0, 0, 4), math.Rand(self.FlareSizeMin, self.FlareSizeMax), math.Rand(self.FlareSizeMin, self.FlareSizeMax), self.FlareColor)
 end

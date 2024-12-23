@@ -42,7 +42,7 @@ function ENT:Detonate(ent)
     util.BlastDamageInfo(dmg, self:GetPos(), self.Radius)
 
     dmg:SetDamageType(DMG_BLAST + DMG_BURN)
-    dmg:SetDamage(150 * mult)
+    dmg:SetDamage(250 * mult)
     util.BlastDamageInfo(dmg, self:GetPos(), self.Radius)
 
     self:ImpactTraceAttack(ent, 100 * mult, 100)
@@ -71,7 +71,8 @@ end
 
 local burn = {
     tacrp_proj_m202 = 12,
-    tacrp_proj_p2a1_flare = 5,
+    tacrp_proj_p2a1_flare = 4,
+    tacrp_proj_p2a1_incendiary = 9,
 }
 
 hook.Add("PostEntityTakeDamage", "tacrp_pa_m202", function(ent, dmginfo, took)

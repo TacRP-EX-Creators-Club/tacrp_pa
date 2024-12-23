@@ -1,78 +1,18 @@
 AddCSLuaFile()
 
-ENT.Base                     = "tacrp_proj_base"
-ENT.PrintName                = "P2A1 Signal Flare"
+ENT.Base                     = "tacrp_proj_p2a1_flare"
+ENT.PrintName                = "P2A1 Incendiary Flare"
 ENT.Spawnable                = false
-
-ENT.Model                    = "models/weapons/tacint/grenade_40mm.mdl"
-
-ENT.IsRocket = false // projectile has a booster and will not drop.
-
-ENT.InstantFuse = false // projectile is armed immediately after firing.
-ENT.RemoteFuse = false // allow this projectile to be triggered by remote detonator.
-ENT.ImpactFuse = true // projectile explodes on impact.
-
-ENT.ExplodeOnDamage = false // projectile explodes when it takes damage.
-ENT.ExplodeUnderwater = true
-
-ENT.Delay = 0
-ENT.SafetyFuse = 0
 
 ENT.ImpactDamage = 50
 
-ENT.AudioLoop = false
-
-ENT.Radius = 200
+ENT.Radius = 328
 
 ENT.SmokeTrail = true
-ENT.FlareColor = Color(255, 200, 200)
+ENT.FlareColor = Color(255, 200, 100)
 ENT.FlareSizeMin = 16
 ENT.FlareSizeMax = 32
-ENT.Gravity = Vector(0, 0, 9.81 * 0.333333)
-
-function ENT:Initialize()
-    if SERVER then
-        self:SetModel(self.Model)
-        self:PhysicsInitBox(-Vector(3, 3, 3), Vector(3, 3, 3) )
-        self:SetMoveType(MOVETYPE_VPHYSICS)
-        self:SetSolid(SOLID_VPHYSICS)
-        self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
-
-        local phys = self:GetPhysicsObject()
-        if !phys:IsValid() then
-            self:Remove()
-            return
-        end
-
-        phys:EnableDrag(false)
-        phys:SetDragCoefficient(0)
-        phys:SetMass(1)
-        phys:SetBuoyancyRatio(0)
-        phys:Wake()
-    end
-
-    self.SpawnTime = CurTime()
-    self.NextFlareRedirectTime = 0
-
-    self.NPCDamage = IsValid(self:GetOwner()) and self:GetOwner():IsNPC() and !TacRP.ConVars["npc_equality"]:GetBool()
-
-    if self.AudioLoop then
-        self.LoopSound = CreateSound(self, self.AudioLoop)
-        self.LoopSound:Play()
-    end
-
-    if self.InstantFuse then
-        self.ArmTime = CurTime()
-        self.Armed = true
-    end
-end
-
-function ENT:PhysicsUpdate(phys)
-    if phys:IsGravityEnabled() and self:WaterLevel() <= 2 then
-        local v = phys:GetVelocity()
-        phys:SetVelocityInstantaneous(v + self.Gravity)
-    end
-end
+ENT.Gravity = Vector(0, 0, 9.81 * 0.275)
 
 function ENT:Detonate(ent)
     local attacker = self.Attacker or self:GetOwner() or self
@@ -89,7 +29,7 @@ function ENT:Detonate(ent)
     util.BlastDamageInfo(dmg, self:GetPos(), self.Radius)
 
     dmg:SetDamageType(DMG_BURN)
-    dmg:SetDamage(50 * mult)
+    dmg:SetDamage(75 * mult)
     util.BlastDamageInfo(dmg, self:GetPos(), self.Radius)
 
     // TacRP.Flashbang(self, self:GetPos(), 512, 0.5, 0.1, 0)
@@ -100,24 +40,9 @@ function ENT:Detonate(ent)
     if self:WaterLevel() > 0 then
         util.Effect("WaterSurfaceExplosion", fx)
     else
-        util.Effect("tacrp_flare_explode", fx)
-        self:EmitSound("^ambient/fire/ignite.wav", 80, 112)
-    end
-
-    local cloud = ents.Create("tacrp_flare_cloud")
-
-    if !IsValid(cloud) then return end
-
-    cloud:SetPos(self:GetPos())
-    cloud:SetAngles(self:GetAngles())
-    cloud:SetOwner(attacker)
-    cloud:Spawn()
-    if IsValid(self:GetParent()) then
-        cloud:SetParent(self:GetParent())
-    elseif self:GetMoveType() == MOVETYPE_NONE then
-        cloud:SetMoveType(MOVETYPE_NONE)
-    else
-        cloud:GetPhysicsObject():SetVelocityInstantaneous(self:GetVelocity() * 0.25)
+        util.Effect("tacrp_m202_explode", fx)
+        self:EmitSound("^ambient/fire/ignite.wav", 80, 108)
+        self:EmitSound("^weapons/explode5.wav", 80, 115, 0.8)
     end
 
     self:Remove()
@@ -131,10 +56,10 @@ function ENT:Draw()
         if (self.Light) then
             self.Light.Pos = self:GetPos()
             self.Light.r = 255
-            self.Light.g = 75
-            self.Light.b = 60
-            self.Light.Brightness = 1.5
-            self.Light.Size = 512
+            self.Light.g = 128
+            self.Light.b = 50
+            self.Light.Brightness = 1
+            self.Light.Size = 328
             self.Light.DieTime = CurTime() + 30
         end
     else
@@ -148,9 +73,9 @@ end
 function ENT:OnRemove()
     if self.Light then
         self.Light.Size = 728
-        self.Light.Brightness = 3
-        self.Light.DieTime = CurTime() + 1
-        self.Light.Decay = 1000
+        self.Light.Brightness = 1
+        self.Light.DieTime = CurTime() + 3
+        self.Light.Decay = 500
     end
     if !self.FireSound then return end
     self.FireSound:Stop()
@@ -174,15 +99,15 @@ function ENT:DoSmokeTrail()
         smoke:SetPos(self:GetPos())
         smoke:SetVelocity(VectorRand() * 32)
 
-        smoke:SetColor(255, 50, 25)
+        smoke:SetColor(255, 200, 25)
         smoke:SetLighting(false)
-        smoke:SetDieTime(math.Rand(0.75, 1))
+        smoke:SetDieTime(math.Rand(0.3, 0.5))
         smoke:SetGravity(Vector(0, 0, 0))
         smoke:SetNextThink( CurTime() + FrameTime() )
         smoke:SetThinkFunction( function(pa)
             if !pa then return end
-            local col1 = Color(255, 50, 25)
-            local col2 = Color(255, 155, 155)
+            local col1 = Color(255, 128, 50)
+            local col2 = Color(220, 200, 180)
 
             local col3 = col1
             local d = pa:GetLifeTime() / pa:GetDieTime()
