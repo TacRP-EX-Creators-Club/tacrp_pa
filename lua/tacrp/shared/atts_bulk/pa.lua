@@ -638,7 +638,7 @@ ATT = {}
 
 ATT.PrintName = "Incendiary"
 ATT.FullName = "P2A1 Incendiary Cartridges"
-ATT.Icon = Material("entities/tacrp_att_ammo_40mm_smoke.png", "mips smooth")
+ATT.Icon = Material("entities/tacrp_att_ammo_40mm_concussion.png", "mips smooth")
 ATT.Description = "Flare payload with a more powerful explosion but no illumination."
 ATT.Pros = {"att.procon.radius", "att.procon.incendiary"}
 ATT.Cons = {"att.procon.noflare", "stat.muzzlevelocity"}
@@ -647,7 +647,7 @@ ATT.Category = "ammo_p2a1"
 
 ATT.SortOrder = 0
 ATT.Override_ShootEnt = "tacrp_proj_p2a1_incendiary"
-ATT.Mult_ShootEntForce = 0.66667
+ATT.Mult_ShootEntForce = 0.75
 
 if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true

@@ -144,7 +144,7 @@ SWEP.HolsterAng = Angle(90, 0, 0)
 SWEP.ClipSize = 1
 SWEP.Ammo = "buckshot"
 
-SWEP.ReloadTimeMult = 1.15
+SWEP.ReloadTimeMult = 1.2
 SWEP.ReloadUpInTime = 1.2
 
 // sounds
@@ -155,7 +155,7 @@ SWEP.Sound_Shoot = "^" .. path .. "flaregun_fire_player_01.wav"
 SWEP.Sound_Shoot_Silenced = "TacRP/weapons/g36k/g36k_fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 100
-SWEP.Pitch_Shoot = 108
+SWEP.Pitch_Shoot = 111
 SWEP.ShootPitchVariance = 0
 
 // effects

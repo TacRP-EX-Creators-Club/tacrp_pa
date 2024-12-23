@@ -74,8 +74,8 @@ function ENT:OnRemove()
     if self.Light then
         self.Light.Size = 728
         self.Light.Brightness = 1
-        self.Light.DieTime = CurTime() + 3
-        self.Light.Decay = 500
+        self.Light.DieTime = CurTime() + 4
+        self.Light.Decay = 250
     end
     if !self.FireSound then return end
     self.FireSound:Stop()
