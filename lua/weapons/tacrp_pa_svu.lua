@@ -17,7 +17,7 @@ SWEP.Trivia_Manufacturer = "KBP Instrument Design Bureau"
 SWEP.Trivia_Year = "1994"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
-SWEP.Credits = "Assets: B0T\nSound: NightmareMutant, sHiBaN, xLongWayHome\nAnimations: Tactical Intervention, edited by speedonerd"
+SWEP.Credits = "Assets: B0T\nSound: NightmareMutant, sHiBaN, xLongWayHome\nAnimations: speedonerd"
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_svu.mdl"
 SWEP.WorldModel = "models/weapons/tacint_extras/w_svu.mdl"
@@ -137,21 +137,30 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(0, -2, -5)
+SWEP.PassivePos = Vector(0.25, 1, 0)
 
-SWEP.BlindFireAng = Angle(0, 5, 0)
-SWEP.BlindFirePos = Vector(3, -2, -5)
+SWEP.CustomizeAng = Angle(30, 15, 0)
+SWEP.CustomizePos = Vector(4.5, -0.4, -0.7)
 
-SWEP.SprintAng = Angle(30, -15, 0)
-SWEP.SprintPos = Vector(5, 0, -2)
+SWEP.BlindFireAng = Angle(0, 0, 0)
+SWEP.BlindFirePos = Vector(-1, 1, 1)
 
-SWEP.SightAng = Angle(-0.9, 0, 0.2)
-SWEP.SightPos = Vector(-4.08, -7.5, -3.5)
+SWEP.BlindFireLeftAng = Angle(90, 0, 0)
+SWEP.BlindFireLeftPos = Vector(10, 6, -4)
 
-SWEP.CorrectivePos = Vector(0.25, 0, 0.1)
-SWEP.CorrectiveAng = Angle(0.9, 0, 0)
+SWEP.BlindFireRightAng = Angle(-90, 0, 0)
+SWEP.BlindFireRightPos = Vector(-4, 20, -4)
 
-SWEP.CorrectiveBoneAng = Angle(90, 38, 38)
+SWEP.SprintAng = Angle(30, -15, -5)
+SWEP.SprintPos = Vector(2, 0, 1.5)
+
+SWEP.SightAng = Angle(0, 0.1, 0)
+SWEP.SightPos = Vector(-3.96, -8, 1.5)
+
+SWEP.CorrectivePos = Vector(0, 0, 0.1)
+SWEP.CorrectiveAng = Angle(0, 0, -0)
+
+--SWEP.CorrectiveBoneAng = Angle(90, 38, 38)
 
 SWEP.HolsterVisible = true
 SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_BACK
@@ -168,11 +177,11 @@ SWEP.ClipSize = 10
 SWEP.Ammo = "357"
 SWEP.Ammo_Expanded = "ti_rifle"
 
-SWEP.ReloadTimeMult = 1.5
+SWEP.ReloadTimeMult = 1.3
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/svu.mdl"
 SWEP.DropMagazineImpact = "metal"
 
-SWEP.ReloadUpInTime = 1.25
+SWEP.ReloadUpInTime = 1.4
 SWEP.DropMagazineTime = 0.55
 
 SWEP.FreeAimMaxAngle = 5
@@ -258,45 +267,47 @@ SWEP.AttachmentElements = {
     },
 }
 
+SWEP.NoRMR = true
+
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
-        Category = {"ironsights_sniper", "optic_cqb_verytall", "optic_medium", "optic_sniper"},
-        Bone = "ValveBiped.AUG_rootbone",
+        Category = {"ironsights_sniper", "optic_cqb", "optic_medium", "optic_sniper"},
+        Bone = "famas_root",
         WMBone = "ValveBiped.Bip01_R_Hand",
         InstalledElements = {"rail"},
         AttachSound = "tacrp/weapons/optic_on.wav",
         DetachSound = "tacrp/weapons/optic_off.wav",
         VMScale = 0.8,
         WMScale = 0.8,
-        Pos_VM = Vector(-5.9, -0.15, 4),
-        Ang_VM = Angle(90, 0, 0),
+        Pos_VM = Vector(-0, -5.4, 4),
+        Ang_VM = Angle(90, 0, -90),
         Pos_WM = Vector(7.3, 1.15, -6.9),
         Ang_WM = Angle(0, 0, 180),
     },
     [2] = {
         PrintName = "Muzzle",
         Category = {"silencer", "muzz_svu"},
-        Bone = "ValveBiped.AUG_rootbone",
+        Bone = "famas_root",
         AttachSound = "tacrp/weapons/silencer_on.wav",
         DetachSound = "tacrp/weapons/silencer_off.wav",
         VMScale = 0.9,
         WMScale = 0.9,
-        Pos_VM = Vector(-2.75, -0.15, 22),
-        Ang_VM = Angle(90, 0, 0),
+        Pos_VM = Vector(0, -2.1, 21.5),
+        Ang_VM = Angle(90, 0, -90),
         Pos_WM = Vector(25.5, 1.15, -3.9),
         Ang_WM = Angle(0, 0, 180),
     },
     [3] = {
         PrintName = "Tactical",
         Category = {"tactical", "tactical_zoom", "tactical_ebullet"},
-        Bone = "ValveBiped.AUG_rootbone",
+        Bone = "famas_root",
         WMBone = "ValveBiped.Bip01_R_Hand",
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
-        Pos_VM = Vector(-3.4, -0.8, 9),
+        Pos_VM = Vector(-0.7, -2.5, 9),
         Pos_WM = Vector(12, 1.8, -4.25),
-        Ang_VM = Angle(90, 0, -75),
+        Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(0, 0, 90),
     },
     [4] = {
