@@ -17,10 +17,6 @@ SWEP.Description_Quote = ""
 SWEP.ViewModel = "models/weapons/tacint_extras/v_p2a1.mdl"
 SWEP.WorldModel = "models/weapons/tacint_shark/w_contender.mdl"
 
-// TEMPORARY
-SWEP.CanQuickNade = false
-SWEP.CanBlindFire = false
-
 SWEP.Trivia_Caliber = "25mm Flares" // approx. 7.5 gauge
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Year = "1974"
@@ -201,22 +197,23 @@ SWEP.AnimationTranslationTable = {
 SWEP.AttachmentElements = {
 }
 
-SWEP.DeployTimeMult = 1
+SWEP.DeployTimeMult = 0.8
 
 SWEP.LastShot = false
+SWEP.NoIdle = true
 
 // attachments
 
 SWEP.Attachments = {
     [1] = {
-        PrintName = "Accessory",
-        Category = {"acc", "acc_holster", "acc_brace"},
+        PrintName = "Ammo",
+        Category = {"ammo_p2a1"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
     [2] = {
-        PrintName = "Ammo",
-        Category = {"ammo_p2a1"},
+        PrintName = "Accessory",
+        Category = {"acc", "acc_holster", "acc_brace"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },

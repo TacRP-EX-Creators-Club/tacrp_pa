@@ -72,7 +72,7 @@ end
 local burn = {
     tacrp_proj_m202 = 12,
     tacrp_proj_p2a1_flare = 4,
-    tacrp_proj_p2a1_incendiary = 9,
+    tacrp_proj_p2a1_incendiary = 6,
 }
 
 hook.Add("PostEntityTakeDamage", "tacrp_pa_m202", function(ent, dmginfo, took)

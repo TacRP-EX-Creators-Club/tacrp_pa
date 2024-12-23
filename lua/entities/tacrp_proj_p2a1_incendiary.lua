@@ -29,7 +29,7 @@ function ENT:Detonate(ent)
     util.BlastDamageInfo(dmg, self:GetPos(), self.Radius)
 
     dmg:SetDamageType(DMG_BURN)
-    dmg:SetDamage(75 * mult)
+    dmg:SetDamage(50 * mult)
     util.BlastDamageInfo(dmg, self:GetPos(), self.Radius)
 
     // TacRP.Flashbang(self, self:GetPos(), 512, 0.5, 0.1, 0)

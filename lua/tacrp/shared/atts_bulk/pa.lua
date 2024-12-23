@@ -647,8 +647,6 @@ ATT.Category = "ammo_p2a1"
 
 ATT.SortOrder = 0
 ATT.Override_ShootEnt = "tacrp_proj_p2a1_incendiary"
-ATT.Override_Damage_Max = 75
-ATT.Override_Damage_Min = 75
 ATT.Mult_ShootEntForce = 0.66667
 
 if engine.ActiveGamemode() == "terrortown" then

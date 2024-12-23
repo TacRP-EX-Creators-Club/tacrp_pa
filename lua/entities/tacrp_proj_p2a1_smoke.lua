@@ -17,12 +17,13 @@ ENT.Gravity = Vector(0, 0, 9.81 * 0.3333)
 function ENT:Detonate(ent)
 
     self:EmitSound("TacRP/weapons/grenade/smoke_explode-1.wav", 80, 108)
-    local cloud = ents.Create( "tacrp_smoke_cloud_p2a1" )
-    if !IsValid(cloud) then return end
-    cloud:SetPos(self:GetPos())
-    cloud:Spawn()
-
-    self:Remove()
+    timer.Simple(0, function()
+        local cloud = ents.Create( "tacrp_smoke_cloud_p2a1" )
+        if !IsValid(cloud) then return end
+        cloud:SetPos(self:GetPos())
+        cloud:Spawn()
+        self:Remove()
+    end)
 end
 
 

@@ -42,8 +42,6 @@ function ENT:Initialize()
 
         -- self.FireTime = self.FireTime * math.Rand(0.8, 1.2)
         -- self:SetNWFloat("FireTime", CurTime() + self.FireTime)
-
-        self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
     else
         local tr = util.TraceHull({
             start = self:GetPos() + Vector(0, 0, 12),

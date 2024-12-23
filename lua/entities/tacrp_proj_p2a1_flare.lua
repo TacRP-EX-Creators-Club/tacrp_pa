@@ -111,16 +111,17 @@ function ENT:Detonate(ent)
     cloud:SetPos(self:GetPos())
     cloud:SetAngles(self:GetAngles())
     cloud:SetOwner(attacker)
-    cloud:Spawn()
-    if IsValid(self:GetParent()) then
-        cloud:SetParent(self:GetParent())
-    elseif self:GetMoveType() == MOVETYPE_NONE then
-        cloud:SetMoveType(MOVETYPE_NONE)
-    else
-        cloud:GetPhysicsObject():SetVelocityInstantaneous(self:GetVelocity() * 0.25)
-    end
-
-    self:Remove()
+    timer.Simple(0, function()
+        cloud:Spawn()
+        if IsValid(self:GetParent()) then
+            cloud:SetParent(self:GetParent())
+        elseif self:GetMoveType() == MOVETYPE_NONE then
+            cloud:SetMoveType(MOVETYPE_NONE)
+        else
+            cloud:GetPhysicsObject():SetVelocityInstantaneous(self:GetVelocity() * 0.25)
+        end
+        self:Remove()
+    end)
 end
 
 
