@@ -4,15 +4,15 @@ ENT.Base                     = "tacrp_proj_p2a1_flare"
 ENT.PrintName                = "P2A1 Incendiary Flare"
 ENT.Spawnable                = false
 
-ENT.ImpactDamage = 50
-
 ENT.Radius = 328
+
+ENT.SafetyFuse = 0.25
 
 ENT.SmokeTrail = true
 ENT.FlareColor = Color(255, 200, 100)
 ENT.FlareSizeMin = 16
 ENT.FlareSizeMax = 32
-ENT.Gravity = Vector(0, 0, 9.81 * 0.275)
+ENT.Gravity = Vector(0, 0, 9.81 * 0.3)
 
 function ENT:Detonate(ent)
     local attacker = self.Attacker or self:GetOwner() or self
@@ -137,7 +137,7 @@ function ENT:SafetyImpact(data, collider)
         local dmginfo = DamageInfo()
         dmginfo:SetAttacker(attacker)
         dmginfo:SetInflictor(self)
-        dmginfo:SetDamageType(DMG_CRUSH + DMG_SLOWBURN)
+        dmginfo:SetDamageType(self.ImpactDamageType)
         dmginfo:SetDamage(self.ImpactDamage * (self.NPCDamage and 0.25 or 1))
         dmginfo:SetDamageForce(data.OurOldVelocity * 20)
         dmginfo:SetDamagePosition(data.HitPos)

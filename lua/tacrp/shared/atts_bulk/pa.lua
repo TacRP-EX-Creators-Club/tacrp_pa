@@ -639,15 +639,15 @@ ATT = {}
 ATT.PrintName = "Incendiary"
 ATT.FullName = "P2A1 Incendiary Cartridges"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_concussion.png", "mips smooth")
-ATT.Description = "Flare payload with a more powerful explosion but no illumination."
+ATT.Description = "Flares with a more powerful explosion but no illumination."
 ATT.Pros = {"att.procon.radius", "att.procon.incendiary"}
-ATT.Cons = {"att.procon.noflare", "stat.muzzlevelocity"}
+ATT.Cons = {"att.procon.noflare", "stat.muzzlevelocity", "att.procon.armdelay"}
 
 ATT.Category = "ammo_p2a1"
 
 ATT.SortOrder = 0
 ATT.Override_ShootEnt = "tacrp_proj_p2a1_incendiary"
-ATT.Mult_ShootEntForce = 0.75
+ATT.Mult_ShootEntForce = 0.7
 
 if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
@@ -661,7 +661,7 @@ ATT = {}
 ATT.PrintName = "Smoke"
 ATT.FullName = "P2A1 Smoke Cartridges"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_smoke.png", "mips smooth")
-ATT.Description = "Flare payload that creates a small smokescreen on impact."
+ATT.Description = "Flares that creates a small smokescreen on impact."
 ATT.Pros = {"att.procon.smoke"}
 ATT.Cons = {"att.procon.noflare", "att.procon.nonlethal"}
 
@@ -675,6 +675,25 @@ if engine.ActiveGamemode() == "terrortown" then
 end
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_smoke")
+
+
+ATT = {}
+
+ATT.PrintName = "Illumination"
+ATT.FullName = "P2A1 Illumination Flare Cartridges"
+ATT.Icon = Material("entities/tacrp_att_ammo_40mm_concussion.png", "mips smooth")
+ATT.Description = "White flares with a mini-parachute, lighting up a large area while it falls."
+ATT.Pros = {"att.procon.illumradius"}
+ATT.Cons = {"att.procon.timedfuse", "att.procon.noexp"}
+
+ATT.Category = "ammo_p2a1"
+
+ATT.SortOrder = 0
+ATT.Free = true
+ATT.Override_ShootEnt = "tacrp_proj_p2a1_paraflare"
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_para")
+
 
 ATT = {}
 

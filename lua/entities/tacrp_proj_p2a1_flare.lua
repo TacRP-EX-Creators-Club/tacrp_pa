@@ -19,6 +19,7 @@ ENT.Delay = 0
 ENT.SafetyFuse = 0
 
 ENT.ImpactDamage = 50
+ENT.ImpactDamageType = DMG_BURN + DMG_SLOWBURN
 
 ENT.AudioLoop = false
 
@@ -118,12 +119,11 @@ function ENT:Detonate(ent)
         elseif self:GetMoveType() == MOVETYPE_NONE then
             cloud:SetMoveType(MOVETYPE_NONE)
         else
-            cloud:GetPhysicsObject():SetVelocityInstantaneous(self:GetVelocity() * 0.25)
+            cloud:GetPhysicsObject():SetVelocityInstantaneous(self:GetVelocity() * 0.5)
         end
         self:Remove()
     end)
 end
-
 
 local mat = Material("effects/ar2_altfire1b")
 function ENT:Draw()
