@@ -11,7 +11,7 @@ ENT.ImpactFuse = false
 ENT.ExplodeOnDamage = false // projectile explodes when it takes damage.
 ENT.ExplodeUnderwater = true
 
-ENT.Delay = 1.5
+ENT.Delay = 2
 
 ENT.Radius = 328
 
@@ -58,7 +58,7 @@ function ENT:Draw()
             self.Light.r = 255
             self.Light.g = 200
             self.Light.b = 100
-            self.Light.Brightness = 0.75
+            self.Light.Brightness = 0.5
             self.Light.Size = 728
             self.Light.DieTime = CurTime() + 2
         end

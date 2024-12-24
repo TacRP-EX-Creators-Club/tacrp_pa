@@ -58,28 +58,29 @@ function ENT:Think()
                 self.Light.g = 200
                 self.Light.b = 140
                 self.Light.Brightness = 1
-                self.Light.Size = 728
+                self.Light.Size = 1500
                 self.Light.DieTime = CurTime() + self.FireTime
             end
         else
-            if self:GetVelocity():LengthSqr() <= 32 then
-                self.Light.Pos = self:GetPos()
-            else
-                if self.LastTraceTime + 0.05 < CurTime() then
-                    self.LastTraceTime = CurTime()
-                    local tr = util.TraceLine({
-                        start = self:GetPos(),
-                        endpos = self:GetPos() - Vector(0, 0, 3000),
-                        mask = MASK_SOLID_BRUSHONLY,
-                    })
-                    self.LastTracePos = self:GetPos() - tr.Fraction * Vector(0, 0, 1500)
-                    self.Light.Size = Lerp(tr.Fraction, 728, 2048)
-                    self.Light.Brightness = Lerp(tr.Fraction, 1, 5)
-
-                end
-                self.Light.Pos = self.LastTracePos or self:GetPos()
-            end
+            self.Light.Pos = self:GetPos()
         end
+
+        -- fucking expensive
+        --[[]
+        if !self.ProjectedTexture then
+            self.ProjectedTexture = ProjectedTexture()
+            self.ProjectedTexture:SetTexture("effects/flashlight001")
+            self.ProjectedTexture:SetColor(Color(255, 200, 140))
+            self.ProjectedTexture:SetNearZ(728)
+            self.ProjectedTexture:SetFarZ(4096)
+            self.ProjectedTexture:SetAngles(down)
+            self.ProjectedTexture:SetFOV(170)
+            self.ProjectedTexture:SetLightWorld(false)
+            self.ProjectedTexture:SetBrightness(0.75)
+        end
+        self.ProjectedTexture:SetPos(self:GetPos())
+        self.ProjectedTexture:Update()
+        ]]
 
         local emitter = ParticleEmitter(self:GetPos())
 
@@ -170,6 +171,9 @@ function ENT:OnRemove()
     if self.Light then
         self.Light.dietime = CurTime() + 0.5
         self.Light.decay = 800
+    end
+    if IsValid(self.ProjectedTexture) then
+        self.ProjectedTexture:Remove()
     end
     if !self.FireSound then return end
     self.FireSound:Stop()

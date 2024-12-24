@@ -684,13 +684,14 @@ ATT.FullName = "P2A1 Illumination Flare Cartridges"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_concussion.png", "mips smooth")
 ATT.Description = "White flares with a mini-parachute, lighting up a large area while it falls."
 ATT.Pros = {"att.procon.illumradius"}
-ATT.Cons = {"att.procon.timedfuse", "att.procon.noexp"}
+ATT.Cons = {"att.procon.timedfuse", "att.procon.noexp", "stat.muzzlevelocity"}
 
 ATT.Category = "ammo_p2a1"
 
 ATT.SortOrder = 0
 ATT.Free = true
 ATT.Override_ShootEnt = "tacrp_proj_p2a1_paraflare"
+ATT.Mult_ShootEntForce = 0.9
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_para")
 
