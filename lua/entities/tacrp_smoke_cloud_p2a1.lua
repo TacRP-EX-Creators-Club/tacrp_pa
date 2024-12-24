@@ -12,7 +12,7 @@ local function GetSmokeImage()
     return smokeimages[math.random(#smokeimages)]
 end
 
-ENT.SmokeRadius = 225
+ENT.SmokeRadius = 150
 ENT.SmokeColor = Color(150, 150, 150)
 ENT.BillowTime = 1
 ENT.Life = 12
@@ -33,11 +33,11 @@ function ENT:Initialize()
 
         self.Particles = {}
 
-        local amt = 18
+        local amt = 15
 
         for i = 1, amt do
             local smoke = emitter:Add(GetSmokeImage(), self:GetPos())
-            smoke:SetVelocity( VectorRand() * 8 + (Angle(0, i * (360 / amt), 0):Forward() * 200) )
+            smoke:SetVelocity( VectorRand() * 8 + (Angle(0, i * (360 / amt), 0):Forward() * 100) )
             smoke:SetStartAlpha( 0 )
             smoke:SetEndAlpha( 255 )
             smoke:SetStartSize( 0 )

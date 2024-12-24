@@ -663,12 +663,13 @@ ATT.FullName = "P2A1 Smoke Cartridges"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_smoke.png", "mips smooth")
 ATT.Description = "Flares that creates a small smokescreen on impact."
 ATT.Pros = {"att.procon.smoke"}
-ATT.Cons = {"att.procon.noflare", "att.procon.nonlethal"}
+ATT.Cons = {"att.procon.noflare", "att.procon.nonlethal", "stat.muzzlevelocity"}
 
 ATT.Category = "ammo_p2a1"
 
-ATT.SortOrder = 0.1
+ATT.SortOrder = 1
 ATT.Override_ShootEnt = "tacrp_proj_p2a1_smoke"
+ATT.Mult_ShootEntForce = 0.75
 
 if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
@@ -684,38 +685,38 @@ ATT.FullName = "P2A1 Illumination Flare Cartridges"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_concussion.png", "mips smooth")
 ATT.Description = "White flares with a mini-parachute, lighting up a large area while it falls."
 ATT.Pros = {"att.procon.illumradius"}
-ATT.Cons = {"att.procon.timedfuse", "att.procon.noexp", "stat.muzzlevelocity"}
+ATT.Cons = {"att.procon.timedfuse", "att.procon.noexp"}
 
 ATT.Category = "ammo_p2a1"
 
-ATT.SortOrder = 0
-ATT.Free = true
+ATT.SortOrder = 0.1
 ATT.Override_ShootEnt = "tacrp_proj_p2a1_paraflare"
-ATT.Mult_ShootEntForce = 0.9
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_para")
-
 
 ATT = {}
 
 ATT.PrintName = "Medi-Smoke"
 ATT.FullName = "P2A1 Medi-Smoke Cartridges"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_smoke.png", "mips smooth")
-ATT.Description = "Rounds that produce restorative gas on impact."
+ATT.Description = "Flares that produce a tiny amount of restorative gas on impact."
 ATT.Pros = {"att.procon.heal"}
-ATT.Cons = {"att.procon.noflare"}
+ATT.Cons = {"att.procon.noflare", "att.procon.nonlethal", "stat.muzzlevelocity"}
 
 ATT.Category = "ammo_p2a1"
 ATT.InvAtt = "ammo_40mm_heal"
 
-ATT.SortOrder = 0.5
-ATT.Override_ShootEnt = "tacrp_proj_40mm_heal"
+ATT.SortOrder = 1.5
+ATT.Override_ShootEnt = "tacrp_proj_p2a1_heal"
+ATT.Mult_ShootEntForce = 0.75
 
 if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
-
-ATT.Ignore = true -- too good?
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_heal")
 
@@ -732,7 +733,7 @@ ATT.Cons = {"stat.spread", "rating.mobility"}
 ATT.Category = "ammo_p2a1"
 ATT.InvAtt = "ammo_shotgun_mag"
 
-ATT.SortOrder = 1
+ATT.SortOrder = 2
 
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 30
@@ -767,7 +768,7 @@ ATT.Cons = {"stat.spread", "stat.damage", "rating.mobility"}
 ATT.Category = "ammo_p2a1"
 ATT.InvAtt = "ammo_shotgun_bird"
 
-ATT.SortOrder = 2
+ATT.SortOrder = 3
 
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 18
@@ -803,7 +804,7 @@ ATT.Cons = {"att.procon.1proj", "rating.mobility"}
 ATT.Category = "ammo_p2a1"
 ATT.InvAtt = "ammo_shotgun_slugs"
 
-ATT.SortOrder = 3
+ATT.SortOrder = 4
 
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 18
@@ -851,7 +852,7 @@ ATT.Cons = {"att.procon.damage", "stat.muzzlevelocity"}
 ATT.Category = "ammo_p2a1"
 ATT.InvAtt = "ammo_shotgun_frag"
 
-ATT.SortOrder = 4
+ATT.SortOrder = 5
 
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 18

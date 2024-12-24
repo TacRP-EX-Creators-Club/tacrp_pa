@@ -1,13 +1,13 @@
 AddCSLuaFile()
 
 ENT.Base                     = "tacrp_proj_p2a1_flare"
-ENT.PrintName                = "P2A1 Smoke Flare"
+ENT.PrintName                = "P2A1 Medi-Smoke Flare"
 ENT.Spawnable                = false
 
 ENT.ImpactDamage = 0
 
 ENT.SmokeTrail = true
-ENT.FlareColor = Color(255, 255, 255)
+ENT.FlareColor = Color(100, 50, 255)
 ENT.FlareSizeMin = 16
 ENT.FlareSizeMax = 32
 ENT.Gravity = Vector(0, 0, 9.81 * 0.3333)
@@ -16,7 +16,7 @@ function ENT:Detonate(ent)
 
     self:EmitSound("TacRP/weapons/grenade/smoke_explode-1.wav", 80, 108)
     timer.Simple(0, function()
-        local cloud = ents.Create( "tacrp_smoke_cloud_p2a1" )
+        local cloud = ents.Create( "tacrp_heal_cloud_p2a1" )
         if !IsValid(cloud) then return end
         cloud:SetPos(self:GetPos())
         cloud:SetOwner(self:GetOwner())
@@ -49,8 +49,7 @@ function ENT:DoSmokeTrail()
 
         smoke:SetPos(self:GetPos())
         smoke:SetVelocity(VectorRand() * 32)
-
-        smoke:SetColor(255, 255, 255)
+        smoke:SetColor(125, 25, 255)
         smoke:SetLighting(false)
         smoke:SetDieTime(math.Rand(0.3, 0.5))
         smoke:SetGravity(Vector(0, 0, 0))
