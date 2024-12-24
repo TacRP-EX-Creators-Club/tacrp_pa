@@ -15,7 +15,7 @@ SWEP.Description = "Single-shot flare pistol for signaling and illumination use.
 SWEP.Description_Quote = ""
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_p2a1.mdl"
-SWEP.WorldModel = "models/weapons/tacint_shark/w_contender.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_p2a1.mdl"
 
 SWEP.Trivia_Caliber = "25mm Flares" // approx. 7.5 gauge
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -109,7 +109,7 @@ SWEP.HoldTypeSprint = "normal"
 SWEP.HoldTypeBlindFire = "pistol"
 
 SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
-SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_REVOLVER
+SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 
 SWEP.PassiveAng = Angle(0, 0, 0)
 SWEP.PassivePos = Vector(0, 0, 0)
@@ -144,7 +144,7 @@ SWEP.HolsterAng = Angle(90, 0, 0)
 SWEP.ClipSize = 1
 SWEP.Ammo = "buckshot"
 
-SWEP.ReloadTimeMult = 1.2
+SWEP.ReloadTimeMult = 1.15
 SWEP.ReloadUpInTime = 1.2
 
 // sounds
@@ -152,7 +152,6 @@ SWEP.ReloadUpInTime = 1.2
 local path = "tacint_extras/p2a1/"
 
 SWEP.Sound_Shoot = "^" .. path .. "flaregun_fire_player_01.wav"
-SWEP.Sound_Shoot_Silenced = "TacRP/weapons/g36k/g36k_fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 100
 SWEP.Pitch_Shoot = 111

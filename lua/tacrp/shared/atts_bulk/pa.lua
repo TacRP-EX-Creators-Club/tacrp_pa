@@ -724,7 +724,7 @@ TacRP.LoadAtt(ATT, "ammo_p2a1_heal")
 ATT = {}
 
 ATT.PrintName = "Magnum Buck"
-ATT.FullName = "P2A1 Magnum Buckshot Rounds"
+ATT.FullName = "P2A1 Magnum Buck Shotshells"
 ATT.Icon = Material("entities/tacrp_att_acc_magnum.png", "mips smooth")
 ATT.Description = "Cram some shotshells into your flare gun for direct firepower."
 ATT.Pros = {"att.procon.direct"}
@@ -735,6 +735,7 @@ ATT.InvAtt = "ammo_shotgun_mag"
 
 ATT.SortOrder = 2
 
+ATT.Override_Ammo = "buckshot"
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 30
 ATT.Override_Spread = 0.044
@@ -759,7 +760,7 @@ TacRP.LoadAtt(ATT, "ammo_p2a1_buckshot")
 ATT = {}
 
 ATT.PrintName = "Birdshot"
-ATT.FullName = "P2A1 Birdshot Rounds"
+ATT.FullName = "P2A1 Bird Shotshells"
 ATT.Icon = Material("entities/tacrp_att_acc_bird.png", "mips smooth")
 ATT.Description = "Cram some birdshells into your flare gun. Insane spread but hard to miss."
 ATT.Pros = {"att.procon.direct", "att.procon.moreproj"}
@@ -770,6 +771,7 @@ ATT.InvAtt = "ammo_shotgun_bird"
 
 ATT.SortOrder = 3
 
+ATT.Override_Ammo = "buckshot"
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 18
 ATT.Override_Spread = 0.08
@@ -795,7 +797,7 @@ TacRP.LoadAtt(ATT, "ammo_p2a1_bird")
 ATT = {}
 
 ATT.PrintName = "att.ammo_shotgun_slugs.name"
-ATT.FullName = "P2A1 Slug Rounds"
+ATT.FullName = "P2A1 Slug Shotshells"
 ATT.Icon = Material("entities/tacrp_att_acc_slugs.png", "mips smooth")
 ATT.Description = "Cram slugs into your flare gun. Short barrel limits accuracy and range."
 ATT.Pros = {"att.procon.direct", "stat.range"}
@@ -806,6 +808,7 @@ ATT.InvAtt = "ammo_shotgun_slugs"
 
 ATT.SortOrder = 4
 
+ATT.Override_Ammo = "buckshot"
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 18
 ATT.Override_Spread = 0.01
@@ -843,7 +846,7 @@ TacRP.LoadAtt(ATT, "ammo_p2a1_slug")
 ATT = {}
 
 ATT.PrintName = "Frag"
-ATT.FullName = "P2A1 HE Frag Rounds"
+ATT.FullName = "P2A1 HE Frag Shotshells"
 ATT.Icon = Material("entities/tacrp_att_ammo_frag12.png", "mips smooth")
 ATT.Description = "Turn your flare gun into a knockoff grenade pistol."
 ATT.Pros = {"att.procon.explosive", "att.procon.radius"}
@@ -854,6 +857,7 @@ ATT.InvAtt = "ammo_shotgun_frag"
 
 ATT.SortOrder = 5
 
+ATT.Override_Ammo = "buckshot"
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 18
 ATT.Override_Spread = 0.012
@@ -878,7 +882,7 @@ TacRP.LoadAtt(ATT, "ammo_p2a1_frag")
 ATT = {}
 
 ATT.PrintName = "Zvezda"
-ATT.FullName = "P2A1 Zvezda Flash Rounds"
+ATT.FullName = "P2A1 Zvezda Flash Shotshells"
 ATT.Icon = Material("entities/tacrp_att_ammo_ks23_flashbang.png", "mips smooth")
 ATT.Description = "Flashbang dispenser in your pocket. Best used around corners."
 ATT.Pros = {"att.procon.flash"}
@@ -887,6 +891,7 @@ ATT.Cons = {"att.procon.timedfuse", "att.procon.nonlethal"}
 ATT.SortOrder = 11
 ATT.Category = "ammo_p2a1"
 ATT.InvAtt = "ammo_ks23_flashbang"
+ATT.Override_Ammo = "buckshot"
 
 ATT.Override_ShootEnt = "tacrp_proj_ks23_flashbang"
 ATT.Override_ShootEntForce = 1500
@@ -901,7 +906,7 @@ TacRP.LoadAtt(ATT, "ammo_p2a1_flashbang")
 ATT = {}
 
 ATT.PrintName = "Breach"
-ATT.FullName = "P2A1 Breaching Rounds"
+ATT.FullName = "P2A1 Breaching Shotshells"
 ATT.Icon = Material("entities/tacrp_att_ammo_breaching.png", "mips smooth")
 ATT.Description = "Load a specialized breaching slug for pocket door busting."
 ATT.Pros = {"att.procon.doorbreach"}
@@ -909,6 +914,7 @@ ATT.Cons = {"att.procon.nonlethal"}
 
 ATT.Category = "ammo_p2a1"
 ATT.InvAtt = "ammo_shotgun_breach"
+ATT.Override_Ammo = "buckshot"
 
 ATT.SortOrder = 10
 ATT.Override_ShootEntForce = 2000
@@ -923,7 +929,7 @@ TacRP.LoadAtt(ATT, "ammo_p2a1_breach")
 ATT = {}
 
 ATT.PrintName = "Rocks"
-ATT.FullName = "P2A1 Rock Rounds"
+ATT.FullName = "P2A1 Rock Shotshells"
 ATT.Icon = Material("entities/tacrp_att_ammo_p2a1_rock.png", "mips smooth")
 ATT.Description = "Neolithic buckshot."
 ATT.Pros = {"att.procon.throwrocks"}
@@ -932,7 +938,7 @@ ATT.Cons = {"att.procon.throwrocks"}
 ATT.Category = "ammo_p2a1"
 ATT.Free = true
 
-
+ATT.Override_Ammo = "buckshot"
 ATT.SortOrder = 90
 ATT.Override_Spread = 0.05
 ATT.Override_ShotgunPelletSpread = 0.03
@@ -959,16 +965,17 @@ TacRP.LoadAtt(ATT, "ammo_p2a1_rock")
 ATT = {}
 
 ATT.PrintName = "Confetti"
-ATT.FullName = "P2A1 Confetti Rounds"
+ATT.FullName = "P2A1 Confetti Shotshells"
 ATT.Icon = Material("entities/tacrp_att_ammo_p2a1_confetti.png", "mips smooth")
 ATT.Description = "For celebrations. Yippie!"
-ATT.Pros = {"att.procon.infiniteammo"}
+ATT.Pros = {}
 ATT.Cons = {"att.procon.nonlethal"}
 
 ATT.Category = "ammo_p2a1"
 ATT.Free = true
 
 ATT.SortOrder = 100
+ATT.Override_Ammo = "buckshot"
 ATT.Override_ShootEnt = false
 ATT.Override_Num = 0
 ATT.Override_Damage_Max = 0

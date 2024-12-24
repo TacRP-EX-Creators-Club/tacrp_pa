@@ -22,7 +22,7 @@ SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = "Model: Harry Ridgeway, MediocrityGoggles\nTexture: Millenia\nSound: Bethesda, Obsidian\nAssets: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_sw10.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_mr96.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_sw10.mdl"
 
 SWEP.Slot = 1
 
@@ -58,9 +58,9 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 
 // "ballistics"
 
-SWEP.Damage_Max = 35 // damage at minimum range
+SWEP.Damage_Max = 36 // damage at minimum range
 SWEP.Damage_Min = 18 // damage at maximum range
-SWEP.Range_Min = 900 // distance for which to maintain maximum damage
+SWEP.Range_Min = 800 // distance for which to maintain maximum damage
 SWEP.Range_Max = 2500 // distance at which we drop to minimum damage
 SWEP.Penetration = 5 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.7
@@ -84,7 +84,7 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Double-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 220
+SWEP.RPM = 200
 
 SWEP.Spread = 0.003
 
@@ -97,8 +97,8 @@ SWEP.RecoilResetTime = 0
 SWEP.RecoilDissipationRate = 9
 SWEP.RecoilFirstShotMult = 0.9
 
-SWEP.RecoilVisualKick = 2.5
-SWEP.RecoilKick = 4
+SWEP.RecoilVisualKick = 3
+SWEP.RecoilKick = 7
 SWEP.RecoilStability = 0.65
 
 SWEP.RecoilSpreadPenalty = 0.012
@@ -237,24 +237,24 @@ SWEP.Attachments = {
         AttachSound = "TacRP/weapons/optic_on.wav",
         DetachSound = "TacRP/weapons/optic_off.wav",
         VMScale = 0.8,
-        WMScale = 1,
+        WMScale = 0.8,
         Pos_VM = Vector(-3.75, -0.1, 4.5),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(0, 1.5, -0.8),
+        Pos_WM = Vector(0, 2.5, -0.25),
         Ang_WM = Angle(0, -90, 0),
     },
     [2] = {
         PrintName = "Tactical",
-        Category = {"tactical", "tactical_zoom", "tactical_ebullet"},
+        Category = {"tactical_zoom", "tactical_ebullet"},
         Bone = "ValveBiped.mr96_rootbone",
         WMBone = "Box01",
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         VMScale = 1,
         WMScale = 1,
-        Pos_VM = Vector(-2.65, -0.125, 9),
+        Pos_VM = Vector(-2.65, -0.1, 9),
         Ang_VM = Angle(90, 0, 180),
-        Pos_WM = Vector(0, 8, -2.25),
+        Pos_WM = Vector(0, 8, -1.6),
         Ang_WM = Angle(0, -90, 180),
     },
     [3] = {

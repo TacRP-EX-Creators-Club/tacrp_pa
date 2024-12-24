@@ -17,8 +17,8 @@ local SmokeColor = Color(125, 25, 125)
 ENT.Particles = nil
 ENT.SmokeRadius = 128
 ENT.SmokeColor = SmokeColor
-ENT.BillowTime = 0.25
-ENT.Life = 2
+ENT.BillowTime = 0.5
+ENT.Life = 5
 
 ENT.TacRPSmoke = true
 
@@ -35,7 +35,7 @@ function ENT:Initialize()
 
         self.Particles = {}
 
-        local amt = 16
+        local amt = 12
 
         for i = 1, amt do
             local smoke = emitter:Add(GetSmokeImage(), self:GetPos())
@@ -139,7 +139,7 @@ function ENT:Think()
                     elseif ply:Armor() > 0 and ply:Armor() <= ply:GetMaxArmor() and TacRP.ConVars["healnade_armor"]:GetInt() > 0 then
                         ply:SetArmor(math.min(ply:Armor() + TacRP.ConVars["healnade_armor"]:GetInt(), ply:GetMaxArmor()))
                     end
-                    k.TacRPNextCanHealthGasTime = CurTime() + 0.19
+                    k.TacRPNextCanHealthGasTime = CurTime() + 0.74
                 elseif !k:IsPlayer() and (k.TacRPNextCanHealthGasTime or 0) <= CurTime() then
                     if TacRP.EntityIsNecrotic(k) then
                         local dmginfo = DamageInfo()
@@ -155,12 +155,12 @@ function ENT:Think()
                         amt = ret and ret[1] or amt
                         k:SetHealth(math.min(k:Health() + amt, k:GetMaxHealth()))
                     end
-                    k.TacRPNextCanHealthGasTime = CurTime() + 0.19
+                    k.TacRPNextCanHealthGasTime = CurTime() + 0.74
                 end
             end
         end
 
-        self:NextThink(CurTime() + 0.2)
+        self:NextThink(CurTime() + 0.75)
 
         if self.dt < CurTime() then
             SafeRemoveEntity(self)
@@ -207,7 +207,7 @@ function ENT:Think()
 
         emitter:Finish()
 
-        self.NextEmitTime = CurTime() + 0.02
+        self.NextEmitTime = CurTime() + 0.1
     end
 
     return true
