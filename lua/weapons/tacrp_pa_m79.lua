@@ -19,10 +19,10 @@ SWEP.Trivia_Year = "1961"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = [[
-Textures: Millenia
 Model: EdisLeado
-Animations: speedonerd & 8z
-Sounds: Firearms: Source
+Texture: Millenia
+Sound: Firearms: Source
+Animations: speedonerd & 8Z
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint/v_m79.mdl"
@@ -48,7 +48,7 @@ SWEP.Range_Max = 6000
 SWEP.Range_Min = 1000
 
 SWEP.ShootEnt = "tacrp_proj_40mm_he"
-SWEP.ShootEntForce = 9000
+SWEP.ShootEntForce = 7000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 1,
@@ -71,7 +71,7 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Single-Shot" // only used externally for firemode name distinction
 
-SWEP.RPM = 60
+SWEP.RPM = 90
 
 SWEP.Spread = 0.005
 
@@ -85,7 +85,7 @@ SWEP.RecoilVisualKick = 1
 SWEP.RecoilKick = 5
 
 SWEP.RecoilSpreadPenalty = 0 // extra spread per one unit of recoil
-SWEP.HipFireSpreadPenalty = 0.05
+SWEP.HipFireSpreadPenalty = 0.03
 SWEP.PeekPenaltyFraction = 0.25
 
 SWEP.CanBlindFire = true
@@ -93,13 +93,13 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.875
-SWEP.ShootingSpeedMult = 0.75
-SWEP.SightedSpeedMult = 0.5
+SWEP.ShootingSpeedMult = 0.5
+SWEP.SightedSpeedMult = 0.65
 
-SWEP.ReloadSpeedMult = 0.4
+SWEP.ReloadSpeedMult = 0.5
 
-SWEP.AimDownSightsTime = 0.34
-SWEP.SprintToFireTime = 0.44 // multiplies how long it takes to recover from sprinting
+SWEP.AimDownSightsTime = 0.33
+SWEP.SprintToFireTime = 0.4
 
 SWEP.Sway = 1.25
 SWEP.ScopedSway = 0.15
@@ -170,7 +170,7 @@ SWEP.MuzzleEffect = "muzzleflash_m79"
 
 // anims
 
-SWEP.DeployTimeMult = 2
+SWEP.DeployTimeMult = 1.75
 SWEP.ReloadTimeMult = 1
 
 SWEP.AnimationTranslationTable = {

@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "2Magnum Pistol"
 
-SWEP.Description = "Quality revolver with pinpoint precision but harsh recoil."
+SWEP.Description = "Quality revolver with pinpoint precision and raw power.\nTo be wielded one-handed, cowboy style."
 SWEP.Description_Quote = "\"When you have to shoot, shoot. Don't talk.\""
 
 SWEP.Trivia_Caliber = ".357 Magnum"
@@ -34,7 +34,7 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
         Damage_Max = 60,
         Damage_Min = 30,
-        RPM = 150,
+        RPM = 180,
         RecoilKick = 16,
     },
     [TacRP.BALANCE_TTT] = {
@@ -92,11 +92,11 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Double-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 180
+SWEP.RPM = 200
 
 SWEP.Spread = 0.001
 
-SWEP.ShootTimeMult = 1
+SWEP.ShootTimeMult = 0.85
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
@@ -208,10 +208,10 @@ SWEP.AnimationTranslationTable = {
 }
 
 SWEP.ProceduralIronFire = {
-    vm_pos = Vector(0, -3, -4.5),
-    vm_ang = Angle(0, 20, 0),
-    t = 0.35,
-    tmax = 0.35,
+    vm_pos = Vector(0, -3, -4.2),
+    vm_ang = Angle(0, 17, 0),
+    t = 0.3,
+    tmax = 0.3,
     bones = {
         {
             bone = "ValveBiped.cylinder",
@@ -223,7 +223,7 @@ SWEP.ProceduralIronFire = {
             bone = "ValveBiped.hammer",
             ang = Angle(35, 0, 0),
             t0 = 0.05,
-            t1 = 0.2,
+            t1 = 0.15,
         },
         {
             bone = "ValveBiped.Bip01_R_Finger1",
