@@ -17,8 +17,8 @@ SWEP.Trivia_Caliber = ".303 British"
 SWEP.Trivia_Manufacturer = "Lewis Automatic Machine Gun Company"
 SWEP.Trivia_Year = "1911"
 
-SWEP.Faction = TacRP.FACTION_COALITION
-SWEP.Credits = "Model & Texture: Verdun\nAnimation: Tactical Intervention\nPorted By: Arctic"
+SWEP.Faction = TacRP.FACTION_NEUTRAL
+SWEP.Credits = "Assets: Verdun\nAnimation: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint/v_lewis.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_lewis.mdl"
@@ -89,7 +89,7 @@ SWEP.RPM = 550
 
 SWEP.Spread = 0.012
 
-SWEP.ShootTimeMult = 0.5
+SWEP.ShootTimeMult = 0.95
 
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 20
