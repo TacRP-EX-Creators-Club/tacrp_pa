@@ -43,10 +43,10 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
-SWEP.Damage_Max = 20
-SWEP.Damage_Min = 6
-SWEP.Range_Min = 500 // distance for which to maintain maximum damage
-SWEP.Range_Max = 1800 // distance at which we drop to minimum damage
+SWEP.Damage_Max = 18
+SWEP.Damage_Min = 4
+SWEP.Range_Min = 300 // distance for which to maintain maximum damage
+SWEP.Range_Max = 1500 // distance at which we drop to minimum damage
 SWEP.Penetration = 1 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.75
 SWEP.ArmorBonus = 1.25
@@ -74,12 +74,13 @@ SWEP.FiremodeName = "Pump-Action" // only used externally for firemode name dist
 
 SWEP.RPM = 60
 
-SWEP.Spread = 0.022
-SWEP.ShotgunPelletSpread = 0.025
+SWEP.Spread = 0.035
+SWEP.ShotgunPelletSpread = 0.035
 
 SWEP.ShootTimeMult = 1
 
 SWEP.MidAirSpreadPenalty = 0
+SWEP.MoveSpreadPenalty = 0
 
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 3
@@ -89,14 +90,14 @@ SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
 SWEP.RecoilVisualKick = 4
 SWEP.RecoilKick = 18
-SWEP.RecoilStability = 0.25
+SWEP.RecoilStability = 0.15
 
 SWEP.RecoilSpreadPenalty = 0.02
-SWEP.HipFireSpreadPenalty = 0.015
+SWEP.HipFireSpreadPenalty = 0.02
 
 SWEP.CanBlindFire = true
 
-SWEP.Sway = 0.75
+SWEP.Sway = 1
 SWEP.ScopedSway = 0.3
 
 SWEP.FreeAimMaxAngle = 5

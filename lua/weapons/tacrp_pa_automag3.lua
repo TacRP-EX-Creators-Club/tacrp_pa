@@ -38,13 +38,17 @@ SWEP.BalanceStats = {
         HipFireSpreadPenalty = 0.02,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 30,
-        Damage_Min = 18,
+        Damage_Max = 32,
+        Damage_Min = 20,
 
-        Range_Min = 700,
+        Range_Min = 800,
         Range_Max = 2000,
 
-        RPM = 200,
+        HipFireSpreadPenalty = 0.01,
+        Spread = 0.001,
+        RecoilKick = 3,
+
+        RPM = 180,
         RPMMultSemi = 1,
 
         BodyDamageMultipliers = {
@@ -58,8 +62,8 @@ SWEP.BalanceStats = {
             [HITGROUP_GEAR] = 0.75
         },
 
-        RecoilDissipationRate = 4.5,
-        HipFireSpreadPenalty = 0.022,
+        ReloadTimeMult = 1,
+        RecoilDissipationRate = 5,
     },
 }
 
@@ -69,11 +73,11 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 
 SWEP.Damage_Max = 34
 SWEP.Damage_Min = 20
-SWEP.Range_Min = 600 // distance for which to maintain maximum damage
-SWEP.Range_Max = 2000 // distance at which we drop to minimum damage
+SWEP.Range_Min = 500 // distance for which to maintain maximum damage
+SWEP.Range_Max = 2500 // distance at which we drop to minimum damage
 SWEP.Penetration = 6 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.65
-SWEP.ArmorBonus = 0.5
+SWEP.ArmorBonus = 1
 
 SWEP.MuzzleVelocity = 16000
 
@@ -106,10 +110,10 @@ SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 3
 SWEP.RecoilResetTime = 0.17
 SWEP.RecoilDissipationRate = 5
-SWEP.RecoilFirstShotMult = 0.9
+SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 2.5
-SWEP.RecoilKick = 7
+SWEP.RecoilVisualKick = 2
+SWEP.RecoilKick = 6
 SWEP.RecoilStability = 0.5
 
 SWEP.CanBlindFire = true

@@ -9,9 +9,9 @@ SWEP.AbbrevName = "OA-93"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "5Value"
-SWEP.SubCatType = "1Pistol"
+SWEP.SubCatType = "3Machine Pistol"
 
-SWEP.Description = "AR-15 derived pistol with a top charging handle and no buffer tube. Designed to circumvent legal restrictions, but ironically became illegal just one year into its existence."
+SWEP.Description = "AR-15 derived pistol with a top charging handle and no buffer tube. Designed to circumvent legal restrictions, but this one is ironically modified to fire in full auto."
 
 SWEP.Trivia_Caliber = "5.56x45mm"
 SWEP.Trivia_Manufacturer = "Olympic Arms"
@@ -25,7 +25,7 @@ Animation: Tactical Intervention
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_oa93.mdl"
-SWEP.WorldModel = "models/weapons/tacint_extras/w_ar15pistol.mdl"
+SWEP.WorldModel = "models/weapons/tacint_extras/w_oa93.mdl"
 
 SWEP.Slot = 1
 
@@ -36,10 +36,10 @@ SWEP.BalanceStats = {
         ClipSize = 30,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 15,
-        Damage_Min = 8,
-        Range_Min = 500,
-        Range_Max = 2000,
+        Damage_Max = 14,
+        Damage_Min = 6,
+        Range_Min = 150,
+        Range_Max = 1000,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2.5,
@@ -58,10 +58,10 @@ SWEP.TTTReplace = {["weapon_zm_mac10"] = 0.5}
 
 // "ballistics"
 
-SWEP.Damage_Max = 22
-SWEP.Damage_Min = 13
-SWEP.Range_Min = 400
-SWEP.Range_Max = 2000
+SWEP.Damage_Max = 20
+SWEP.Damage_Min = 10
+SWEP.Range_Min = 200
+SWEP.Range_Max = 1200
 SWEP.Penetration = 5 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.775
 
@@ -80,28 +80,27 @@ SWEP.MuzzleVelocity = 17000
 
 // misc. shooting
 
-SWEP.Firemode = 1
-SWEP.RPM = 480
-SWEP.RPMMultSemi = 0.65
+SWEP.Firemode = 2
+SWEP.RPM = 680
+SWEP.RPMMultSemi = 1
 
-SWEP.Spread = 0.0085
+SWEP.Spread = 0.01
 
-SWEP.ShootTimeMult = 0.8
+SWEP.ShootTimeMult = 0.5
 
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 7
+SWEP.RecoilMaximum = 8
 SWEP.RecoilResetTime = 0.12
 SWEP.RecoilDissipationRate = 10
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 1
+SWEP.RecoilVisualKick = 2
+SWEP.RecoilKick = 10
+SWEP.RecoilStability = 0.1
+SWEP.RecoilAltMultiplier = 200
 
-SWEP.RecoilKick = 5
-SWEP.RecoilStability = 0.25
-SWEP.RecoilAltMultiplier = 100
-
-SWEP.RecoilSpreadPenalty = 0.003
-SWEP.HipFireSpreadPenalty = 0.02
+SWEP.RecoilSpreadPenalty = 0.004
+SWEP.HipFireSpreadPenalty = 0.04
 SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.CanBlindFire = true
@@ -109,13 +108,13 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.95
-SWEP.ShootingSpeedMult = 0.8
+SWEP.ShootingSpeedMult = 0.65
 SWEP.SightedSpeedMult = 0.85
 
 SWEP.ReloadSpeedMult = 0.5
 
-SWEP.AimDownSightsTime = 0.26
-SWEP.SprintToFireTime = 0.29
+SWEP.AimDownSightsTime = 0.27
+SWEP.SprintToFireTime = 0.3
 
 SWEP.Sway = 1
 SWEP.ScopedSway = 0.55
@@ -152,10 +151,10 @@ SWEP.HolsterPos = Vector(0, 3, -4)
 SWEP.HolsterAng = Angle(90, 0, 0)
 // reload
 
-SWEP.ClipSize = 15
+SWEP.ClipSize = 30
 SWEP.Ammo = "smg1"
 
-SWEP.ReloadTimeMult = 1.25
+SWEP.ReloadTimeMult = 1.5
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/m4.mdl"
 SWEP.DropMagazineImpact = "metal"
 
@@ -172,8 +171,8 @@ local path3 = "tacint_extras/oa93/"
 SWEP.Sound_Shoot = "^" .. path3 .. "Shoot_Unsil.wav"
 SWEP.Sound_Shoot_Silenced = path .. "fire_silenced-1.wav"
 
-SWEP.Vol_Shoot = 120
-SWEP.Pitch_Shoot = 95
+SWEP.Vol_Shoot = 130
+SWEP.Pitch_Shoot = 100
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 
 // effects
@@ -226,15 +225,15 @@ SWEP.Attachments = {
         Category = {"optic_cqb", "optic_medium"},
         InstalledElements = {"sights"},
         Bone = "Skorpion_ROOT",
-        WMBone = "Bone02",
+        WMBone = "Box01",
         AttachSound = "tacrp/weapons/optic_on.wav",
         DetachSound = "tacrp/weapons/optic_off.wav",
         VMScale = 0.9,
         WMScale = 0.9,
         Pos_VM = Vector(6.5, 0, 2.5),
         Ang_VM = Angle(90, 0, 180),
-        Pos_WM = Vector(-12, 1.25, -5),
-        Ang_WM = Angle(0, 0, 180),
+        Pos_WM = Vector(1.4, 21, -0.5),
+        Ang_WM = Angle(0, -90 + 3.5, 0),
     },
     [2] = {
         PrintName = "Muzzle",

@@ -19,7 +19,8 @@ SWEP.Trivia_Manufacturer = "Browning Arms"
 SWEP.Trivia_Year = "1900"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
-SWEP.Credits = "Animation: Tactical Intervention"
+SWEP.Credits = "Model: RedRogueXIII, An Aggressive Napkin\nTexture: Futon\nSound: Futon\nAnimation: Tactical Intervention"
+// Sound is not credited on the GameBanana page so ehhhh
 
 SWEP.ViewModel = "models/weapons/tacint/v_auto5.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_auto5.mdl"
@@ -36,23 +37,13 @@ SWEP.BalanceStats = {
         RecoilKick = 3.5,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 8,
-        Damage_Min = 5,
-        Range_Min = 300,
-        Range_Max = 1000,
-        RPM = 200,
+        Damage_Max = 6,
+        Damage_Min = 3,
+        Range_Min = 200,
+        Range_Max = 800,
+        RPM = 220,
         RPMMultSemi = 1,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 2,
-            [HITGROUP_CHEST] = 1,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 1,
-            [HITGROUP_RIGHTARM] = 1,
-            [HITGROUP_LEFTLEG] = 0.75,
-            [HITGROUP_RIGHTLEG] = 0.75,
-            [HITGROUP_GEAR] = 0.9
-        },
+        RecoilKick = 2,
     }
 }
 
@@ -62,52 +53,41 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.AutoShotgun
 
 SWEP.ShootTimeMult = 0.5
 
-SWEP.Damage_Max = 9
-SWEP.Damage_Min = 6
-SWEP.Range_Min = 1000 // distance for which to maintain maximum damage
-SWEP.Range_Max = 2200 // distance at which we drop to minimum damage
+SWEP.Damage_Max = 8
+SWEP.Damage_Min = 4
+SWEP.Range_Min = 300 // distance for which to maintain maximum damage
+SWEP.Range_Max = 2800 // distance at which we drop to minimum damage
 SWEP.Penetration = 1 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.5
-SWEP.ArmorBonus = 2
+SWEP.ArmorPenetration = 0.4
+SWEP.ArmorBonus = 3
 
 SWEP.Num = 6
 
-SWEP.MuzzleVelocity = 14500
-
-SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 1.5,
-    [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 1,
-    [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.9,
-    [HITGROUP_RIGHTLEG] = 0.9,
-    [HITGROUP_GEAR] = 0.9
-}
+SWEP.MuzzleVelocity = 10000
 
 // misc. shooting
 
 SWEP.Firemode = 1
 
 SWEP.RPM = 250
-SWEP.RPMMultSemi = 0.8
+SWEP.RPMMultSemi = 0.75
 
-SWEP.Spread = 0.018
-SWEP.ShotgunPelletSpread = 0.015
+SWEP.Spread = 0.02
+SWEP.ShotgunPelletSpread = 0.02
 
-SWEP.HipFireSpreadPenalty = 0.03
+SWEP.HipFireSpreadPenalty = 0.02
 SWEP.MidAirSpreadPenalty = 0
 
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 2
-SWEP.RecoilResetTime = 0.2 // time after you stop shooting for recoil to start dissipating
-SWEP.RecoilDissipationRate = 4
+SWEP.RecoilMaximum = 4
+SWEP.RecoilResetTime = 0.25 // time after you stop shooting for recoil to start dissipating
+SWEP.RecoilDissipationRate = 5
 SWEP.RecoilFirstShotMult = 1.25 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 1
+SWEP.RecoilVisualKick = 1.5
 SWEP.RecoilKick = 5
-SWEP.RecoilStability = 0.2
-SWEP.RecoilAltMultiplier = 300
+SWEP.RecoilStability = 0.15
+SWEP.RecoilAltMultiplier = 500
 SWEP.NoRecoilPattern = true
 
 SWEP.RecoilSpreadPenalty = 0.01
@@ -117,13 +97,13 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.875
-SWEP.ShootingSpeedMult = 0.7
-SWEP.SightedSpeedMult = 0.75
+SWEP.ShootingSpeedMult = 0.55
+SWEP.SightedSpeedMult = 0.7
 
 SWEP.ReloadSpeedMult = 0.5
 
 SWEP.AimDownSightsTime = 0.37
-SWEP.SprintToFireTime = 0.39
+SWEP.SprintToFireTime = 0.4
 
 // hold types
 
@@ -135,7 +115,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(0, -2, -6)
+SWEP.PassivePos = Vector(0, -1.5, -6.5)
 
 SWEP.BlindFireAng = Angle(0, 5, 0)
 SWEP.BlindFirePos = Vector(4, -2, -4)
@@ -155,9 +135,9 @@ SWEP.HolsterPos = Vector(5, 0, -6)
 SWEP.HolsterAng = Angle(0, 0, 0)
 
 SWEP.Sway = 0.8
-SWEP.ScopedSway = 0.25
+SWEP.ScopedSway = 0.2
 
-SWEP.FreeAimMaxAngle = 3.5
+SWEP.FreeAimMaxAngle = 6
 
 // reload
 
@@ -166,8 +146,6 @@ SWEP.Ammo = "buckshot"
 SWEP.ShotgunReload = true
 
 SWEP.ReloadTimeMult = 1.15
-
-SWEP.JamBaseMSB = 9
 
 // sounds
 
@@ -220,8 +198,9 @@ SWEP.Attachments = {
         AttachSound = "tacrp/weapons/optic_on.wav",
         DetachSound = "tacrp/weapons/optic_off.wav",
         VMScale = 0.75,
+        WMScale = 0.9,
         Pos_VM = Vector(-5.75, 0.2, 6),
-        Pos_WM = Vector(11, 1.5, -5.5),
+        Pos_WM = Vector(9.5, 1, -6.4),
         Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(0, 0, 180),
     },

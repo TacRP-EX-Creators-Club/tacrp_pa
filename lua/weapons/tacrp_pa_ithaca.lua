@@ -11,7 +11,7 @@ SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "5Shotgun"
 
 SWEP.Description = "Vintage shotgun that has seen both police and military use. Capable of fast slam-fire but has poor spread and a low shell capacity."
-SWEP.Description_Quote = "\"What? It was obvious! He's the RED Spy!\"" // take a wild guess
+SWEP.Description_Quote = "\"What? It was obvious! He's the RED Spy!\"" // typical colors 2
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_ithaca.mdl"
 SWEP.WorldModel = "models/weapons/tacint_shark/w_ithaca.mdl"
@@ -28,10 +28,31 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        // TODO
+        Damage_Max = 14,
+        Damage_Min = 4,
+        Range_Min = 150,
+        Range_Max = 1000,
     },
     [TacRP.BALANCE_TTT] = {
-        // TODO
+        Damage_Max = 7,
+        Damage_Min = 2,
+        Range_Min = 100,
+        Range_Max = 1000,
+
+        Spread = 0.05,
+        ShotgunPelletSpread = 0.03,
+        HipFireSpreadPenalty = 0.01,
+
+        BodyDamageMultipliers = {
+            [HITGROUP_HEAD] = 2,
+            [HITGROUP_CHEST] = 1,
+            [HITGROUP_STOMACH] = 1,
+            [HITGROUP_LEFTARM] = 1,
+            [HITGROUP_RIGHTARM] = 1,
+            [HITGROUP_LEFTLEG] = 0.75,
+            [HITGROUP_RIGHTLEG] = 0.75,
+            [HITGROUP_GEAR] = 0.9
+        },
     },
 }
 
@@ -39,17 +60,17 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
-SWEP.Damage_Max = 12
-SWEP.Damage_Min = 5
+SWEP.Damage_Max = 13
+SWEP.Damage_Min = 4
 SWEP.Range_Min = 100 // distance for which to maintain maximum damage
-SWEP.Range_Max = 1500 // distance at which we drop to minimum damage
+SWEP.Range_Max = 600 // distance at which we drop to minimum damage
 SWEP.Penetration = 1 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.47
 SWEP.ArmorBonus = 1.25
 
 SWEP.Num = 8
 
-SWEP.MuzzleVelocity = 9000
+SWEP.MuzzleVelocity = 7500
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 1.5,
@@ -68,12 +89,12 @@ SWEP.Firemode = 2
 
 SWEP.FiremodeName = "Slam-Fire" // only used externally for firemode name distinction
 
-SWEP.RPM = 85
+SWEP.RPM = 82
 
-SWEP.ShootTimeMult = 0.8
+SWEP.ShootTimeMult = 1
 
-SWEP.Spread = 0.03
-SWEP.ShotgunPelletSpread = 0.03
+SWEP.Spread = 0.035
+SWEP.ShotgunPelletSpread = 0.035
 
 SWEP.HipFireSpreadPenalty = 0.015
 SWEP.MidAirSpreadPenalty = 0
@@ -86,12 +107,12 @@ SWEP.RecoilResetTime = 0.5 // time after you stop shooting for recoil to start d
 SWEP.RecoilDissipationRate = 2.5
 SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 2
+SWEP.RecoilVisualKick = 3
 SWEP.RecoilKick = 18
 SWEP.RecoilStability = 0.2
-SWEP.RecoilAltMultiplier = 300
+SWEP.RecoilAltMultiplier = 400
 
-SWEP.RecoilSpreadPenalty = 0.02
+SWEP.RecoilSpreadPenalty = 0.012
 
 SWEP.CanBlindFire = true
 

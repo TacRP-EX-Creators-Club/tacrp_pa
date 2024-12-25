@@ -12,7 +12,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "4Assault Rifle"
 
 SWEP.Description = "Vintage assault rifle, considered by many to be the first of its kind. Somewhat powerful but prone to malfunctions."
-SWEP.Description_Quote = "\"Mein carbine did not kill you? I will use gas! More gas!\"" -- Killing Floor 2
+SWEP.Description_Quote = "\"Mein carbine did not kill you? I will use gas! More gas!\"" // Killing Floor 2
 
 SWEP.Trivia_Caliber = "7.92x33mm Kurz"
 SWEP.Trivia_Manufacturer = "C.G. Haenel"
@@ -49,7 +49,11 @@ SWEP.BalanceStats = {
         RPM = 550,
     },
     [TacRP.BALANCE_TTT] = {
-        // TODO
+        Damage_Max = 14,
+        Damage_Min = 10,
+        Range_Min = 600,
+        Range_Max = 2000,
+        RPM = 520,
     },
 }
 

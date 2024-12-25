@@ -36,6 +36,24 @@ SWEP.BalanceStats = {
         Damage_Min = 5,
     },
     [TacRP.BALANCE_TTT] = {
+        Damage_Max = 10,
+        Damage_Min = 4,
+        Range_Min = 500,
+        Range_Max = 1500,
+        RecoilSpreadPenalty = 0.0015,
+        HipFireSpreadPenalty = 0.03,
+        RecoilMaximum = 12,
+
+        BodyDamageMultipliers = {
+            [HITGROUP_HEAD] = 2,
+            [HITGROUP_CHEST] = 1,
+            [HITGROUP_STOMACH] = 1,
+            [HITGROUP_LEFTARM] = 1,
+            [HITGROUP_RIGHTARM] = 1,
+            [HITGROUP_LEFTLEG] = 0.75,
+            [HITGROUP_RIGHTLEG] = 0.75,
+            [HITGROUP_GEAR] = 0.9
+        },
     },
 }
 
@@ -124,7 +142,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SMG1
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(0, -4, -5)
+SWEP.PassivePos = Vector(0, -3, -4)
 
 SWEP.BlindFireAng = Angle(0, 5, 0)
 SWEP.BlindFirePos = Vector(0, -4, -3)

@@ -12,7 +12,7 @@ SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "3Machine Pistol"
 
 SWEP.Description = "Automatic variant of the quintessential \"Wonder Nine\".\nFast firing and controllable, but capacity is low."
-SWEP.Description_Quote = "The pinnacle of semi-automatic handgun evolution." -- Gunsmith Cats
+SWEP.Description_Quote = "The pinnacle of semi-automatic handgun evolution." // Gunsmith Cats
 SWEP.Trivia_Caliber = "9x19mm"
 SWEP.Trivia_Manufacturer = "CZ Uherský Brod"
 SWEP.Trivia_Year = "1993"
@@ -38,7 +38,7 @@ SWEP.BalanceStats = {
         Damage_Max = 12,
         Damage_Min = 8,
         Range_Min = 500,
-        Range_Max = 2000,
+        Range_Max = 1800,
 
         RPM = 750,
         RecoilMaximum = 6,
@@ -281,7 +281,7 @@ SWEP.Attachments = {
         WMScale = 0.5,
         Pos_VM = Vector(-2.95, 0, 10.05),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(0, 8, -1.5),
+        Pos_WM = Vector(0, 8.75, -1.62),
         Ang_WM = Angle(0, -90, 0),
     },
     [3] = {

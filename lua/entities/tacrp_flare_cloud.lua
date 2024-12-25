@@ -151,10 +151,10 @@ function ENT:Think()
 
         local dmg = DamageInfo()
         dmg:SetDamageType(DMG_BURN)
-        dmg:SetDamage(10)
+        dmg:SetDamage(15)
         dmg:SetInflictor(self)
         dmg:SetAttacker(self:GetOwner())
-        util.BlastDamageInfo(dmg, IsValid(self:GetParent()) and self:GetParent():GetPos() or self:GetPos(), 128)
+        util.BlastDamageInfo(dmg, IsValid(self:GetParent()) and self:GetParent():GetPos() or self:GetPos(), 96)
 
         if self.SpawnTime + self.FireTime <= CurTime() then self:Remove() return end
 

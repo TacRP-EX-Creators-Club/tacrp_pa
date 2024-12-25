@@ -33,10 +33,13 @@ SWEP.BalanceStats = {
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 20,
-        Damage_Min = 12,
-        Range_Min = 750,
-        Range_Max = 3000,
+        Damage_Min = 13,
+        Range_Min = 600,
+        Range_Max = 2000,
         ClipSize = 200,
+
+        HipFireSpreadPenalty = 0.03,
+        RecoilMaximum = 20,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2,

@@ -11,7 +11,7 @@ ENT.ImpactFuse = false
 ENT.ExplodeOnDamage = false // projectile explodes when it takes damage.
 ENT.ExplodeUnderwater = true
 
-ENT.Delay = 1.5
+ENT.Delay = 2
 
 ENT.Radius = 328
 

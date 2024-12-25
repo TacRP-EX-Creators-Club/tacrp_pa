@@ -46,11 +46,14 @@ SWEP.BalanceStats = {
     },
     [TacRP.BALANCE_TTT] = {
 
-        Damage_Max = 34,
+        Damage_Max = 38,
         Damage_Min = 25,
-        Range_Min = 800,
-        Range_Max = 5000,
-        RPM = 230,
+        Range_Min = 500,
+        Range_Max = 2000,
+        RPM = 200,
+
+        RecoilVisualKick = 3,
+        RecoilKick = 20,
 
         RecoilResetInstant = true,
         RecoilResetTime = 0.18,
@@ -116,7 +119,7 @@ SWEP.RecoilResetTime = 0.075
 SWEP.RecoilDissipationRate = 10
 SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 1
+SWEP.RecoilVisualKick = 2
 SWEP.RecoilKick = 10
 SWEP.RecoilStability = 0.6
 SWEP.RecoilAltMultiplier = 100
@@ -262,7 +265,7 @@ SWEP.Attachments = {
         AttachSound = "TacRP/weapons/silencer_on.wav",
         DetachSound = "TacRP/weapons/silencer_off.wav",
         Pos_VM = Vector(-2.85, 0.2, 40.1),
-        Pos_WM = Vector(30, 0, -14.5),
+        Pos_WM = Vector(43.5, -1, -20),
         Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(-22.5, 5, 180),
         VMScale = 1
@@ -275,7 +278,7 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         InstalledElements = {"tactical"},
         Pos_VM = Vector(-3, -0.25, 27),
-        Pos_WM = Vector(23, 0, -11),
+        Pos_WM = Vector(23, 0.9, -11.5),
         Ang_VM = Angle(90, 0, -90),
         Ang_WM = Angle(-22.5, 5, 90),
     },

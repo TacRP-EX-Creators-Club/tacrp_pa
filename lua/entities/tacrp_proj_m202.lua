@@ -73,13 +73,13 @@ local burn = {
     tacrp_proj_m202 = 12,
     tacrp_proj_p2a1_flare = 4,
     tacrp_proj_p2a1_paraflare = 4,
-    tacrp_proj_p2a1_incendiary = 6,
+    tacrp_proj_p2a1_incendiary = 8,
 }
 
 hook.Add("PostEntityTakeDamage", "tacrp_pa_m202", function(ent, dmginfo, took)
     local infl = dmginfo:GetInflictor()
     if took and IsValid(infl) and burn[infl:GetClass()] and dmginfo:IsDamageType(DMG_SLOWBURN) then
-        local fr = math.Clamp(1 - (ent:GetPos():Distance(dmginfo:GetDamagePosition())) / infl.Radius, 0.1, 1)
-        ent:Ignite(fr * burn[infl:GetClass()] )
+        local fr = Lerp(1 - (ent:GetPos():Distance(infl:GetPos())) / infl.Radius, 0.25, 1)
+        ent:Ignite(fr * burn[infl:GetClass()] * (ent:IsPlayer() and 1 or 2.5))
     end
 end)

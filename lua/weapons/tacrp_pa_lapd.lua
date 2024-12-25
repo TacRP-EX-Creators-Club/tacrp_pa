@@ -62,9 +62,9 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 // "ballistics"
 
 SWEP.Damage_Max = 50 // damage at minimum range
-SWEP.Damage_Min = 34 // damage at maximum range
-SWEP.Range_Min = 800 // distance for which to maintain maximum damage
-SWEP.Range_Max = 3000 // distance at which we drop to minimum damage
+SWEP.Damage_Min = 28 // damage at maximum range
+SWEP.Range_Min = 500 // distance for which to maintain maximum damage
+SWEP.Range_Max = 2500 // distance at which we drop to minimum damage
 SWEP.Penetration = 7 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.725
 
@@ -87,9 +87,9 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Double-Action" // only used externally for firemode name distinction
 
-SWEP.RPM = 150
+SWEP.RPM = 140
 
-SWEP.Spread = 0.0025
+SWEP.Spread = 0.003
 
 SWEP.ShootTimeMult = 1
 
@@ -101,11 +101,11 @@ SWEP.RecoilDissipationRate = 24
 SWEP.RecoilFirstShotMult = 0.9
 
 SWEP.RecoilVisualKick = 4
-SWEP.RecoilKick = 7
+SWEP.RecoilKick = 8
 SWEP.RecoilStability = 0.45
 
-SWEP.RecoilSpreadPenalty = 0.008
-SWEP.HipFireSpreadPenalty = 0.014
+SWEP.RecoilSpreadPenalty = 0.009
+SWEP.HipFireSpreadPenalty = 0.015
 
 SWEP.CanBlindFire = true
 
@@ -118,9 +118,9 @@ SWEP.SightedSpeedMult = 0.8
 SWEP.ReloadSpeedMult = 0.75
 
 SWEP.AimDownSightsTime = 0.2
-SWEP.SprintToFireTime = 0.27
+SWEP.SprintToFireTime = 0.25
 
-SWEP.FreeAimMaxAngle = 3.5
+SWEP.FreeAimMaxAngle = 3
 
 // hold types
 
@@ -144,7 +144,7 @@ SWEP.SprintAng = Angle(0, 30, 0)
 SWEP.SprintPos = Vector(2, 0, -12)
 
 SWEP.SightAng = Angle(-0.15, 0, 0)
-SWEP.SightPos = Vector(-3.5, 0, -4.1)
+SWEP.SightPos = Vector(-3.5, 0, -4.3)
 
 SWEP.CorrectivePos = Vector(0, 0, 0.1)
 
@@ -153,7 +153,7 @@ SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_PISTOL
 SWEP.HolsterPos = Vector(0, 3, -4)
 SWEP.HolsterAng = Angle(90, 0, 0)
 
-SWEP.Sway = 1.5
+SWEP.Sway = 1
 SWEP.ScopedSway = 0.6
 
 // reload
@@ -161,7 +161,7 @@ SWEP.ScopedSway = 0.6
 SWEP.ClipSize = 5
 SWEP.Ammo = "357"
 
-SWEP.ReloadTimeMult = 1.25
+SWEP.ReloadTimeMult = 1.2
 
 SWEP.ReloadUpInTime = 1.35
 
@@ -202,10 +202,10 @@ SWEP.AnimationTranslationTable = {
 }
 
 SWEP.ProceduralIronFire = {
-    vm_pos = Vector(0, -3, -2.4),
+    vm_pos = Vector(0, -3, -2.8),
     vm_ang = Angle(0, 12, 0),
-    t = 0.3,
-    tmax = 0.3,
+    t = 0.35,
+    tmax = 0.35,
     bones = {
         {
             bone = "ValveBiped.cylinder",

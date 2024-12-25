@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Sporter"
 
-SWEP.Description = "Popular semi-automatic pistol-caliber carbine. Cheap and reliable, but not all that powerful."
+SWEP.Description = "Infamous semi-automatic pistol-caliber carbine.\nReasonably powerful... when it works, which is never."
 SWEP.Description_Quote = "\"Good wombs have borne bad sons.\""
 
 SWEP.Trivia_Caliber = "9x19mm"
@@ -19,7 +19,7 @@ SWEP.Trivia_Manufacturer = "Hi-Point Firearms"
 SWEP.Trivia_Year = "1998"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
-SWEP.Credits = "Model: Yumyumshisha\nAnimations: Tactical Intervention\nPorted By: Arctic"
+SWEP.Credits = "Model/Texture: Yumyumshisha\nSound: Obsidian\nAnimations: Tactical Intervention"
 
 SWEP.ViewModel = "models/weapons/tacint/v_hipoint.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_hipoint.mdl"
@@ -28,8 +28,9 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 28,
-        Damage_Min = 12,
+        Damage_Max = 30,
+        Damage_Min = 15,
+        JamFactor = 0.3,
 
         RecoilSpreadPenalty = 0.004,
         HipFireSpreadPenalty = 0.025,
@@ -39,17 +40,9 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 20,
         Damage_Min = 5,
-        Range_Min = 200,
-        Range_Max = 1200,
-        RPM = 650,
-
-        Spread = 0.0125,
-        FreeAimMaxAngle = 4,
-
-        HipFireSpreadPenalty = 0.035,
-        RecoilSpreadPenalty = 0.0065,
-        RecoilMaximum = 14,
-        RecoilResetTime = 0.15,
+        Range_Min = 500,
+        Range_Max = 2000,
+        RPM = 600,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2.5,
@@ -68,9 +61,9 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.MachinePistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 20
+SWEP.Damage_Max = 25
 SWEP.Damage_Min = 12
-SWEP.Range_Min = 1500
+SWEP.Range_Min = 1000
 SWEP.Range_Max = 4000
 SWEP.Penetration = 3
 SWEP.ArmorPenetration = 0.6
@@ -93,8 +86,10 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 360
-SWEP.RPMMultSemi = 0.8
+SWEP.RPM = 420
+SWEP.RPMMultSemi = 0.7
+
+SWEP.JamFactor = 2
 
 SWEP.Spread = 0.007
 
@@ -106,7 +101,7 @@ SWEP.RecoilDissipationRate = 15
 SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 2.5
+SWEP.RecoilKick = 3
 SWEP.RecoilStability = 0.65
 SWEP.RecoilAltMultiplier = 200
 
@@ -180,11 +175,13 @@ SWEP.HolsterTimeMult = 2
 // sounds
 
 local path = "tacrp/weapons/uzi/"
+local path1 = "tacint_extras/hipoint/"
 
-SWEP.Sound_Shoot = "^" .. path .. "fire-1.wav"
+SWEP.Sound_Shoot = "^" .. path1 .. "wpn_chinesepistolfire.wav"
 SWEP.Sound_Shoot_Silenced = path .. "fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 110
+SWEP.Pitch_Shoot = 105
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
 
 // effects
@@ -286,7 +283,7 @@ SWEP.Attachments = {
     },
     [5] = {
         PrintName = "Bolt",
-        Category = {"bolt_automatic"},
+        Category = {"bolt_automatic", "bolt_jammable"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },

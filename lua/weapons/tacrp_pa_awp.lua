@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "7Sniper Rifle"
 
-SWEP.Description = "Robust magnum sniper with unmatched power and accuracy.\nEquipped with a 12x scope by default."
+SWEP.Description = "Robust magnum sniper with unmatched power and accuracy. A counter-terrorist favourite.\nEquipped with a 12x scope by default."
 SWEP.Description_Quote = "\"He's a madman, a scientist, and a sharpshooter.\"" // Nifty's 51 frags at IEM Sydney 2018
 
 SWEP.Trivia_Caliber = ".338 Lapua Magnum"
@@ -44,6 +44,11 @@ SWEP.BalanceStats = {
         ScopedSway = 0.075,
     },
     [TacRP.BALANCE_TTT] = {
+        Damage_Max = 80,
+        Damage_Min = 130,
+
+        Range_Min = 2000,
+        Range_Max = 5000,
     },
 }
 
@@ -70,7 +75,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.5
 }
 
-SWEP.MuzzleVelocity = 35000
+SWEP.MuzzleVelocity = 36000
 
 // misc. shooting
 
@@ -85,7 +90,7 @@ SWEP.ShootTimeMult = 1.2
 SWEP.Spread = 0.00
 
 SWEP.HipFireSpreadPenalty = 0.05
-SWEP.PeekPenaltyFraction = 0.3
+SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 1
@@ -104,16 +109,16 @@ SWEP.CanBlindFire = true
 // handling
 
 SWEP.MoveSpeedMult = 0.85
-SWEP.ShootingSpeedMult = 0.6
+SWEP.ShootingSpeedMult = 0.5
 SWEP.SightedSpeedMult = 0.5
 
 SWEP.ReloadSpeedMult = 0.3
 
-SWEP.AimDownSightsTime = 0.38
-SWEP.SprintToFireTime = 0.45
+SWEP.AimDownSightsTime = 0.36
+SWEP.SprintToFireTime = 0.42
 
 SWEP.Sway = 1.5
-SWEP.ScopedSway = 0.025
+SWEP.ScopedSway = 0.01
 
 SWEP.FreeAimMaxAngle = 9
 
@@ -165,7 +170,7 @@ SWEP.ClipSize = 5
 SWEP.Ammo = "357"
 SWEP.AmmoTTT = "357"
 
-SWEP.ReloadTimeMult = 1.3
+SWEP.ReloadTimeMult = 1.25
 SWEP.DropMagazineImpact = "metal"
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/uratio.mdl"
 

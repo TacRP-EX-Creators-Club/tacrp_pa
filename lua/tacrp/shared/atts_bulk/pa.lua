@@ -522,22 +522,21 @@ ATT.Free = false
 ATT.SortOrder = 999
 
 ATT.Mult_MuzzleVelocity = 0.85
-ATT.Mult_RPM = 1.1
+ATT.Mult_RPM = 1.15
 ATT.Add_RecoilKick = 10
 ATT.Mult_RecoilKick = 1.25
 ATT.Add_RecoilVisualKick = 2
-ATT.Add_Spread = 0.015
-ATT.Add_ShotgunPelletSpread = 0.01
+ATT.Add_Spread = 0.03
+ATT.Add_ShotgunPelletSpread = 0.025
 ATT.Add_HipFireSpreadPenalty = -0.005
 ATT.Add_FreeAimMaxAngle = -2.5
 ATT.Add_AimDownSightsTime = -0.18
 ATT.Add_SprintToFireTime = -0.15
-ATT.Add_MoveSpeedMult = 0.04
-ATT.Add_SightedSpeedMult = 0.15
 ATT.Mult_DeployTimeMult = 0.75
 ATT.Mult_HolsterTimeMult = 0.75
-ATT.Add_ShootingSpeedMult = -0.15
-ATT.Mult_Range_Min = 0.5
+ATT.Add_MoveSpeedMult = 0.05
+ATT.Add_SightedSpeedMult = 0.15
+ATT.Add_ShootingSpeedMult = 0.2
 ATT.Mult_Range_Max = 0.5
 
 ATT.Override_Sound_Shoot = "^tacint_extras/coachgun/coach_fire1.wav"
@@ -578,7 +577,7 @@ ATT.FullName = "AutoMag III .30 Carbine Mod Kit"
 ATT.Icon = Material("entities/tacrp_att_ammo_automag3_30carbine.png", "mips smooth")
 ATT.Description = "Load a carbine cartridge for improved accuracy and range."
 ATT.Pros = {"stat.spread", "stat.range", "stat.muzzlevelocity"}
-ATT.Cons = {"stat.rpm", "stat.recoilkick"}
+ATT.Cons = {"stat.rpm"}
 
 ATT.Category = "ammo_automag3"
 ATT.Free = true
@@ -593,11 +592,9 @@ ATT.Mult_ShootTimeMult = 1 / 0.85
 
 ATT.Add_Spread = -0.004
 
-ATT.Add_Range_Min = 400
+ATT.Add_Range_Min = 500
 ATT.Add_Range_Max = 1500
-ATT.Mult_MuzzleVelocity = 1.4
-
-ATT.Mult_RecoilKick = 1.15
+ATT.Mult_MuzzleVelocity = 1.5
 
 TacRP.LoadAtt(ATT, "ammo_automag3_30carbine")
 
@@ -738,8 +735,8 @@ ATT.SortOrder = 2
 ATT.Override_Ammo = "buckshot"
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 30
-ATT.Override_Spread = 0.044
-ATT.Override_ShotgunPelletSpread = 0.044
+ATT.Override_Spread = 0.06
+ATT.Override_ShotgunPelletSpread = 0.06
 ATT.Override_Damage_Max = 10
 ATT.Override_Damage_Min = 4
 ATT.Override_Range_Min = 150
@@ -774,8 +771,8 @@ ATT.SortOrder = 3
 ATT.Override_Ammo = "buckshot"
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 18
-ATT.Override_Spread = 0.08
-ATT.Override_ShotgunPelletSpread = 0.05
+ATT.Override_Spread = 0.1
+ATT.Override_ShotgunPelletSpread = 0.08
 ATT.Override_Damage_Max = 5
 ATT.Override_Damage_Min = 2
 ATT.Override_Range_Min = 150
@@ -812,7 +809,7 @@ ATT.Override_Ammo = "buckshot"
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 18
 ATT.Override_Spread = 0.01
-ATT.Override_Damage_Max = 60
+ATT.Override_Damage_Max = 75
 ATT.Override_Damage_Min = 30
 ATT.Override_Range_Min = 300
 ATT.Override_Range_Max = 1200
@@ -860,7 +857,7 @@ ATT.SortOrder = 5
 ATT.Override_Ammo = "buckshot"
 ATT.Override_ShootEnt = false
 ATT.Add_RecoilKick = 18
-ATT.Override_Spread = 0.012
+ATT.Override_Spread = 0.02
 ATT.Override_Damage_Max = 25
 ATT.Override_Damage_Min = 25
 ATT.Override_ExplosiveEffect = "HelicopterMegaBomb"
@@ -940,17 +937,18 @@ ATT.Free = true
 
 ATT.Override_Ammo = "buckshot"
 ATT.SortOrder = 90
-ATT.Override_Spread = 0.05
-ATT.Override_ShotgunPelletSpread = 0.03
+ATT.Override_Spread = 0.04
+ATT.Override_ShotgunPelletSpread = 0.04
 ATT.Override_ShootEnt = "tacrp_proj_nade_rock"
-ATT.Override_Num = 5
+ATT.Override_Num = 4
 ATT.Override_Damage_Max = 10
 ATT.Override_Damage_Min = 10
 ATT.Override_Sound_ShootAdd = "physics/concrete/boulder_impact_hard4.wav"
+ATT.Mult_ShootEntForce = 1.5
 
-ATT.Hook_PreShootEnt = function(wep, rocket)
-    rocket.AllowFunny = false
-end
+-- ATT.Hook_PreShootEnt = function(wep, rocket)
+--     rocket.AllowFunny = false
+-- end
 ATT.Hook_PostShootEnt = function(wep, rocket)
     rocket:SetPhysicsAttacker(wep:GetOwner(), 10)
     local phys = rocket:GetPhysicsObject()

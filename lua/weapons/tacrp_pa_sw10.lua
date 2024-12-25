@@ -102,6 +102,7 @@ SWEP.RecoilKick = 7
 SWEP.RecoilStability = 0.65
 
 SWEP.RecoilSpreadPenalty = 0.012
+SWEP.HipFireSpreadPenalty = 0.01
 
 SWEP.CanBlindFire = true
 

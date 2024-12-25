@@ -6,7 +6,7 @@ ENT.Spawnable                = false
 
 ENT.Radius = 328
 
-ENT.SafetyFuse = 0.25
+ENT.SafetyFuse = 0.3
 
 ENT.SmokeTrail = true
 ENT.FlareColor = Color(255, 200, 100)
@@ -29,7 +29,7 @@ function ENT:Detonate(ent)
     util.BlastDamageInfo(dmg, self:GetPos(), self.Radius)
 
     dmg:SetDamageType(DMG_BURN)
-    dmg:SetDamage(50 * mult)
+    dmg:SetDamage(60 * mult)
     util.BlastDamageInfo(dmg, self:GetPos(), self.Radius)
 
     // TacRP.Flashbang(self, self:GetPos(), 512, 0.5, 0.1, 0)
