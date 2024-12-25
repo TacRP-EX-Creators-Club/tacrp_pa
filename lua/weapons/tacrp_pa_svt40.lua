@@ -11,6 +11,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Battle Rifle"
 
 SWEP.Description = "WW2-era mass production semi-automatic rifle. Unreliable and has limited optic options, but still packs raw power."
+SWEP.Description_Quote = "\"It's a sign that the Germans are starting to shit their pants!\"" // Enemy at the Gates
 
 SWEP.Trivia_Caliber = "7.62x54mmR"
 SWEP.Trivia_Manufacturer = "Tula Arsenal"

@@ -12,7 +12,7 @@ SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "2Magnum Pistol"
 
 SWEP.Description = "Stainless steel pistol chambered in an obscure cartridge. Not very powerful for a magnum pistol, but has good capacity."
-SWEP.Description_Quote = ""
+SWEP.Description_Quote = "\"You were always the best. Nobody ever came close.\"" // Hitman
 
 SWEP.Trivia_Caliber = "9mm Win Mag" // Most AutoMag IIIs were in .30 Carbine, but this is our excuse for it to be magnum caliber
 SWEP.Trivia_Manufacturer = "Arcadia Machine & Tool"

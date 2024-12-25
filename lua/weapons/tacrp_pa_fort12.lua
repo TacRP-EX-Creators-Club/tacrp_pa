@@ -11,7 +11,7 @@ SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "1Pistol"
 
 SWEP.Description = "Cost effective Ukrainian pistol rarely seen outside Eastern Europe. Low stopping power, but handy and can probably survive quite a few supernatural disasters."
-SWEP.Description_Quote = "Find Strelok. Kill Strelok?"
+SWEP.Description_Quote = "Find Strelok. Kill Strelok?" // STALKER
 
 SWEP.Trivia_Caliber = "9x18mm"
 SWEP.Trivia_Manufacturer = "RPC Fort"

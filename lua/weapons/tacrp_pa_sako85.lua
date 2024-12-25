@@ -11,6 +11,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "7Sniper Rifle"
 
 SWEP.Description = "A simple, rugged hunting rifle with no room for tactical nonsense. Equipped with an adjustable 6x scope."
+SWEP.Description_Quote = "Get a girl who loves you for your braaaains."
 
 SWEP.Trivia_Caliber = ".270 Winchester"
 SWEP.Trivia_Manufacturer = "SAKO"

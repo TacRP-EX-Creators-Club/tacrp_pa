@@ -11,7 +11,7 @@ SWEP.SubCatTier = "3Security"
 SWEP.SubCatType = "5Machine Gun"
 
 SWEP.Description = "Machine gun with practically no mobility but compensates with incredible firepower and capacity."
-SWEP.Description_Quote = "\"You can't leave me here with these... animals.\""
+SWEP.Description_Quote = "\"You can't leave me here with these... animals.\"" // Made up out of thin air
 
 SWEP.Trivia_Caliber = "7.62x51mm"
 SWEP.Trivia_Manufacturer = "Fabrique National"

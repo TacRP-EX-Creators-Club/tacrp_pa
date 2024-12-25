@@ -12,6 +12,7 @@ SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "3Machine Pistol"
 
 SWEP.Description = "Russian machine pistol with low recoil and high mobility, designed for paramilitary forces."
+SWEP.Description_Quote = "\"I hope this hurts.\""
 
 SWEP.Trivia_Caliber = "9x18mm"
 SWEP.Trivia_Manufacturer = "KBP Instrument Design Bureau"

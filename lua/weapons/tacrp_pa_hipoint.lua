@@ -12,7 +12,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "5Sporter"
 
 SWEP.Description = "Infamous semi-automatic pistol-caliber carbine.\nReasonably powerful... when it works, which is never."
-SWEP.Description_Quote = "\"Good wombs have borne bad sons.\""
+SWEP.Description_Quote = "\"Good wombs have borne bad sons.\"" // Quote about Columbine shooters
 
 SWEP.Trivia_Caliber = "9x19mm"
 SWEP.Trivia_Manufacturer = "Hi-Point Firearms"

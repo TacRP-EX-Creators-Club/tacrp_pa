@@ -12,7 +12,7 @@ SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "7Sniper Rifle"
 
 SWEP.Description = "Subsonic sniper rifle with high capacity and rate of fire, but low muzzle velocity and poor handling.\nEquipped with a 6x scope by default."
-SWEP.Description_Quote = "Na'am seyidi, al qanas ala al khatt."
+SWEP.Description_Quote = "\"Na'am seyidi, al qanas ala al khatt.\"" // Syrian Warfare (2016)
 
 SWEP.Trivia_Caliber = "12.7x55mm"
 SWEP.Trivia_Manufacturer = "TsKIB SOO"

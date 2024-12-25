@@ -12,7 +12,7 @@ SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "2Magnum Pistol"
 
 SWEP.Description = "Modern long barrel revolver with hexagonal cylinder.\nBulky and has a heavy trigger, but recoil control is excellent."
-SWEP.Description_Quote = "\"It's simple: overspecialize, and you breed in weakness. It's a slow death.\"" // Ghost in The Shell. Togusa's gun is actually a Mateba but the Rhino is very similar and often confused for one.
+SWEP.Description_Quote = "\"Take responsibility.\"" // Mouthwashing
 
 SWEP.Trivia_Caliber = ".357 Magnum"
 SWEP.Trivia_Manufacturer = "Chiappa Firearms"

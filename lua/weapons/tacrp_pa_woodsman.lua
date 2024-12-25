@@ -12,7 +12,7 @@ SWEP.SubCatTier = "4Consumer"
 SWEP.SubCatType = "1Pistol"
 
 SWEP.Description = "Small caliber sporting pistol. Light and controllable enough to use one-handed, but lethality is low."
-SWEP.Description_Quote = "\"Oh, my God, is that a .22?\""
+SWEP.Description_Quote = "\"Oh, my God, is that a .22?\"" // El Camino
 
 SWEP.Trivia_Caliber = ".22 LR"
 SWEP.Trivia_Manufacturer = "Colt"

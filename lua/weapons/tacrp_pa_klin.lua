@@ -12,6 +12,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "3Machine Pistol"
 
 SWEP.Description = "Simple, lightweight, cheap machine pistol.\nHas a high fire rate but is prone to jamming."
+SWEP.Description_Quote = "\"Eyy, importnyy? FUCK OFF. Ponyl?\"" // Tarkov
 
 SWEP.Trivia_Caliber = "9x18mm"
 SWEP.Trivia_Manufacturer = "Izhmash"
