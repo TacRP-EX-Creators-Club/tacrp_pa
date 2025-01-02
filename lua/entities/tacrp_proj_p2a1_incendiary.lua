@@ -51,8 +51,8 @@ end
 
 local mat = Material("effects/ar2_altfire1b")
 function ENT:Draw()
-    if !self.Light then
-        self.Light = DynamicLight(self:EntIndex())
+    if !self.Light and TacRP.ConVars["dynamiclight"]:GetBool() then
+        self.Light = DynamicLight(self:EntIndex() + 1)
         if (self.Light) then
             self.Light.Pos = self:GetPos()
             self.Light.r = 255
@@ -62,7 +62,7 @@ function ENT:Draw()
             self.Light.Size = 328
             self.Light.DieTime = CurTime() + 30
         end
-    else
+    elseif self.Light then
         self.Light.Pos = self:GetPos()
     end
 

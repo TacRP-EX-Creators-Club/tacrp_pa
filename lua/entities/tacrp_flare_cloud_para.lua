@@ -50,7 +50,7 @@ function ENT:Think()
     if CLIENT then
         local d = Lerp((self.SpawnTime + self.FireTime - CurTime()) / 12, 1, 0.000001) ^ 2
 
-        if !self.Light then
+        if !self.Light and TacRP.ConVars["dynamiclight"]:GetBool() then
             self.Light = DynamicLight(self:EntIndex())
             if (self.Light) then
                 self.Light.Pos = self:GetPos()
@@ -61,7 +61,7 @@ function ENT:Think()
                 self.Light.Size = 1500
                 self.Light.DieTime = CurTime() + self.FireTime
             end
-        else
+        elseif self.Light then
             self.Light.Pos = self:GetPos()
         end
 
@@ -223,4 +223,11 @@ function ENT:PhysicsUpdate(phys)
         v.z = math.max(v.z, -70)
         phys:SetVelocityInstantaneous(v)
     end
+end
+
+function ENT:UpdateTransmitState()
+    if TacRP.ConVars["dynamiclight"]:GetBool() then
+        return TRANSMIT_ALWAYS
+    end
+    return TRANSMIT_PVS
 end

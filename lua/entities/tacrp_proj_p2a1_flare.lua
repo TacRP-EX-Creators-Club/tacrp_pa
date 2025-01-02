@@ -8,14 +8,15 @@ ENT.Model                    = "models/weapons/tacint/grenade_40mm.mdl"
 
 ENT.IsRocket = false // projectile has a booster and will not drop.
 
-ENT.InstantFuse = false // projectile is armed immediately after firing.
+ENT.InstantFuse = true // projectile is armed immediately after firing.
 ENT.RemoteFuse = false // allow this projectile to be triggered by remote detonator.
 ENT.ImpactFuse = true // projectile explodes on impact.
 
+ENT.ExplodeOnImpact = true
 ENT.ExplodeOnDamage = false // projectile explodes when it takes damage.
 ENT.ExplodeUnderwater = true
 
-ENT.Delay = 0
+ENT.Delay = 8
 ENT.SafetyFuse = 0
 
 ENT.ImpactDamage = 50
@@ -127,8 +128,8 @@ end
 
 local mat = Material("effects/ar2_altfire1b")
 function ENT:Draw()
-    if !self.Light then
-        self.Light = DynamicLight(self:EntIndex())
+    if !self.Light and TacRP.ConVars["dynamiclight"]:GetBool() then
+        self.Light = DynamicLight(self:EntIndex() + 1)
         if (self.Light) then
             self.Light.Pos = self:GetPos()
             self.Light.r = 255
@@ -136,9 +137,9 @@ function ENT:Draw()
             self.Light.b = 60
             self.Light.Brightness = 1
             self.Light.Size = 1024
-            self.Light.DieTime = CurTime() + 30
+            self.Light.DieTime = CurTime() + 8
         end
-    else
+    elseif self.Light then
         self.Light.Pos = self:GetPos()
     end
 
@@ -221,4 +222,11 @@ function ENT:SafetyImpact(data, collider)
     end
 
     self:EmitSound("physics/plastic/plastic_barrel_impact_hard2.wav", 70, 110)
+end
+
+function ENT:UpdateTransmitState()
+    if TacRP.ConVars["dynamiclight"]:GetBool() then
+        return TRANSMIT_ALWAYS
+    end
+    return TRANSMIT_PVS
 end

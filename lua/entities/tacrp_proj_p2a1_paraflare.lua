@@ -51,8 +51,8 @@ end
 
 local mat = Material("effects/ar2_altfire1b")
 function ENT:Draw()
-    if !self.Light then
-        self.Light = DynamicLight(self:EntIndex())
+    if !self.Light and TacRP.ConVars["dynamiclight"]:GetBool() then
+        self.Light = DynamicLight(self:EntIndex() + 1)
         if (self.Light) then
             self.Light.Pos = self:GetPos()
             self.Light.r = 255
@@ -62,14 +62,13 @@ function ENT:Draw()
             self.Light.Size = 728
             self.Light.DieTime = CurTime() + 2
         end
-    else
+    elseif self.Light then
         self.Light.Pos = self:GetPos()
     end
 
     render.SetMaterial(mat)
     render.DrawSprite(self:GetPos(), math.Rand(self.FlareSizeMin, self.FlareSizeMax), math.Rand(self.FlareSizeMin, self.FlareSizeMax), self.FlareColor)
 end
-
 
 function ENT:DoSmokeTrail()
     if CLIENT and self.SmokeTrail and !(self:GetOwner() == LocalPlayer() and (self.SpawnTime + 0.1) > CurTime()) then
