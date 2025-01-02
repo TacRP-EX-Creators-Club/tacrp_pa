@@ -28,7 +28,7 @@ Sound: Raising The Bar: Redux, speedonerd
 Animation: 8Z
 ]]
 
-SWEP.Slot = 1
+SWEP.Slot = 4
 
 SWEP.BalanceStats = {
 }
@@ -135,9 +135,9 @@ SWEP.SightAng = Angle(0, 0, 0)
 SWEP.SightPos = Vector(-4.02, 0, 2.25)
 
 SWEP.HolsterVisible = true
-SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_PISTOL
-SWEP.HolsterPos = Vector(0, 3, -4)
-SWEP.HolsterAng = Angle(90, 0, 0)
+SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_GEAR
+SWEP.HolsterPos = Vector(2, -1, -1)
+SWEP.HolsterAng = Angle(0, -80, 30)
 
 // reload
 
