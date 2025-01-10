@@ -21,7 +21,7 @@ SWEP.Trivia_Year = "1943"
 SWEP.Faction = TacRP.FACTION_COALITION
 SWEP.Credits = [[
 Model/Texture: Tuuttipingu
-Sounds: 
+Sounds: Navaro, Project Reality
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_stg44.mdl"
@@ -141,8 +141,8 @@ SWEP.SprintPos = Vector(5, 0, -2)
 SWEP.SightAng = Angle(-0.74, 0.3, 0)
 SWEP.SightPos = Vector(-4.25, -7.5, -4)
 
-SWEP.CorrectivePos = Vector(0, 0, 0.1)
-SWEP.CorrectiveAng = Angle(0, 0, 0)
+SWEP.CorrectivePos = Vector(0.16, 0, -0.1)
+SWEP.CorrectiveAng = Angle(0.5, 0, 0)
 
 SWEP.HolsterVisible = true
 SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_BACK
@@ -238,7 +238,7 @@ SWEP.Attachments = {
         AttachSound = "tacrp/weapons/optic_on.wav",
         DetachSound = "tacrp/weapons/optic_off.wav",
         VMScale = 0.75,
-        Pos_VM = Vector(-5.1, 0, 2.6),
+        Pos_VM = Vector(-5.1, -0.1, 2.6),
         Pos_WM = Vector(5, 1.2, -6),
         Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(180, 180, 0),
