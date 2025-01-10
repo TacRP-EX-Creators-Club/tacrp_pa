@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP (Special)"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "6Launcher"
 
-SWEP.Description = "Incendiary rocket launcher. Fires four thermobaric rockets in quick succession, which can ignite targets but have low explosive power."
+SWEP.Description = "Incendiary rocket launcher with four shots. Rockets ignite targets but have low damage and splash radius."
 SWEP.Description_Quote = "\"Fire and forget!\""
 
 SWEP.Trivia_Caliber = "66mm Rockets"
@@ -53,7 +53,7 @@ SWEP.Num = 1
 
 SWEP.Firemode = 2
 
-SWEP.RPM = 300
+SWEP.RPM = 225
 
 SWEP.Spread = 0.005
 
