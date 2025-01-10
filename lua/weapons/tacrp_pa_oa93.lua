@@ -12,7 +12,7 @@ SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "3Machine Pistol"
 
 SWEP.Description = "AR-15 derived pistol with a top charging handle and no buffer tube. Designed to circumvent legal restrictions, but this one is ironically modified to fire in full auto."
-SWEP.Description_Quote = "\"The most absurdly engineered way to say 'fuck you!' I've ever come across. Genius.\"" // Some guy on Youtube, re: OA-96
+SWEP.Description_Quote = "\"The most absurdly engineered way to say 'fuck you!' I've ever come across.\"" // Some guy on Youtube, re: OA-96
 
 SWEP.Trivia_Caliber = "5.56x45mm"
 SWEP.Trivia_Manufacturer = "Olympic Arms"
