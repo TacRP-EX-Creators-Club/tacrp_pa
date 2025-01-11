@@ -25,7 +25,6 @@ SWEP.ViewModel = "models/weapons/tacint/v_shorty.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_shorty.mdl"
 
 SWEP.Slot = 1
-SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
