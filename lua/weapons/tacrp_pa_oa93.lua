@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "5Value"
 SWEP.SubCatType = "3Machine Pistol"
 
-SWEP.Description = "AR-15 derived pistol with a top charging handle and no buffer tube. Designed to circumvent legal restrictions, but this one is ironically modified to fire in full auto."
+SWEP.Description = "AR-15 derived pistol with a top charging handle, designed to circumvent legal restrictions. Jury rigged for automatic fire, so it requires time to ramp up its fire rate."
 SWEP.Description_Quote = "\"The most absurdly engineered way to say 'fuck you!' I've ever come across.\"" // Some guy on Youtube, re: OA-96
 
 SWEP.Trivia_Caliber = "5.56x45mm"
@@ -82,17 +82,19 @@ SWEP.MuzzleVelocity = 17000
 // misc. shooting
 
 SWEP.Firemode = 2
-SWEP.RPM = 680
-SWEP.RPMMultSemi = 1
+SWEP.RPM = 700
+SWEP.RPMMultSemi = 0.7
+SWEP.RPMMultBurst = 0.8
 
 SWEP.Spread = 0.01
 
 SWEP.ShootTimeMult = 0.5
 
+SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 8
-SWEP.RecoilResetTime = 0.12
-SWEP.RecoilDissipationRate = 10
+SWEP.RecoilMaximum = 12
+SWEP.RecoilResetTime = 0.03
+SWEP.RecoilDissipationRate = 20
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
 SWEP.RecoilVisualKick = 2
@@ -100,8 +102,8 @@ SWEP.RecoilKick = 10
 SWEP.RecoilStability = 0.1
 SWEP.RecoilAltMultiplier = 200
 
-SWEP.RecoilSpreadPenalty = 0.004
-SWEP.HipFireSpreadPenalty = 0.04
+SWEP.RecoilSpreadPenalty = 0.003
+SWEP.HipFireSpreadPenalty = 0.03
 SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.CanBlindFire = true
@@ -174,7 +176,7 @@ SWEP.Sound_Shoot_Silenced = path .. "fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 130
 SWEP.Pitch_Shoot = 100
-SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
+SWEP.ShootPitchVariance = 0 // amount to vary pitch by each shot
 
 // effects
 
@@ -278,7 +280,7 @@ SWEP.Attachments = {
     },
     [6] = {
         PrintName = "Trigger",
-        Category = {"trigger_semi"},
+        Category = {"trigger_auto"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
@@ -308,3 +310,24 @@ end
 addsound("tacint_oa93.Clip_Out", path2 .. "clipout.mp3")
 addsound("tacint_oa93.Clip_In", path2 .. "clipin.mp3")
 addsound("tacint_oa93.bolt_action", "tacrp/weapons/skorpion/bolt_action-1.wav")
+
+local factor = 7
+
+SWEP.Func_RPM = function(wep, data)
+    // data.mul = data.mul * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 1.75, 1)
+    if wep:GetCurrentFiremode() == 2 then
+        data.add = -300 * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 1, 0)
+    end
+end
+
+SWEP.Func_Pitch_Shoot = function(wep, data)
+    if wep:GetCurrentFiremode() == 2 then
+        data.mul = data.mul * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 0.975, 1)
+    end
+end
+
+SWEP.Func_ShootTimeMult = function(wep, data)
+    if wep:GetCurrentFiremode() == 2 then
+        data.mul = data.mul * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 1, 0.5)
+    end
+end
