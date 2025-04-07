@@ -32,8 +32,8 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 28,
-        Damage_Min = 14,
+        Damage_Max = 26,
+        Damage_Min = 12,
         ClipSize = 30,
     },
     [TacRP.BALANCE_TTT] = {
@@ -59,7 +59,7 @@ SWEP.TTTReplace = {["weapon_zm_mac10"] = 0.5}
 
 // "ballistics"
 
-SWEP.Damage_Max = 20
+SWEP.Damage_Max = 22
 SWEP.Damage_Min = 10
 SWEP.Range_Min = 200
 SWEP.Range_Max = 1200
@@ -88,22 +88,22 @@ SWEP.RPMMultBurst = 0.8
 
 SWEP.Spread = 0.01
 
-SWEP.ShootTimeMult = 0.5
+SWEP.ShootTimeMult = 0.75
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 12
-SWEP.RecoilResetTime = 0.03
-SWEP.RecoilDissipationRate = 20
+SWEP.RecoilMaximum = 10
+SWEP.RecoilResetTime = 0
+SWEP.RecoilDissipationRate = 30
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
 SWEP.RecoilVisualKick = 2
 SWEP.RecoilKick = 10
 SWEP.RecoilStability = 0.1
-SWEP.RecoilAltMultiplier = 200
+SWEP.RecoilAltMultiplier = 250
 
 SWEP.RecoilSpreadPenalty = 0.003
-SWEP.HipFireSpreadPenalty = 0.03
+SWEP.HipFireSpreadPenalty = 0.025
 SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.CanBlindFire = true
@@ -311,12 +311,12 @@ addsound("tacint_oa93.Clip_Out", path2 .. "clipout.mp3")
 addsound("tacint_oa93.Clip_In", path2 .. "clipin.mp3")
 addsound("tacint_oa93.bolt_action", "tacrp/weapons/skorpion/bolt_action-1.wav")
 
-local factor = 7
+local factor = 10
 
 SWEP.Func_RPM = function(wep, data)
     // data.mul = data.mul * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 1.75, 1)
     if wep:GetCurrentFiremode() == 2 then
-        data.add = -300 * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 1, 0)
+        data.mul = Lerp((wep:GetRecoilAmount() / factor) ^ 2, 0.6667, 1)
     end
 end
 
