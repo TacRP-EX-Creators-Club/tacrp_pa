@@ -27,14 +27,14 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 26,
-        Damage_Min = 10,
+        Damage_Max = 25,
+        Damage_Min = 12,
         Range_Min = 500,
         Range_Max = 1200,
         Spread = 0.012,
         JamFactor = 0.02,
-        ClipSize = 18,
-        RPM = 450,
+        ClipSize = 20,
+        RPM = 850,
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 20,
@@ -43,7 +43,7 @@ SWEP.BalanceStats = {
         Range_Max = 900,
         Spread = 0.01,
         JamFactor = 0.02,
-        RPM = 400,
+        RPM = 800,
     }
 }
 
@@ -76,8 +76,10 @@ SWEP.MuzzleVelocity = 10000
 
 SWEP.Firemodes = {2}
 
-SWEP.RPM = 420
+SWEP.RPM = 800
 SWEP.JamFactor = 0.05
+SWEP.RPMMultSemi = 0.5
+SWEP.RPMMultBurst = 0.7
 
 SWEP.Spread = 0.016
 
@@ -86,8 +88,8 @@ SWEP.ShootTimeMult = 0.7
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 8
-SWEP.RecoilResetTime = 0.03
-SWEP.RecoilDissipationRate = 55
+SWEP.RecoilResetTime = 0
+SWEP.RecoilDissipationRate = 24
 SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 1
@@ -163,6 +165,7 @@ local path = "tacrp/weapons/ak47/ak47_"
 local path1 = "tacint_extras/luty/"
 
 SWEP.Sound_Shoot = "^" .. path1 .. "tmp-1.wav"
+SWEP.Sound_Shoot_Silenced = path .. "fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 110
 SWEP.Pitch_Shoot = 98
@@ -301,14 +304,19 @@ addsound("tacint_luty.Buttstock_Back", path .. "buttstock_back.wav")
 local factor = 4
 
 SWEP.Func_RPM = function(wep, data)
-    // data.mul = data.mul * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 1.75, 1)
-    data.add = 380 * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 1, 0)
+    if wep:GetCurrentFiremode() == 2 then
+        data.mul = Lerp((wep:GetRecoilAmount() / factor) ^ 1, 1, 0.5)
+    end
 end
 
 SWEP.Func_Pitch_Shoot = function(wep, data)
-    data.mul = data.mul * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 1.075, 1)
+    if wep:GetCurrentFiremode() == 2 then
+        data.mul = data.mul * Lerp((wep:GetRecoilAmount() / factor) ^ 1, 1.075, 1)
+    end
 end
 
 SWEP.Func_ShootTimeMult = function(wep, data)
-    data.mul = data.mul * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 0.5, 1)
+    if wep:GetCurrentFiremode() == 2 then
+        data.mul = data.mul * Lerp((wep:GetRecoilAmount() / factor) ^ 1, 0.5, 1)
+    end
 end
