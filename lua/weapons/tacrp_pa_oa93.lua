@@ -32,8 +32,10 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 26,
-        Damage_Min = 12,
+        Damage_Max = 25,
+        Damage_Min = 10,
+        Range_Min = 300,
+        Range_Max = 1600,
         ClipSize = 30,
     },
     [TacRP.BALANCE_TTT] = {
@@ -59,17 +61,17 @@ SWEP.TTTReplace = {["weapon_zm_mac10"] = 0.5}
 
 // "ballistics"
 
-SWEP.Damage_Max = 22
+SWEP.Damage_Max = 24
 SWEP.Damage_Min = 10
 SWEP.Range_Min = 200
-SWEP.Range_Max = 1200
+SWEP.Range_Max = 1300
 SWEP.Penetration = 5 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.775
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 3,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.25,
+    [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.9,
@@ -82,9 +84,9 @@ SWEP.MuzzleVelocity = 17000
 // misc. shooting
 
 SWEP.Firemode = 2
-SWEP.RPM = 700
-SWEP.RPMMultSemi = 0.7
-SWEP.RPMMultBurst = 0.8
+SWEP.RPM = 750
+SWEP.RPMMultSemi = 0.65
+SWEP.RPMMultBurst = 0.75
 
 SWEP.Spread = 0.01
 
@@ -93,7 +95,7 @@ SWEP.ShootTimeMult = 0.75
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 10
-SWEP.RecoilResetTime = 0
+SWEP.RecoilResetTime = 0.02
 SWEP.RecoilDissipationRate = 30
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
@@ -154,7 +156,7 @@ SWEP.HolsterPos = Vector(0, 3, -4)
 SWEP.HolsterAng = Angle(90, 0, 0)
 // reload
 
-SWEP.ClipSize = 30
+SWEP.ClipSize = 20
 SWEP.Ammo = "smg1"
 
 SWEP.ReloadTimeMult = 1.5
@@ -286,7 +288,7 @@ SWEP.Attachments = {
     },
     [7] = {
         PrintName = "Ammo",
-        Category = {"ammo_pistol"},
+        Category = {"ammo_rifle"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
@@ -311,12 +313,12 @@ addsound("tacint_oa93.Clip_Out", path2 .. "clipout.mp3")
 addsound("tacint_oa93.Clip_In", path2 .. "clipin.mp3")
 addsound("tacint_oa93.bolt_action", "tacrp/weapons/skorpion/bolt_action-1.wav")
 
-local factor = 10
+local factor = 6
 
 SWEP.Func_RPM = function(wep, data)
     // data.mul = data.mul * Lerp((wep:GetRecoilAmount() / factor) ^ 2, 1.75, 1)
     if wep:GetCurrentFiremode() == 2 then
-        data.mul = Lerp((wep:GetRecoilAmount() / factor) ^ 2, 0.6667, 1)
+        data.mul = Lerp((wep:GetRecoilAmount() / factor) ^ 2, 0.6, 1)
     end
 end
 
