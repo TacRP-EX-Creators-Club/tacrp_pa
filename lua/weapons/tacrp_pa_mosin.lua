@@ -13,6 +13,7 @@ SWEP.SubCatType = "6Marksman Rifle"
 
 SWEP.Description = "Mass production Soviet bolt-action rifle. Infantry model cycles faster but is inaccurate; equip a scope for increased accuracy at cost of firerate."
 SWEP.Description_Quote = "\"One out of two gets a rifle, one without follows him!\""
+
 SWEP.Trivia_Caliber = "7.62x54mmR"
 SWEP.Trivia_Manufacturer = "Tula Arms Plant" // ... among countless others
 SWEP.Trivia_Year = "1891"

@@ -12,7 +12,7 @@ SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "7Special Weapon"
 
 SWEP.Description = "Single-shot flare pistol for signaling and illumination use.\nStandard round has a weak incendiary explosion. Can load a variety of payloads, including some shotshell types."
-SWEP.Description_Quote = ""
+SWEP.Description_Quote = "Package is secure. Extraction complete." -- The Division 1/2
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_p2a1.mdl"
 SWEP.WorldModel = "models/weapons/tacint_extras/w_p2a1.mdl"

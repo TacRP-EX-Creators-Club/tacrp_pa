@@ -13,6 +13,7 @@ SWEP.SubCatType = "3Machine Pistol"
 
 SWEP.Description = "Automatic variant of the quintessential \"Wonder Nine\".\nFast firing and controllable, but capacity is low."
 SWEP.Description_Quote = "The pinnacle of semi-automatic handgun evolution." // Gunsmith Cats
+
 SWEP.Trivia_Caliber = "9x19mm"
 SWEP.Trivia_Manufacturer = "CZ Uherský Brod"
 SWEP.Trivia_Year = "1993"

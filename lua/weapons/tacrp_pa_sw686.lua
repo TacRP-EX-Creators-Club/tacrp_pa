@@ -14,7 +14,6 @@ SWEP.SubCatType = "2Magnum Pistol"
 SWEP.Description = "Magnum revolver with balanced, reliable performance."
 SWEP.Description_Quote = "When there's no more room in hell, the dead will walk the Earth." // Dawn of the Dead
 
-
 SWEP.Trivia_Caliber = ".357 Magnum"
 SWEP.Trivia_Manufacturer = "Smith & Wesson"
 SWEP.Trivia_Year = "1981"
