@@ -8,7 +8,7 @@ SWEP.PrintName = "SVU"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "3Security"
-SWEP.SubCatType = "7Sniper Rifle"
+SWEP.SubCatType = "6Marksman Rifle"
 
 SWEP.Description = "Bullpup modernized model of the SVD. Has good handling but average effective range.\nEquipped with a 6x scope by default."
 SWEP.Description_Quote = "\"It's all just about perpective.\"" // Black Ops 6
