@@ -205,7 +205,7 @@ SWEP.AnimationTranslationTable = {
     ["dryfire"] = "sh_dryfire",
     ["idle"] = "sh_idle",
     ["holster"] = "sh_holster"
-	["unholster"] = "sh_unholster"
+    ["unholster"] = "sh_unholster"
 }
 
 SWEP.ProceduralIronFire = {
