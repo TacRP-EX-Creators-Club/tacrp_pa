@@ -153,25 +153,25 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
 
 SWEP.PassiveAng = Angle(0, 2, 0)
-SWEP.PassivePos = Vector(1.25, 4.5, -0.5)
+SWEP.PassivePos = Vector(0, 1, -0.5)
 
 SWEP.BlindFireAng = Angle(0, 0, -45)
 SWEP.BlindFirePos = Vector(1, 0, 5)
 
-SWEP.BlindFireLeftAng = Angle(75, 0, 0)
+SWEP.BlindFireLeftAng = Angle(75, 0, -20)
 SWEP.BlindFireLeftPos = Vector(8, 10, -2)
 
-SWEP.BlindFireRightAng = Angle(-75, 0, 0)
-SWEP.BlindFireRightPos = Vector(0, 10, 0)
+SWEP.BlindFireRightAng = Angle(-75, 0, -45)
+SWEP.BlindFireRightPos = Vector(-9, 17, -5)
 
 SWEP.BlindFireSuicideAng = Angle(0, 115, 0)
-SWEP.BlindFireSuicidePos = Vector(-2, 25, -36)
+SWEP.BlindFireSuicidePos = Vector(-4.5, 25, -45)
 
 SWEP.SprintAng = Angle(30, -15, 0)
 SWEP.SprintPos = Vector(2, 4.5, 0.75)
 
-SWEP.SightAng = Angle(0, 0, 0)
-SWEP.SightPos = Vector(-2.335, 1, 1.87)
+SWEP.SightAng = Angle(0, 0.1, 0)
+SWEP.SightPos = Vector(-4.55, 1, 2.05)
 
 SWEP.CorrectivePos = Vector(0.05, 0, 0.2)
 SWEP.CorrectiveAng = Angle(0.1, -0.3, 0)
@@ -204,7 +204,7 @@ SWEP.ReloadTimeMult = 1
 SWEP.ShootTimeMult = 0.675
 SWEP.DropMagazineModel = false
 
-SWEP.ShotgunLoadInTime = 0
+SWEP.ShotgunUpInTime = 2.3
 SWEP.BulletBodygroups = {
     [1] = {1, 1},
 }
@@ -236,33 +236,41 @@ SWEP.EjectDelay = 0.5
 
 SWEP.AnimationTranslationTable = {
     ["deploy"] = "draw",
-    ["fire"] = "shoot2",
-    ["fire_iron"] = "shoot2_iron",
+    ["fire"] = {"shoot1", "shoot2"},
     ["blind_idle"] = "idle",
     ["blind_dryfire"] = "dryfire",
     ["blind_fire"] = "shoot1",
-    ["reload"] = "reload_insert",
-    ["reload_finish"] = "reload_end2",
-    ["reload_start"] = "reload_start2",
-    ["melee"] = "melee",
-    ["dryfire"] = "shoot_noshot",
+    ["reload"] = "reload",
+    ["reload_clip"] = "reload_clip",
+    ["reload_finish"] = "reload_end",
+    ["reload_start"] = "reload_start",
+    ["melee"] = {"melee1", "melee2"},
+    ["melee_bayo"] = "melee_bayonet",
+    ["dryfire"] = "dryfire",
     ["jam"] = "unjam2",
+	["deploy_sniper"] = "draw_sniper",
+    ["fire_sniper"] = {"shoot1_sniper", "shoot2_sniper"},
+    ["fire_iron_sniper"] = "shoot1_sniper",
+    ["reload_start_sniper"] = "reload_start_sniper",
+    ["reload_finish_sniper"] = "reload_end_sniper",
 }
 
-SWEP.AnimationTranslationTable_Curved = {
-    ["fire"] = "shoot1",
-    ["fire_iron"] = "shoot1",
-    ["reload_start"] = "reload_start1",
-    ["reload_finish"] = "reload_end1",
-    ["jam"] = "unjam",
-}
+-- SWEP.AnimationTranslationTable_Curved = {
+	-- ["deploy"] = "draw_sniper",
+    -- ["fire"] = {"shoot1_sniper", "shoot2_sniper"},
+    -- ["fire_iron"] = "shoot1_sniper",
+    -- ["reload_start"] = "reload_start_sniper",
+    -- ["reload_finish"] = "reload_end_sniper",
+	-- --["reload_clip"] = "reload_clip_sniper",
+    -- ["jam"] = "unjam",
+-- }
 
 
-SWEP.Hook_TranslateSequence = function(self, seq)
-    if self.Attachments[1].Installed then
-        return self.AnimationTranslationTable_Curved[seq]
-    end
-end
+-- SWEP.Hook_TranslateSequence = function(self, seq)
+    -- if self.Attachments[1].Installed then
+        -- return self.AnimationTranslationTable_Curved[seq]
+    -- end
+-- end
 
 // attachments
 
@@ -311,10 +319,10 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     [1] = {
-        PrintName = "Optic",
-        Category = "optic_mosin",
+        PrintName = "Top",
+        Category = {"optic_mosin", "stripper_clip"},
         WMBone = "Bone02",
-        Bone = "rifle",
+        Bone = "k98_root",
         AttachSound = "TacRP/weapons/optic_on.wav",
         DetachSound = "TacRP/weapons/optic_off.wav",
         Pos_VM = Vector(0.05, 0, 2),
@@ -326,27 +334,27 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Category = {"silencer", "muzz_mosin"},
         WMBone = "Bone02",
-        Bone = "rifle",
+        Bone = "k98_root",
         AttachSound = "TacRP/weapons/silencer_on.wav",
         DetachSound = "TacRP/weapons/silencer_off.wav",
         VMScale = 0.7,
         WMScale = 0.7,
-        Pos_VM = Vector(-0.02, 27, 0.94),
+        Pos_VM = Vector(0.2, -1.7, 40),
         Pos_WM = Vector(25.5, 1.2, -4.9),
-        Ang_VM = Angle(0, -90, 0),
+        Ang_VM = Angle(90, 0, -90),
         Ang_WM = Angle(0, 0, 180),
     },
     [3] = {
         PrintName = "Tactical",
         Category = {"tactical", "tactical_zoom"},
         WMBone = "Bone02",
-        Bone = "rifle",
+        Bone = "k98_root",
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         InstalledElements = {"tactical"},
-        Pos_VM = Vector(0.5, 11, 0.75),
+        Pos_VM = Vector(-0.35, -1.5, 25.75),
         Pos_WM = Vector(8, 2, -4),
-        Ang_VM = Angle(0, -90, -90),
+        Ang_VM = Angle(90, 0, 0),
         Ang_WM = Angle(0, 0, 90),
     },
     [4] = {
@@ -390,8 +398,8 @@ local function addsound(name, spath)
     })
 end
 
-addsound("tacint_mosin.Clip_Out", path1 .. "magout.wav")
-addsound("tacint_mosin.Clip_In", path1 .. "magin.wav")
+addsound("tacint_mosin.ClipIn", path1 .. "clipin2.wav")
+addsound("tacint_mosin.ClipIn2", path1 .. "roundinsert_clip.wav")
 addsound("tacint_mosin.CockBack", path1 .. "boltback.wav")
 addsound("tacint_mosin.CockForward", path1 .. "boltforward.wav")
 addsound("tacint_mosin.safety", path1 .. "magrelease.wav")

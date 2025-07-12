@@ -295,6 +295,20 @@ ATT.Mult_Spread = 0.333
 ATT.Mult_RPM = 45 / 52
 ATT.Mult_ShootTimeMult = 1.15
 
+ATT.Hook_TranslateSequence = function(self, seq)
+	if seq == "fire" then
+        return seq .. "_sniper"
+	elseif seq == "fire_iron" then
+		return seq .. "_sniper"
+	elseif seq == "deploy" then
+		return seq .. "_sniper"
+	elseif seq == "reload_start" then
+		return seq .. "_sniper"
+	elseif seq == "reload_finish" then
+		return seq .. "_sniper"
+	end
+end
+
 ATT.InstalledElements = {"bolt"}
 
 TacRP.LoadAtt(ATT, "optic_mosin_irons")
@@ -322,6 +336,20 @@ ATT.Mult_Spread = 0.333
 ATT.Add_AimDownSightsTime = 0.03
 ATT.Mult_RPM = 45 / 52
 ATT.Mult_ShootTimeMult = 1.15
+
+ATT.Hook_TranslateSequence = function(self, seq)
+	if seq == "fire" then
+        return seq .. "_sniper"
+	elseif seq == "fire_iron" then
+		return seq .. "_sniper"
+	elseif seq == "deploy" then
+		return seq .. "_sniper"
+	elseif seq == "reload_start" then
+		return seq .. "_sniper"
+	elseif seq == "reload_finish" then
+		return seq .. "_sniper"
+	end
+end
 
 ATT.InstalledElements = {"scope1", "bolt"}
 
@@ -351,6 +379,20 @@ ATT.Add_AimDownSightsTime = 0.03
 ATT.Mult_RPM = 45 / 52
 ATT.Mult_ShootTimeMult = 1.15
 
+ATT.Hook_TranslateSequence = function(self, seq)
+	if seq == "fire" then
+        return seq .. "_sniper"
+	elseif seq == "fire_iron" then
+		return seq .. "_sniper"
+	elseif seq == "deploy" then
+		return seq .. "_sniper"
+	elseif seq == "reload_start" then
+		return seq .. "_sniper"
+	elseif seq == "reload_finish" then
+		return seq .. "_sniper"
+	end
+end
+
 ATT.InstalledElements = {"scope2", "bolt"}
 
 TacRP.LoadAtt(ATT, "optic_mosin_pem")
@@ -379,6 +421,20 @@ ATT.Add_AimDownSightsTime = 0.03
 ATT.Mult_RPM = 45 / 52
 ATT.Mult_ShootTimeMult = 1.15
 
+ATT.Hook_TranslateSequence = function(self, seq)
+	if seq == "fire" then
+        return seq .. "_sniper"
+	elseif seq == "fire_iron" then
+		return seq .. "_sniper"
+	elseif seq == "deploy" then
+		return seq .. "_sniper"
+	elseif seq == "reload_start" then
+		return seq .. "_sniper"
+	elseif seq == "reload_finish" then
+		return seq .. "_sniper"
+	end
+end
+
 ATT.InstalledElements = {"scope3", "bolt"}
 
 TacRP.LoadAtt(ATT, "optic_mosin_pe")
@@ -403,6 +459,12 @@ ATT.Mult_MeleeAttackTime = 1.25
 
 ATT.Mult_SightedSpeedMult = 0.85
 ATT.Add_ScopedSway = 0.1
+
+ATT.Hook_TranslateSequence = function(self, seq)
+	if seq == "melee" then
+        return seq .. "_bayo"
+	end
+end
 
 ATT.InstalledElements = {"bayonet"}
 
