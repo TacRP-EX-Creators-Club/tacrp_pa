@@ -170,12 +170,13 @@ SWEP.JamSkipFix = true
 
 // sounds
 
-local path = "TacRP/weapons/mr96/"
-local path1 = "tacint_extras/sw686/"
+local path = "tacint_extras/sw686/"
 
-SWEP.Sound_Shoot = "^" .. path1 .. "revolver_fire_01.wav"
+SWEP.Sound_Shoot = "^" .. path .. "revolver_fire_01.wav"
 SWEP.Vol_Shoot = 130
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
+
+SWEP.Sound_DryFire = path .. "dryfire.wav"
 
 // effects
 
@@ -296,10 +297,10 @@ local function addsound(name, spath)
     })
 end
 
-addsound("tacint_sw686.Release_Cylinder", path .. "mr96_release_cylinder.wav")
-addsound("tacint_sw686.Eject_Shells", path .. "mr96_eject_shells.wav")
-addsound("tacint_sw686.Insert_Bullets", path .. "mr96_insert_bullets.wav")
-addsound("tacint_sw686.Shut_Cylinder", path .. "mr96_shut_cylinder.wav")
-addsound("tacint_sw686.Insert_Bullets-Mid", path .. "mr96_insert_bullets-mid.wav")
-addsound("tacint_sw686.Cock_Hammer", path1 .. "revolver_hammerback1.wav")
-addsound("tacint_sw686.Deploy", path1 .. "revolver_spincyl.wav")
+addsound("tacint_sw686.Release_Cylinder", path .. "open.wav")
+addsound("tacint_sw686.Eject_Shells", path .. "eject.wav")
+addsound("tacint_sw686.Insert_Bullets", path .. "insert.wav")
+addsound("tacint_sw686.Shut_Cylinder", path .. "close.wav")
+addsound("tacint_sw686.Insert_Bullets-Mid", path .. "insert.wav")
+addsound("tacint_sw686.Cock_Hammer", path .. "revolver_hammerback1.wav")
+addsound("tacint_sw686.Deploy", path .. "revolver_spincyl.wav")
