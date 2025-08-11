@@ -153,25 +153,28 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
 
 SWEP.PassiveAng = Angle(0, 2, 0)
-SWEP.PassivePos = Vector(1.25, 4.5, -0.5)
+SWEP.PassivePos = Vector(0, 1, -0.5)
 
 SWEP.BlindFireAng = Angle(0, 0, -45)
 SWEP.BlindFirePos = Vector(1, 0, 5)
 
-SWEP.BlindFireLeftAng = Angle(75, 0, 0)
+SWEP.BlindFireLeftAng = Angle(75, 0, -20)
 SWEP.BlindFireLeftPos = Vector(8, 10, -2)
 
-SWEP.BlindFireRightAng = Angle(-75, 0, 0)
-SWEP.BlindFireRightPos = Vector(0, 10, 0)
+SWEP.BlindFireRightAng = Angle(-75, 0, -45)
+SWEP.BlindFireRightPos = Vector(-9, 17, -5)
 
 SWEP.BlindFireSuicideAng = Angle(0, 115, 0)
-SWEP.BlindFireSuicidePos = Vector(-2, 25, -36)
+SWEP.BlindFireSuicidePos = Vector(-4.5, 25, -45)
 
 SWEP.SprintAng = Angle(30, -15, 0)
 SWEP.SprintPos = Vector(2, 4.5, 0.75)
 
-SWEP.SightAng = Angle(0, 0, -0.1)
-SWEP.SightPos = Vector(-2.3, 1, 1.95)
+SWEP.SightAng = Angle(0, 0.1, 0)
+SWEP.SightPos = Vector(-4.55, 1, 2.05)
+
+SWEP.CorrectivePos = Vector(0.05, 0, 0.2)
+SWEP.CorrectiveAng = Angle(0.1, -0.3, 0)
 
 SWEP.CustomizePos = Vector(4, 3, -1.5)
 SWEP.CustomizeAng = Angle(30, 15, 0)
@@ -201,8 +204,10 @@ SWEP.ReloadTimeMult = 0.85
 SWEP.ShootTimeMult = 0.72
 SWEP.DropMagazineModel = false
 
-SWEP.ShotgunLoadInTime = 0
-SWEP.BulletBodygroups = {}
+SWEP.ShotgunUpInTime = 2.3
+SWEP.BulletBodygroups = {
+    [1] = {1, 1},
+}
 
 // sounds
 
@@ -230,15 +235,18 @@ SWEP.EjectDelay = 0.7
 
 SWEP.AnimationTranslationTable = {
     ["deploy"] = "draw",
-    ["fire"] = "shoot1",
+    ["fire"] = {"shoot1", "shoot2"},
     ["blind_idle"] = "idle",
     ["blind_dryfire"] = "dryfire",
     ["blind_fire"] = "shoot1",
-    ["reload"] = "reload_insert",
+    ["reload"] = "reload",
+    ["reload_clip"] = "reload_clip",
     ["reload_finish"] = "reload_end",
-    ["melee"] = "melee",
-    ["dryfire"] = "shoot_noshot",
-    ["jam"] = "reload_end"
+    ["reload_start"] = "reload_start",
+    ["melee"] = {"melee1", "melee2"},
+    ["melee_bayo"] = "melee_bayonet",
+    ["dryfire"] = "dryfire",
+    ["jam"] = "unjam2",
 }
 
 // attachments
@@ -246,7 +254,7 @@ SWEP.AnimationTranslationTable = {
 SWEP.AttachmentElements = {
     ["scope"] = {
         BGs_VM = {
-            {1, 1}
+            {2, 1}
         },
         BGs_WM = {
             {1, 1},
@@ -256,8 +264,8 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     [1] = {
-        PrintName = "Optic",
-        Category = "optic_smle",
+        PrintName = "Top",
+        Category = {"optic_smle", "stripper_clip"},
         WMBone = "Bone02",
         Bone = "rifle",
         AttachSound = "TacRP/weapons/optic_on.wav",
