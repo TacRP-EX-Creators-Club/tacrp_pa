@@ -171,7 +171,7 @@ SWEP.SprintAng = Angle(30, -15, 0)
 SWEP.SprintPos = Vector(2, 4.5, 0.75)
 
 SWEP.SightAng = Angle(0, 0.1, 0)
-SWEP.SightPos = Vector(-4.55, 1, 2.05)
+SWEP.SightPos = Vector(-4.68, 1, 2.2)
 
 SWEP.CorrectivePos = Vector(0.05, 0, 0.2)
 SWEP.CorrectiveAng = Angle(0.1, -0.3, 0)
@@ -213,6 +213,7 @@ SWEP.BulletBodygroups = {
 
 // local path = "TacRP/weapons/spr/"
 local path1 = "tacint_extras/smle/"
+local path2 = "tacint_extras/mosin/"
 
 SWEP.Sound_Shoot = "^" .. path1 .. "rifle_fire.wav"
 SWEP.Sound_Shoot_Silenced = "TacRP/weapons/ak47/ak47_fire_silenced-1.wav"
@@ -240,7 +241,7 @@ SWEP.AnimationTranslationTable = {
     ["blind_dryfire"] = "dryfire",
     ["blind_fire"] = "shoot1",
     ["reload"] = "reload",
-    ["reload_clip"] = "reload_clip",
+    ["reload_clip"] = "reload_clip2",
     ["reload_finish"] = "reload_end",
     ["reload_start"] = "reload_start",
     ["melee"] = {"melee1", "melee2"},
@@ -346,4 +347,6 @@ end
 
 addsound("tacint_smle.CockBack", path1 .. "rifle_cock_back.wav")
 addsound("tacint_smle.CockForward", path1 .. "rifle_cock_forward.wav")
+addsound("tacint_smle.ClipIn", path2 .. "clipin2.wav")
+addsound("tacint_smle.ClipIn2", path2 .. "roundinsert_clip.wav")
 addsound("tacint_smle.InsertShell", path1 .. "rifle_insert.wav")
