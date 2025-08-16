@@ -296,17 +296,17 @@ ATT.Mult_RPM = 45 / 52
 ATT.Mult_ShootTimeMult = 1.15
 
 ATT.Hook_TranslateSequence = function(self, seq)
-	if seq == "fire" then
+    if seq == "fire" then
         return seq .. "_sniper"
-	elseif seq == "fire_iron" then
-		return seq .. "_sniper"
-	elseif seq == "deploy" then
-		return seq .. "_sniper"
-	elseif seq == "reload_start" then
-		return seq .. "_sniper"
-	elseif seq == "reload_finish" then
-		return seq .. "_sniper"
-	end
+    elseif seq == "fire_iron" then
+        return seq .. "_sniper"
+    elseif seq == "deploy" then
+        return seq .. "_sniper"
+    elseif seq == "reload_start" then
+        return seq .. "_sniper"
+    elseif seq == "reload_finish" then
+        return seq .. "_sniper"
+    end
 end
 
 ATT.InstalledElements = {"bolt"}
@@ -338,17 +338,17 @@ ATT.Mult_RPM = 45 / 52
 ATT.Mult_ShootTimeMult = 1.15
 
 ATT.Hook_TranslateSequence = function(self, seq)
-	if seq == "fire" then
+    if seq == "fire" then
         return seq .. "_sniper"
-	elseif seq == "fire_iron" then
-		return seq .. "_sniper"
-	elseif seq == "deploy" then
-		return seq .. "_sniper"
-	elseif seq == "reload_start" then
-		return seq .. "_sniper"
-	elseif seq == "reload_finish" then
-		return seq .. "_sniper"
-	end
+    elseif seq == "fire_iron" then
+        return seq .. "_sniper"
+    elseif seq == "deploy" then
+        return seq .. "_sniper"
+    elseif seq == "reload_start" then
+        return seq .. "_sniper"
+    elseif seq == "reload_finish" then
+        return seq .. "_sniper"
+    end
 end
 
 ATT.InstalledElements = {"scope1", "bolt"}
@@ -380,17 +380,17 @@ ATT.Mult_RPM = 45 / 52
 ATT.Mult_ShootTimeMult = 1.15
 
 ATT.Hook_TranslateSequence = function(self, seq)
-	if seq == "fire" then
+    if seq == "fire" then
         return seq .. "_sniper"
-	elseif seq == "fire_iron" then
-		return seq .. "_sniper"
-	elseif seq == "deploy" then
-		return seq .. "_sniper"
-	elseif seq == "reload_start" then
-		return seq .. "_sniper"
-	elseif seq == "reload_finish" then
-		return seq .. "_sniper"
-	end
+    elseif seq == "fire_iron" then
+        return seq .. "_sniper"
+    elseif seq == "deploy" then
+        return seq .. "_sniper"
+    elseif seq == "reload_start" then
+        return seq .. "_sniper"
+    elseif seq == "reload_finish" then
+        return seq .. "_sniper"
+    end
 end
 
 ATT.InstalledElements = {"scope2", "bolt"}
@@ -422,17 +422,17 @@ ATT.Mult_RPM = 45 / 52
 ATT.Mult_ShootTimeMult = 1.15
 
 ATT.Hook_TranslateSequence = function(self, seq)
-	if seq == "fire" then
+    if seq == "fire" then
         return seq .. "_sniper"
-	elseif seq == "fire_iron" then
-		return seq .. "_sniper"
-	elseif seq == "deploy" then
-		return seq .. "_sniper"
-	elseif seq == "reload_start" then
-		return seq .. "_sniper"
-	elseif seq == "reload_finish" then
-		return seq .. "_sniper"
-	end
+    elseif seq == "fire_iron" then
+        return seq .. "_sniper"
+    elseif seq == "deploy" then
+        return seq .. "_sniper"
+    elseif seq == "reload_start" then
+        return seq .. "_sniper"
+    elseif seq == "reload_finish" then
+        return seq .. "_sniper"
+    end
 end
 
 ATT.InstalledElements = {"scope3", "bolt"}
@@ -461,9 +461,9 @@ ATT.Mult_SightedSpeedMult = 0.85
 ATT.Add_ScopedSway = 0.1
 
 ATT.Hook_TranslateSequence = function(self, seq)
-	if seq == "melee" then
+    if seq == "melee" then
         return seq .. "_bayo"
-	end
+    end
 end
 
 ATT.InstalledElements = {"bayonet"}
@@ -687,6 +687,31 @@ ATT.Mult_ReloadTimeMult = 1.1
 ATT.InstalledElements = {"scope"}
 
 TacRP.LoadAtt(ATT, "optic_smle_no32")
+
+
+ATT = {}
+
+ATT.PrintName = "Mad"
+ATT.FullName = "Mad Minute"
+ATT.Icon = Material("entities/tacrp_att_bolt_greased.png", "mips smooth")
+ATT.Description = "Use an old speed shooting technique to shoot at blazing speeds!"
+ATT.Pros = {"stat.rpm"}
+ATT.Cons = {"rating.mobility", "stat.recoil"}
+
+ATT.Category = "bolt_mad"
+
+ATT.SortOrder = 1
+
+ATT.Mult_RPM = 2
+ATT.Mult_ShootTimeMult = 1 / 2
+
+ATT.Add_RecoilVisualKick = 2
+ATT.Mult_RecoilKick = 1.25
+ATT.Add_ShootingSpeedMult = -0.2
+ATT.Add_SightedSpeedMult = -0.1
+
+TacRP.LoadAtt(ATT, "bolt_mad")
+-- #endregion
 
 
 ------------------------------
@@ -938,6 +963,7 @@ end
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_frag")
 
+
 ATT = {}
 
 ATT.PrintName = "Zvezda"
@@ -1058,3 +1084,25 @@ ATT.Hook_PostShoot = function(wep)
 end
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_confetti")
+
+
+ATT = {}
+
+ATT.PrintName = "Signal"
+ATT.FullName = "P2A1 Signal Flare Cartridges"
+ATT.Icon = Material("entities/tacrp_att_ammo_40mm_concussion.png", "mips smooth")
+ATT.Description = "A brighter, longer burning flare for distress signaling."
+ATT.Pros = {"stat.muzzlevelocity"}
+ATT.Cons = {"att.procon.noexp"}
+
+ATT.Category = "ammo_p2a1"
+
+ATT.SortOrder = 0.1
+ATT.Mult_ShootEntForce = 1.5
+ATT.Override_ShootEnt = "tacrp_proj_p2a1_flare_signal"
+
+if engine.ActiveGamemode() == "terrortown" then
+    ATT.Free = true
+end
+
+TacRP.LoadAtt(ATT, "ammo_p2a1_signal")
