@@ -247,7 +247,7 @@ SWEP.AnimationTranslationTable = {
     ["melee"] = {"melee1", "melee2"},
     ["melee_bayo"] = "melee_bayonet",
     ["dryfire"] = "dryfire",
-    ["jam"] = "unjam2",
+    ["jam"] = "reload_end"
 }
 
 // attachments
