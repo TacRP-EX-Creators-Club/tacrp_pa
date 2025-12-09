@@ -702,13 +702,24 @@ ATT.Category = "bolt_mad"
 
 ATT.SortOrder = 1
 
-ATT.Mult_RPM = 2
-ATT.Mult_ShootTimeMult = 1 / 2
+ATT.Mult_RPM = 1.5
+ATT.Mult_ShootTimeMult = 1.75 / 2
+ATT.EjectDelay = 0.6
 
 ATT.Add_RecoilVisualKick = 2
 ATT.Mult_RecoilKick = 1.25
 ATT.Add_ShootingSpeedMult = -0.2
 ATT.Add_SightedSpeedMult = -0.1
+
+ATT.Hook_TranslateSequence = function(self, seq)
+	if seq == "fire" then
+		return {"shoot_madmin"}
+	elseif seq == "shoot1" then
+		return {"shoot_madmin"}
+	elseif seq == "shoot2" then
+		return {"shoot_madmin"}
+	end
+end
 
 TacRP.LoadAtt(ATT, "bolt_mad")
 -- #endregion
