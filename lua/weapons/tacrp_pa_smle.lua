@@ -21,7 +21,7 @@ SWEP.Trivia_Year = "1907"
 SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = [[
 Assets: Cry of Fear
-Animations: Cry of Fear, Lazarus
+Animations: speedonerd, UMP45
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_smle.mdl"
