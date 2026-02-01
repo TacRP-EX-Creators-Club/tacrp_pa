@@ -93,8 +93,8 @@ SWEP.BodyDamageMultipliers = {
 
 // misc. shooting
 
-SWEP.Firemodes = {-2, 2}
-SWEP.Firemode = false
+SWEP.Firemodes = {1}
+SWEP.Firemode = 1
 SWEP.RunawayBurst = true
 SWEP.PostBurstDelay = 0.06
 
