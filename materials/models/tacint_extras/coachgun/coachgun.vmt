@@ -22,4 +22,16 @@
 	"$rimlightexponent" "512"	
 	"$rimexponent" "512"
 	"$rimlightboost" ".1"
+
+	$blendtintbybasealpha 1
+    $blendtintcoloroverbase 0.1
+    $color2 "[1 1 1]"
+
+    Proxies
+    {
+        ShellColor
+        {
+            resultvar $color2
+        }
+    }
 }
