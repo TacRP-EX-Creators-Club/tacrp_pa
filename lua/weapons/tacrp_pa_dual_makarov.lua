@@ -170,7 +170,8 @@ SWEP.HolsterAng = Angle(60, 5, 0)
 
 // reload
 
-SWEP.ClipSize = 16
+SWEP.ClipSize = 8
+SWEP.ClipSize2 = 8
 SWEP.Ammo = "pistol"
 SWEP.Ammo_Expanded = "ti_pistol_light"
 
@@ -214,6 +215,7 @@ SWEP.AnimationTranslationTable = {
 
 SWEP.LastShot = true
 SWEP.Akimbo = true
+SWEP.DualAkimbo = true  // Proper dual wielding: LMB=left, RMB=right
 SWEP.EffectsAlternate = true
 
 // attachments
