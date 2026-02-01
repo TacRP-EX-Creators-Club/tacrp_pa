@@ -737,6 +737,8 @@ if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
 
+ATT.ShellColor = Color(255, 100, 0)
+
 TacRP.LoadAtt(ATT, "ammo_p2a1_incendiary")
 
 
@@ -759,6 +761,8 @@ if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
 
+ATT.ShellColor = Color(100, 100, 100)
+
 TacRP.LoadAtt(ATT, "ammo_p2a1_smoke")
 
 
@@ -779,6 +783,8 @@ ATT.Override_ShootEnt = "tacrp_proj_p2a1_paraflare"
 if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
+
+ATT.ShellColor = Color(255, 255, 0)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_para")
 
@@ -801,6 +807,8 @@ ATT.Mult_ShootEntForce = 0.75
 if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
+
+ATT.ShellColor = Color(255, 0, 255)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_heal")
 
@@ -839,6 +847,8 @@ if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
 
+ATT.ShellColor = Color(0, 255, 0)
+
 TacRP.LoadAtt(ATT, "ammo_p2a1_buckshot")
 
 ATT = {}
@@ -874,6 +884,8 @@ ATT.Override_MuzzleEffect = "muzzleflash_shotgun"
 if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
+
+ATT.ShellColor = Color(255, 255, 255)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_bird")
 
@@ -924,6 +936,8 @@ if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
 
+ATT.ShellColor = Color(25, 25, 25)
+
 TacRP.LoadAtt(ATT, "ammo_p2a1_slug")
 
 
@@ -961,6 +975,8 @@ if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
 
+ATT.ShellColor = Color(255, 255, 0)
+
 TacRP.LoadAtt(ATT, "ammo_p2a1_frag")
 
 
@@ -985,6 +1001,8 @@ if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
 
+ATT.ShellColor = Color(255, 150, 150)
+
 TacRP.LoadAtt(ATT, "ammo_p2a1_flashbang")
 
 
@@ -1008,6 +1026,8 @@ ATT.Override_ShootEnt = "tacrp_proj_breach_slug"
 if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
+
+ATT.ShellColor = Color(255, 125, 75)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_breach")
 
@@ -1044,6 +1064,8 @@ ATT.Hook_PostShootEnt = function(wep, rocket)
         phys:AddAngleVelocity(VectorRand() * 1500)
     end
 end
+
+ATT.ShellColor = Color(120, 120, 120)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_rock")
 
@@ -1083,6 +1105,8 @@ ATT.Hook_PostShoot = function(wep)
 
 end
 
+ATT.ShellColor = Color(255, 0, 255)
+
 TacRP.LoadAtt(ATT, "ammo_p2a1_confetti")
 
 
@@ -1104,5 +1128,7 @@ ATT.Override_ShootEnt = "tacrp_proj_p2a1_flare_signal"
 if engine.ActiveGamemode() == "terrortown" then
     ATT.Free = true
 end
+
+ATT.ShellColor = Color(255, 0, 0)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_signal")
