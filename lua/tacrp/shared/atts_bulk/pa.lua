@@ -1,10 +1,14 @@
 local ATT
 
+------------------------------
+-- #region optic_sako85_4x (Sako 85 4x Scope Zoom)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "4x"
+ATT.PrintName = "att.optic_sako85_4x.name"
+ATT.FullName = "att.optic_sako85_4x.name.full"
 ATT.Icon = Material("entities/tacrp_att_optic_8x.png", "mips smooth")
-ATT.Description = "Reduced scope magnification."
+ATT.Description = "att.optic_sako85_4x.desc"
 ATT.Pros = {"att.zoom.4"}
 
 ATT.Free = true
@@ -17,11 +21,15 @@ ATT.Override_ScopeFOV = 90 / 4
 
 TacRP.LoadAtt(ATT, "optic_sako85_4x")
 
+------------------------------
+-- #region optic_sako85_8x (Sako 85 4x Scope Zoom)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "8x"
+ATT.PrintName = "att.optic_sako85_8x.name"
+ATT.FullName = "att.optic_sako85_8x.name.full"
 ATT.Icon = Material("entities/tacrp_att_optic_8x.png", "mips smooth")
-ATT.Description = "Increased scope magnification."
+ATT.Description = "att.optic_sako85_8x.desc"
 ATT.Pros = {"att.zoom.8"}
 
 ATT.Free = true
@@ -34,11 +42,14 @@ ATT.Override_ScopeFOV = 90 / 8
 
 TacRP.LoadAtt(ATT, "optic_sako85_8x")
 
+------------------------------
+-- #region optic_sako85_irons (Iron Sights)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Iron Sights"
+ATT.PrintName = "att.optic_sako85_irons.name"
 ATT.Icon = Material("entities/tacrp_att_optic_irons.png", "mips smooth")
-ATT.Description = "Remove scope for faster aim and better mobility."
+ATT.Description = "att.optic_sako85_irons.desc"
 ATT.Pros = {"rating.handling", "rating.mobility"}
 ATT.Cons = {"att.procon.noscope"}
 
@@ -62,12 +73,15 @@ ATT.Mult_HipFireSpreadPenalty = 0.75
 
 TacRP.LoadAtt(ATT, "optic_sako85_irons")
 
+------------------------------
+-- #region ammo_sako85_222 (Sako 85 .222 Winchester Mod Kit)
+------------------------------
 ATT = {}
 
-ATT.PrintName = ".222 Win"
-ATT.FullName = "Sako 85 .222 Winchester Mod Kit"
+ATT.PrintName = "att.ammo_sako85_222.name"
+ATT.FullName = "att.ammo_sako85_222.name.full"
 ATT.Icon = Material("entities/tacrp_pa_sako85.png", "mips smooth")
-ATT.Description = "Load intermediate rounds with reduced recoil and lethality."
+ATT.Description = "att.ammo_sako85_222.desc"
 ATT.Pros = {"stat.rpm", "stat.recoilkick", "stat.clipsize"}
 ATT.Cons = {"stat.damage"}
 
@@ -96,12 +110,15 @@ ATT.Override_BodyDamageMultipliersExtra = {
 
 TacRP.LoadAtt(ATT, "ammo_sako85_222")
 
+------------------------------
+-- #region ammo_sako85_300mag (Sako 85 .300 Winchester Magnum Mod Kit/.300 Win Mag)
+------------------------------
 ATT = {}
 
-ATT.PrintName = ".300 Win Mag"
-ATT.FullName = "Sako 85 .300 Winchester Magnum Mod Kit"
+ATT.PrintName = "att.ammo_sako85_300mag.name"
+ATT.FullName = "att.ammo_sako85_300mag.name.full"
 ATT.Icon = Material("entities/tacrp_pa_sako85.png", "mips smooth")
-ATT.Description = "Load magnum rounds for improved lethality."
+ATT.Description = "att.ammo_sako85_300mag.desc"
 ATT.Pros = {"stat.damage"}
 ATT.Cons = {"stat.recoilkick", "stat.rpm", "stat.clipsize"}
 
@@ -130,12 +147,15 @@ ATT.Override_BodyDamageMultipliersExtra = {
 
 TacRP.LoadAtt(ATT, "ammo_sako85_300mag")
 
+------------------------------
+-- #region optic_svt_pu (SVT-40 3.5x PU Scope)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "PU"
-ATT.FullName = "SVT-40 PU 3.5x Scope"
+ATT.PrintName = "att.optic_svt_pu.name"
+ATT.FullName = "att.optic_svt_pu.name.full"
 ATT.Icon = Material("entities/tacrp_att_optic_svt_pu.png", "mips smooth")
-ATT.Description = "Low power scope with specialized mount for the SVT-40."
+ATT.Description = "att.optic_svt_pu.desc"
 ATT.Pros = {"att.zoom.3.5"}
 ATT.Cons = {"stat.aimdownsights"}
 
@@ -159,14 +179,14 @@ end
 TacRP.LoadAtt(ATT, "optic_svt_pu")
 
 ------------------------------
--- #region ammo_m202_smoke
+-- #region ammo_m202_smoke (M202 Smoke Rockets)
 ------------------------------
 ATT = {}
 
-ATT.PrintName = "Smoke"
-ATT.FullName = "M202 Smoke Rockets"
+ATT.PrintName = "att.ammo_m202_smoke.name"
+ATT.FullName = "att.ammo_m202_smoke.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_m202.png", "mips smooth")
-ATT.Description = "Rocket that produces a concealing smokescreen on impact."
+ATT.Description = "att.ammo_m202_smoke.desc"
 ATT.Pros = {"att.procon.smoke"}
 ATT.Cons = {"att.procon.noexp"}
 
@@ -184,14 +204,14 @@ TacRP.LoadAtt(ATT, "ammo_m202_smoke")
 -- #endregion
 
 ------------------------------
--- #region ammo_m202_apers
+-- #region ammo_m202_apers (M202 Hornet Rockets)
 ------------------------------
 ATT = {}
 
-ATT.PrintName = "Hornet"
-ATT.FullName = "M202 Hornet Rockets"
+ATT.PrintName = "att.ammo_m202_apers.name"
+ATT.FullName = "att.ammo_m202_apers.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_m202.png", "mips smooth")
-ATT.Description = "Airburst fragmentation rockets for direct fire anti-personnel use."
+ATT.Description = "att.ammo_m202_apers.desc"
 ATT.Pros = {"att.procon.radius", "att.procon.proxfuse"}
 ATT.Cons = {"stat.damage", "stat.muzzlevelocity"}
 
@@ -211,14 +231,14 @@ TacRP.LoadAtt(ATT, "ammo_m202_apers")
 -- #endregion
 
 ------------------------------
--- #region ammo_m202_harpoon
+-- #region ammo_m202_harpoon (M202 Harpoon Rockets)
 ------------------------------
 ATT = {}
 
-ATT.PrintName = "Harpoon"
-ATT.FullName = "M202 Harpoon Rockets"
+ATT.PrintName = "att.ammo_m202_harpoon.name"
+ATT.FullName = "att.ammo_m202_harpoon.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_m202.png", "mips smooth")
-ATT.Description = "Launch fiery harpoons that do tremendous damage on impact."
+ATT.Description = "att.ammo_m202_harpoon.desc"
 ATT.Pros = {"stat.damage", "rating.mobility", "rating.precision"}
 ATT.Cons = {"att.procon.noexp"}
 
@@ -250,16 +270,15 @@ end
 TacRP.LoadAtt(ATT, "ammo_m202_harpoon")
 -- #endregion
 
-
 ------------------------------
--- #region ammo_m202_he
+-- #region ammo_m202_he (M202 High-Explosive Anti-Tank Rockets (HEAT))
 ------------------------------
 ATT = {}
 
-ATT.PrintName = "HEAT"
-ATT.FullName = "M202 High-Explosive Anti-Tank Rockets"
+ATT.PrintName = "att.ammo_m202_he.name"
+ATT.FullName = "att.ammo_m202_he.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_m202.png", "mips smooth")
-ATT.Description = "Rocket with an explosive charge."
+ATT.Description = "att.ammo_m202_he.desc"
 ATT.Pros = {"att.procon.proj.direct"}
 ATT.Cons = {"stat.rpm", "att.procon.radius"}
 
@@ -276,12 +295,15 @@ end
 TacRP.LoadAtt(ATT, "ammo_m202_he")
 -- #endregion
 
+------------------------------
+-- #region optic_mosin_irons (Mosin-Nagant Sniper Bolt)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Sniper"
-ATT.FullName = "Sniper Bolt"
+ATT.PrintName = "att.optic_mosin_irons.name"
+ATT.FullName = "att.optic_mosin_irons.name.full"
 ATT.Icon = Material("entities/tacrp_att_optic_irons.png", "mips smooth")
-ATT.Description = "Use the sniper bolt without a scope, increasing accuracy."
+ATT.Description = "att.optic_mosin_irons.desc"
 ATT.Pros = {"stat.spread", "stat.zoom"}
 ATT.Cons = {"stat.rpm"}
 
@@ -313,13 +335,15 @@ ATT.InstalledElements = {"bolt"}
 
 TacRP.LoadAtt(ATT, "optic_mosin_irons")
 
-
+------------------------------
+-- #region optic_mosin_pu (Mosin-Nagant 3.5x PU Scope)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "PU"
-ATT.FullName = "Mosin-Nagant PU 3.5x Scope"
+ATT.PrintName = "att.optic_mosin_pu.name"
+ATT.FullName = "att.optic_mosin_pu.name.full"
 ATT.Icon = Material("entities/tacrp_att_optic_mosin_pu.png", "mips smooth")
-ATT.Description = "Side-mounted low power scope for the Mosin-Nagant."
+ATT.Description = "att.optic_mosin_pu.desc"
 ATT.Pros = {"stat.spread", "att.zoom.3.5"}
 ATT.Cons = {"stat.rpm", "stat.aimdownsights"}
 
@@ -355,13 +379,15 @@ ATT.InstalledElements = {"scope1", "bolt"}
 
 TacRP.LoadAtt(ATT, "optic_mosin_pu")
 
-
+------------------------------
+-- #region optic_mosin_pem (Mosin-Nagant 6x PEM Scope)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "PEM"
-ATT.FullName = "Mosin-Nagant 6x PEM Scope"
+ATT.PrintName = "att.optic_mosin_pem.name"
+ATT.FullName = "att.optic_mosin_pem.name.full"
 ATT.Icon = Material("entities/tacrp_att_optic_mosin_pem.png", "mips smooth")
-ATT.Description = "Side-mounted sniper scope for the Mosin-Nagant."
+ATT.Description = "att.optic_mosin_pem.desc"
 ATT.Pros = {"stat.spread", "att.zoom.6"}
 ATT.Cons = {"stat.rpm", "stat.aimdownsights"}
 
@@ -397,13 +423,15 @@ ATT.InstalledElements = {"scope2", "bolt"}
 
 TacRP.LoadAtt(ATT, "optic_mosin_pem")
 
-
+------------------------------
+-- #region optic_mosin_pe (Mosin-Nagant 4x PE Scope)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "PE"
-ATT.FullName = "Mosin-Nagant 4x PE Scope"
+ATT.PrintName = "att.optic_mosin_pe.name"
+ATT.FullName = "att.optic_mosin_pe.name.full"
 ATT.Icon = Material("entities/tacrp_att_optic_mosin_pe.png", "mips smooth")
-ATT.Description = "Top-mounted medium range scope for the Mosin-Nagant."
+ATT.Description = "att.optic_mosin_pe.desc"
 ATT.Pros = {"stat.spread", "att.zoom.4"}
 ATT.Cons = {"stat.rpm", "stat.aimdownsights"}
 
@@ -439,13 +467,15 @@ ATT.InstalledElements = {"scope3", "bolt"}
 
 TacRP.LoadAtt(ATT, "optic_mosin_pe")
 
-
+------------------------------
+-- #region muzz_mosin_bayonet (Mosin-Nagant Spike Bayonet)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Bayonet"
-ATT.FullName = "Mosin-Nagant Spike Bayonet"
+ATT.PrintName = "att.muzz_mosin_bayonet.name"
+ATT.FullName = "att.muzz_mosin_bayonet.name.full"
 ATT.Icon = Material("entities/tacrp_att_muzz_mosin_bayonet.png", "mips smooth")
-ATT.Description = "For stabbing fascist scum."
+ATT.Description = "att.muzz_mosin_bayonet.desc"
 ATT.Pros = {"stat.meleedamage", "stat.meleerange"}
 ATT.Cons = {"stat.sightedspeed", "stat.scopedsway", "stat.meleeattacktime"}
 
@@ -473,13 +503,15 @@ ATT.Override_Sound_MeleeHitBody = "tacint_extras/mosin/melee_hitbody.ogg"
 
 TacRP.LoadAtt(ATT, "muzz_mosin_bayonet")
 
-
+------------------------------
+-- #region muzz_svu_supp (Dragunov SVU Suppressor)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "SVU Supp."
-ATT.FullName = "SVU Suppressor"
+ATT.PrintName = "att.muzz_svu_supp.name"
+ATT.FullName = "att.muzz_svu_supp.name.full"
 ATT.Icon = Material("entities/tacrp_att_muzz_svu_supp.png", "mips smooth")
-ATT.Description = "Weapon-specific suppressor that boosts fire rate."
+ATT.Description = "att.muzz_svu_supp.desc"
 ATT.Pros = {"stat.rpm"}
 ATT.Cons = {"stat.recoilstability", "rating.range", "rating.maneuvering"}
 
@@ -509,13 +541,15 @@ ATT.Override_MuzzleEffect = "muzzleflash_suppressed"
 
 TacRP.LoadAtt(ATT, "muzz_svu_supp")
 
-
+------------------------------
+-- #region muzz_sks_bayonet (SKS Folding Bayonet)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Bayonet"
-ATT.FullName = "SKS Folding Bayonet"
+ATT.PrintName = "att.muzz_sks_bayonet.name"
+ATT.FullName = "att.muzz_sks_bayonet.name.full"
 ATT.Icon = Material("entities/tacrp_att_muzz_sks_bayonet.png", "mips smooth")
-ATT.Description = "For stabbing capitalist scum."
+ATT.Description = "att.muzz_sks_bayonet.desc"
 ATT.Pros = {"stat.meleedamage", "stat.meleerange"}
 ATT.Cons = {"stat.sightedspeed", "stat.scopedsway", "stat.meleeattacktime"}
 
@@ -538,16 +572,15 @@ ATT.Override_Sound_MeleeHitBody = "tacint_extras/mosin/melee_hitbody.ogg"
 
 TacRP.LoadAtt(ATT, "muzz_sks_bayonet")
 
-
 ------------------------------
--- #region tac_cz75_mag
+-- #region tac_cz75_mag (CZ-75 Backup Mag)
 ------------------------------
 ATT = {}
 
-ATT.PrintName = "Backup Mag"
-ATT.FullName = "CZ-75 Backup Magazine"
+ATT.PrintName = "att.tac_cz75_mag.name"
+ATT.FullName = "att.tac_cz75_mag.name.full"
 ATT.Icon = Material("entities/tacrp_att_tac_cz75_mag.png", "mips smooth")
-ATT.Description = "An extra magazine mounted on the gun for peace of mind."
+ATT.Description = "att.tac_cz75_mag.desc"
 ATT.Pros = {"stat.reloadtime"}
 ATT.Cons = {"stat.sightedspeed", "rating.stability"}
 
@@ -564,16 +597,15 @@ ATT.Add_ScopedSway = 0.1
 
 TacRP.LoadAtt(ATT, "tac_cz75_mag")
 
-
 ------------------------------
--- #region barrel_coachgun_short
+-- #region barrel_coachgun_short (Coachgun Shortened Barrels)
 ------------------------------
 ATT = {}
 
-ATT.PrintName = "Short"
-ATT.FullName = "Coachgun Short Barrels"
+ATT.PrintName = "att.barrel_coachgun_short.name"
+ATT.FullName = "att.barrel_coachgun_short.name.full"
 ATT.Icon = Material("entities/tacrp_att_barrel_coachgun_short.png", "mips smooth")
-ATT.Description = "Significantly shortened barrel for close range encounters."
+ATT.Description = "att.barrel_coachgun_short.desc"
 ATT.Pros = {"stat.rpm", "rating.maneuvering", "rating.mobility"}
 ATT.Cons = {"stat.spread", "stat.recoilkick", "stat.range"}
 
@@ -605,9 +637,8 @@ ATT.Override_Sound_Shoot = "^tacint_extras/coachgun/coach_fire1.wav"
 
 TacRP.LoadAtt(ATT, "barrel_coachgun_short")
 
-
 ------------------------------
--- #region muzz_pistol_comp
+-- #region muzz_pistol_comp (Compensator)
 ------------------------------
 ATT = {}
 
@@ -632,12 +663,15 @@ ATT.Add_Range_Min = 500
 
 TacRP.LoadAtt(ATT, "muzz_pistol_comp_automag3")
 
+------------------------------
+-- #region ammo_automag3_30carbine (AutoMag III .30 Carbine Mod Kit)
+------------------------------
 ATT = {}
 
-ATT.PrintName = ".30 Carbine"
-ATT.FullName = "AutoMag III .30 Carbine Mod Kit"
+ATT.PrintName = "tt.ammo_automag3_30carbine.name"
+ATT.FullName = "tt.ammo_automag3_30carbine.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_automag3_30carbine.png", "mips smooth")
-ATT.Description = "Load a carbine cartridge for improved accuracy and range."
+ATT.Description = "tt.ammo_automag3_30carbine.desc"
 ATT.Pros = {"stat.spread", "stat.range", "stat.muzzlevelocity"}
 ATT.Cons = {"stat.rpm"}
 
@@ -660,13 +694,15 @@ ATT.Mult_MuzzleVelocity = 1.5
 
 TacRP.LoadAtt(ATT, "ammo_automag3_30carbine")
 
-
+------------------------------
+-- #region optic_smle_no32 (Lee Enfield No. 32 Telescopic Scope/No. 32 Scope)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "No. 32 Scope"
-ATT.FullName = "Lee-Enfield No. 32 Telescope Sight"
+ATT.PrintName = "att.optic_smle_no32.name"
+ATT.FullName = "att.optic_smle_no32.name.full"
 ATT.Icon = Material("entities/tacrp_att_optic_mosin_pe.png", "mips smooth")
-ATT.Description = "Top-mounted medium range scope for the Lee-Enfield."
+ATT.Description = "att.optic_smle_no32.desc"
 ATT.Pros = {"stat.spread", "att.zoom.3.5"}
 ATT.Cons = {"stat.reloadtime", "stat.aimdownsights"}
 
@@ -688,13 +724,15 @@ ATT.InstalledElements = {"scope"}
 
 TacRP.LoadAtt(ATT, "optic_smle_no32")
 
-
+------------------------------
+-- #region optic_smle_mad (Mad Minute)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Mad"
-ATT.FullName = "Mad Minute"
+ATT.PrintName = "optic_smle_mad.name"
+ATT.FullName = "optic_smle_mad.name.full"
 ATT.Icon = Material("entities/tacrp_att_bolt_greased.png", "mips smooth")
-ATT.Description = "Use an old speed shooting technique to shoot at blazing speeds!"
+ATT.Description = "optic_smle_mad.desc"
 ATT.Pros = {"stat.rpm"}
 ATT.Cons = {"rating.mobility", "stat.recoil"}
 
@@ -713,17 +751,15 @@ ATT.Add_SightedSpeedMult = -0.1
 TacRP.LoadAtt(ATT, "bolt_mad")
 -- #endregion
 
-
 ------------------------------
--- Flare Pistol Ammo
+-- #region ammo_p2a1_incendiary (P2A1 Incendiary Cartridges)
 ------------------------------
-
 ATT = {}
 
-ATT.PrintName = "Incendiary"
-ATT.FullName = "P2A1 Incendiary Cartridges"
+ATT.PrintName = "att.ammo_p2a1_incendiary.name"
+ATT.FullName = "att.ammo_p2a1_incendiary.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_concussion.png", "mips smooth")
-ATT.Description = "Flares with a more powerful explosion but no illumination."
+ATT.Description = "att.ammo_p2a1_incendiary.desc"
 ATT.Pros = {"att.procon.radius", "att.procon.incendiary"}
 ATT.Cons = {"att.procon.noflare", "stat.muzzlevelocity", "att.procon.armdelay"}
 
@@ -741,13 +777,15 @@ ATT.ShellColor = Color(255, 100, 0)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_incendiary")
 
-
+------------------------------
+-- #region ammo_p2a1_smoke (P2A1 Smoke Cartridges)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Smoke"
-ATT.FullName = "P2A1 Smoke Cartridges"
+ATT.PrintName = "att.ammo_p2a1_smoke.name"
+ATT.FullName = "att.ammo_p2a1_smoke.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_smoke.png", "mips smooth")
-ATT.Description = "Flares that creates a small smokescreen on impact."
+ATT.Description = "att.ammo_p2a1_smoke.desc"
 ATT.Pros = {"att.procon.smoke"}
 ATT.Cons = {"att.procon.noflare", "att.procon.nonlethal", "stat.muzzlevelocity"}
 
@@ -765,13 +803,15 @@ ATT.ShellColor = Color(100, 100, 100)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_smoke")
 
-
+------------------------------
+-- #region ammo_p2a1_para (P2A1 Illumination Flare Cartridges)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Illumination"
-ATT.FullName = "P2A1 Illumination Flare Cartridges"
+ATT.PrintName = "att.ammo_p2a1_para.name"
+ATT.FullName = "att.ammo_p2a1_para.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_concussion.png", "mips smooth")
-ATT.Description = "White flares with a mini-parachute, lighting up a large area while it falls."
+ATT.Description = "att.ammo_p2a1_para.desc"
 ATT.Pros = {"att.procon.illumradius"}
 ATT.Cons = {"att.procon.timedfuse", "att.procon.noexp"}
 
@@ -788,12 +828,15 @@ ATT.ShellColor = Color(255, 255, 0)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_para")
 
+------------------------------
+-- #region ammo_p2a1_heal (P2A1 Medi-Smoke Cartridges)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Medi-Smoke"
-ATT.FullName = "P2A1 Medi-Smoke Cartridges"
+ATT.PrintName = "att.ammo_p2a1_heal.name"
+ATT.FullName = "att.ammo_p2a1_heal.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_smoke.png", "mips smooth")
-ATT.Description = "Flares that produce a tiny amount of restorative gas on impact."
+ATT.Description = "att.ammo_p2a1_heal.desc"
 ATT.Pros = {"att.procon.heal"}
 ATT.Cons = {"att.procon.noflare", "att.procon.nonlethal", "stat.muzzlevelocity"}
 
@@ -813,12 +856,15 @@ ATT.ShellColor = Color(255, 0, 255)
 TacRP.LoadAtt(ATT, "ammo_p2a1_heal")
 
 
+------------------------------
+-- #region ammo_p2a1_buckshot (P2A1 Magnum Buck Shotshells)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Magnum Buck"
-ATT.FullName = "P2A1 Magnum Buck Shotshells"
+ATT.PrintName = "att.ammo_p2a1_buckshot.name"
+ATT.FullName = "att.ammo_p2a1_buckshot.name.full"
 ATT.Icon = Material("entities/tacrp_att_acc_magnum.png", "mips smooth")
-ATT.Description = "Cram some shotshells into your flare gun for direct firepower."
+ATT.Description = "att.ammo_p2a1_buckshot.desc"
 ATT.Pros = {"att.procon.direct"}
 ATT.Cons = {"stat.spread", "rating.mobility"}
 
@@ -851,12 +897,15 @@ ATT.ShellColor = Color(0, 255, 0)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_buckshot")
 
+------------------------------
+-- #region ammo_p2a1_bird (P2A1 Birdshot Shotshells)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Birdshot"
-ATT.FullName = "P2A1 Bird Shotshells"
+ATT.PrintName = "att.ammo_p2a1_bird.name"
+ATT.FullName = "att.ammo_p2a1_bird.name.full"
 ATT.Icon = Material("entities/tacrp_att_acc_bird.png", "mips smooth")
-ATT.Description = "Cram some birdshells into your flare gun. Insane spread but hard to miss."
+ATT.Description = "att.ammo_p2a1_bird.desc"
 ATT.Pros = {"att.procon.direct", "att.procon.moreproj"}
 ATT.Cons = {"stat.spread", "stat.damage", "rating.mobility"}
 
@@ -889,13 +938,15 @@ ATT.ShellColor = Color(255, 255, 255)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_bird")
 
-
+------------------------------
+-- #region ammo_shotgun_slugs (P2A1 Slug Shotshells)
+------------------------------
 ATT = {}
 
 ATT.PrintName = "att.ammo_shotgun_slugs.name"
-ATT.FullName = "P2A1 Slug Shotshells"
+ATT.FullName = "att.ammo_p2a1_slug.name.full"
 ATT.Icon = Material("entities/tacrp_att_acc_slugs.png", "mips smooth")
-ATT.Description = "Cram slugs into your flare gun. Short barrel limits accuracy and range."
+ATT.Description = "att.ammo_p2a1_slug.desc"
 ATT.Pros = {"att.procon.direct", "stat.range"}
 ATT.Cons = {"att.procon.1proj", "rating.mobility"}
 
@@ -940,13 +991,15 @@ ATT.ShellColor = Color(25, 25, 25)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_slug")
 
-
+------------------------------
+-- #region ammo_p2a1_frag (P2A1 High-Explosive Frag Shotshells)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Frag"
-ATT.FullName = "P2A1 HE Frag Shotshells"
+ATT.PrintName = "att.ammo_p2a1_frag.name"
+ATT.FullName = "att.ammo_p2a1_frag.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_frag12.png", "mips smooth")
-ATT.Description = "Turn your flare gun into a knockoff grenade pistol."
+ATT.Description = "att.ammo_p2a1_frag.desc"
 ATT.Pros = {"att.procon.explosive", "att.procon.radius"}
 ATT.Cons = {"att.procon.damage", "stat.muzzlevelocity"}
 
@@ -979,13 +1032,15 @@ ATT.ShellColor = Color(255, 255, 0)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_frag")
 
-
+------------------------------
+-- #region ammo_p2a1_flashbang (P2A1 Zvezda Flash Shotshells)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Zvezda"
-ATT.FullName = "P2A1 Zvezda Flash Shotshells"
+ATT.PrintName = "att.ammo_p2a1_flashbang.name"
+ATT.FullName = "att.ammo_p2a1_flashbang.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_ks23_flashbang.png", "mips smooth")
-ATT.Description = "Flashbang dispenser in your pocket. Best used around corners."
+ATT.Description = "att.ammo_p2a1_flashbang.desc"
 ATT.Pros = {"att.procon.flash"}
 ATT.Cons = {"att.procon.timedfuse", "att.procon.nonlethal"}
 
@@ -1005,13 +1060,15 @@ ATT.ShellColor = Color(255, 150, 150)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_flashbang")
 
-
+------------------------------
+-- #region ammo_p2a1_breach (P2A1 Breaching Shotshells)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Breach"
-ATT.FullName = "P2A1 Breaching Shotshells"
+ATT.PrintName = "att.ammo_p2a1_breach.name"
+ATT.FullName = "att.ammo_p2a1_breach.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_breaching.png", "mips smooth")
-ATT.Description = "Load a specialized breaching slug for pocket door busting."
+ATT.Description = "att.ammo_p2a1_breach.desc"
 ATT.Pros = {"att.procon.doorbreach"}
 ATT.Cons = {"att.procon.nonlethal"}
 
@@ -1031,12 +1088,15 @@ ATT.ShellColor = Color(255, 125, 75)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_breach")
 
+------------------------------
+-- #region ammo_p2a1_rocks (P2A1 Rock Shotshells)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Rocks"
-ATT.FullName = "P2A1 Rock Shotshells"
+ATT.PrintName = "att.ammo_p2a1_rocks.name"
+ATT.FullName = "att.ammo_p2a1_rocks.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_p2a1_rock.png", "mips smooth")
-ATT.Description = "Neolithic buckshot."
+ATT.Description = "att.ammo_p2a1_rocks.desc"
 ATT.Pros = {"att.procon.throwrocks"}
 ATT.Cons = {"att.procon.throwrocks"}
 
@@ -1069,13 +1129,15 @@ ATT.ShellColor = Color(120, 120, 120)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_rock")
 
-
+------------------------------
+-- #region ammo_p2a1_confetti (P2A1 Confetti Shotshells)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Confetti"
-ATT.FullName = "P2A1 Confetti Shotshells"
+ATT.PrintName = "att.ammo_p2a1_confetti.name"
+ATT.FullName = "att.ammo_p2a1_confetti.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_p2a1_confetti.png", "mips smooth")
-ATT.Description = "For celebrations. Yippie!"
+ATT.Description = "att.ammo_p2a1_confetti.desc"
 ATT.Pros = {}
 ATT.Cons = {"att.procon.nonlethal"}
 
@@ -1109,13 +1171,15 @@ ATT.ShellColor = Color(255, 0, 255)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_confetti")
 
-
+------------------------------
+-- #region ammo_p2a1_signal (P2A1 Signal Flare Cartridges)
+------------------------------
 ATT = {}
 
-ATT.PrintName = "Signal"
-ATT.FullName = "P2A1 Signal Flare Cartridges"
+ATT.PrintName = "att.ammo_p2a1_signal.name"
+ATT.FullName = "att.ammo_p2a1_signal.name.full"
 ATT.Icon = Material("entities/tacrp_att_ammo_40mm_concussion.png", "mips smooth")
-ATT.Description = "A brighter, longer burning flare for distress signaling."
+ATT.Description = "att.ammo_p2a1_signal.desc"
 ATT.Pros = {"stat.muzzlevelocity"}
 ATT.Cons = {"att.procon.noexp"}
 
