@@ -725,18 +725,18 @@ ATT.InstalledElements = {"scope"}
 TacRP.LoadAtt(ATT, "optic_smle_no32")
 
 ------------------------------
--- #region optic_smle_mad (Mad Minute)
+-- #region bolt_smle_mad (Mad Minute)
 ------------------------------
 ATT = {}
 
-ATT.PrintName = "optic_smle_mad.name"
-ATT.FullName = "optic_smle_mad.name.full"
-ATT.Icon = Material("entities/tacrp_att_bolt_greased.png", "mips smooth")
-ATT.Description = "optic_smle_mad.desc"
+ATT.PrintName = "bolt_smle_mad.name"
+ATT.FullName = "bolt_smle_mad.name.full"
+ATT.Icon = Material("entities/tacrp_att_bolt_smle_mad.png", "mips smooth")
+ATT.Description = "bolt_smle_mad.desc"
 ATT.Pros = {"stat.rpm"}
-ATT.Cons = {"rating.mobility", "stat.recoil"}
+ATT.Cons = {"stat.shootingspeed", "stat.recoil"}
 
-ATT.Category = "bolt_mad"
+ATT.Category = "bolt_smle"
 
 ATT.SortOrder = 1
 
@@ -745,10 +745,9 @@ ATT.Mult_ShootTimeMult = 1 / 2
 
 ATT.Add_RecoilVisualKick = 2
 ATT.Mult_RecoilKick = 1.25
-ATT.Add_ShootingSpeedMult = -0.2
-ATT.Add_SightedSpeedMult = -0.1
+ATT.Mult_ShootingSpeedMult = 0.4
 
-TacRP.LoadAtt(ATT, "bolt_mad")
+TacRP.LoadAtt(ATT, "bolt_smle_mad")
 -- #endregion
 
 ------------------------------

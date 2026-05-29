@@ -414,9 +414,9 @@ L["att.optic_smle_no32.name.full"] = "Lee Enfield No. 32 Telescopic Scope"
 L["att.optic_smle_no32.name"] = "No. 32 Scope"
 L["att.optic_smle_no32.desc"] = "Top-mounted medium range scope for the Lee-Enfield."
 
-L["att.optic_smle_mad.name.full"] = "Mad Minute"
-L["att.optic_smle_mad.name"] = "Mad"
-L["att.optic_smle_mad.desc"] = "Use an old speed shooting technique to shoot at blazing speeds!"
+L["att.bolt_smle_mad.name.full"] = "Mad Minute Bolt"
+L["att.bolt_smle_mad.name"] = "Mad Min."
+L["att.bolt_smle_mad.desc"] = "Special bolt enabling a blazing fast speed shooting technique."
 
 L["att.ammo_p2a1_incendiary.name.full"] = "P2A1 Incendiary Cartridges"
 L["att.ammo_p2a1_incendiary.name"] = "Incendiary"

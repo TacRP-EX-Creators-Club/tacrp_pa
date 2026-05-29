@@ -200,8 +200,8 @@ SWEP.ShotgunThreeload = false
 SWEP.ShotgunFullCancel = true
 SWEP.ShotgunNoReverseStart = true
 
-SWEP.ReloadTimeMult = 0.85
-SWEP.ShootTimeMult = 0.72
+SWEP.ReloadTimeMult = 0.82
+SWEP.ShootTimeMult = 0.67
 SWEP.DropMagazineModel = false
 
 SWEP.ShotgunUpInTime = 2.3
@@ -311,7 +311,7 @@ SWEP.Attachments = {
     },
     [5] = {
         PrintName = "Bolt",
-        Category = {"bolt_manual", "bolt_mad"},
+        Category = {"bolt_manual", "bolt_smle"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
