@@ -242,6 +242,14 @@ SWEP.AnimationTranslationTable = {
 // attachments
 
 SWEP.AttachmentElements = {
+    ["optic"] = {
+        BGs_VM = {
+            {1, 1}
+        },
+        BGs_WM = {
+            {1, 1}
+        },
+    },
     ["irons"] = {
         BGs_VM = {
             {1, 1}
