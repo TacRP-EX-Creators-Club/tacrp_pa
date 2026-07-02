@@ -19,10 +19,7 @@ SWEP.Trivia_Manufacturer = "Royal Small Arms Factory"
 SWEP.Trivia_Year = "1907"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
-SWEP.Credits = [[
-Assets: Cry of Fear
-Animations: Cry of Fear, Lazarus
-]]
+SWEP.Credits = "Assets: Cry of Fear\nAnimations: speedonerd, UMP45GFL"
 
 SWEP.ViewModel = "models/weapons/tacint_extras/v_smle.mdl"
 SWEP.WorldModel = "models/weapons/tacint_extras/w_smle.mdl"
@@ -241,7 +238,8 @@ SWEP.AnimationTranslationTable = {
     ["blind_dryfire"] = "dryfire",
     ["blind_fire"] = "shoot1",
     ["reload"] = "reload",
-    ["reload_clip"] = "reload_clip2",
+    ["reload_clip"] = "reload_clip",
+    ["reload_clip_half"] = "reload_clip_half",
     ["reload_finish"] = "reload_end",
     ["reload_start"] = "reload_start",
     ["melee"] = {"melee1", "melee2"},
@@ -249,6 +247,8 @@ SWEP.AnimationTranslationTable = {
     ["dryfire"] = "dryfire",
     ["jam"] = "reload_end"
 }
+
+-- tactical reload code is on the stripper clip attachment in pa.lua
 
 // attachments
 
@@ -266,7 +266,7 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     [1] = {
         PrintName = "Top",
-        Category = {"optic_smle", "stripper_clip"},
+        Category = {"optic_smle"},
         WMBone = "Bone02",
         Bone = "k98_root",
         AttachSound = "TacRP/weapons/optic_on.wav",
@@ -349,3 +349,4 @@ addsound("tacint_smle.CockForward", path1 .. "rifle_cock_forward.wav")
 addsound("tacint_smle.ClipIn", path2 .. "clipin2.wav")
 addsound("tacint_smle.ClipIn2", path2 .. "roundinsert_clip.wav")
 addsound("tacint_smle.InsertShell", path1 .. "rifle_insert.wav")
+addsound("tacint_smle.ClipEject", path1 .. "rifle_clipeject.wav")

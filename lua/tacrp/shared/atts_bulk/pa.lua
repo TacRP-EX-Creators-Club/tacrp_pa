@@ -725,7 +725,7 @@ ATT.InstalledElements = {"scope"}
 TacRP.LoadAtt(ATT, "optic_smle_no32")
 
 ------------------------------
--- #region bolt_smle_mad (Mad Minute)
+-- #region bolt_smle_mad (Lee Enfield Mad Minute)
 ------------------------------
 ATT = {}
 
@@ -741,11 +741,18 @@ ATT.Category = "bolt_smle"
 ATT.SortOrder = 1
 
 ATT.Mult_RPM = 2
-ATT.Mult_ShootTimeMult = 1 / 2
+ATT.Mult_ShootTimeMult = 1 / 1.5
+ATT.EjectDelay = 0.35
 
 ATT.Add_RecoilVisualKick = 2
 ATT.Mult_RecoilKick = 1.25
 ATT.Mult_ShootingSpeedMult = 0.4
+
+ATT.Hook_TranslateSequence = function(self, seq)
+    if seq == "fire" then
+        return {"shoot_madmin"} --i wanted to put the code in the weapon lua, but it didnt work
+    end
+end
 
 TacRP.LoadAtt(ATT, "bolt_smle_mad")
 -- #endregion
@@ -1195,3 +1202,37 @@ end
 ATT.ShellColor = Color(255, 0, 0)
 
 TacRP.LoadAtt(ATT, "ammo_p2a1_signal")
+
+------------------------------
+-- toploader_stripper_clip_smle (Stripper Clip)
+------------------------------
+ATT = {}
+
+ATT.PrintName = "att.tac_stripper.name"
+ATT.FullName = "att.tac_stripper.name.full"
+ATT.Icon = Material("entities/tacrp_att_optic_stripperclip.png", "mips smooth")
+ATT.Description = "att.tac_stripper.desc"
+ATT.Pros = {"Reloads all rounds at once"}
+ATT.Cons = {"No single-round reloads", "Incompatible with optics"}
+
+ATT.Category = "optic_smle"
+
+ATT.SortOrder = 0
+
+ATT.ShotgunReload = false
+
+ATT.Hook_TranslateSequence = function(self, seq)
+	if self:Clip1() >= 5 then --lazy but it works, yknow?
+		if seq == "reload" then
+			return "reload_clip_half"
+		end
+	elseif self:Clip1() <= 4 then
+		if seq == "reload" then
+			return "reload_clip"
+		end
+	end
+end
+
+ATT.InstalledElements = {"optic_clip"}
+
+TacRP.LoadAtt(ATT, "toploader_stripper_clip_smle")
